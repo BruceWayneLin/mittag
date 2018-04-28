@@ -25,11 +25,11 @@ class ControllerExtensionModuleLatest extends Controller {
 		);
 
 		$results = $this->model_catalog_product->getProducts($filter_data);
-
 		if ($results) {
 			foreach ($results as $result) {
 				if ($result['image']) {
-					$image = $this->model_tool_image->resize($result['image'], $setting['width'], $setting['height']);
+//					$image = $this->model_tool_image->resize($result['image'], $setting['width'], $setting['height']);
+                    $image = $this->config->get('config_ssl') . 'image/' . $result['image'];
 				} else {
 					$image = $this->model_tool_image->resize('placeholder.png', $setting['width'], $setting['height']);
 				}
@@ -39,6 +39,18 @@ class ControllerExtensionModuleLatest extends Controller {
 				} else {
 					$price = false;
 				}
+
+				if ($result['activity_title']) {
+					$activity_title = $result['activity_title'];
+				} else {
+					$activity_title = '';
+				}
+
+                if ($result['eng_name']) {
+                   $eng_name = $result['eng_name'];
+                } else {
+                    $eng_name = '';
+                }
 
 				if ((float)$result['special']) {
 					$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
@@ -52,6 +64,7 @@ class ControllerExtensionModuleLatest extends Controller {
 					$tax = false;
 				}
 
+
 				if ($this->config->get('config_review_status')) {
 					$rating = $result['rating'];
 				} else {
@@ -61,7 +74,9 @@ class ControllerExtensionModuleLatest extends Controller {
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
-					'name'        => $result['name'],
+					'activity_title' => $activity_title,
+                    'eng_name' => $eng_name,
+                    'name'        => $result['name'],
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
 					'price'       => $price,
 					'special'     => $special,

@@ -29,8 +29,8 @@
             <li class="active"><a href="#tab-general" data-toggle="tab"><?php echo $tab_general; ?></a></li>
             <?php if ($customer_id) { ?>
             <li><a href="#tab-history" data-toggle="tab"><?php echo $tab_history; ?></a></li>
-            <li><a href="#tab-transaction" data-toggle="tab"><?php echo $tab_transaction; ?></a></li>
-            <li><a href="#tab-reward" data-toggle="tab"><?php echo $tab_reward; ?></a></li>
+            <li><a href="#tab-transaction" class="hidden" data-toggle="tab"><?php echo $tab_transaction; ?></a></li>
+            <li><a href="#tab-reward"  class="hidden" data-toggle="tab"><?php echo $tab_reward; ?></a></li>
             <li><a href="#tab-ip" data-toggle="tab"><?php echo $tab_ip; ?></a></li>
             <?php } ?>
           </ul>

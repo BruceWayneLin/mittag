@@ -9,7 +9,7 @@ $_['text_login']      = '您必須 <a href="%s">登入</a> 或 <a href="%s">加�
 $_['text_items']      = '%s 件商品 - %s';
 $_['text_points']     = '贈送紅利點數： %s 點';
 $_['text_next']              = '其他功能';
-$_['text_next_choice']       = '如果您要使用優惠券、購物禮券或紅利點數請在此點選，也可以點選運費計算來試算您的運費';
+$_['text_next_choice']       = '';
 $_['text_empty']      = '您的購物車沒有加入任何商品';
 $_['text_day']               = '天';
 $_['text_week']              = '週';

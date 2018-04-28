@@ -330,6 +330,8 @@ class ControllerUserUserPermission extends Controller {
 
 		$ignore = array(
 			'common/dashboard',
+            'common/email',
+			'common/blog',
 			'common/startup',
 			'common/login',
 			'common/logout',

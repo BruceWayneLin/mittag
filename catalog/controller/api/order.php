@@ -2,7 +2,6 @@
 class ControllerApiOrder extends Controller {
 	public function add() {
 		$this->load->language('api/order');
-
 		$json = array();
 
 		if (!isset($this->session->data['api_id'])) {
@@ -341,7 +340,7 @@ class ControllerApiOrder extends Controller {
 
 				$this->load->model('checkout/order');
 
-				$json['order_id'] = $this->model_checkout_order->addOrder($order_data);
+                $json['order_id'] = $this->model_checkout_order->addOrder($order_data);
 
 				// Set the order history
 				if (isset($this->request->post['order_status_id'])) {

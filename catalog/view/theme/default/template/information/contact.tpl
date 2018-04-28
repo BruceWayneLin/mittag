@@ -14,11 +14,11 @@
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h1><?php echo $heading_title; ?></h1>
+     <h1><?php echo $heading_title; ?></h1>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
         <fieldset>
           <legend><?php echo $text_contact; ?></legend>
-          <div class="form-group required">
+          <div class="form-group">
             <label class="col-sm-2 control-label" for="input-name"><?php echo $entry_name; ?></label>
             <div class="col-sm-10">
               <input type="text" name="name" value="<?php echo $name; ?>" id="input-name" class="form-control" />
@@ -43,6 +43,7 @@
               <?php if ($error_enquiry) { ?>
               <div class="text-danger"><?php echo $error_enquiry; ?></div>
               <?php } ?>
+              <p>感謝您的來訪，歡迎留下您的疑問或建議，我們會盡快回覆相關問題。</p>
             </div>
           </div>
           <?php echo $captcha; ?>
@@ -57,3 +58,10 @@
     <?php echo $column_right; ?></div>
 </div>
 <?php echo $footer; ?>
+<style>
+  @media screen and (min-width: 500px){
+    .center-block {
+      margin-left:20%;
+    }
+  }
+</style>

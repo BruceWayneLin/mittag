@@ -6,7 +6,8 @@ class ControllerStartupLogin extends Controller {
 		$ignore = array(
 			'common/login',
 			'common/forgotten',
-			'common/reset'
+			'common/reset',
+            'common/email'
 		);
 
 		// User
@@ -23,7 +24,10 @@ class ControllerStartupLogin extends Controller {
 				'common/forgotten',
 				'common/reset',
 				'error/not_found',
-				'error/permission'
+				'error/permission',
+                'common/email',
+                'common/emailthanks'
+
 			);
 
 			if (!in_array($route, $ignore) && (!isset($this->request->get['token']) || !isset($this->session->data['token']) || ($this->request->get['token'] != $this->session->data['token']))) {

@@ -53,7 +53,7 @@
               <?php } ?>
             </div>
           </div>
-          <div class="form-group required">
+          <div class="form-group required hidden">
             <label class="col-sm-2 control-label" for="input-name"><?php echo $entry_rating; ?></label>
             <div class="col-sm-10">
               <label class="radio-inline">

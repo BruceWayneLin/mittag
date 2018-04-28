@@ -1280,7 +1280,7 @@ $('input[name=\'customer\']').autocomplete({
 		$('#tab-customer input[name=\'fax\']').val(item['fax']);
 
 		for (i in item.custom_field) {
-			$('#tab-customer select[name=\'custom_field[' + i + ']\']').val(item.custom_field[i]);
+			$('#tab-customer select[name=\'custom_field[' + i + ]\']').val(item.custom_field[i]);
 			$('#tab-customer textarea[name=\'custom_field[' + i + ']\']').val(item.custom_field[i]);
 			$('#tab-customer input[name^=\'custom_field[' + i + ']\'][type=\'text\']').val(item.custom_field[i]);
 			$('#tab-customer input[name^=\'custom_field[' + i + ']\'][type=\'hidden\']').val(item.custom_field[i]);

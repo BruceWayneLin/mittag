@@ -63,10 +63,10 @@ class Mail {
 		if (!$this->from) {
 			throw new \Exception('Error: E-Mail from required!');
 		}
-
-		if (!$this->sender) {
-			throw new \Exception('Error: E-Mail sender required!');
-		}
+//
+//		if (!$this->sender) {
+//			throw new \Exception('Error: E-Mail sender required!');
+//		}
 
 		if (!$this->subject) {
 			throw new \Exception('Error: E-Mail subject required!');

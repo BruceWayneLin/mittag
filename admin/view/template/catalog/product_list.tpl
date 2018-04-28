@@ -51,7 +51,12 @@
                 <label class="control-label" for="input-quantity"><?php echo $entry_quantity; ?></label>
                 <input type="text" name="filter_quantity" value="<?php echo $filter_quantity; ?>" placeholder="<?php echo $entry_quantity; ?>" id="input-quantity" class="form-control" />
               </div>
+              <div class="form-group">
+                <label class="control-label" for="input-date_available">上架日期</label>
+                <input type="text" name="filter_date_available" value="<?php echo $filter_date_available; ?>" placeholder="搜尋上架日期" id="input-date_available" class="form-control" />
+              </div>
             </div>
+
             <div class="col-sm-4">
               <div class="form-group">
                 <label class="control-label" for="input-status"><?php echo $entry_status; ?></label>
@@ -111,6 +116,11 @@
                     <?php } else { ?>
                     <a href="<?php echo $sort_price; ?>"><?php echo $column_price; ?></a>
                     <?php } ?></td>
+                  <td class="text-right"><?php if ($sort == 'p.date_added') { ?>
+                    <a href="<?php echo $sort_date_available; ?>" class="<?php echo strtolower($order); ?>">上架時間</a>
+                    <?php } else { ?>
+                    <a href="<?php echo $sort_date_available; ?>">上架時間</a>
+                    <?php } ?></td>
                   <td class="text-right"><?php if ($sort == 'p.quantity') { ?>
                     <a href="<?php echo $sort_quantity; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_quantity; ?></a>
                     <?php } else { ?>
@@ -146,6 +156,7 @@
                     <?php } else { ?>
                     <?php echo $product['price']; ?>
                     <?php } ?></td>
+                  <td class="text-left"><?php echo $product['date_available']; ?></td>
                   <td class="text-right"><?php if ($product['quantity'] <= 0) { ?>
                     <span class="label label-warning"><?php echo $product['quantity']; ?></span>
                     <?php } elseif ($product['quantity'] <= 5) { ?>
@@ -200,6 +211,12 @@ $('#button-filter').on('click', function() {
 	if (filter_quantity) {
 		url += '&filter_quantity=' + encodeURIComponent(filter_quantity);
 	}
+
+    var filter_date_available = $('input[name=\'filter_date_available\']').val();
+
+    if (filter_date_available) {
+        url += '&filter_date_available=' + encodeURIComponent(filter_date_available);
+    }
 
 	var filter_status = $('select[name=\'filter_status\']').val();
 

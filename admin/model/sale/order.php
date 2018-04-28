@@ -124,7 +124,8 @@ class ModelSaleOrder extends Model {
 				'payment_address_format'  => $order_query->row['payment_address_format'],
 				'payment_custom_field'    => json_decode($order_query->row['payment_custom_field'], true),
 				'payment_method'          => $order_query->row['payment_method'],
-				'payment_code'            => $order_query->row['payment_code'],
+                'extraShippingFee'        => $order_query->row['extraShippingFee'],
+                'payment_code'            => $order_query->row['payment_code'],
 				'shipping_firstname'      => $order_query->row['shipping_firstname'],
 				'shipping_lastname'       => $order_query->row['shipping_lastname'],
 				'shipping_company'        => $order_query->row['shipping_company'],
@@ -447,4 +448,12 @@ class ModelSaleOrder extends Model {
 
 		return $query->row['email'];
 	}
+
+	public function toUpdateOrder($shipFee, $order_id){
+        $this->db->query("UPDATE `" . DB_PREFIX . "order` SET extraShippingFee = '" . (int)$shipFee . "', date_modified = NOW() WHERE order_id = '" . (int)$order_id . "'");
+
+        var_dump($shipFee);
+        var_dump($order_id);
+        die();
+    }
 }

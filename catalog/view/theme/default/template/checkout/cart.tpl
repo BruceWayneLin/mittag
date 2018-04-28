@@ -30,9 +30,11 @@
     <?php } ?>
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
       <h1><?php echo $heading_title; ?>
+        <span class="hidden">
         <?php if ($weight) { ?>
         &nbsp;(<?php echo $weight; ?>)
         <?php } ?>
+        </span>
       </h1>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
         <div class="table-responsive">
@@ -130,3 +132,11 @@
     <?php echo $column_right; ?></div>
 </div>
 <?php echo $footer; ?>
+<style>
+    .input-group-btn i{
+        color:white;
+    }
+    .fa.fa-search {
+        color:#4b3900;
+    }
+</style>

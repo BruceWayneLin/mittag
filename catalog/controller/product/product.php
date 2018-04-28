@@ -157,7 +157,6 @@ class ControllerProductProduct extends Controller {
 		$this->load->model('catalog/product');
 
 		$product_info = $this->model_catalog_product->getProduct($product_id);
-
 		if ($product_info) {
 			$url = '';
 
@@ -225,7 +224,8 @@ class ControllerProductProduct extends Controller {
 			$this->document->addStyle('catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css');
 
 			$data['heading_title'] = $product_info['name'];
-
+            $data['text_texture'] = $this->language->get('text_texture');
+            $data['text_location'] = $this->language->get('text_location');
 			$data['text_select'] = $this->language->get('text_select');
 			$data['text_manufacturer'] = $this->language->get('text_manufacturer');
 			$data['text_model'] = $this->language->get('text_model');
@@ -265,13 +265,48 @@ class ControllerProductProduct extends Controller {
 
 			$data['product_id'] = (int)$this->request->get['product_id'];
 			$data['manufacturer'] = $product_info['manufacturer'];
-			$data['manufacturers'] = $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $product_info['manufacturer_id']);
+            $data['location'] = $product_info['location'];
+            $data['texture'] = $product_info['texture'];
+
+            $data['braceLong'] = $product_info['braceLong'];
+            $data['braceWidth'] = $product_info['braceWidth'];
+            $data['braceHeight'] = $product_info['braceHeight'];
+            $data['braceSeleLen'] = $product_info['braceSeleLen'];
+            $data['secondaryNote'] = $product_info['secondaryNote'];
+            $data['braceNote'] = html_entity_decode($product_info['braceNote'], ENT_QUOTES, 'UTF-8');
+            $data['braceletDiameter'] = $product_info['braceletDiameter'];
+            $data['braceletDiameterMax'] = $product_info['braceletDiameterMax'];
+
+            $data['necklaceLength'] = $product_info['necklaceLength'];
+            $data['earingType'] = $product_info['earingType'];
+			$data['activity_title'] = $product_info['activity_title'];
+			$data['activity_desc'] = html_entity_decode($product_info['activity_desc'], ENT_QUOTES, 'UTF-8');
+			$data['eng_name'] = $product_info['eng_name'];
+
+			$data['length'] = $product_info['length'];
+			$data['width'] = $product_info['width'];
+			$data['height'] = $product_info['height'];
+
+            $data['deliveringTime'] = $product_info['deliveringTime'];
+            $data['deliveringExtra'] = html_entity_decode($product_info['deliveringExtra'], ENT_QUOTES, 'UTF-8');
+            $data['extraDetail'] = $product_info['extraDetail'];
+            $data['extraDetail2'] = $product_info['extraDetail2'];
+            $data['extraDetail3'] = $product_info['extraDetail3'];
+            $data['extraDetail4'] = $product_info['extraDetail4'];
+
+
+            $data['ringSizeStart'] = $product_info['ringSizeStart'];
+            $data['ringSizeEnd'] = $product_info['ringSizeEnd'];
+            $data['manufacturers'] = $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $product_info['manufacturer_id']);
 			$data['model'] = $product_info['model'];
 			$data['reward'] = $product_info['reward'];
 			$data['points'] = $product_info['points'];
 			$data['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
 
-			if ($product_info['quantity'] <= 0) {
+			$ringSizes = $this->model_catalog_product->getRingSizes();
+            $data['ringSizes'] = $ringSizes;
+
+            if ($product_info['quantity'] <= 0) {
 				$data['stock'] = $product_info['stock_status'];
 			} elseif ($this->config->get('config_stock_display')) {
 				$data['stock'] = $product_info['quantity'];
@@ -288,7 +323,8 @@ class ControllerProductProduct extends Controller {
 			}
 
 			if ($product_info['image']) {
-				$data['thumb'] = $this->model_tool_image->resize($product_info['image'], $this->config->get($this->config->get('config_theme') . '_image_thumb_width'), $this->config->get($this->config->get('config_theme') . '_image_thumb_height'));
+                $data['thumb'] = $this->config->get('config_ssl') . 'image/' . $product_info['image'];
+//				$data['thumb'] = $this->model_tool_image->resize($product_info['image'], '800' , '800');
 			} else {
 				$data['thumb'] = '';
 			}
@@ -389,6 +425,7 @@ class ControllerProductProduct extends Controller {
 			}
 
 			$data['reviews'] = sprintf($this->language->get('text_reviews'), (int)$product_info['reviews']);
+
 			$data['rating'] = (int)$product_info['rating'];
 
 			// Captcha
@@ -550,7 +587,6 @@ class ControllerProductProduct extends Controller {
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
-
 			$this->response->setOutput($this->load->view('error/not_found', $data));
 		}
 	}
@@ -602,11 +638,11 @@ class ControllerProductProduct extends Controller {
 		$json = array();
 
 		if ($this->request->server['REQUEST_METHOD'] == 'POST') {
-			if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 25)) {
+			if ((utf8_strlen($this->request->post['name']) < 1) || (utf8_strlen($this->request->post['name']) > 25)) {
 				$json['error'] = $this->language->get('error_name');
 			}
 
-			if ((utf8_strlen($this->request->post['text']) < 25) || (utf8_strlen($this->request->post['text']) > 1000)) {
+			if ((utf8_strlen($this->request->post['text']) < 1) || (utf8_strlen($this->request->post['text']) > 1000)) {
 				$json['error'] = $this->language->get('error_text');
 			}
 

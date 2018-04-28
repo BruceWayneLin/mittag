@@ -21,12 +21,12 @@
         <?php } ?>
       </div>
       <div class="form-group required">
-        <label class="control-label" for="input-payment-firstname"><?php echo $entry_firstname; ?></label>
-        <input type="text" name="firstname" value="<?php echo $firstname; ?>" placeholder="<?php echo $entry_firstname; ?>" id="input-payment-firstname" class="form-control" />
+        <label class="control-label" for="input-payment-firstname">姓名</label>
+        <input type="text" name="firstname" value="<?php echo $firstname; ?>" placeholder="姓名" id="input-payment-firstname" class="form-control" />
       </div>
-      <div class="form-group required">
+      <div class="form-group required hidden">
         <label class="control-label" for="input-payment-lastname"><?php echo $entry_lastname; ?></label>
-        <input type="text" name="lastname" value="<?php echo $lastname; ?>" placeholder="<?php echo $entry_lastname; ?>" id="input-payment-lastname" class="form-control" />
+        <input type="hidden" name="lastname" value="<?php echo $lastname; ?>" placeholder="<?php echo $entry_lastname; ?>" id="input-payment-lastname" class="form-control" />
       </div>
       <div class="form-group required">
         <label class="control-label" for="input-payment-email"><?php echo $entry_email; ?></label>
@@ -34,9 +34,9 @@
       </div>
       <div class="form-group required">
         <label class="control-label" for="input-payment-telephone"><?php echo $entry_telephone; ?></label>
-        <input type="text" name="telephone" value="<?php echo $telephone; ?>" placeholder="<?php echo $entry_telephone; ?>" id="input-payment-telephone" class="form-control" />
+        <input type="text" maxlength="10" name="telephone" value="<?php echo $telephone; ?>" placeholder="<?php echo $entry_telephone; ?>" id="input-payment-telephone" class="form-control" />
       </div>
-      <div class="form-group">
+      <div class="form-group hidden">
         <label class="control-label" for="input-payment-fax"><?php echo $entry_fax; ?></label>
         <input type="text" name="fax" value="<?php echo $fax; ?>" placeholder="<?php echo $entry_fax; ?>" id="input-payment-fax" class="form-control" />
       </div>
@@ -152,29 +152,29 @@
     </fieldset>
   </div>
   <div class="col-sm-6">
-    <fieldset id="address">
-      <legend><?php echo $text_your_address; ?></legend>
-      <div class="form-group">
+    <fieldset id="address hidden">
+      <legend class="hidden"><?php echo $text_your_address; ?></legend>
+      <div class="form-group hidden">
         <label class="control-label" for="input-payment-company"><?php echo $entry_company; ?></label>
         <input type="text" name="company" value="<?php echo $company; ?>" placeholder="<?php echo $entry_company; ?>" id="input-payment-company" class="form-control" />
       </div>
-      <div class="form-group required">
+      <div class="form-group hidden">
         <label class="control-label" for="input-payment-address-1"><?php echo $entry_address_1; ?></label>
         <input type="text" name="address_1" value="<?php echo $address_1; ?>" placeholder="<?php echo $entry_address_1; ?>" id="input-payment-address-1" class="form-control" />
       </div>
-      <div class="form-group">
+      <div class="form-group hidden">
         <label class="control-label" for="input-payment-address-2"><?php echo $entry_address_2; ?></label>
         <input type="text" name="address_2" value="<?php echo $address_2; ?>" placeholder="<?php echo $entry_address_2; ?>" id="input-payment-address-2" class="form-control" />
       </div>
-      <div class="form-group required">
+      <div class="form-group hidden">
         <label class="control-label" for="input-payment-city"><?php echo $entry_city; ?></label>
-        <input type="text" name="city" value="<?php echo $city; ?>" placeholder="<?php echo $entry_city; ?>" id="input-payment-city" class="form-control" />
+        <input type="hidden" name="city" value="<?php echo $city; ?>" placeholder="<?php echo $entry_city; ?>" id="input-payment-city" class="form-control" />
       </div>
-      <div class="form-group required">
+      <div class="form-group hidden">
         <label class="control-label" for="input-payment-postcode"><?php echo $entry_postcode; ?></label>
         <input type="text" name="postcode" value="<?php echo $postcode; ?>" placeholder="<?php echo $entry_postcode; ?>" id="input-payment-postcode" class="form-control" />
       </div>
-      <div class="form-group required">
+      <div class="form-group hidden">
         <label class="control-label" for="input-payment-country"><?php echo $entry_country; ?></label>
         <select name="country_id" id="input-payment-country" class="form-control">
           <option value=""><?php echo $text_select; ?></option>
@@ -187,7 +187,7 @@
           <?php } ?>
         </select>
       </div>
-      <div class="form-group required">
+      <div class="form-group hidden">
         <label class="control-label" for="input-payment-zone"><?php echo $entry_zone; ?></label>
         <select name="zone_id" id="input-payment-zone" class="form-control">
         </select>
@@ -307,7 +307,7 @@
   </div>
 </div>
 <?php if ($shipping_required) { ?>
-<div class="checkbox">
+<div class="checkbox hidden">
   <label>
     <?php if ($shipping_address) { ?>
     <input type="checkbox" name="shipping_address" value="1" checked="checked" />
@@ -499,3 +499,10 @@ $('#collapse-payment-address select[name=\'country_id\']').on('change', function
 
 $('#collapse-payment-address select[name=\'country_id\']').trigger('change');
 //--></script>
+<style type="text/css">
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+</style>

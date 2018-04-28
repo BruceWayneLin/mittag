@@ -39,7 +39,23 @@ class ControllerCommonColumnLeft extends Controller {
 				'href'     => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], true),
 				'children' => array()
 			);
-			
+
+//            $data['menus'][] = array(
+//                'id'       => 'menu-test',
+//                'icon'	   => 'fa-dashboard',
+//                'name'	   => '生日寄信系統',
+//                'href'     => $this->url->link('common/email', 'token=' . $this->session->data['token'], true),
+//                'children' => array()
+//            );
+
+//			$data['menus'][] = array(
+//                'id'       => 'menu-test',
+//                'icon'	   => 'fa-dashboard',
+//                'name'	   => '活動',
+//                'href'     => $this->url->link('common/blog', 'token=' . $this->session->data['token'], true),
+//                'children' => array()
+//            );
+
 			// Catalog
 			$catalog = array();
 			
@@ -521,8 +537,8 @@ class ControllerCommonColumnLeft extends Controller {
 					'children' => array()		
 				);
 			}
-			
-			if ($return) {	
+
+			if ($return) {
 				$localisation[] = array(
 					'name'	   => $this->language->get('text_return'),
 					'href'     => '',

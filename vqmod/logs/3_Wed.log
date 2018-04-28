@@ -1,0 +1,14 @@
+---------- Date: 2018-03-14 21:45:42 ~ IP : 220.135.38.215 ----------
+REQUEST URI : /index.php?route=checkout/checkout
+MOD DETAILS:
+   modFile   : /home/jungweic/public_html/mittag.com.tw/vqmod/xml/fb_login_one_page.xml
+   id        : FBLogin
+   version   : 1.0
+   vqmver    : 2.X
+   author    : Rahul Jain - rahuljain1991@live.com
+
+File Name    : catalog/view/theme/*/template/checkout/checkout.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <a href="<?php echo $forgotten; ?>"><?php echo $text_forgotten; ?></a>
+----------------------------------------------------------------------
+
+

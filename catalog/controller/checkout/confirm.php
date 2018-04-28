@@ -113,7 +113,6 @@ class ControllerCheckoutConfirm extends Controller {
 					$order_data['store_url'] = HTTP_SERVER;
 				}
 			}
-
 			if ($this->customer->isLogged()) {
 				$this->load->model('account/customer');
 
@@ -224,13 +223,18 @@ class ControllerCheckoutConfirm extends Controller {
 						'type'                    => $option['type']
 					);
 				}
-
 				$order_data['products'][] = array(
 					'product_id' => $product['product_id'],
 					'name'       => $product['name'],
 					'model'      => $product['model'],
 					'option'     => $option_data,
-					'download'   => $product['download'],
+					'extraDetail'      => $product['extralDetail'],
+                    'extraDetail1'      => $product['extralDetail1'],
+                    'extraDetail2'      => $product['extralDetail2'],
+                    'extraDetail3'      => $product['extralDetail3'],
+                    'extraDetail4'      => $product['extralDetail4'],
+                    'extraDetail5'      => $product['extralDetail5'],
+                    'download'   => $product['download'],
 					'quantity'   => $product['quantity'],
 					'subtract'   => $product['subtract'],
 					'price'      => $product['price'],
@@ -390,6 +394,7 @@ class ControllerCheckoutConfirm extends Controller {
 					'name'       => $product['name'],
 					'model'      => $product['model'],
 					'option'     => $option_data,
+					'extraDetail' => $product['extralDetail'],
 					'recurring'  => $recurring,
 					'quantity'   => $product['quantity'],
 					'subtract'   => $product['subtract'],

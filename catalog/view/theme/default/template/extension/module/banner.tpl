@@ -12,10 +12,10 @@
 <script type="text/javascript"><!--
 $('#banner<?php echo $module; ?>').owlCarousel({
 	items: 6,
-	autoPlay: 3000,
-	singleItem: true,
+	autoPlay: 5000,
+	singleItem: false,
 	navigation: false,
-	pagination: false,
+	pagination: true,
 	transitionStyle: 'fade'
 });
 --></script>

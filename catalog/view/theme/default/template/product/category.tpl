@@ -1,6 +1,6 @@
 <?php echo $header; ?>
 <div class="container">
-  <ul class="breadcrumb">
+    <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
     <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
     <?php } ?>
@@ -44,9 +44,9 @@
       <?php } ?>
       <?php } ?>
       <?php if ($products) { ?>
-      <div class="row">
+      <div class="row hidden">
         <div class="col-md-2 col-sm-6 hidden-xs">
-          <div class="btn-group btn-group-sm">
+          <div class="btn-group btn-group-sm hidden">
             <button type="button" id="list-view" class="btn btn-default" data-toggle="tooltip" title="<?php echo $button_list; ?>"><i class="fa fa-th-list"></i></button>
             <button type="button" id="grid-view" class="btn btn-default" data-toggle="tooltip" title="<?php echo $button_grid; ?>"><i class="fa fa-th"></i></button>
           </div>
@@ -76,38 +76,40 @@
             <select id="input-limit" class="form-control" onchange="location = this.value;">
               <?php foreach ($limits as $limits) { ?>
               <?php if ($limits['value'] == $limit) { ?>
-              <option value="<?php echo $limits['href']; ?>" selected="selected"><?php echo $limits['text']; ?></option>
-              <?php } else { ?>
               <option value="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></option>
+              <?php } else { ?>
+              <option value="<?php echo $limits['href']; ?>" selected="selected"><?php echo $limits['text']; ?></option>
               <?php } ?>
               <?php } ?>
             </select>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div id="box" class="row">
         <?php foreach ($products as $product) { ?>
-        <div class="product-layout product-list col-xs-12">
+        <div id="customProductLayout" class="product-layout product-list col-xs-12">
           <div class="product-thumb">
-            <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
+            <div class="image"><a href="<?php echo $product['href']; ?>"><img style="width:100%!important;" src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
             <div>
               <div class="caption">
-                <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
-                <p><?php echo $product['description']; ?></p>
+                <h2 style="font-size:22px;"><a href="<?php echo $product['href']; ?>"><?php echo $product['engName']; ?></a></h2>
+                <h4><a style="font-size:13px;" href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
+                </h4>
+                <p style="font-weight:normal;font-size:10px;"><?php echo $product['description']; ?></p>
                 <?php if ($product['price']) { ?>
-                <p class="price">
+                <p class="<?php echo $product['activity_title'] !== '' ? 'hidden' : ''; ?>">
                   <?php if (!$product['special']) { ?>
                   <?php echo $product['price']; ?>
                   <?php } else { ?>
                   <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
                   <?php } ?>
                   <?php if ($product['tax']) { ?>
-                  <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
                   <?php } ?>
+                <span class="<?php echo $product['activity_title'] !== '' ? 'hidden' : ''; ?>" type="button pull-right" style="display:inline-block;cursor:pointer" onclick="cart.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md hidden"><?php echo $button_cart; ?></span></span>
                 </p>
                 <?php } ?>
                 <?php if ($product['rating']) { ?>
-                <div class="rating">
+                <div class="rating hidden">
                   <?php for ($i = 1; $i <= 5; $i++) { ?>
                   <?php if ($product['rating'] < $i) { ?>
                   <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
@@ -118,11 +120,11 @@
                 </div>
                 <?php } ?>
               </div>
-              <div class="button-group">
-                <button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>
-                <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
-                <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
-              </div>
+            </div>
+            <div class="button-group text-center hidden">
+              <button type="button" style="width:100%;" onclick="cart.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>
+              <button class="hidden" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
+              <button class="hidden" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
             </div>
           </div>
         </div>
@@ -143,3 +145,34 @@
     <?php echo $column_right; ?></div>
 </div>
 <?php echo $footer; ?>
+<style>
+  #box {
+    margin-right: 0px!important;
+  }
+  #customProductLayout {
+    padding-right: 5px!important;
+    padding-left: 5px!important;
+  }
+  .product-grid .product-thumb .caption {
+    height: auto;
+    min-height: inherit;
+  }
+  .product-thumb .button-group button {
+    background: white;
+  }
+</style>
+<!-- The jQuery library version >= 1.8 -->
+<script src="catalog/view/theme/default/template/product/productjs/prodjs2.js"></script>
+<!-- The core Waterfall library -->
+<script src="catalog/view/theme/default/template/product/productjs/prodjs3.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('#box').waterfall();
+        var array = $('.product-thumb');
+        array.each(function(item){
+          console.log($(this).height());
+          console.log(Math.floor((Math.random() * 80 ) + 450));
+            $(this).height(Math.floor((Math.random() * (580-400 + 1) ) + 520));
+        });
+    })
+</script>

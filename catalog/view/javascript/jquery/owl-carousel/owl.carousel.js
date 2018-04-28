@@ -1507,6 +1507,6 @@ if (typeof Object.create !== "function") {
         afterMove : false,
         afterAction : false,
         startDragging : false,
-        afterLazyLoad: false
+        afterLazyLoad: false,
     };
 }(jQuery, window, document));
