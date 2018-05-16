@@ -30,10 +30,15 @@
             <li><a href="#tab-data" data-toggle="tab"><?php echo $tab_data; ?></a></li>
             <li><a href="#tab-links" data-toggle="tab"><?php echo $tab_links; ?></a></li>
             <li class="hidden"><a href="#tab-attribute" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
-            <li><a href="#tab-option" data-toggle="tab"><?php echo $tab_option; ?></a></li>
+            <li class="hidden"><a href="#tab-option" data-toggle="tab"><?php echo $tab_option; ?></a></li>
             <li class="hidden"><a href="#tab-recurring" data-toggle="tab"><?php echo $tab_recurring; ?></a></li>
             <li class="hidden"><a href="#tab-discount" data-toggle="tab"><?php echo $tab_discount; ?></a></li>
             <li class="hidden"><a href="#tab-special" data-toggle="tab"><?php echo $tab_special; ?></a></li>
+            <li><a href="#tab-ring" data-toggle="tab">戒指選項</a></li>
+            <li><a href="#tab-bracelet" data-toggle="tab">手鍊選項</a></li>
+            <li><a href="#tab-necklace" data-toggle="tab">項鍊選項</a></li>
+            <li><a href="#tab-earing" data-toggle="tab">耳環選項</a></li>
+            <li><a href="#tab-activity" data-toggle="tab">新增活動</a></li>
             <li><a href="#tab-image" data-toggle="tab"><?php echo $tab_image; ?></a></li>
             <li class="hidden"><a href="#tab-reward" data-toggle="tab"><?php echo $tab_reward; ?></a></li>
             <li class="hidden"><a href="#tab-design" data-toggle="tab"><?php echo $tab_design; ?></a></li>
@@ -55,6 +60,25 @@
                       <?php if (isset($error_name[$language['language_id']])) { ?>
                       <div class="text-danger"><?php echo $error_name[$language['language_id']]; ?></div>
                       <?php } ?>
+                    </div>
+                  </div>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="eng_name">英文名稱</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="eng_name" value="<?php echo $eng_name; ?>" placeholder="請輸入英文名稱" id="eng_name" class="form-control" />
+                        </div>
+                    </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-category"><span data-toggle="tooltip" title="<?php echo $help_category; ?>">產品類別</span></label>
+                    <div class="col-sm-10">
+                      <input type="text" name="category" value="" placeholder="產品類別" id="input-category" class="form-control" />
+                      <div id="product-category" class="well well-sm" style="height: 150px; overflow: auto;">
+                        <?php foreach ($product_categories as $product_category) { ?>
+                        <div id="product-category<?php echo $product_category['category_id']; ?>"><i class="fa fa-minus-circle"></i> <?php echo $product_category['name']; ?>
+                          <input type="hidden" name="product_category[]" value="<?php echo $product_category['category_id']; ?>" />
+                        </div>
+                        <?php } ?>
+                      </div>
                     </div>
                   </div>
                   <div class="form-group">
@@ -94,6 +118,150 @@
                 <?php } ?>
               </div>
             </div>
+            <div class="tab-pane" id="tab-ring">
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-status">訂購戒圍起:</label>
+                  <div class="col-sm-10">
+                    <?php echo ' <input id="hiddenRS" class="hidden" type="text" value=" ' . $ringSizeStart . ' " />' ?>
+                    <?php
+                                        echo "<select " . ' name="ringSizeStart" id="ringSizeStart" class="form-control"' . ">";
+                      foreach ($ring_size as $value) {
+                        if($value['id'] == $ringSizeStart ){
+                          echo '<option value="' .  $value['id']  . '" selected="selected">' . $value['size'] . '</option>';
+                        }else{
+                          echo '<option value="' .  $value['id']  . '" >' . $value['size'] . '</option>';
+                        }
+                      };
+                    echo "</select>";
+                    ?>
+                  </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-status">訂購戒圍終:</label>
+                <div class="col-sm-10">
+                  <?php echo ' <input id="hiddenRE" class="hidden" type="text" value=" ' . $ringSizeEnd . ' " />' ?>
+                  <?php
+                                        echo "<select " . 'name="ringSizeEnd" id="ringSizeEnd" class="form-control"' . ">";
+                  foreach ($ring_size as $value) {
+                    if($value['id'] == $ringSizeEnd ){
+                    echo '<option value="' .  $value['id']  . '" selected="selected">' . $value['size'] . '</option>';
+                    }else{
+                    echo '<option value="' .  $value['id']  . '" >' . $value['size'] . '</option>';
+                    }
+                  };
+                  echo "</select>";
+                  ?>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-status">備註:</label>
+                <div class="col-sm-10">
+                  <textarea name="extraDetail" id="extraDetail" cols="80" rows="10" placeholder="請輸入備註："><?php echo $extraDetail ?></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="tab-bracelet">
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-status">手鍊長度:</label>
+                <div class="col-sm-10">
+                  <select class="form-control" name="braceSeleLen" id="">
+                    <option value="" <?php echo $braceSeleLen == ' ' ? 'selected' :  ' ' ;?> >選擇長度</option>
+                    <option value="20" <?php echo $braceSeleLen == 20 ? 'selected' :  ' ' ;?> >20cm</option>
+                    <option value="16" <?php echo $braceSeleLen == 16 ? 'selected' :  ' ' ;?> >16cm</option>
+                    <option value="12" <?php echo $braceSeleLen == 12 ? 'selected' :  ' ' ;?> >12cm</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-status">手環內圍直徑:(最小值)</label>
+                <div class="col-sm-10">
+                  <select class="form-control" name="braceletDiameter" id="">
+                    <option value="" <?php echo $braceletDiameter == ' ' ? 'selected' :  ' ' ;?> >選擇長度(最小值)</option>
+                    <option value="5.5" <?php echo $braceletDiameter == 5.5 ? 'selected' :  ' ' ;?> >S (內圍直徑5.5cm)</option>
+                    <option value="6.0" <?php echo $braceletDiameter == 6.0 ? 'selected' :  ' ' ;?> >M (內圍直徑6.0cm)</option>
+                    <option value="6.5" <?php echo $braceletDiameter == 6.5 ? 'selected' :  ' ' ;?> >L (內圍直徑6.5cm)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+              <label class="col-sm-2 control-label" for="input-status">手環內圍直徑:(最大值)</label>
+              <div class="col-sm-10">
+                <select class="form-control" name="braceletDiameterMax" id="">
+                  <option value="" <?php echo $braceletDiameterMax == ' ' ? 'selected' :  ' ' ;?> >選擇長度(最大值)</option>
+                  <option value="5.5" <?php echo $braceletDiameterMax == 5.5 ? 'selected' :  ' ' ;?> >S (內圍直徑5.5cm)</option>
+                  <option value="6.0" <?php echo $braceletDiameterMax == 6.0 ? 'selected' :  ' ' ;?> >M (內圍直徑6.0cm)</option>
+                  <option value="6.5" <?php echo $braceletDiameterMax == 6.5 ? 'selected' :  ' ' ;?> >L (內圍直徑6.5cm)</option>
+                </select>
+              </div>
+            </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-status">備註:</label>
+                <div class="col-sm-10">
+                  <textarea name="extraDetail2" id="extraDetail2" cols="80" rows="10" placeholder="請輸入備註："><?php echo $extraDetail2 ?></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="tab-necklace">
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-status">項鍊長度:</label>
+                  <div class="col-sm-10">
+                    <select class="form-control" name="necklaceLength" id="">
+                      <option value="" <?php echo $necklaceLength == ' ' ? 'selected' :  ' ' ;?> > 選擇長度</option>
+                      <option value="40" <?php echo $necklaceLength == 40 ? 'selected' :  ' ' ;?> >40cm</option>
+                      <option value="45" <?php echo $necklaceLength == 45 ? 'selected' :  ' ' ;?> >45cm</option>
+                      <option value="50" <?php echo $necklaceLength == 50 ? 'selected' :  ' ' ;?> >50cm</option>
+                      <option value="60" <?php echo $necklaceLength == 60 ? 'selected' :  ' ' ;?> >60cm</option>
+                      <option value="75" <?php echo $necklaceLength == 75 ? 'selected' :  ' ' ;?> >75cm</option>
+                      <option value="90" <?php echo $necklaceLength == 90 ? 'selected' :  ' ' ;?> >90cm</option>
+                    </select>
+                  </div>
+                </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-status">備註:</label>
+                <div class="col-sm-10">
+                  <textarea name="extraDetail3" id="extraDetail3" cols="80" rows="10" placeholder="請輸入備註："><?php echo $extraDetail3 ?></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="tab-earing">
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-status">耳環形式:</label>
+                <div class="col-sm-10">
+                  <select class="form-control" name="earingType" id="">
+                    <option value="" <?php echo $earingType == ' '  ?  'selected' :  ' ' ; ?> > 耳環形式 </option>
+                    <option value="耳針式耳環" <?php echo $earingType ==  '耳針式耳環' ? 'selected' :  ' ' ;?> >耳針式耳環</option>
+                    <option value="耳夾式耳環" <?php echo $earingType ==  '耳夾式耳環' ? 'selected' :  ' ' ;?> >耳夾式耳環</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-status">備註:</label>
+                <div class="col-sm-10">
+                  <textarea name="extraDetail4" id="extraDetail4" cols="80" rows="10" placeholder="請輸入備註："><?php echo $extraDetail4 ?></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="tab-activity">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-status">活動標題:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="activity_title" value="<?php echo $activity_title; ?>" placeholder="請輸入活動標題" id="input-texture" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-texture">活動內容</label>
+                    <div class="col-sm-10">
+                        <textarea  name="activity_desc" value="<?php echo $activity_desc; ?>" placeholder="請輸入活動內容" id="input-texture" class="form-control summernote"  name="" id="" cols="30" rows="10"><?php echo $activity_desc; ?></textarea>
+                    </div>
+                </div>
+            </div>
+
             <div class="tab-pane" id="tab-data">
               <div class="form-group required">
                 <label class="col-sm-2 control-label" for="input-model"><?php echo $entry_model; ?></label>
@@ -141,9 +309,51 @@
                 </div>
               </div>
               <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-texture"><?php echo $entry_texture; ?></label>
+                <div class="col-sm-10">
+                  <input type="text" name="texture" value="<?php echo $texture; ?>" placeholder="<?php echo $entry_texture; ?>" id="input-texture" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-texture">交貨時間</label>
+                <div class="col-sm-10">
+                    <select class="form-control" name="deliveringTime" id="">
+                        <option value="0" <?php echo $deliveringTime == 0 ? 'selected="selected"' : ' '; ?>">約3個工作天，不包含運送時間</option>
+                        <option value="1" <?php echo $deliveringTime == 1 ? 'selected="selected"' : ' '; ?>">約14個工作天，不包含運送時間</option>
+                    </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-texture">交貨時間(備註:)</label>
+                <div class="col-sm-10">
+                  <textarea  name="deliveringExtra" value="<?php echo $deliveringExtra; ?>" placeholder="輸入交貨時間" id="input-texture" class="form-control summernote"  name="" id="" cols="30" rows="10"><?php echo $deliveringExtra; ?></textarea>
+                </div>
+              </div>
+              <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-location"><?php echo $entry_location; ?></label>
                 <div class="col-sm-10">
                   <input type="text" name="location" value="<?php echo $location; ?>" placeholder="<?php echo $entry_location; ?>" id="input-location" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-status">主飾品尺寸:</label>
+                <div class="col-sm-10">
+                  <div class="col-sm-4">長:<input class="form-control" name="braceLong" type="text" value="<?php echo $braceLong ?>" placeholder="主飾品長">(長cm)</div>
+                  <div class="col-sm-4">寬:<input class="form-control" name="braceWidth" type="text" value="<?php echo $braceWidth ?>" placeholder="主飾品寬">(寬cm)</div>
+                  <div class="col-sm-4">高:<input class="form-control" name="braceHeight" type="text" value="<?php echo $braceHeight ?>" placeholder="主飾品高">(高cm)</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-status">主飾品備註:</label>
+                <div class="col-sm-10">
+                    <textarea type="text" class="form-control summernote" name="braceNote" id="" cols="30" rows="10"><?php echo $braceNote ?>
+                    </textarea>
+                </div>
+              </div>
+              <div class="form-group hidden">
+                <label class="col-sm-2 control-label" for="input-status">主飾品長度備註:</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="secondaryNote" value="<?php echo $secondaryNote ?>" placeholder="請輸入主飾品長度備註">
                 </div>
               </div>
               <div class="form-group">
@@ -255,12 +465,15 @@
                   <div class="row">
                     <div class="col-sm-4">
                       <input type="text" name="length" value="<?php echo $length; ?>" placeholder="<?php echo $entry_length; ?>" id="input-length" class="form-control" />
+                        (長cm)
                     </div>
                     <div class="col-sm-4">
                       <input type="text" name="width" value="<?php echo $width; ?>" placeholder="<?php echo $entry_width; ?>" id="input-width" class="form-control" />
+                        (寬cm)
                     </div>
                     <div class="col-sm-4">
                       <input type="text" name="height" value="<?php echo $height; ?>" placeholder="<?php echo $entry_height; ?>" id="input-height" class="form-control" />
+                        (高cm)
                     </div>
                   </div>
                 </div>
@@ -279,13 +492,13 @@
                   </select>
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group hidden">
                 <label class="col-sm-2 control-label" for="input-weight"><?php echo $entry_weight; ?></label>
                 <div class="col-sm-10">
                   <input type="text" name="weight" value="<?php echo $weight; ?>" placeholder="<?php echo $entry_weight; ?>" id="input-weight" class="form-control" />
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group hidden">
                 <label class="col-sm-2 control-label" for="input-weight-class"><?php echo $entry_weight_class; ?></label>
                 <div class="col-sm-10">
                   <select name="weight_class_id" id="input-weight-class" class="form-control">
@@ -326,19 +539,6 @@
                 <div class="col-sm-10">
                   <input type="text" name="manufacturer" value="<?php echo $manufacturer; ?>" placeholder="<?php echo $entry_manufacturer; ?>" id="input-manufacturer" class="form-control" />
                   <input type="hidden" name="manufacturer_id" value="<?php echo $manufacturer_id; ?>" />
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-category"><span data-toggle="tooltip" title="<?php echo $help_category; ?>"><?php echo $entry_category; ?></span></label>
-                <div class="col-sm-10">
-                  <input type="text" name="category" value="" placeholder="<?php echo $entry_category; ?>" id="input-category" class="form-control" />
-                  <div id="product-category" class="well well-sm" style="height: 150px; overflow: auto;">
-                    <?php foreach ($product_categories as $product_category) { ?>
-                    <div id="product-category<?php echo $product_category['category_id']; ?>"><i class="fa fa-minus-circle"></i> <?php echo $product_category['name']; ?>
-                      <input type="hidden" name="product_category[]" value="<?php echo $product_category['category_id']; ?>" />
-                    </div>
-                    <?php } ?>
-                  </div>
                 </div>
               </div>
               <div class="form-group">
@@ -922,6 +1122,19 @@
       </div>
     </div>
   </div>
+  <script>
+//    $(document).ready(function() {
+//        var rStartVal = $('#hiddenRS').val();
+//        var rEndVal = $('#hiddenRE').val();
+//        if(rStartVal) {
+//          $('#ringSizeStart').val(Number(rStartVal));
+//        }
+//        if(rEndVal) {
+//            $('#ringSizeEnd').val(Number(rEndVal));
+//        }
+//    });
+
+  </script>
   <script type="text/javascript" src="view/javascript/summernote/summernote.js"></script>
   <link href="view/javascript/summernote/summernote.css" rel="stylesheet" />
   <script type="text/javascript" src="view/javascript/summernote/opencart.js"></script>
@@ -1243,16 +1456,19 @@ $('input[name=\'option\']').autocomplete({
 		});
 
 		$('.date').datetimepicker({
-			pickTime: false
+			pickTime: false,
+            language:"cn"
 		});
 
 		$('.time').datetimepicker({
-			pickDate: false
+			pickDate: false,
+            language:"cn"
 		});
 
 		$('.datetime').datetimepicker({
 			pickDate: true,
-			pickTime: true
+			pickTime: true,
+            language:"cn"
 		});
 
 		option_row++;
@@ -1317,7 +1533,8 @@ function addDiscount() {
 	$('#discount tbody').append(html);
 
 	$('.date').datetimepicker({
-		pickTime: false
+		pickTime: false,
+        language:"cn"
 	});
 
 	discount_row++;
@@ -1343,7 +1560,8 @@ function addSpecial() {
 	$('#special tbody').append(html);
 
 	$('.date').datetimepicker({
-		pickTime: false
+		pickTime: false,
+        language:"cn"
 	});
 
 	special_row++;
@@ -1395,16 +1613,25 @@ function addRecurring() {
 //--></script>
   <script type="text/javascript"><!--
 $('.date').datetimepicker({
-	pickTime: false
+	pickTime: false,
+    format: "yyyy-mm-dd",
+    autoclose: true,
+    startDate: "today",
+    clearBtn: true,
+    calendarWeeks: true,
+    todayHighlight: true,
+    language: 'zh-TW'
 });
 
 $('.time').datetimepicker({
-	pickDate: false
+	pickDate: false,
+    language:"cn"
 });
 
 $('.datetime').datetimepicker({
 	pickDate: true,
-	pickTime: true
+	pickTime: true,
+    language:""
 });
 //--></script>
   <script type="text/javascript"><!--

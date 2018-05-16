@@ -1,0 +1,34 @@
+#constructContain {
+    background-color:black;
+}
+
+#bakgroundConstruct {
+    background-image: url(./img/construct.png);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 33% 0;
+}
+
+.constructInputDiv {
+    position: relative;
+    top: 400px;
+}
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+@media screen and (min-width: 480px) {
+   html,body
+    {
+        width: 104%;
+        height: 104%;
+    }
+}

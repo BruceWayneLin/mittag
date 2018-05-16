@@ -1,53 +1,88 @@
 <footer>
   <div class="container">
-    <div class="row">
-      <?php if ($informations) { ?>
-      <div class="col-sm-3">
-        <h5><?php echo $text_information; ?></h5>
-        <ul class="list-unstyled">
-          <?php foreach ($informations as $information) { ?>
-          <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
-          <?php } ?>
-        </ul>
+      <div class="row">
+         <div class="col-lg-12">
+            <div class="col-lg-6">
+               <div class="col-xs-6 text-center">
+                   <?php if ($informations) { ?>
+                   <a title="關於mittag" href="<?php echo $informations[0]['href']; ?>"><?php echo $informations[0]['title']; ?></a>
+                   <?php } ?>
+               </div>
+                <div class="col-xs-6 text-center">
+                    <?php if ($informations) { ?>
+                    <a title="購買注意事項" href="<?php echo $informations[6]['href']; ?>"><?php echo $informations[6]['title']; ?></a>
+                    <?php } ?>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="col-xs-6 text-center">
+                    <?php if ($informations) { ?>
+                    <a title="產品包裝" href="<?php echo $informations[5]['href']; ?>"><?php echo $informations[5]['title']; ?></a>
+                    <?php } ?>
+
+                </div>
+                <div class="col-xs-6 text-center">
+                     <a title="聯繫mittag" href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a>
+                </div>
+              </div>
+         </div>
+         <div class="col-lg-12">
+            <div class="col-lg-6">
+                <div class="col-xs-6 text-center">
+                    <a title="商品退換貨" href="<?php echo $return; ?>"><?php echo $text_return; ?></a>
+                    <a class="hidden" title="facebook" href="https://www.facebook.com/mittagNatureME/">facebook</a>
+                </div>
+                <div class="col-xs-6 text-center">
+                    <?php if ($informations) { ?>
+                    <a title="配送和售後服務說明" href="<?php echo $informations[4]['href']; ?>"><?php echo $informations[4]['title']; ?></a>
+                    <?php } ?>
+                </div>
+            </div>
+             <div class="col-lg-6">
+                 <div class="col-xs-6 text-center">
+                     <?php if ($informations) { ?>
+                     <a title="快速解答" href="<?php echo $informations[2]['href']; ?>"><?php echo $informations[2]['title']; ?></a>
+                     <?php } ?>
+
+                 </div>
+                <div class="col-xs-6 text-center">
+                    <a title="會員中心" href="<?php echo $account; ?>"><?php echo $text_account; ?></a>
+                </div>
+             </div>
+         </div>
+         <div class="col-lg-12">
+            <div class="col-lg-6 text-center">
+                <div class="col-xs-6">
+                    <a class="hidden" title="商品退換貨" href="<?php echo $return; ?>"><?php echo $text_return; ?></a>
+                </div>
+                <div class="col-xs-6">
+                </div>
+            </div>
+            <div class="col-lg-6  text-center">
+                <div class="col-xs-6">
+                    <?php if ($informations) { ?>
+                    <a title="尺寸對照圖" href="<?php echo $informations[1]['href']; ?>"><?php echo $informations[1]['title']; ?></a>
+                    <?php } ?>
+                </div>
+                <div class="col-xs-6"></div>
+            </div>
+         </div>
       </div>
-      <?php } ?>
-      <div class="col-sm-3">
-        <h5><?php echo $text_service; ?></h5>
-        <ul class="list-unstyled">
-          <li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
-          <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
-          <li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
-        </ul>
+  </div>
+  <div class="row">
+      <div class="col-lg-12 text-center">
+          <hr>
+          <p ><?php echo $powered; ?></p>
       </div>
-      <div class="col-sm-3">
-        <h5><?php echo $text_extra; ?></h5>
-        <ul class="list-unstyled">
-          <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
-          <li><a href="<?php echo $voucher; ?>"><?php echo $text_voucher; ?></a></li>
-          <li><a href="<?php echo $affiliate; ?>"><?php echo $text_affiliate; ?></a></li>
-          <li><a href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li>
-        </ul>
-      </div>
-      <div class="col-sm-3">
-        <h5><?php echo $text_account; ?></h5>
-        <ul class="list-unstyled">
-          <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
-          <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
-          <li><a href="<?php echo $wishlist; ?>"><?php echo $text_wishlist; ?></a></li>
-          <li><a href="<?php echo $newsletter; ?>"><?php echo $text_newsletter; ?></a></li>
-        </ul>
-      </div>
-    </div>
-    <hr>
-    <p><?php echo $powered; ?></p>
   </div>
 </footer>
 
-<!--
-OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
-Please donate via PayPal to donate@opencart.com
-//-->
-
-<!-- Theme created by Welford Media for OpenCart 2.0 www.welfordmedia.co.uk -->
-
-</body></html>
+<style>
+  footer .row .col-sm-6 .col-sm-6 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  footer {
+    padding-bottom: 30px;
+  }
+</style>

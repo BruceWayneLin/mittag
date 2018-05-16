@@ -237,7 +237,7 @@ final class Openbay {
 	public function newOrderAdminNotify($order_id, $order_status_id) {
 		$this->load->model('checkout/order');
 		$order_info = $this->model_checkout_order->getOrder($order_id);
-		
+
 		if (version_compare(VERSION, '2.2', '>') == true) {
 			$language_code = $order_info['language_code'];
 		} else {

@@ -14,6 +14,7 @@
       </ul>
     </div>
   </div>
+
   <div class="container-fluid">
     <?php if ($error_warning) { ?>
     <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?>
@@ -51,7 +52,12 @@
                 <label class="control-label" for="input-quantity"><?php echo $entry_quantity; ?></label>
                 <input type="text" name="filter_quantity" value="<?php echo $filter_quantity; ?>" placeholder="<?php echo $entry_quantity; ?>" id="input-quantity" class="form-control" />
               </div>
+              <div class="form-group">
+                <label class="control-label" for="input-date_available">上架日期</label>
+                <input type="text" name="filter_date_available" value="<?php echo $filter_date_available; ?>" placeholder="搜尋上架日期" id="input-date_available" class="form-control" />
+              </div>
             </div>
+
             <div class="col-sm-4">
               <div class="form-group">
                 <label class="control-label" for="input-status"><?php echo $entry_status; ?></label>
@@ -89,6 +95,36 @@
             </div>
           </div>
         </div>
+        <div class="container-fluid">
+          <div class="col-xs-4"></div>
+          <div class=" col-xs-4 text-center">
+            <div class="form-group bg-primary text-white" style="padding: 5px;">
+              <label for="discountSelectForProd">全館打折</label>
+              <select class="form-control" id="discountSelectForProd">
+                <option>1</option>
+                <option>1.5</option>
+                <option>2</option>
+                <option>2.5</option>
+                <option>3</option>
+                <option>3.5</option>
+                <option>4</option>
+                <option>4.5</option>
+                <option>5</option>
+                <option>5.5</option>
+                <option>6</option>
+                <option>6.5</option>
+                <option>7</option>
+                <option>7.5</option>
+                <option>8</option>
+                <option>8.5</option>
+                <option>9</option>
+                <option>9.5</option>
+              </select>
+              <button type="submit" form="form1" value="Submit">儲存</button>
+            </div>
+          </div>
+          <div class="col-xs-4"></div>
+        </div>
         <form action="<?php echo $delete; ?>" method="post" enctype="multipart/form-data" id="form-product">
           <div class="table-responsive">
             <table class="table table-bordered table-hover">
@@ -110,6 +146,11 @@
                     <a href="<?php echo $sort_price; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_price; ?></a>
                     <?php } else { ?>
                     <a href="<?php echo $sort_price; ?>"><?php echo $column_price; ?></a>
+                    <?php } ?></td>
+                  <td class="text-right"><?php if ($sort == 'p.date_added') { ?>
+                    <a href="<?php echo $sort_date_available; ?>" class="<?php echo strtolower($order); ?>">上架時間</a>
+                    <?php } else { ?>
+                    <a href="<?php echo $sort_date_available; ?>">上架時間</a>
                     <?php } ?></td>
                   <td class="text-right"><?php if ($sort == 'p.quantity') { ?>
                     <a href="<?php echo $sort_quantity; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_quantity; ?></a>
@@ -146,6 +187,7 @@
                     <?php } else { ?>
                     <?php echo $product['price']; ?>
                     <?php } ?></td>
+                  <td class="text-left"><?php echo $product['date_available']; ?></td>
                   <td class="text-right"><?php if ($product['quantity'] <= 0) { ?>
                     <span class="label label-warning"><?php echo $product['quantity']; ?></span>
                     <?php } elseif ($product['quantity'] <= 5) { ?>
@@ -201,6 +243,12 @@ $('#button-filter').on('click', function() {
 		url += '&filter_quantity=' + encodeURIComponent(filter_quantity);
 	}
 
+    var filter_date_available = $('input[name=\'filter_date_available\']').val();
+
+    if (filter_date_available) {
+        url += '&filter_date_available=' + encodeURIComponent(filter_date_available);
+    }
+
 	var filter_status = $('select[name=\'filter_status\']').val();
 
 	if (filter_status != '*') {
@@ -217,7 +265,22 @@ $('#button-filter').on('click', function() {
 });
 //--></script>
   <script type="text/javascript"><!--
-$('input[name=\'filter_name\']').autocomplete({
+      $("button[type='submit']").click(function(){
+          $.ajax({
+              url: 'index.php?route=catalog/product/autocomplete&token=<?php echo $token; ?>&discountSelectForProd=' +  encodeURIComponent($('#discountSelectForProd').val()),
+              dataType: 'json',
+              success: function(json) {
+                  response($.map(json, function(item) {
+                      return {
+                          label: item['name'],
+                          value: item['product_id']
+                      }
+                  }));
+              }
+          });
+      });
+
+      $('input[name=\'filter_name\']').autocomplete({
 	'source': function(request, response) {
 		$.ajax({
 			url: 'index.php?route=catalog/product/autocomplete&token=<?php echo $token; ?>&filter_name=' +  encodeURIComponent(request),
@@ -256,5 +319,6 @@ $('input[name=\'filter_model\']').autocomplete({
 		$('input[name=\'filter_model\']').val(item['label']);
 	}
 });
+
 //--></script></div>
 <?php echo $footer; ?>

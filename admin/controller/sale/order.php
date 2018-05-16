@@ -18,9 +18,21 @@ class ControllerSaleOrder extends Controller {
 		$this->document->setTitle($this->language->get('heading_title'));
 
 		$this->load->model('sale/order');
-
 		$this->getForm();
 	}
+
+	public function addShip() {
+        if (isset($this->request->get['shipFee'])) {
+	        $shipFee = $this->request->get['shipFee'];
+        }
+        if (isset($this->request->get['order_id'])) {
+            $order_Id = $this->request->get['order_id'];
+        }
+
+        $this->load->model('sale/order');
+
+        $this->model_sale_order->toUpdateOrder($shipFee, $order_Id);
+    }
 
 	public function edit() {
 		$this->load->language('sale/order');
@@ -208,11 +220,13 @@ class ControllerSaleOrder extends Controller {
 		$results = $this->model_sale_order->getOrders($filter_data);
 
 		foreach ($results as $result) {
+            $order_info =  $this->model_sale_order->getOrder($result['order_id']);
+            $extraFee = $order_info['extraShippingFee'];
 			$data['orders'][] = array(
 				'order_id'      => $result['order_id'],
 				'customer'      => $result['customer'],
 				'order_status'  => $result['order_status'] ? $result['order_status'] : $this->language->get('text_missing'),
-				'total'         => $this->currency->format($result['total'], $result['currency_code'], $result['currency_value']),
+				'total'         => $this->currency->format(($result['total']+$extraFee), $result['currency_code'], $result['currency_value']),
 				'date_added'    => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
 				'date_modified' => date($this->language->get('date_format_short'), strtotime($result['date_modified'])),
 				'shipping_code' => $result['shipping_code'],
@@ -550,8 +564,10 @@ class ControllerSaleOrder extends Controller {
 			$data['payment_custom_field'] = $order_info['payment_custom_field'];
 			$data['payment_method'] = $order_info['payment_method'];
 			$data['payment_code'] = $order_info['payment_code'];
+            $data['extraShippingFee'] = $order_info['extraShippingFee'];
 
-			$data['shipping_firstname'] = $order_info['shipping_firstname'];
+
+            $data['shipping_firstname'] = $order_info['shipping_firstname'];
 			$data['shipping_lastname'] = $order_info['shipping_lastname'];
 			$data['shipping_company'] = $order_info['shipping_company'];
 			$data['shipping_address_1'] = $order_info['shipping_address_1'];
@@ -592,7 +608,6 @@ class ControllerSaleOrder extends Controller {
 			$data['order_totals'] = array();
 
 			$order_totals = $this->model_sale_order->getOrderTotals($this->request->get['order_id']);
-
 			foreach ($order_totals as $order_total) {
 				// If coupon, voucher or reward points
 				$start = strpos($order_total['title'], '(') + 1;
@@ -1012,7 +1027,7 @@ class ControllerSaleOrder extends Controller {
 
 			$products = $this->model_sale_order->getOrderProducts($this->request->get['order_id']);
 
-			foreach ($products as $product) {
+            foreach ($products as $product) {
 				$option_data = array();
 
 				$options = $this->model_sale_order->getOrderOptions($this->request->get['order_id'], $product['order_product_id']);
@@ -1045,7 +1060,7 @@ class ControllerSaleOrder extends Controller {
 					'model'    		   => $product['model'],
 					'option'   		   => $option_data,
 					'quantity'		   => $product['quantity'],
-					'price'    		   => $this->currency->format($product['price'] + ($this->config->get('config_tax') ? $product['tax'] : 0), $order_info['currency_code'], $order_info['currency_value']),
+                    'price'	           => $this->currency->format($product['price'] + ($this->config->get('config_tax') ? $product['tax'] : 0), $order_info['currency_code'], $order_info['currency_value']),
 					'total'    		   => $this->currency->format($product['total'] + ($this->config->get('config_tax') ? ($product['tax'] * $product['quantity']) : 0), $order_info['currency_code'], $order_info['currency_value']),
 					'href'     		   => $this->url->link('catalog/product/edit', 'token=' . $this->session->data['token'] . '&product_id=' . $product['product_id'], true)
 				);
@@ -1066,15 +1081,21 @@ class ControllerSaleOrder extends Controller {
 			$data['totals'] = array();
 
 			$totals = $this->model_sale_order->getOrderTotals($this->request->get['order_id']);
-
-			foreach ($totals as $total) {
+            foreach ($totals as $total) {
 				$data['totals'][] = array(
 					'title' => $total['title'],
 					'text'  => $this->currency->format($total['value'], $order_info['currency_code'], $order_info['currency_value'])
 				);
 			}
 
-			$data['comment'] = nl2br($order_info['comment']);
+            $order_info =  $this->model_sale_order->getOrder($this->request->get['order_id']);
+            $extraFee = $order_info['extraShippingFee'];
+            $totalCustom = intval($extraFee) + intval($totals['2']['value']);
+            array_push($data['totals'], array("title" => "額外收費 + 固定運費 + 帳單總計", "text" => $this->currency->format($totalCustom, $order_info['currency_code'], $order_info['currency_value'])));
+
+            $data['extraFee'] = $extraFee;
+
+            $data['comment'] = nl2br($order_info['comment']);
 
 			$this->load->model('customer/customer');
 
@@ -1458,7 +1479,6 @@ class ControllerSaleOrder extends Controller {
 		$this->load->language('sale/order');
 
 		$json = array();
-
 		if (!$this->user->hasPermission('modify', 'sale/order')) {
 			$json['error'] = $this->language->get('error_permission');
 		} else {
@@ -1484,7 +1504,6 @@ class ControllerSaleOrder extends Controller {
 
 			$json['success'] = $this->language->get('text_commission_added');
 		}
-
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
@@ -1770,7 +1789,7 @@ class ControllerSaleOrder extends Controller {
 					);
 				}
 
-				$data['orders'][] = array(
+                $data['orders'][] = array(
 					'order_id'	       => $order_id,
 					'invoice_no'       => $invoice_no,
 					'date_added'       => date($this->language->get('date_format_short'), strtotime($order_info['date_added'])),

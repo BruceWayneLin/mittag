@@ -5,7 +5,36 @@
     <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
     <?php } ?>
   </ul>
-  <div class="row"><?php echo $column_left; ?>
+  <script type="text/javascript">
+      $(document).ready(function(){
+          var divAt = $('#actOne').val();
+          var divDesc = $('#actTwo').val();
+          console.log(divAt.length);
+          console.log(divDesc.length);
+          if(divAt.length == 5 && divDesc.length == 5){
+              $('#main-content').hide();
+              $('#activity-content').show();
+          }else{
+              $('#activity-content').hide();
+              $('#main-content').show();
+          }
+      });
+  </script>
+  <div id="activity-content" class="row">
+    <div class="container">
+      <input id="actOne" class="hidden" type="text" value="<?php echo $activity_title == '' ? 'true' : 'false'; ?>"/>
+      <input id="actTwo" class="hidden" type="text" value="<?php echo $activity_desc == '' ? 'true' : 'false'; ?>"/>
+    </div>
+    <div class="container text-center">
+      <h3><?php echo $activity_title; ?></h3>
+    </div>
+    <div class="row">
+      <div class="container text-center">
+        <?php echo $activity_desc; ?>
+      </div>
+    </div>
+  </div>
+  <div id="main-content" class="row"><?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>
     <?php $class = 'col-sm-6'; ?>
     <?php } elseif ($column_left || $column_right) { ?>
@@ -24,11 +53,11 @@
           <?php if ($thumb || $images) { ?>
           <ul class="thumbnails">
             <?php if ($thumb) { ?>
-            <li><a class="thumbnail" href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
+            <li><div class="thumbnail" style="cursor:pointer;" href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"><img id="mainThumb" src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
             <?php } ?>
             <?php if ($images) { ?>
             <?php foreach ($images as $image) { ?>
-            <li class="image-additional"><a class="thumbnail" href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>"> <img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
+            <li class="image-additional"  style="cursor:pointer;"><div class="thumbnail" href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>"> <img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></div></li>
             <?php } ?>
             <?php } ?>
           </ul>
@@ -49,17 +78,17 @@
               <table class="table table-bordered">
                 <?php foreach ($attribute_groups as $attribute_group) { ?>
                 <thead>
-                  <tr>
-                    <td colspan="2"><strong><?php echo $attribute_group['name']; ?></strong></td>
-                  </tr>
+                <tr>
+                  <td colspan="2"><strong><?php echo $attribute_group['name']; ?></strong></td>
+                </tr>
                 </thead>
                 <tbody>
-                  <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
-                  <tr>
-                    <td><?php echo $attribute['name']; ?></td>
-                    <td><?php echo $attribute['text']; ?></td>
-                  </tr>
-                  <?php } ?>
+                <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+                <tr>
+                  <td><?php echo $attribute['name']; ?></td>
+                  <td><?php echo $attribute['text']; ?></td>
+                </tr>
+                <?php } ?>
                 </tbody>
                 <?php } ?>
               </table>
@@ -84,9 +113,9 @@
                     <div class="help-block"><?php echo $text_note; ?></div>
                   </div>
                 </div>
-                <div class="form-group required">
+                <div class="form-group hidden">
                   <div class="col-sm-12">
-                    <label class="control-label"><?php echo $entry_rating; ?></label>
+                    <label class="control-label hidden"><?php echo $entry_rating; ?></label>
                     &nbsp;&nbsp;&nbsp; <?php echo $entry_bad; ?>&nbsp;
                     <input type="radio" name="rating" value="1" />
                     &nbsp;
@@ -96,7 +125,7 @@
                     &nbsp;
                     <input type="radio" name="rating" value="4" />
                     &nbsp;
-                    <input type="radio" name="rating" value="5" />
+                    <input type="radio" name="rating" checked value="5" />
                     &nbsp;<?php echo $entry_good; ?></div>
                 </div>
                 <?php echo $captcha; ?>
@@ -119,11 +148,13 @@
         <?php $class = 'col-sm-4'; ?>
         <?php } ?>
         <div class="<?php echo $class; ?>">
-          <div class="btn-group">
-            <button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><i class="fa fa-heart"></i></button>
-            <button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><i class="fa fa-exchange"></i></button>
-          </div>
-          <h1><?php echo $heading_title; ?></h1>
+          <h1 class="setvaleng" style="font-size:22px;font-weight:bold;">
+            <?php if ($eng_name) { ?>
+            <?php echo $eng_name; ?>
+            <?php } ?>
+          </h1>
+          <span class="getval"><?php echo $heading_title; ?></span>
+          <p class="setval"></p>
           <ul class="list-unstyled">
             <?php if ($manufacturer) { ?>
             <li><?php echo $text_manufacturer; ?> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a></li>
@@ -133,6 +164,68 @@
             <li><?php echo $text_reward; ?> <?php echo $reward; ?></li>
             <?php } ?>
             <li><?php echo $text_stock; ?> <?php echo $stock; ?></li>
+            <?php if ($texture) { ?>
+            <li><?php echo $text_texture; ?> <?php echo $texture; ?></li>
+            <?php } ?>
+            <?php if ($location) { ?>
+            <li><?php echo $text_location; ?> <?php echo $location; ?></li>
+            <?php } ?>
+            <?php if ($deliveringTime == 0 || $deliveringTime == 1) { ?>
+            <li>交貨時間: <?php echo $deliveringTime == '0' ? '約3個工作天，不包含運送時間' : '約14個工作天，不包含運送時間'; ?> </li>
+            <?php } ?>
+            <?php if ($deliveringExtra) { ?>
+            <li style="padding-left: 40px;"><?php echo $deliveringExtra; ?> </li>
+            <?php } ?>
+            <?php if ($length > 0 && $width > 0 && $height > 0) { ?>
+            <?php ?>
+            <li style="">
+              尺寸：長<?php echo $length; ?>cm x 寬<?php echo $width; ?>cm x 高<?php echo $height; ?>cm<br/>
+            </li>
+            <?php } ?>
+            <?php if ($braceLong > 0 &&  $braceWidth > 0 && $braceHeight > 0) { ?>
+            <div style="padding-left:40px;">主飾品尺度：長<?php echo $braceLong; ?>cm x 寬<?php echo $braceWidth; ?>cm x 高<?php echo $braceHeight; ?>cm</div>
+            <?php } ?>
+            <?php if ($secondaryNote) { ?>
+            <div class="hidden" style="padding-left:40px;"><?php echo $secondaryNote; ?></div>
+            <?php } ?>
+            <?php if ($braceNote) { ?>
+            <li style="padding-left: 40px;"><?php echo $braceNote; ?> </li>
+            <?php } ?>
+            <?php if ($braceSeleLen) { ?>
+            <li>手鍊長度: <?php echo $braceSeleLen; ?> cm</li>
+            <?php if ( $extraDetail2) {
+                     echo '<li>' . $extraDetail2 . '</li>' ;
+            }
+            ?>
+            <?php } ?>
+            <?php if ($necklaceLength) { ?>
+            <li>項鍊長度: <?php echo $necklaceLength; ?> cm</li>
+            <?php } ?>
+            <?php if ( $extraDetail3) {
+                     echo '<li>' . $extraDetail3 . '</li>' ;
+            }
+            ?>
+            <?php if ($braceletDiameter) { ?>
+            <li>請選擇手環內圍直徑:
+              <select name="" id="braceSelect" class="form-control">
+                <option value="5.5">S (內圍直徑5.5cm)</option>
+                <?php if($braceletDiameterMax == '6.0') {
+                            echo "<option value='6.0'>M (內圍直徑6.0cm)</option>";
+                } ?>
+                <?php if($braceletDiameterMax == '6.5') {
+                            echo "<option value='6.0'>M (內圍直徑6.0cm)</option>";
+                echo "<option value='6.5'>L (內圍直徑6.5cm)</option>";
+                } ?>
+              </select>
+            </li>
+            <?php } ?>
+            <?php if ($earingType) { ?>
+            <li>耳環形式: <?php echo $earingType; ?></li>
+            <?php } ?>
+            <?php if ( $extraDetail2) {
+                     echo '<li>' . $extraDetail4 . '</li>' ;
+            }
+            ?>
           </ul>
           <?php if ($price) { ?>
           <ul class="list-unstyled">
@@ -147,7 +240,7 @@
             </li>
             <?php } ?>
             <?php if ($tax) { ?>
-            <li><?php echo $text_tax; ?> <?php echo $tax; ?></li>
+            <li class="hidden"><?php echo $text_tax; ?> <?php echo $tax; ?></li>
             <?php } ?>
             <?php if ($points) { ?>
             <li><?php echo $text_points; ?> <?php echo $points; ?></li>
@@ -174,9 +267,9 @@
                 <option value=""><?php echo $text_select; ?></option>
                 <?php foreach ($option['product_option_value'] as $option_value) { ?>
                 <option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
-                <?php if ($option_value['price']) { ?>
-                (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
-                <?php } ?>
+                  <?php if ($option_value['price']) { ?>
+                  (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
+                  <?php } ?>
                 </option>
                 <?php } ?>
               </select>
@@ -191,8 +284,8 @@
                   <label>
                     <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" />
                     <?php if ($option_value['image']) { ?>
-                    <img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail" /> 
-                    <?php } ?>                    
+                    <img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail" />
+                    <?php } ?>
                     <?php echo $option_value['name']; ?>
                     <?php if ($option_value['price']) { ?>
                     (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
@@ -212,7 +305,7 @@
                   <label>
                     <input type="checkbox" name="option[<?php echo $option['product_option_id']; ?>][]" value="<?php echo $option_value['product_option_value_id']; ?>" />
                     <?php if ($option_value['image']) { ?>
-                    <img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail" /> 
+                    <img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail" />
                     <?php } ?>
                     <?php echo $option_value['name']; ?>
                     <?php if ($option_value['price']) { ?>
@@ -289,301 +382,400 @@
             </div>
             <?php } ?>
             <div class="form-group">
-              <label class="control-label" for="input-quantity"><?php echo $entry_qty; ?></label>
-              <input type="text" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
-              <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
-              <br />
-              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><?php echo $button_cart; ?></button>
+              <?php echo ($ringSizeEnd == 0 || $ringSizeStart == 0) ? '<label class="hidden control-label" name="">選擇戒圍:</label><select class="hidden" id="ringSizeSelected" name="ringSizeSelected">' : '<label class="control-label" name="ringSizeSelected">選擇戒圍:</label><select class="form-control" id="ringSizeSelected" name="ringSizeSelected">'; ?>
+                  <?php
+                            $start = intval($ringSizeStart);
+                            $end = intval($ringSizeEnd);
+                            var_dump($start);
+                            var_dump($end);
+                            foreach($ringSizes as $value) {
+                                 $id = intval($value["id"]);
+                                 if(($id >= $start) && ($id <= $end)) {
+                  echo '<option class="form-control" value="' . $value["size"] . '">' . $value["size"] . '</option>';
+                  }
+                  }
+                  ?>
+                  <?php echo '</select>'; ?>
+                  <?php
+                              if ( $extraDetail) {
+                                  echo '<div>' . $extraDetail . '</div>' ;
+                    }
+                  ?>
+                  <?php
+                                     echo '<a target="_blank" style="font-weight: 400px; font-size:12px; color:#337ab7" href="./index.php?route=information/information&information_id=5">尺寸對照表</a>';
+                  ?>
+                  <div class="extraDetail">
+                    <?php
+
+                 
+                  if ( $extraDetail4) {
+                  echo '<div>' . $extraDetail4 . '</div>' ;
+                  }
+                  ?>
             </div>
-            <?php if ($minimum > 1) { ?>
-            <div class="alert alert-info"><i class="fa fa-info-circle"></i> <?php echo $text_minimum; ?></div>
-            <?php } ?>
           </div>
-          <?php if ($review_status) { ?>
-          <div class="rating hidden">
-            <p>
-              <?php for ($i = 1; $i <= 5; $i++) { ?>
-              <?php if ($rating < $i) { ?>
-              <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
-              <?php } else { ?>
-              <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
-              <?php } ?>
-              <?php } ?>
-              <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;"><?php echo $reviews; ?></a> / <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;"><?php echo $text_write; ?></a></p>
-            <hr>
-            <!-- AddThis Button BEGIN -->
-            <div class="addthis_toolbox addthis_default_style" data-url="<?php echo $share; ?>"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
-            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>
-            <!-- AddThis Button END -->
+          <input type="text" id="braceSeleLen" name="braceSeleLen" class="hidden" value="<?php echo  $braceSeleLen; ?>">
+          <input type="text" id="necklaceLength" name="necklaceLength" class="hidden" value="<?php echo  $necklaceLength; ?>">
+          <input type="text" id="braceletDiameter" name="braceletDiameter" class="braceletDaiInput hidden" value="">
+          <input type="text" id="earingType" name="earingType" class="hidden" value="<?php echo $earingType; ?>">
+          <div class="form-group">
+            <label class="control-label" for="input-quantity"><?php echo $entry_qty; ?></label>
+            <input type="text" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
+            <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
+            <br />
+            <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><?php echo $button_cart; ?></button>
           </div>
+          <?php if ($minimum > 1) { ?>
+          <div class="alert alert-info"><i class="fa fa-info-circle"></i> <?php echo $text_minimum; ?></div>
           <?php } ?>
         </div>
-      </div>
-      <?php if ($products) { ?>
-      <h3><?php echo $text_related; ?></h3>
-      <div class="row">
-        <?php $i = 0; ?>
-        <?php foreach ($products as $product) { ?>
-        <?php if ($column_left && $column_right) { ?>
-        <?php $class = 'col-xs-8 col-sm-6'; ?>
-        <?php } elseif ($column_left || $column_right) { ?>
-        <?php $class = 'col-xs-6 col-md-4'; ?>
-        <?php } else { ?>
-        <?php $class = 'col-xs-6 col-sm-3'; ?>
+        <?php if ($review_status) { ?>
+        <div class="rating">
+          <p>
+            <?php for ($i = 1; $i <= 5; $i++) { ?>
+            <?php if ($rating < $i) { ?>
+            <span class="fa fa-stack hidden"><i class="fa fa-star-o fa-stack-1x hidden"></i></span>
+            <?php } else { ?>
+            <span class="fa fa-stack hidden"><i class="fa fa-star fa-stack-1x hidden"></i><i class="fa fa-star-o fa-stack-1x hidden"></i></span>
+            <?php } ?>
+            <?php } ?>
+            <a class="hidden" href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;"><?php echo $reviews; ?></a> <a  class="hidden" href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;"><?php echo $text_write; ?></a></p>
+          <hr>
+          <!-- AddThis Button BEGIN -->
+          <div class="addthis_toolbox addthis_default_style" data-url="<?php echo $share; ?>"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
+          <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>
+          <!-- AddThis Button END -->
+        </div>
         <?php } ?>
-        <div class="<?php echo $class; ?>">
-          <div class="product-thumb transition">
-            <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
-            <div class="caption">
-              <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
-              <p><?php echo $product['description']; ?></p>
-              <?php if ($product['rating']) { ?>
-              <div class="rating">
-                <?php for ($j = 1; $j <= 5; $j++) { ?>
-                <?php if ($product['rating'] < $j) { ?>
-                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
-                <?php } else { ?>
-                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
-                <?php } ?>
-                <?php } ?>
-              </div>
+      </div>
+    </div>
+    <?php if ($products) { ?>
+    <h3><?php echo $text_related; ?></h3>
+    <div class="row">
+      <?php $i = 0; ?>
+      <?php foreach ($products as $product) { ?>
+      <?php if ($column_left && $column_right) { ?>
+      <?php $class = 'col-xs-8 col-sm-6'; ?>
+      <?php } elseif ($column_left || $column_right) { ?>
+      <?php $class = 'col-xs-6 col-md-4'; ?>
+      <?php } else { ?>
+      <?php $class = 'col-xs-6 col-sm-3'; ?>
+      <?php } ?>
+      <div class="<?php echo $class; ?>">
+        <div class="product-thumb transition">
+          <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
+          <div class="caption">
+            <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
+            <p><?php echo $product['description']; ?></p>
+            <?php if ($product['rating']) { ?>
+            <div class="rating">
+              <?php for ($j = 1; $j <= 5; $j++) { ?>
+              <?php if ($product['rating'] < $j) { ?>
+              <span class="fa fa-stack hidden"><i class="fa fa-star-o fa-stack-1x hidden"></i></span>
+              <?php } else { ?>
+              <span class="fa fa-stack hidden"><i class="fa fa-star fa-stack-1x hidden"></i><i class="fa fa-star-o fa-stack-1x hidden"></i></span>
               <?php } ?>
-              <?php if ($product['price']) { ?>
-              <p class="price">
-                <?php if (!$product['special']) { ?>
-                <?php echo $product['price']; ?>
-                <?php } else { ?>
-                <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
-                <?php } ?>
-                <?php if ($product['tax']) { ?>
-                <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
-                <?php } ?>
-              </p>
               <?php } ?>
             </div>
-            <div class="button-group">
-              <button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span> <i class="fa fa-shopping-cart"></i></button>
-              <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
-              <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
-            </div>
+            <?php } ?>
+            <?php if ($product['price']) { ?>
+            <p class="price">
+              <?php if (!$product['special']) { ?>
+              <?php echo $product['price']; ?>
+              <?php } else { ?>
+              <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+              <?php } ?>
+              <?php if ($product['tax']) { ?>
+              <span class="price-tax hidden"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+              <?php } ?>
+            </p>
+            <?php } ?>
+          </div>
+          <div class="button-group">
+            <button type="button" class="hidden" style="width:100%;" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span> <i class="fa fa-shopping-cart"></i></button>
+            <button class="hidden" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
+            <button class="hidden" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
           </div>
         </div>
-        <?php if (($column_left && $column_right) && (($i+1) % 2 == 0)) { ?>
-        <div class="clearfix visible-md visible-sm"></div>
-        <?php } elseif (($column_left || $column_right) && (($i+1) % 3 == 0)) { ?>
-        <div class="clearfix visible-md"></div>
-        <?php } elseif (($i+1) % 4 == 0) { ?>
-        <div class="clearfix visible-md"></div>
-        <?php } ?>
-        <?php $i++; ?>
-        <?php } ?>
       </div>
+      <?php if (($column_left && $column_right) && (($i+1) % 2 == 0)) { ?>
+      <div class="clearfix visible-md visible-sm"></div>
+      <?php } elseif (($column_left || $column_right) && (($i+1) % 3 == 0)) { ?>
+      <div class="clearfix visible-md"></div>
+      <?php } elseif (($i+1) % 4 == 0) { ?>
+      <div class="clearfix visible-md"></div>
       <?php } ?>
-      <?php if ($tags) { ?>
-      <p><?php echo $text_tags; ?>
-        <?php for ($i = 0; $i < count($tags); $i++) { ?>
-        <?php if ($i < (count($tags) - 1)) { ?>
-        <a href="<?php echo $tags[$i]['href']; ?>"><?php echo $tags[$i]['tag']; ?></a>,
-        <?php } else { ?>
-        <a href="<?php echo $tags[$i]['href']; ?>"><?php echo $tags[$i]['tag']; ?></a>
-        <?php } ?>
-        <?php } ?>
-      </p>
+      <?php $i++; ?>
       <?php } ?>
-      <?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
+    </div>
+    <?php } ?>
+    <?php if ($tags) { ?>
+    <p><?php echo $text_tags; ?>
+      <?php for ($i = 0; $i < count($tags); $i++) { ?>
+      <?php if ($i < (count($tags) - 1)) { ?>
+      <a href="<?php echo $tags[$i]['href']; ?>"><?php echo $tags[$i]['tag']; ?></a>,
+      <?php } else { ?>
+      <a href="<?php echo $tags[$i]['href']; ?>"><?php echo $tags[$i]['tag']; ?></a>
+      <?php } ?>
+      <?php } ?>
+    </p>
+    <?php } ?>
+    <?php echo $content_bottom; ?></div>
+  <?php echo $column_right; ?></div>
 </div>
+<style>
+  #mainThumb {
+    width: 100%!important;
+  }
+</style>
 <script type="text/javascript"><!--
-$('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
-	$.ajax({
-		url: 'index.php?route=product/product/getRecurringDescription',
-		type: 'post',
-		data: $('input[name=\'product_id\'], input[name=\'quantity\'], select[name=\'recurring_id\']'),
-		dataType: 'json',
-		beforeSend: function() {
-			$('#recurring-description').html('');
-		},
-		success: function(json) {
-			$('.alert, .text-danger').remove();
+    $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
+        $.ajax({
+            url: 'index.php?route=product/product/getRecurringDescription',
+            type: 'post',
+            data: $('input[name=\'product_id\'], input[name=\'quantity\'], select[name=\'recurring_id\']'),
+            dataType: 'json',
+            beforeSend: function() {
+                $('#recurring-description').html('');
+            },
+            success: function(json) {
+                $('.alert, .text-danger').remove();
 
-			if (json['success']) {
-				$('#recurring-description').html(json['success']);
-			}
-		}
-	});
-});
-//--></script>
+                if (json['success']) {
+                    $('#recurring-description').html(json['success']);
+                }
+            }
+        });
+    });
+    //--></script>
 <script type="text/javascript"><!--
-$('#button-cart').on('click', function() {
-	$.ajax({
-		url: 'index.php?route=checkout/cart/add',
-		type: 'post',
-		data: $('#product input[type=\'text\'], #product input[type=\'hidden\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select, #product textarea'),
-		dataType: 'json',
-		beforeSend: function() {
-			$('#button-cart').button('loading');
-		},
-		complete: function() {
-			$('#button-cart').button('reset');
-		},
-		success: function(json) {
-			$('.alert, .text-danger').remove();
-			$('.form-group').removeClass('has-error');
+    $(document).ready(function(){
+        $('#braceSelect').on('click', function(){
+            $('.braceletDaiInput').val($(this).val());
+        });
+    });
+    var textval = $('.getval').text();
+    var text = textval.split(' ');
+    var textLen = text.length - 2;
+    var rearray = '';
+    var engarray = '';
+    //  for(var i = 0; i <= text.length; i ++) {
+    //     if(text[i].match(/[\u3400-\u9FBF]/)) {
+    //       rearray = text[i];
+    //       $('.setval').append(rearray);
+    //     } else {
+    //       engarray += ' ' + text[i];
+    //       if(i == textLen) {
+    //         $('.setvaleng').append(engarray);
+    //           console.log(i, engarray);
+    //       }
+    //     }
+    //  };
 
-			if (json['error']) {
-				if (json['error']['option']) {
-					for (i in json['error']['option']) {
-						var element = $('#input-option' + i.replace('_', '-'));
+    $('#button-cart').on('click', function() {
+        $.ajax({
+            url: 'index.php?route=checkout/cart/add',
+            type: 'post',
+            data: $('#product select option:selected, #product input[type=\'text\'], #product input[type=\'hidden\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select, #product textarea'),
+            dataType: 'json',
+            beforeSend: function() {
+                $('#button-cart').button('loading');
+            },
+            complete: function() {
+                $('#button-cart').button('reset');
+            },
+            success: function(json) {
+                $('.alert, .text-danger').remove();
+                $('.form-group').removeClass('has-error');
 
-						if (element.parent().hasClass('input-group')) {
-							element.parent().after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
-						} else {
-							element.after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
-						}
-					}
-				}
+                if (json['error']) {
+                    if (json['error']['option']) {
+                        for (i in json['error']['option']) {
+                            var element = $('#input-option' + i.replace('_', '-'));
 
-				if (json['error']['recurring']) {
-					$('select[name=\'recurring_id\']').after('<div class="text-danger">' + json['error']['recurring'] + '</div>');
-				}
+                            if (element.parent().hasClass('input-group')) {
+                                element.parent().after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+                            } else {
+                                element.after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+                            }
+                        }
+                    }
 
-				// Highlight any found errors
-				$('.text-danger').parent().addClass('has-error');
-			}
+                    if (json['error']['recurring']) {
+                        $('select[name=\'recurring_id\']').after('<div class="text-danger">' + json['error']['recurring'] + '</div>');
+                    }
 
-			if (json['success']) {
-				$('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+                    // Highlight any found errors
+                    $('.text-danger').parent().addClass('has-error');
+                }
 
-				$('#cart > button').html('<span id="cart-total"><i class="fa fa-shopping-cart"></i> ' + json['total'] + '</span>');
+                if (json['success']) {
+                    $('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
 
-				$('html, body').animate({ scrollTop: 0 }, 'slow');
+                    $('#cart > button').html('<span id="cart-total"><i class="fa fa-shopping-cart"></i> ' + json['total'] + '</span>');
 
-				$('#cart > ul').load('index.php?route=common/cart/info ul li');
-			}
-		},
-        error: function(xhr, ajaxOptions, thrownError) {
-            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                    $('html, body').animate({ scrollTop: 0 }, 'slow');
+
+                    $('#cart > ul').load('index.php?route=common/cart/info ul li');
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
+        });
+    });
+    //--></script>
+<script type="text/javascript"><!--
+    $('.date').datetimepicker({
+        pickTime: false
+    });
+
+    $('.datetime').datetimepicker({
+        pickDate: true,
+        pickTime: true
+    });
+
+    $('.time').datetimepicker({
+        pickDate: false
+    });
+
+    $('button[id^=\'button-upload\']').on('click', function() {
+        var node = this;
+
+        $('#form-upload').remove();
+
+        $('body').prepend('<form enctype="multipart/form-data" id="form-upload" style="display: none;"><input type="file" name="file" /></form>');
+
+        $('#form-upload input[name=\'file\']').trigger('click');
+
+        if (typeof timer != 'undefined') {
+            clearInterval(timer);
         }
-	});
-});
-//--></script>
+
+        timer = setInterval(function() {
+            if ($('#form-upload input[name=\'file\']').val() != '') {
+                clearInterval(timer);
+
+                $.ajax({
+                    url: 'index.php?route=tool/upload',
+                    type: 'post',
+                    dataType: 'json',
+                    data: new FormData($('#form-upload')[0]),
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    beforeSend: function() {
+                        $(node).button('loading');
+                    },
+                    complete: function() {
+                        $(node).button('reset');
+                    },
+                    success: function(json) {
+                        $('.text-danger').remove();
+
+                        if (json['error']) {
+                            $(node).parent().find('input').after('<div class="text-danger">' + json['error'] + '</div>');
+                        }
+
+                        if (json['success']) {
+                            alert(json['success']);
+
+                            $(node).parent().find('input').val(json['code']);
+                        }
+                    },
+                    error: function(xhr, ajaxOptions, thrownError) {
+                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                    }
+                });
+            }
+        }, 500);
+    });
+    //--></script>
 <script type="text/javascript"><!--
-$('.date').datetimepicker({
-	pickTime: false
-});
+    $('#review').delegate('.pagination a', 'click', function(e) {
+        e.preventDefault();
 
-$('.datetime').datetimepicker({
-	pickDate: true,
-	pickTime: true
-});
+        $('#review').fadeOut('slow');
 
-$('.time').datetimepicker({
-	pickDate: false
-});
+        $('#review').load(this.href);
 
-$('button[id^=\'button-upload\']').on('click', function() {
-	var node = this;
+        $('#review').fadeIn('slow');
+    });
 
-	$('#form-upload').remove();
+    $('#review').load('index.php?route=product/product/review&product_id=<?php echo $product_id; ?>');
 
-	$('body').prepend('<form enctype="multipart/form-data" id="form-upload" style="display: none;"><input type="file" name="file" /></form>');
+    $('#button-review').on('click', function() {
+        $.ajax({
+            url: 'index.php?route=product/product/write&product_id=<?php echo $product_id; ?>',
+            type: 'post',
+            dataType: 'json',
+            data: $("#form-review").serialize(),
+            beforeSend: function() {
+                $('#button-review').button('loading');
+            },
+            complete: function() {
+                $('#button-review').button('reset');
+            },
+            success: function(json) {
+                $('.alert-success, .alert-danger').remove();
 
-	$('#form-upload input[name=\'file\']').trigger('click');
+                if (json['error']) {
+                    $('#review').after('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '</div>');
+                }
 
-	if (typeof timer != 'undefined') {
-    	clearInterval(timer);
-	}
+                if (json['success']) {
+                    $('#review').after('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
 
-	timer = setInterval(function() {
-		if ($('#form-upload input[name=\'file\']').val() != '') {
-			clearInterval(timer);
+                    $('input[name=\'name\']').val('');
+                    $('textarea[name=\'text\']').val('');
+                    $('input[name=\'rating\']:checked').prop('checked', false);
+                }
+            }
+        });
+    });
 
-			$.ajax({
-				url: 'index.php?route=tool/upload',
-				type: 'post',
-				dataType: 'json',
-				data: new FormData($('#form-upload')[0]),
-				cache: false,
-				contentType: false,
-				processData: false,
-				beforeSend: function() {
-					$(node).button('loading');
-				},
-				complete: function() {
-					$(node).button('reset');
-				},
-				success: function(json) {
-					$('.text-danger').remove();
-
-					if (json['error']) {
-						$(node).parent().find('input').after('<div class="text-danger">' + json['error'] + '</div>');
-					}
-
-					if (json['success']) {
-						alert(json['success']);
-
-						$(node).parent().find('input').val(json['code']);
-					}
-				},
-				error: function(xhr, ajaxOptions, thrownError) {
-					alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-				}
-			});
-		}
-	}, 500);
-});
-//--></script>
-<script type="text/javascript"><!--
-$('#review').delegate('.pagination a', 'click', function(e) {
-    e.preventDefault();
-
-    $('#review').fadeOut('slow');
-
-    $('#review').load(this.href);
-
-    $('#review').fadeIn('slow');
-});
-
-$('#review').load('index.php?route=product/product/review&product_id=<?php echo $product_id; ?>');
-
-$('#button-review').on('click', function() {
-	$.ajax({
-		url: 'index.php?route=product/product/write&product_id=<?php echo $product_id; ?>',
-		type: 'post',
-		dataType: 'json',
-		data: $("#form-review").serialize(),
-		beforeSend: function() {
-			$('#button-review').button('loading');
-		},
-		complete: function() {
-			$('#button-review').button('reset');
-		},
-		success: function(json) {
-			$('.alert-success, .alert-danger').remove();
-
-			if (json['error']) {
-				$('#review').after('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '</div>');
-			}
-
-			if (json['success']) {
-				$('#review').after('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
-
-				$('input[name=\'name\']').val('');
-				$('textarea[name=\'text\']').val('');
-				$('input[name=\'rating\']:checked').prop('checked', false);
-			}
-		}
-	});
-});
-
-$(document).ready(function() {
-	$('.thumbnails').magnificPopup({
-		type:'image',
-		delegate: 'a',
-		gallery: {
-			enabled:true
-		}
-	});
-});
-//--></script>
+    $(document).ready(function() {
+        setTimeout(function(){
+            $('.fa.fa-stack').addClass('hidden');
+        }, 300);
+        $(document).on('click', '.thumbnail', function () {
+            var src = $(this).attr('href');
+            console.log(src);
+            $('#mainThumb').attr('src', src);
+        });
+        $('.thumbnails').magnificPopup({
+            type:'image',
+            delegate: 'a',
+            gallery: {
+                enabled:true
+            }
+        });
+    });
+    //--></script>
 <?php echo $footer; ?>
+
+<style>
+  .extraDetail {
+    white-space: pre;
+    font-size: 3px;
+    font-weight: 800;
+    margin: 0px;
+    height: 70px;
+  }
+  .extraDetail div {
+    position: relative;
+    top: -36px;
+  }
+  .caption {
+    font-weight: normal;
+  }
+  .caption p {
+    font-size: 12px;
+  }
+  .price {
+    font-weight: bold;
+  }
+  #tab-description {
+    font-weight: normal;
+  }
+</style>

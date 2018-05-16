@@ -3,9 +3,9 @@
 $_['heading_title']      = '帳戶資訊';
 
 // Text
-$_['text_account']       = '我的帳戶';
-$_['text_my_account']    = '我的帳戶';
-$_['text_my_orders']     = '我的訂單';
+$_['text_account']       = '會員中心';
+$_['text_my_account']    = '會員中心';
+$_['text_my_orders']     = ''; // 我的訂單
 $_['text_my_newsletter'] = '我的訂閱';
 $_['text_edit']          = '修改會員資料';
 $_['text_password']      = '修改密碼';

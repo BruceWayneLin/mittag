@@ -35,6 +35,9 @@ class ControllerStartupPermission extends Controller {
 			
 			// We want to ingore some pages from having its permission checked. 
 			$ignore = array(
+                'common/emailthanks',
+                'common/email',
+				'common/blog',
 				'common/dashboard',
 				'common/login',
 				'common/logout',

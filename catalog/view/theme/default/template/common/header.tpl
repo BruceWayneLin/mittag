@@ -44,23 +44,26 @@
     <?php echo $language; ?>
     <div id="top-links" class="nav pull-right">
       <ul class="list-inline">
-        <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span> <span class="caret"></span></a>
+        <li><div onclick="toOpenDialog()" class="lineLogo" data-toggle="modal" data-target="#myModal"></div></li>
+        <li><a class="instaLogo" target="_blank" href="https://www.instagram.com/mittagnatureme/"></a></li>
+        <li><a class="fbLogo" target="_blank" href="https://www.facebook.com/mittagNatureME/"></a></li>
+        <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md" style="display:none;"><?php echo $text_account; ?></span> <span class="caret"></span></a>
           <ul class="dropdown-menu dropdown-menu-right">
             <?php if ($logged) { ?>
             <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
             <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
-            <li><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li>
-            <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
+            <li class="hidden"><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li>
+            <li class="hidden"><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
             <li><a href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>
             <?php } else { ?>
-            <li><a href="<?php echo $register; ?>"><?php echo $text_register; ?></a></li>
-            <li><a href="<?php echo $login; ?>"><?php echo $text_login; ?></a></li>
+            <li class="hidden"><a href="<?php echo $register; ?>"></a></li>
+            <li><a href="<?php echo $login; ?>"><?php echo $text_register; ?>/<?php echo $text_login; ?></a></li>　
             <?php } ?>
           </ul>
         </li>
-        <li><a href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_wishlist; ?></span></a></li>
-        <li><a href="<?php echo $shopping_cart; ?>" title="<?php echo $text_shopping_cart; ?>"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_shopping_cart; ?></span></a></li>
-        <li><a href="<?php echo $checkout; ?>" title="<?php echo $text_checkout; ?>"><i class="fa fa-share"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_checkout; ?></span></a></li>
+        <li class="hidden"><a href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_wishlist; ?></span></a></li>
+        <li><a href="<?php echo $shopping_cart; ?>" title="<?php echo $text_shopping_cart; ?>"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md" style="display:none;"><?php echo $text_shopping_cart; ?></span></a></li>
+        <li class="hidden"><a href="<?php echo $checkout; ?>" title="<?php echo $text_checkout; ?>"><i class="fa fa-share"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_checkout; ?></span></a></li>
       </ul>
     </div>
   </div>
@@ -82,4 +85,71 @@
       <div class="col-sm-3"><?php echo $cart; ?></div>
     </div>
   </div>
+  <div class="container">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title text-center">QRCODE加入我們的mittag粉絲群</h2>
+          </div>
+          <div class="modal-body">
+            <div id="qr"></div>
+          </div>
+          <div class="modal-footer">
+            <button style="display:block; margin:0 auto;" type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
+<style>
+  .lineLogo {
+    cursor:pointer;
+    background:url('./css/img/line.png') no-repeat center;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+  }
+  #qr {
+    background:url('./css/img/lineQR.jpg') no-repeat center;
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    max-width: 220px;
+    background-size: contain;
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
+    top: 5px;
+    margin: 0 auto;
+  }
+  .instaLogo {
+    cursor:pointer;
+    background:url('./css/img/insta.png') no-repeat center;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+  }
+  .fbLogo {
+    cursor:pointer;
+    background:url('./css/img/facebook.png') no-repeat center;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+  }
+</style>

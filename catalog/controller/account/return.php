@@ -542,9 +542,9 @@ class ControllerAccountReturn extends Controller {
 	}
 
 	protected function validate() {
-		if (!$this->request->post['order_id']) {
-			$this->error['order_id'] = $this->language->get('error_order_id');
-		}
+//		if (!$this->request->post['order_id']) {
+//			$this->error['order_id'] = $this->language->get('error_order_id');
+//		}
 
 		if ((utf8_strlen(trim($this->request->post['firstname'])) < 1) || (utf8_strlen(trim($this->request->post['firstname'])) > 32)) {
 			$this->error['firstname'] = $this->language->get('error_firstname');

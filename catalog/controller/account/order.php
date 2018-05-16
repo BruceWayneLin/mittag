@@ -6,7 +6,6 @@ class ControllerAccountOrder extends Controller {
 
 			$this->response->redirect($this->url->link('account/login', '', true));
 		}
-
 		$this->load->language('account/order');
 
 		$this->document->setTitle($this->language->get('heading_title'));
@@ -70,6 +69,7 @@ class ControllerAccountOrder extends Controller {
 				'order_id'   => $result['order_id'],
 				'name'       => $result['firstname'] . ' ' . $result['lastname'],
 				'status'     => $result['status'],
+				'1234' => '43123414312412',
 				'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
 				'products'   => ($product_total + $voucher_total),
 				'total'      => $this->currency->format($result['total'], $result['currency_code'], $result['currency_value']),

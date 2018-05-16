@@ -42,6 +42,10 @@ class ControllerCatalogProduct extends Controller {
 				$url .= '&filter_quantity=' . $this->request->get['filter_quantity'];
 			}
 
+            if (isset($this->request->get['filter_date_available'])) {
+                $url .= '&filter_date_available=' . $this->request->get['filter_date_available'];
+            }
+
 			if (isset($this->request->get['filter_status'])) {
 				$url .= '&filter_status=' . $this->request->get['filter_status'];
 			}
@@ -93,6 +97,10 @@ class ControllerCatalogProduct extends Controller {
 			if (isset($this->request->get['filter_quantity'])) {
 				$url .= '&filter_quantity=' . $this->request->get['filter_quantity'];
 			}
+
+            if (isset($this->request->get['filter_date_available'])) {
+                $url .= '&filter_date_available=' . $this->request->get['filter_date_available'];
+            }
 
 			if (isset($this->request->get['filter_status'])) {
 				$url .= '&filter_status=' . $this->request->get['filter_status'];
@@ -148,6 +156,10 @@ class ControllerCatalogProduct extends Controller {
 				$url .= '&filter_quantity=' . $this->request->get['filter_quantity'];
 			}
 
+            if (isset($this->request->get['filter_date_available'])) {
+                $url .= '&filter_date_available=' . $this->request->get['filter_date_available'];
+            }
+
 			if (isset($this->request->get['filter_status'])) {
 				$url .= '&filter_status=' . $this->request->get['filter_status'];
 			}
@@ -202,6 +214,10 @@ class ControllerCatalogProduct extends Controller {
 				$url .= '&filter_quantity=' . $this->request->get['filter_quantity'];
 			}
 
+            if (isset($this->request->get['filter_date_available'])) {
+                $url .= '&filter_date_available=' . $this->request->get['filter_date_available'];
+            }
+
 			if (isset($this->request->get['filter_status'])) {
 				$url .= '&filter_status=' . $this->request->get['filter_status'];
 			}
@@ -248,6 +264,12 @@ class ControllerCatalogProduct extends Controller {
 		} else {
 			$filter_quantity = null;
 		}
+
+        if (isset($this->request->get['filter_date_available'])) {
+            $filter_date_available = $this->request->get['filter_date_available'];
+        } else {
+            $filter_date_available = null;
+        }
 
 		if (isset($this->request->get['filter_status'])) {
 			$filter_status = $this->request->get['filter_status'];
@@ -297,6 +319,10 @@ class ControllerCatalogProduct extends Controller {
 			$url .= '&filter_quantity=' . $this->request->get['filter_quantity'];
 		}
 
+        if (isset($this->request->get['filter_date_available'])) {
+            $url .= '&filter_date_available=' . $this->request->get['filter_date_available'];
+        }
+
 		if (isset($this->request->get['filter_status'])) {
 			$url .= '&filter_status=' . $this->request->get['filter_status'];
 		}
@@ -340,6 +366,7 @@ class ControllerCatalogProduct extends Controller {
 			'filter_model'	  => $filter_model,
 			'filter_price'	  => $filter_price,
 			'filter_quantity' => $filter_quantity,
+            'filter_date_available' => $filter_date_available,
 			'filter_status'   => $filter_status,
 			'filter_image'    => $filter_image,
 			'sort'            => $sort,
@@ -379,6 +406,7 @@ class ControllerCatalogProduct extends Controller {
 				'name'       => $result['name'],
 				'model'      => $result['model'],
 				'price'      => $result['price'],
+				'date_available' => $result['date_available'],
 				'special'    => $special,
 				'quantity'   => $result['quantity'],
 				'status'     => $result['status'] ? $this->language->get('text_enabled') : $this->language->get('text_disabled'),
@@ -455,6 +483,10 @@ class ControllerCatalogProduct extends Controller {
 			$url .= '&filter_quantity=' . $this->request->get['filter_quantity'];
 		}
 
+        if (isset($this->request->get['filter_date_available'])) {
+            $url .= '&filter_date_available=' . $this->request->get['filter_date_available'];
+        }
+
 		if (isset($this->request->get['filter_status'])) {
 			$url .= '&filter_status=' . $this->request->get['filter_status'];
 		}
@@ -477,7 +509,8 @@ class ControllerCatalogProduct extends Controller {
 		$data['sort_model'] = $this->url->link('catalog/product', 'token=' . $this->session->data['token'] . '&sort=p.model' . $url, true);
 		$data['sort_price'] = $this->url->link('catalog/product', 'token=' . $this->session->data['token'] . '&sort=p.price' . $url, true);
 		$data['sort_quantity'] = $this->url->link('catalog/product', 'token=' . $this->session->data['token'] . '&sort=p.quantity' . $url, true);
-		$data['sort_status'] = $this->url->link('catalog/product', 'token=' . $this->session->data['token'] . '&sort=p.status' . $url, true);
+        $data['sort_date_available'] = $this->url->link('catalog/product', 'token=' . $this->session->data['token'] . '&sort=p.date_available' . $url, true);
+        $data['sort_status'] = $this->url->link('catalog/product', 'token=' . $this->session->data['token'] . '&sort=p.status' . $url, true);
 		$data['sort_order'] = $this->url->link('catalog/product', 'token=' . $this->session->data['token'] . '&sort=p.sort_order' . $url, true);
 
 		$url = '';
@@ -497,6 +530,10 @@ class ControllerCatalogProduct extends Controller {
 		if (isset($this->request->get['filter_quantity'])) {
 			$url .= '&filter_quantity=' . $this->request->get['filter_quantity'];
 		}
+
+        if (isset($this->request->get['filter_date_available'])) {
+            $url .= '&filter_filter_date_available=' . $this->request->get['filter_date_available'];
+        }
 
 		if (isset($this->request->get['filter_status'])) {
 			$url .= '&filter_status=' . $this->request->get['filter_status'];
@@ -528,6 +565,7 @@ class ControllerCatalogProduct extends Controller {
 		$data['filter_model'] = $filter_model;
 		$data['filter_price'] = $filter_price;
 		$data['filter_quantity'] = $filter_quantity;
+        $data['filter_date_available'] = $filter_date_available;
 		$data['filter_status'] = $filter_status;
 		$data['filter_image'] = $filter_image;
 
@@ -573,7 +611,8 @@ class ControllerCatalogProduct extends Controller {
 		$data['entry_isbn'] = $this->language->get('entry_isbn');
 		$data['entry_mpn'] = $this->language->get('entry_mpn');
 		$data['entry_location'] = $this->language->get('entry_location');
-		$data['entry_minimum'] = $this->language->get('entry_minimum');
+        $data['entry_texture'] = '材質';
+        $data['entry_minimum'] = $this->language->get('entry_minimum');
 		$data['entry_shipping'] = $this->language->get('entry_shipping');
 		$data['entry_date_available'] = $this->language->get('entry_date_available');
 		$data['entry_quantity'] = $this->language->get('entry_quantity');
@@ -703,6 +742,10 @@ class ControllerCatalogProduct extends Controller {
 			$url .= '&filter_quantity=' . $this->request->get['filter_quantity'];
 		}
 
+        if (isset($this->request->get['filter_date_available'])) {
+            $url .= '&filter_date_available=' . $this->request->get['filter_date_available'];
+        }
+
 		if (isset($this->request->get['filter_status'])) {
 			$url .= '&filter_status=' . $this->request->get['filter_status'];
 		}
@@ -754,7 +797,7 @@ class ControllerCatalogProduct extends Controller {
 		} elseif (isset($this->request->get['product_id'])) {
 			$data['product_description'] = $this->model_catalog_product->getProductDescriptions($this->request->get['product_id']);
 		} else {
-			$data['product_description'] = array();
+			$data['product_description'] = array("手做 手作 handmade 銀飾 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 tiffany georg jensen 喬治傑生 dienes");
 		}
 
 		if (isset($this->request->post['model'])) {
@@ -818,8 +861,127 @@ class ControllerCatalogProduct extends Controller {
 		} elseif (!empty($product_info)) {
 			$data['location'] = $product_info['location'];
 		} else {
-			$data['location'] = '';
+			$data['location'] = 'Taiwan';
 		}
+
+        if (isset($this->request->post['texture'])) {
+            $data['texture'] = $this->request->post['texture'];
+        } elseif (!empty($product_info)) {
+            $data['texture'] = $product_info['texture'];
+        } else {
+            $data['texture'] = '925銀';
+        }
+
+        if (isset($this->request->post['ringSizeStart'])) {
+            $data['ringSizeStart'] = $this->request->post['ringSizeStart'];
+        } elseif (!empty($product_info)) {
+            $data['ringSizeStart'] = $product_info['ringSizeStart'];
+        } else {
+            $data['ringSizeStart'] = '';
+        }
+
+        if (isset($this->request->post['deliveringExtra'])) {
+            $data['deliveringExtra'] = $this->request->post['deliveringExtra'];
+        } elseif (!empty($product_info)) {
+            $data['deliveringExtra'] = $product_info['deliveringExtra'];
+        } else {
+            $data['deliveringExtra'] = '';
+        }
+
+
+        if (isset($this->request->post['extraDetail'])) {
+            $data['extraDetail'] = $this->request->post['extraDetail'];
+        } elseif (!empty($product_info)) {
+            $data['extraDetail'] = $product_info['extraDetail'];
+        } else {
+            $data['extraDetail'] = '';
+        }
+
+        if (isset($this->request->post['extraDetail2'])) {
+            $data['extraDetail2'] = $this->request->post['extraDetail2'];
+        } elseif (!empty($product_info)) {
+            $data['extraDetail2'] = $product_info['extraDetail2'];
+        } else {
+            $data['extraDetail2'] = '';
+        }
+
+        if (isset($this->request->post['extraDetail3'])) {
+            $data['extraDetail3'] = $this->request->post['extraDetail3'];
+        } elseif (!empty($product_info)) {
+            $data['extraDetail3'] = $product_info['extraDetail3'];
+        } else {
+            $data['extraDetail3'] = '';
+        }
+
+        if (isset($this->request->post['extraDetail4'])) {
+            $data['extraDetail4'] = $this->request->post['extraDetail4'];
+        } elseif (!empty($product_info)) {
+            $data['extraDetail4'] = $product_info['extraDetail4'];
+        } else {
+            $data['extraDetail4'] = '';
+        }
+
+        if (isset($this->request->post['braceSeleLen'])) {
+            $data['braceSeleLen'] = $this->request->post['braceSeleLen'];
+        } elseif (!empty($product_info)) {
+            $data['braceSeleLen'] = $product_info['braceSeleLen'];
+        } else {
+            $data['braceSeleLen'] = '';
+        }
+
+        if (isset($this->request->post['braceLong'])) {
+            $data['braceLong'] = $this->request->post['braceLong'];
+        } elseif (!empty($product_info)) {
+            $data['braceLong'] = $product_info['braceLong'];
+        } else {
+            $data['braceLong'] = '';
+        }
+        if (isset($this->request->post['braceHeight'])) {
+            $data['braceHeight'] = $this->request->post['braceHeight'];
+        } elseif (!empty($product_info)) {
+            $data['braceHeight'] = $product_info['braceHeight'];
+        } else {
+            $data['braceHeight'] = '';
+        }
+        if (isset($this->request->post['braceWidth'])) {
+            $data['braceWidth'] = $this->request->post['braceWidth'];
+        } elseif (!empty($product_info)) {
+            $data['braceWidth'] = $product_info['braceWidth'];
+        } else {
+            $data['braceWidth'] = '';
+        }
+
+        if (isset($this->request->post['ringSizeEnd'])) {
+            $data['ringSizeEnd'] = $this->request->post['ringSizeEnd'];
+        } elseif (!empty($product_info)) {
+            $data['ringSizeEnd'] = $product_info['ringSizeEnd'];
+        } else {
+            $data['ringSizeEnd'] = '';
+        }
+
+        if (isset($this->request->post['deliveringTime'])) {
+            $data['deliveringTime'] = $this->request->post['deliveringTime'];
+        } elseif (!empty($product_info)) {
+            $data['deliveringTime'] = $product_info['deliveringTime'];
+        } else {
+            $data['deliveringTime'] = '1';
+        }
+
+        if (isset($this->request->post['braceNote'])) {
+            $data['braceNote'] = $this->request->post['braceNote'];
+        } elseif (!empty($product_info)) {
+            $data['braceNote'] = $product_info['braceNote'];
+        } else {
+            $data['braceNote'] = '';
+        }
+
+        if (isset($this->request->post['secondaryNote'])) {
+            $data['secondaryNote'] = $this->request->post['secondaryNote'];
+        } elseif (!empty($product_info)) {
+            $data['secondaryNote'] = $product_info['secondaryNote'];
+        } else {
+            $data['secondaryNote'] = '';
+        }
 
 		$this->load->model('setting/store');
 
@@ -897,6 +1059,22 @@ class ControllerCatalogProduct extends Controller {
 			$data['quantity'] = 1;
 		}
 
+        if (isset($this->request->post['braceletDiameter'])) {
+            $data['braceletDiameter'] = $this->request->post['braceletDiameter'];
+        } elseif (!empty($product_info)) {
+            $data['braceletDiameter'] = $product_info['braceletDiameter'];
+        } else {
+            $data['braceletDiameter'] = '';
+        }
+
+        if (isset($this->request->post['braceletDiameterMax'])) {
+            $data['braceletDiameterMax'] = $this->request->post['braceletDiameterMax'];
+        } elseif (!empty($product_info)) {
+            $data['braceletDiameterMax'] = $product_info['braceletDiameterMax'];
+        } else {
+            $data['braceletDiameterMax'] = '';
+        }
+
 		if (isset($this->request->post['minimum'])) {
 			$data['minimum'] = $this->request->post['minimum'];
 		} elseif (!empty($product_info)) {
@@ -933,6 +1111,8 @@ class ControllerCatalogProduct extends Controller {
 			$data['stock_status_id'] = 0;
 		}
 
+        $this->load->model('localisation/ring_size');
+        $data['ring_size'] = $this->model_localisation_ring_size->getRingSizes();
 		if (isset($this->request->post['status'])) {
 			$data['status'] = $this->request->post['status'];
 		} elseif (!empty($product_info)) {
@@ -976,6 +1156,46 @@ class ControllerCatalogProduct extends Controller {
 		} else {
 			$data['width'] = '';
 		}
+
+        if (isset($this->request->post['necklaceLength'])) {
+            $data['necklaceLength'] = $this->request->post['necklaceLength'];
+        } elseif (!empty($product_info)) {
+            $data['necklaceLength'] = $product_info['necklaceLength'];
+        } else {
+            $data['necklaceLength'] = '';
+        }
+
+		if (isset($this->request->post['activity_desc'])) {
+			$data['activity_desc'] = $this->request->post['activity_desc'];
+		} elseif (!empty($product_info)) {
+			$data['activity_desc'] = $product_info['activity_desc'];
+		} else {
+			$data['activity_desc'] = '';
+		}
+
+		if (isset($this->request->post['eng_name'])) {
+			$data['eng_name'] = $this->request->post['eng_name'];
+		} elseif (!empty($product_info)) {
+			$data['eng_name'] = $product_info['eng_name'];
+		} else {
+			$data['eng_name'] = '';
+		}
+
+		if (isset($this->request->post['activity_title'])) {
+			$data['activity_title'] = $this->request->post['activity_title'];
+		} elseif (!empty($product_info)) {
+			$data['activity_title'] = $product_info['activity_title'];
+		} else {
+			$data['activity_title'] = '';
+		}
+
+        if (isset($this->request->post['earingType'])) {
+            $data['earingType'] = $this->request->post['earingType'];
+        } elseif (!empty($product_info)) {
+            $data['earingType'] = $product_info['earingType'];
+        } else {
+            $data['earingType'] = '';
+        }
 
 		if (isset($this->request->post['height'])) {
 			$data['height'] = $this->request->post['height'];
@@ -1378,6 +1598,7 @@ class ControllerCatalogProduct extends Controller {
 	}
 
 	public function autocomplete() {
+	    var_dump($this->request->get['discountSelectForProd']);die();
 		$json = array();
 
 		if (isset($this->request->get['filter_name']) || isset($this->request->get['filter_model'])) {

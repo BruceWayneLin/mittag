@@ -24,4 +24,4 @@ $_['email_subject']  = '留言 %s';
 // Errors
 $_['error_name']     = '聯絡人姓名必須在3到32個字元!';
 $_['error_email']    = '錯誤的電子郵件格式!';
-$_['error_enquiry']  = '留言內容必須在10到3000個字元!';
+$_['error_enquiry']  = '留言內容必須在10到999999個字元!';

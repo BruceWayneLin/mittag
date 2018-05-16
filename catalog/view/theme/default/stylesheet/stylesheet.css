@@ -12,8 +12,17 @@ h1, h2, h3, h4, h5, h6 {
 /* default font size */
 .fa {
 	font-size: 15px;
-	color: #4b3900;
+	color: #8a6d3b!important;
 	padding: 0px 5px 0px 5px;
+}
+.fa.fa-times-circle {
+	color: white!important;
+}
+.fa-refresh {
+	color: white!important;
+}
+.input-group-btn i{
+	color:white;
 }
 /* Override the bootstrap defaults */
 h1 {
@@ -376,6 +385,7 @@ footer h5 {
 }
 .pagination {
 	margin: 0;
+	display:none!important;
 }
 /* buttons */
 .buttons {
@@ -530,8 +540,7 @@ a.btn-primary:hover{
 .product-thumb {
 	border: 1px solid #ddd;
 	margin-bottom: 20px;
-	overflow: auto;
-	padding: 5px;
+	overflow: hidden;
 }
 .product-thumb .image {
 	text-align: center;
@@ -618,9 +627,8 @@ h2.price {
 	display: block;
 }
 .product-thumb .button-group {
-	border-top: 1px solid #ddd;
 	background-color: #eee;
-	overflow: auto;
+	overflow: hidden;
 }
 .product-list .product-thumb .button-group {
 	border-left: 1px solid #ddd;
@@ -854,10 +862,74 @@ div.owl-wrapper-outer {
 }
 
 div.owl-item div.item {
-    padding-top: 15px;
-    padding-bottom: 15px;
+  
 }
 
 div#tab-description {
     padding: 15px;
+}
+
+#slideshow0 {
+	margin: 0px;
+}
+.product-thumb .button-group {
+	border-top: none!important;
+	overflow: hidden!important;
+}
+
+@media screen and (max-width: 480px) {
+    button#navbarbar {
+        margin-top: 0px!important; 
+        margin-right: 0px!important; 
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 55px;
+        right: 0;
+    }
+    .navbar-header {
+        position: absolute;
+        top: -188px;
+        right: 0px;
+    }
+    .sidebar-nav {
+        position: relative;
+        top: -60px;
+        right: 0px;
+    }
+    
+    .alert.alert-success {
+        position: absolute;
+        width: 85%;
+        display: inline-block;
+        margin: 0 auto;
+        left: 7%;
+        top: 45%;
+    }
+    
+    #nav-wayne {
+        border:none;
+    }
+    
+    #nav-wayne .navbar-collapse.sidebar-navbar-collapse.collapse.in{
+        padding: 0px;
+        top: 0px;
+        position: absolute;
+        z-index: 99999;
+        width: 120%;
+        background: white;
+        display: block;
+        left: -10%;
+    }
+    
+    #nav-wayne .nav.navbar-nav li {
+       background: black;
+    }
+     #nav-wayne .nav.navbar-nav li a{
+       color: white;
+    }
+    
+    .owl-carousel.owl-theme {
+        margin-top: 45px!important;
+    }
 }

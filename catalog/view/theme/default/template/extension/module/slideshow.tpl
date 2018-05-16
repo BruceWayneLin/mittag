@@ -12,10 +12,10 @@
 <script type="text/javascript"><!--
 $('#slideshow<?php echo $module; ?>').owlCarousel({
 	items: 6,
-	autoPlay: 3000,
+    dots: true,
+	autoPlay: 5000,
 	singleItem: true,
-	navigation: true,
+	navigation: false,
 	navigationText: ['<i class="fa fa-chevron-left fa-5x"></i>', '<i class="fa fa-chevron-right fa-5x"></i>'],
-	pagination: true
 });
 --></script>

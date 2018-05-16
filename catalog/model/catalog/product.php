@@ -21,10 +21,15 @@ class ModelCatalogProduct extends Model {
 				'upc'              => $query->row['upc'],
 				'ean'              => $query->row['ean'],
 				'jan'              => $query->row['jan'],
+                'ringSizeStart'    => $query->row['ringSizeStart'],
+                'ringSizeEnd'      => $query->row['ringSizeEnd'],
 				'isbn'             => $query->row['isbn'],
 				'mpn'              => $query->row['mpn'],
 				'location'         => $query->row['location'],
-				'quantity'         => $query->row['quantity'],
+                'texture'          => $query->row['texture'],
+                'deliveringTime'   => $query->row['deliveringTime'],
+                'deliveringExtra'   => $query->row['deliveringExtra'],
+                'quantity'         => $query->row['quantity'],
 				'stock_status'     => $query->row['stock_status'],
 				'image'            => $query->row['image'],
 				'manufacturer_id'  => $query->row['manufacturer_id'],
@@ -40,6 +45,26 @@ class ModelCatalogProduct extends Model {
 				'length'           => $query->row['length'],
 				'width'            => $query->row['width'],
 				'height'           => $query->row['height'],
+                'extraDetail'      => $query->row['extraDetail'],
+                'extraDetail2'      => $query->row['extraDetail2'],
+                'extraDetail3'      => $query->row['extraDetail3'],
+                'extraDetail4'      => $query->row['extraDetail4'],
+
+                'braceLong'        => $query->row['braceLong'],
+                'braceWidth'       => $query->row['braceWidth'],
+                'braceHeight'      => $query->row['braceHeight'],
+                'braceSeleLen'     => $query->row['braceSeleLen'],
+                'secondaryNote'    => $query->row['secondaryNote'],
+                'braceNote'        => $query->row['braceNote'],
+                'braceletDiameter' => $query->row['braceletDiameter'],
+                'braceletDiameterMax' => $query->row['braceletDiameterMax'],
+                'necklaceLength'   => $query->row['necklaceLength'],
+                'earingType'  	   => $query->row['earingType'],
+				'activity_title'   => $query->row['activity_title'],
+				'eng_name'         => $query->row['eng_name'],
+				'activity_desc'    => $query->row['activity_desc'],
+
+
 				'length_class_id'  => $query->row['length_class_id'],
 				'subtract'         => $query->row['subtract'],
 				'rating'           => round($query->row['rating']),
@@ -55,6 +80,13 @@ class ModelCatalogProduct extends Model {
 			return false;
 		}
 	}
+
+	public function getRingSizes() {
+	    $sql = 'SELECT * FROM ' . DB_PREFIX . 'ring_size WHERE language_id = ' . (int)$this->config->get("config_language_id");
+	    $query = $this->db->query($sql);
+
+	    return $query->rows;
+    }
 
 	public function getProducts($data = array()) {
 		$sql = "SELECT p.product_id, (SELECT AVG(rating) AS total FROM " . DB_PREFIX . "review r1 WHERE r1.product_id = p.product_id AND r1.status = '1' GROUP BY r1.product_id) AS rating, (SELECT price FROM " . DB_PREFIX . "product_discount pd2 WHERE pd2.product_id = p.product_id AND pd2.customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "' AND pd2.quantity = '1' AND ((pd2.date_start = '0000-00-00' OR pd2.date_start < NOW()) AND (pd2.date_end = '0000-00-00' OR pd2.date_end > NOW())) ORDER BY pd2.priority ASC, pd2.price ASC LIMIT 1) AS discount, (SELECT price FROM " . DB_PREFIX . "product_special ps WHERE ps.product_id = p.product_id AND ps.customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW())) ORDER BY ps.priority ASC, ps.price ASC LIMIT 1) AS special";
@@ -191,8 +223,7 @@ class ModelCatalogProduct extends Model {
 			if ($data['limit'] < 1) {
 				$data['limit'] = 20;
 			}
-
-			$sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
+            $sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
 		}
 
 		$product_data = array();
@@ -274,17 +305,17 @@ class ModelCatalogProduct extends Model {
 
 	public function getPopularProducts($limit) {
 		$product_data = $this->cache->get('product.popular.' . (int)$this->config->get('config_language_id') . '.' . (int)$this->config->get('config_store_id') . '.' . $this->config->get('config_customer_group_id') . '.' . (int)$limit);
-	
+
 		if (!$product_data) {
 			$query = $this->db->query("SELECT p.product_id FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "' ORDER BY p.viewed DESC, p.date_added DESC LIMIT " . (int)$limit);
-	
+
 			foreach ($query->rows as $result) {
 				$product_data[$result['product_id']] = $this->getProduct($result['product_id']);
 			}
-			
+
 			$this->cache->set('product.popular.' . (int)$this->config->get('config_language_id') . '.' . (int)$this->config->get('config_store_id') . '.' . $this->config->get('config_customer_group_id') . '.' . (int)$limit, $product_data);
 		}
-		
+
 		return $product_data;
 	}
 

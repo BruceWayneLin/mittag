@@ -126,6 +126,8 @@ class ControllerCheckoutCart extends Controller {
 					$total = false;
 				}
 
+
+
 				$recurring = '';
 
 				if ($product['recurring']) {
@@ -292,22 +294,54 @@ class ControllerCheckoutCart extends Controller {
 			$product_id = 0;
 		}
 
-		$this->load->model('catalog/product');
+        $this->load->model('catalog/product');
 
 		$product_info = $this->model_catalog_product->getProduct($product_id);
 
-		if ($product_info) {
+            if ($product_info) {
 			if (isset($this->request->post['quantity']) && ((int)$this->request->post['quantity'] >= $product_info['minimum'])) {
 				$quantity = (int)$this->request->post['quantity'];
 			} else {
 				$quantity = $product_info['minimum'] ? $product_info['minimum'] : 1;
 			}
-
-			if (isset($this->request->post['option'])) {
+                if (isset($this->request->post['option'])) {
 				$option = array_filter($this->request->post['option']);
-			} else {
+			    } else {
 				$option = array();
-			}
+			    }
+                $this->session->data['extraDetail'] = array();
+                if (isset($this->request->post['ringSizeSelected'])) {
+                    $extraInfo1 = $this->request->post['ringSizeSelected'];
+                } else {
+                    $extraInfo1 = '';
+                }
+
+                if (isset($this->request->post['braceSeleLen'])) {
+                    $extraInfo2 = $this->request->post['braceSeleLen'];
+                } else {
+                    $extraInfo2 = '';
+                }
+
+
+                if (isset($this->request->post['necklaceLength'])) {
+                    $extraInfo3 = $this->request->post['necklaceLength'];
+                }  else {
+                    $extraInfo3 = '';
+                }
+
+                if (isset($this->request->post['braceletDiameter'])) {
+                    $extraInfo4 = $this->request->post['braceletDiameter'];
+                }  else {
+                    $extraInfo4 = '';
+                }
+
+                if (isset($this->request->post['earingType'])) {
+                    $extraInfo5 = $this->request->post['earingType'];
+                }  else {
+                    $extraInfo5 = '';
+                }
+
+
 
 			$product_options = $this->model_catalog_product->getProductOptions($this->request->post['product_id']);
 
@@ -317,7 +351,7 @@ class ControllerCheckoutCart extends Controller {
 				}
 			}
 
-			if (isset($this->request->post['recurring_id'])) {
+                if (isset($this->request->post['recurring_id'])) {
 				$recurring_id = $this->request->post['recurring_id'];
 			} else {
 				$recurring_id = 0;
@@ -337,8 +371,10 @@ class ControllerCheckoutCart extends Controller {
 				}
 			}
 
+			$extraInfo = json_encode($this->session->data['extraDetail']);
+
 			if (!$json) {
-				$this->cart->add($this->request->post['product_id'], $quantity, $option, $recurring_id);
+				$this->cart->add($this->request->post['product_id'], $quantity, $option, $recurring_id, $extraInfo, $extraInfo1, $extraInfo2, $extraInfo3, $extraInfo4, $extraInfo5);
 
 				$json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('checkout/cart'));
 
@@ -361,7 +397,6 @@ class ControllerCheckoutCart extends Controller {
 					'taxes'  => &$taxes,
 					'total'  => &$total
 				);
-
 				// Display prices
 				if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
 					$sort_order = array();
@@ -398,7 +433,7 @@ class ControllerCheckoutCart extends Controller {
 			}
 		}
 
-		$this->response->addHeader('Content-Type: application/json');
+        $this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
 

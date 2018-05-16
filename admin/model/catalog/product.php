@@ -1,7 +1,8 @@
 <?php
 class ModelCatalogProduct extends Model {
 	public function addProduct($data) {
-		$this->db->query("INSERT INTO " . DB_PREFIX . "product SET model = '" . $this->db->escape($data['model']) . "', sku = '" . $this->db->escape($data['sku']) . "', upc = '" . $this->db->escape($data['upc']) . "', ean = '" . $this->db->escape($data['ean']) . "', jan = '" . $this->db->escape($data['jan']) . "', isbn = '" . $this->db->escape($data['isbn']) . "', mpn = '" . $this->db->escape($data['mpn']) . "', location = '" . $this->db->escape($data['location']) . "', quantity = '" . (int)$data['quantity'] . "', minimum = '" . (int)$data['minimum'] . "', subtract = '" . (int)$data['subtract'] . "', stock_status_id = '" . (int)$data['stock_status_id'] . "', date_available = '" . $this->db->escape($data['date_available']) . "', manufacturer_id = '" . (int)$data['manufacturer_id'] . "', shipping = '" . (int)$data['shipping'] . "', price = '" . (float)$data['price'] . "', points = '" . (int)$data['points'] . "', weight = '" . (float)$data['weight'] . "', weight_class_id = '" . (int)$data['weight_class_id'] . "', length = '" . (float)$data['length'] . "', width = '" . (float)$data['width'] . "', height = '" . (float)$data['height'] . "', length_class_id = '" . (int)$data['length_class_id'] . "', status = '" . (int)$data['status'] . "', tax_class_id = '" . (int)$data['tax_class_id'] . "', sort_order = '" . (int)$data['sort_order'] . "', date_added = NOW()");
+	    var_dump($data);die();
+		$this->db->query("INSERT INTO " . DB_PREFIX . "product SET model = '" . $this->db->escape($data['model']) . "', sku = '" . $this->db->escape($data['sku']) . "', upc = '" . $this->db->escape($data['upc']) . "' , braceletDiameterMax = '" . $this->db->escape($data['braceletDiameterMax']) . "' , earingType = '" . $this->db->escape($data['earingType']) . "' , braceNote = '" . $this->db->escape($data['braceNote']) . "' , braceletDiameter = '" . $this->db->escape($data['braceletDiameter']) . "' , secondaryNote = '" . $this->db->escape($data['secondaryNote']) . "', activity_desc='" . $this->db->escape($data['activity_desc']) . "', eng_name='" . $this->db->escape($data['eng_name']) . "' , activity_title = '" . $this->db->escape($data['activity_title']) . "' , necklaceLength = '" . $this->db->escape($data['necklaceLength']) . "' , braceSeleLen = '" . $this->db->escape($data['braceSeleLen']) . "' , deliveringExtra = '" . $this->db->escape($data['deliveringExtra']) . "' , extraDetail = '" . $this->db->escape($data['extraDetail']) . "' , extraDetail2 = '" . $this->db->escape($data['extraDetail2']) . "' , extraDetail3 = '" . $this->db->escape($data['extraDetail3']) . "' , extraDetail4 = '" . $this->db->escape($data['extraDetail4']) . "' , ringSizeStart = '" . $this->db->escape($data['ringSizeStart']) . "' , ringSizeEnd = '" . $this->db->escape($data['ringSizeEnd']) . "', ean = '" . $this->db->escape($data['ean']) . "', jan = '" . $this->db->escape($data['jan']) . "', braceHeight = '" . $this->db->escape($data['braceHeight']) . "', braceLong = '" . $this->db->escape($data['braceLong']) . "', braceWidth = '" . $this->db->escape($data['braceWidth']) . "', isbn = '" . $this->db->escape($data['isbn']) . "', mpn = '" . $this->db->escape($data['mpn']) . "', deliveringTime = '" . $this->db->escape($data['deliveringTime']) . "', location = '" . $this->db->escape($data['location']) . "', texture = '" . $this->db->escape($data['texture']) . "', quantity = '" . (int)$data['quantity'] . "', minimum = '" . (int)$data['minimum'] . "', subtract = '" . (int)$data['subtract'] . "', stock_status_id = '" . (int)$data['stock_status_id'] . "', date_available = '" . $this->db->escape($data['date_available']) . "', manufacturer_id = '" . (int)$data['manufacturer_id'] . "', shipping = '" . (int)$data['shipping'] . "', price = '" . (float)$data['price'] . "', points = '" . (int)$data['points'] . "', weight = '" . (float)$data['weight'] . "', weight_class_id = '" . (int)$data['weight_class_id'] . "', length = '" . (float)$data['length'] . "', width = '" . (float)$data['width'] . "', height = '" . (float)$data['height'] . "', length_class_id = '" . (int)$data['length_class_id'] . "', status = '" . (int)$data['status'] . "', tax_class_id = '" . (int)$data['tax_class_id'] . "', sort_order = '" . (int)$data['sort_order'] . "', date_added = NOW()");
 
 		$product_id = $this->db->getLastId();
 
@@ -10,7 +11,13 @@ class ModelCatalogProduct extends Model {
 		}
 
 		foreach ($data['product_description'] as $language_id => $value) {
-			$this->db->query("INSERT INTO " . DB_PREFIX . "product_description SET product_id = '" . (int)$product_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', description = '" . $this->db->escape($value['description']) . "', tag = '" . $this->db->escape($value['tag']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
+		    if(!isset($value['meta_description']) || !isset($value['meta_keyword']) || isset($value['meta_title'])){
+		        $value['meta_description'] = 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生';
+                $value['meta_keyword'] = 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生';
+                $this->db->query("INSERT INTO " . DB_PREFIX . "product_description SET product_id = '" . (int)$product_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', description = '" . $this->db->escape($value['description']) . "', tag = '" . $this->db->escape($value['tag']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
+            }else{
+                $this->db->query("INSERT INTO " . DB_PREFIX . "product_description SET product_id = '" . (int)$product_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', description = '" . $this->db->escape($value['description']) . "', tag = '" . $this->db->escape($value['tag']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
+            }
 		}
 
 		if (isset($data['product_store'])) {
@@ -127,7 +134,7 @@ class ModelCatalogProduct extends Model {
 	}
 
 	public function editProduct($product_id, $data) {
-		$this->db->query("UPDATE " . DB_PREFIX . "product SET model = '" . $this->db->escape($data['model']) . "', sku = '" . $this->db->escape($data['sku']) . "', upc = '" . $this->db->escape($data['upc']) . "', ean = '" . $this->db->escape($data['ean']) . "', jan = '" . $this->db->escape($data['jan']) . "', isbn = '" . $this->db->escape($data['isbn']) . "', mpn = '" . $this->db->escape($data['mpn']) . "', location = '" . $this->db->escape($data['location']) . "', quantity = '" . (int)$data['quantity'] . "', minimum = '" . (int)$data['minimum'] . "', subtract = '" . (int)$data['subtract'] . "', stock_status_id = '" . (int)$data['stock_status_id'] . "', date_available = '" . $this->db->escape($data['date_available']) . "', manufacturer_id = '" . (int)$data['manufacturer_id'] . "', shipping = '" . (int)$data['shipping'] . "', price = '" . (float)$data['price'] . "', points = '" . (int)$data['points'] . "', weight = '" . (float)$data['weight'] . "', weight_class_id = '" . (int)$data['weight_class_id'] . "', length = '" . (float)$data['length'] . "', width = '" . (float)$data['width'] . "', height = '" . (float)$data['height'] . "', length_class_id = '" . (int)$data['length_class_id'] . "', status = '" . (int)$data['status'] . "', tax_class_id = '" . (int)$data['tax_class_id'] . "', sort_order = '" . (int)$data['sort_order'] . "', date_modified = NOW() WHERE product_id = '" . (int)$product_id . "'");
+		$this->db->query("UPDATE " . DB_PREFIX . "product SET model = '" . $this->db->escape($data['model']) . "', sku = '" . $this->db->escape($data['sku']) . "', earingType = '" . $this->db->escape($data['earingType']) . "', secondaryNote = '" . $this->db->escape($data['secondaryNote']) . "', deliveringExtra = '" . $this->db->escape($data['deliveringExtra']) . "', braceletDiameterMax = '" . $this->db->escape($data['braceletDiameterMax'])  . "', braceletDiameter = '" . $this->db->escape($data['braceletDiameter']) . "', braceSeleLen = '" . $this->db->escape($data['braceSeleLen']) . "', extraDetail = '" . $this->db->escape($data['extraDetail']) . "', extraDetail2 = '" . $this->db->escape($data['extraDetail2']) . "', extraDetail3 = '" . $this->db->escape($data['extraDetail3']) . "', extraDetail4 = '" . $this->db->escape($data['extraDetail4']) . "', earingType = '" . $this->db->escape($data['earingType']) . "', activity_title='" . $this->db->escape($data['activity_title']) . "', eng_name='" . $this->db->escape($data['eng_name']) . "', activity_desc ='" . $this->db->escape($data['activity_desc']) . "', necklaceLength = '" . $this->db->escape($data['necklaceLength']) . "', braceHeight = '" . $this->db->escape($data['braceHeight']) . "', braceLong = '" . $this->db->escape($data['braceLong']) . "', braceWidth = '" . $this->db->escape($data['braceWidth']) . $this->db->escape($data['extraDetail']) . "', ringSizeEnd = '" . $this->db->escape($data['ringSizeEnd']) . "', ringSizeStart = '" . $this->db->escape($data['ringSizeStart']) . "', braceSeleLen = '" . $this->db->escape($data['braceSeleLen']) . "', braceNote = '" . $this->db->escape($data['braceNote']) . "', upc = '" . $this->db->escape($data['upc']) . "', ean = '" . $this->db->escape($data['ean']) . "', jan = '" . $this->db->escape($data['jan']) . "', isbn = '" . $this->db->escape($data['isbn']) . "', mpn = '" . $this->db->escape($data['mpn']) . "', deliveringTime = '" . $this->db->escape($data['deliveringTime']) . "', location = '" . $this->db->escape($data['location']) . "', texture = '" . $this->db->escape($data['texture']) . "', quantity = '" . (int)$data['quantity'] . "', minimum = '" . (int)$data['minimum'] . "', subtract = '" . (int)$data['subtract'] . "', stock_status_id = '" . (int)$data['stock_status_id'] . "', date_available = '" . $this->db->escape($data['date_available']) . "', manufacturer_id = '" . (int)$data['manufacturer_id'] . "', shipping = '" . (int)$data['shipping'] . "', price = '" . (float)$data['price'] . "', points = '" . (int)$data['points'] . "', weight = '" . (float)$data['weight'] . "', weight_class_id = '" . (int)$data['weight_class_id'] . "', length = '" . (float)$data['length'] . "', width = '" . (float)$data['width'] . "', height = '" . (float)$data['height'] . "', length_class_id = '" . (int)$data['length_class_id'] . "', status = '" . (int)$data['status'] . "', tax_class_id = '" . (int)$data['tax_class_id'] . "', sort_order = '" . (int)$data['sort_order'] . "', date_modified = NOW() WHERE product_id = '" . (int)$product_id . "'");
 
 		if (isset($data['image'])) {
 			$this->db->query("UPDATE " . DB_PREFIX . "product SET image = '" . $this->db->escape($data['image']) . "' WHERE product_id = '" . (int)$product_id . "'");
@@ -136,7 +143,13 @@ class ModelCatalogProduct extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "product_description WHERE product_id = '" . (int)$product_id . "'");
 
 		foreach ($data['product_description'] as $language_id => $value) {
-			$this->db->query("INSERT INTO " . DB_PREFIX . "product_description SET product_id = '" . (int)$product_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', description = '" . $this->db->escape($value['description']) . "', tag = '" . $this->db->escape($value['tag']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
+            if(!isset($value['meta_description']) || !isset($value['meta_keyword']) || isset($value['meta_title'])){
+                $value['meta_description'] = 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生';
+                $value['meta_keyword'] = 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生';
+                $this->db->query("INSERT INTO " . DB_PREFIX . "product_description SET product_id = '" . (int)$product_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', description = '" . $this->db->escape($value['description']) . "', tag = '" . $this->db->escape($value['tag']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
+            }else{
+                $this->db->query("INSERT INTO " . DB_PREFIX . "product_description SET product_id = '" . (int)$product_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', description = '" . $this->db->escape($value['description']) . "', tag = '" . $this->db->escape($value['tag']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
+            }
 		}
 
 		$this->db->query("DELETE FROM " . DB_PREFIX . "product_to_store WHERE product_id = '" . (int)$product_id . "'");
@@ -336,7 +349,6 @@ class ModelCatalogProduct extends Model {
 
 	public function getProduct($product_id) {
 		$query = $this->db->query("SELECT DISTINCT *, (SELECT keyword FROM " . DB_PREFIX . "url_alias WHERE query = 'product_id=" . (int)$product_id . "') AS keyword FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE p.product_id = '" . (int)$product_id . "' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "'");
-
 		return $query->row;
 	}
 
@@ -359,6 +371,10 @@ class ModelCatalogProduct extends Model {
 			$sql .= " AND p.quantity = '" . (int)$data['filter_quantity'] . "'";
 		}
 
+        if (isset($data['filter_date_available']) && !is_null($data['filter_date_available'])) {
+            $sql .= " AND p.date_available LIKE '" . $this->db->escape($data['filter_date_available']) . "%'";
+        }
+
 		if (isset($data['filter_status']) && !is_null($data['filter_status'])) {
 			$sql .= " AND p.status = '" . (int)$data['filter_status'] . "'";
 		}
@@ -379,6 +395,7 @@ class ModelCatalogProduct extends Model {
 			'p.price',
 			'p.quantity',
 			'p.status',
+			'p.date_available',
 			'p.sort_order'
 		);
 
@@ -633,6 +650,10 @@ class ModelCatalogProduct extends Model {
 			$sql .= " AND p.quantity = '" . (int)$data['filter_quantity'] . "'";
 		}
 
+        if (isset($data['filter_date-available']) && !is_null($data['filter_date-available'])) {
+            $sql .= " AND p.date-available LIKE '" . $this->db->escape((int)$data['filter_date-available']) . "%'";
+        }
+
 		if (isset($data['filter_status']) && !is_null($data['filter_status'])) {
 			$sql .= " AND p.status = '" . (int)$data['filter_status'] . "'";
 		}
@@ -645,7 +666,7 @@ class ModelCatalogProduct extends Model {
 			}
 		}
 
-		$query = $this->db->query($sql);
+        $query = $this->db->query($sql);
 
 		return $query->row['total'];
 	}

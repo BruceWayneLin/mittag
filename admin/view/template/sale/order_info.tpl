@@ -11,6 +11,19 @@
       </ul>
     </div>
   </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="form-group">
+          <label for="shippingExtraFee">額外費用:</label>
+          <input type="shippingExtraFee" class="form-control" id="shippingExtraFee" value="<?php echo $extraFee; ?>" />
+          <button id="toGo" class="form-control btn-primary">輸入額外費用</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-4">
@@ -182,6 +195,12 @@
             </tr>
             <?php } ?>
             <?php foreach ($totals as $total) { ?>
+            <?php if($total['title'] == '固定運費'){ ?>
+              <tr>
+                <td colspan="4" class="text-right">額外運費</td>
+                <td class="text-right"><?php echo $extraFee; ?></td>
+              </tr>
+            <?php } ?>
             <tr>
               <td colspan="4" class="text-right"><?php echo $total['title']; ?></td>
               <td class="text-right"><?php echo $total['text']; ?></td>
@@ -632,6 +651,20 @@ function changeStatus(){
 		}
 	});
 }
+
+$(document).ready(function(){
+  $('#toGo').on('click', document, function(){
+      $.ajax({
+          url: 'index.php?route=sale/order/addShip&token=<?php echo $token; ?>&shipFee='+ $('#shippingExtraFee').val() + '&order_id=<?php echo $order_id; ?>',
+          type: 'post',
+          dataType: 'html',
+          data: $(".openbay-data").serialize(),
+          success: function() {
+              location.reload();
+          }
+      });
+  });
+});
 
 function addOrderInfo(){
 	var status_id = $('select[name="order_status_id"]').val();

@@ -102,10 +102,10 @@ class ControllerCommonContentTop extends Controller {
                         'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
                     );
                 }
-
                 // Level 1
                 $data['categories'][] = array(
                     'name'     => $category['name'],
+                    'mouseover' => $category['mouseover'],
                     'children' => $children_data,
                     'column'   => $category['column'] ? $category['column'] : 1,
                     'href'     => $this->url->link('product/category', 'path=' . $category['category_id'])

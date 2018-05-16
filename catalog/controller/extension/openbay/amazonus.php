@@ -283,7 +283,6 @@ class ControllerExtensionOpenbayAmazonus extends Controller {
 		);
 
 		$order_id = $this->model_checkout_order->addOrder($order);
-
 		$this->model_extension_openbay_amazonus_order->updateOrderStatus($order_id, $order_status);
 		$this->model_extension_openbay_amazonus_order->addAmazonusOrder($order_id, $amazonus_order_id);
 		$this->model_extension_openbay_amazonus_order->addAmazonusOrderProducts($order_id, $product_mapping);

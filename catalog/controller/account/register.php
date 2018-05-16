@@ -357,9 +357,9 @@ class ControllerAccountRegister extends Controller {
 			$this->error['firstname'] = $this->language->get('error_firstname');
 		}
 
-		if ((utf8_strlen(trim($this->request->post['lastname'])) < 1) || (utf8_strlen(trim($this->request->post['lastname'])) > 32)) {
-			$this->error['lastname'] = $this->language->get('error_lastname');
-		}
+//		if ((utf8_strlen(trim($this->request->post['lastname'])) < 1) || (utf8_strlen(trim($this->request->post['lastname'])) > 32)) {
+//			$this->error['lastname'] = $this->language->get('error_lastname');
+//		}
 
 		if ((utf8_strlen($this->request->post['email']) > 96) || !filter_var($this->request->post['email'], FILTER_VALIDATE_EMAIL)) {
 			$this->error['email'] = $this->language->get('error_email');
@@ -373,13 +373,13 @@ class ControllerAccountRegister extends Controller {
 			$this->error['telephone'] = $this->language->get('error_telephone');
 		}
 
-		if ((utf8_strlen(trim($this->request->post['address_1'])) < 3) || (utf8_strlen(trim($this->request->post['address_1'])) > 128)) {
-			$this->error['address_1'] = $this->language->get('error_address_1');
-		}
+//		if ((utf8_strlen(trim($this->request->post['address_1'])) < 3) || (utf8_strlen(trim($this->request->post['address_1'])) > 128)) {
+//			$this->error['address_1'] = $this->language->get('error_address_1');
+//		}
 
-		if ((utf8_strlen(trim($this->request->post['city'])) < 2) || (utf8_strlen(trim($this->request->post['city'])) > 128)) {
-			$this->error['city'] = $this->language->get('error_city');
-		}
+//		if ((utf8_strlen(trim($this->request->post['city'])) < 2) || (utf8_strlen(trim($this->request->post['city'])) > 128)) {
+//			$this->error['city'] = $this->language->get('error_city');
+//		}
 
 		$this->load->model('localisation/country');
 
@@ -389,13 +389,13 @@ class ControllerAccountRegister extends Controller {
 			$this->error['postcode'] = $this->language->get('error_postcode');
 		}
 
-		if ($this->request->post['country_id'] == '') {
-			$this->error['country'] = $this->language->get('error_country');
-		}
+//		if ($this->request->post['country_id'] == '') {
+//			$this->error['country'] = $this->language->get('error_country');
+//		}
 
-		if (!isset($this->request->post['zone_id']) || $this->request->post['zone_id'] == '' || !is_numeric($this->request->post['zone_id'])) {
-			$this->error['zone'] = $this->language->get('error_zone');
-		}
+//		if (!isset($this->request->post['zone_id']) || $this->request->post['zone_id'] == '' || !is_numeric($this->request->post['zone_id'])) {
+//			$this->error['zone'] = $this->language->get('error_zone');
+//		}
 
 		// Customer Group
 		if (isset($this->request->post['customer_group_id']) && is_array($this->config->get('config_customer_group_display')) && in_array($this->request->post['customer_group_id'], $this->config->get('config_customer_group_display'))) {

@@ -31,7 +31,9 @@
         <div class="col-sm-6">
           <div class="well">
             <h2><?php echo $text_returning_customer; ?></h2>
-            <p><strong><?php echo $text_i_am_returning_customer; ?></strong></p>
+            <p><strong>
+                <span style="color:darkred;font-weight:bold;">(*提醒您，您的電子郵件與聯繫電話將分別是您的帳號與密碼)</span>
+              </strong></p>
             <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
               <div class="form-group">
                 <label class="control-label" for="input-email"><?php echo $entry_email; ?></label>

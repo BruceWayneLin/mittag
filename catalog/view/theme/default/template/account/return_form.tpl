@@ -58,7 +58,7 @@
               <?php } ?>
             </div>
           </div>
-          <div class="form-group required">
+          <div class="form-group">
             <label class="col-sm-2 control-label" for="input-order-id"><?php echo $entry_order_id; ?></label>
             <div class="col-sm-10">
               <input type="text" name="order_id" value="<?php echo $order_id; ?>" placeholder="<?php echo $entry_order_id; ?>" id="input-order-id" class="form-control" />
@@ -125,7 +125,7 @@
               <?php } ?>
             </div>
           </div>
-          <div class="form-group required">
+          <div class="form-group hidden">
             <label class="col-sm-2 control-label"><?php echo $entry_opened; ?></label>
             <div class="col-sm-10">
               <label class="radio-inline">
