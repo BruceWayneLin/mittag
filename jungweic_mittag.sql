@@ -1,4 +1,5 @@
 -- phpMyAdmin SQL Dump
+<<<<<<< HEAD
 -- version 4.5.2
 -- http://www.phpmyadmin.net
 --
@@ -8,6 +9,19 @@
 -- PHP 版本： 5.5.38
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+=======
+-- version 4.7.7
+-- https://www.phpmyadmin.net/
+--
+-- 主機: localhost:3306
+-- 產生時間： 2018 年 04 月 28 日 11:15
+-- 伺服器版本: 5.6.39-cll-lve
+-- PHP 版本： 5.6.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 SET time_zone = "+00:00";
 
 
@@ -46,6 +60,7 @@ CREATE TABLE `oc_address` (
 --
 
 INSERT INTO `oc_address` (`address_id`, `customer_id`, `firstname`, `lastname`, `company`, `address_1`, `address_2`, `city`, `postcode`, `country_id`, `zone_id`, `custom_field`) VALUES
+<<<<<<< HEAD
 (1, 1, 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', 206, 3135, ''),
 (2, 3, '榮斌', '吳', '', '中和區南山路250巷12-1號', '', '新北市', '', 206, 3137, '[]'),
 (3, 4, 'James', 'Wu', '', 'Gfdrest gytrews', '', 'Taipei', '', 206, 3137, '[]'),
@@ -54,6 +69,12 @@ INSERT INTO `oc_address` (`address_id`, `customer_id`, `firstname`, `lastname`, 
 (6, 7, '姆士', '詹', '', '11321231321321321321321321321321321321321321313132121231', '', '313132131313121321', '12212', 222, 3523, '[]'),
 (7, 8, '老詹', '吳', '', '113212313213213213213213213213213213213213213131321212311212121212121', '', '31313213131312132112121', '23232', 206, 3137, ''),
 (8, 9, 'wei', 'lin', '', '中和南山路', '', '中和', '', 206, 3137, '');
+=======
+(3, 4, 'James', 'Wu', '', 'Gfdrest gytrews', '', 'Taipei', '', 206, 3137, '[]'),
+(18, 21, '詹姆士', '吳', '', '中和區南山路250巷12-1號', '', '新北市', '23570', 206, 3137, ''),
+(8, 9, 'wei', 'lin', '', '中和南山路', '', '中和', '', 206, 3137, ''),
+(14, 17, 'LingWei', 'Lin', '', '', '', '', '', 0, 0, '');
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -174,6 +195,18 @@ CREATE TABLE `oc_api_ip` (
   `ip` varchar(40) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
+=======
+--
+-- 資料表的匯出資料 `oc_api_ip`
+--
+
+INSERT INTO `oc_api_ip` (`api_ip_id`, `api_id`, `ip`) VALUES
+(1, 1, '220.135.38.215'),
+(2, 1, '223.140.154.40'),
+(3, 1, '114.136.36.77');
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 -- --------------------------------------------------------
 
 --
@@ -191,6 +224,26 @@ CREATE TABLE `oc_api_session` (
   `date_modified` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
+=======
+--
+-- 資料表的匯出資料 `oc_api_session`
+--
+
+INSERT INTO `oc_api_session` (`api_session_id`, `api_id`, `token`, `session_id`, `session_name`, `ip`, `date_added`, `date_modified`) VALUES
+(20, 1, 'Wfs8vEmZfO8dpT0MtuF1ptFlInue4XZx', 'qp5eebqa0ctnsbmbvckkhhpiq0', '', '220.135.38.215', '2018-02-25 17:09:32', '2018-02-25 17:09:32'),
+(19, 1, 'mMx8q1ZlUjLhlDHhnEBZ5muzVDj3mdUE', '1ct2js8tcvqfpa5ccniunovuo0', '', '114.136.36.77', '2018-02-25 13:56:25', '2018-02-25 13:56:25'),
+(18, 1, 'DmLUnVf1JxLL1IZR95mPg0as9Ut4YXPH', 'ocj9kum61826u0esgo7p65tfv3', '', '220.135.38.215', '2018-02-10 12:39:54', '2018-02-10 12:39:54'),
+(17, 1, '33c1TCzuFXV91Rc7t45q6tyZjb4eaDQL', '98emmnn1ptln31muqul1kvl9s1', '', '220.135.38.215', '2018-02-10 12:39:35', '2018-02-10 12:39:35'),
+(16, 1, 'bZu8zplEarmwmHPxO0VWFj1yrqMuxGxC', 'd9j57hdl7miv127r8r3j00aup1', '', '220.135.38.215', '2018-02-10 12:25:32', '2018-02-10 12:25:32'),
+(15, 1, 'fisEfUqNYyCM2KuSukpL8T0Gu6y1MozQ', '70dlblb0l9hees93mu8o6qrc07', '', '223.140.154.40', '2018-01-27 11:19:39', '2018-01-27 11:19:39'),
+(14, 1, '4hqfQc2Zc0S0vSV4XLC4FvZoFkLvI0pF', '7ecb1p2q1ff4rifbgq2m8kc3p1', '', '223.140.154.40', '2018-01-27 11:19:18', '2018-01-27 11:19:18'),
+(13, 1, '7jRn9i8TfCWTfkUFtpxebiJ5B8QBiTNO', '7hmqepq4m7ji41kknevvtvnei4', '', '223.140.154.40', '2018-01-27 11:18:45', '2018-01-27 11:18:45'),
+(10, 1, '8mYaAhLBZOeF2FshJPzXGppkd3iyGoJd', '0q71jaurojlcjc07m7qoinm134', '', '223.140.154.40', '2018-01-27 11:15:16', '2018-01-27 11:15:16'),
+(11, 1, 'SGujWmbPvmY8Xv83qWsIDxJy1dsrH5I7', 'tsko1ma8o73dg8he5v9jgn3uu7', '', '223.140.154.40', '2018-01-27 11:15:31', '2018-01-27 11:15:31'),
+(12, 1, 'yA4VkCZClBK70giRduKv2NVeKBcJSXRD', '94ie9p3h79qmml495rf9bpug20', '', '223.140.154.40', '2018-01-27 11:16:24', '2018-01-27 11:16:45');
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 -- --------------------------------------------------------
 
 --
@@ -203,6 +256,7 @@ CREATE TABLE `oc_attribute` (
   `sort_order` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 --
 -- 資料表的匯出資料 `oc_attribute`
 --
@@ -220,6 +274,8 @@ INSERT INTO `oc_attribute` (`attribute_id`, `attribute_group_id`, `sort_order`) 
 (10, 3, 7),
 (11, 3, 8);
 
+=======
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 -- --------------------------------------------------------
 
 --
@@ -232,6 +288,7 @@ CREATE TABLE `oc_attribute_description` (
   `name` varchar(64) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 --
 -- 資料表的匯出資料 `oc_attribute_description`
 --
@@ -249,6 +306,8 @@ INSERT INTO `oc_attribute_description` (`attribute_id`, `language_id`, `name`) V
 (11, 1, 'test 8'),
 (3, 1, 'Clockspeed');
 
+=======
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 -- --------------------------------------------------------
 
 --
@@ -260,6 +319,7 @@ CREATE TABLE `oc_attribute_group` (
   `sort_order` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 --
 -- 資料表的匯出資料 `oc_attribute_group`
 --
@@ -270,6 +330,8 @@ INSERT INTO `oc_attribute_group` (`attribute_group_id`, `sort_order`) VALUES
 (5, 3),
 (6, 4);
 
+=======
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 -- --------------------------------------------------------
 
 --
@@ -282,6 +344,7 @@ CREATE TABLE `oc_attribute_group_description` (
   `name` varchar(64) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 --
 -- 資料表的匯出資料 `oc_attribute_group_description`
 --
@@ -292,6 +355,8 @@ INSERT INTO `oc_attribute_group_description` (`attribute_group_id`, `language_id
 (5, 1, '主機板'),
 (6, 1, '處理器');
 
+=======
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 -- --------------------------------------------------------
 
 --
@@ -334,12 +399,30 @@ CREATE TABLE `oc_banner_image` (
 --
 
 INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `language_id`, `title`, `link`, `image`, `sort_order`) VALUES
+<<<<<<< HEAD
 (116, 7, 1, 'nacklace1', 'http://www.mittag.com.tw/index.php?route=product/product&amp;path=20_27&amp;product_id=41', 'catalog/ring/40000181-272.jpg', 0),
 (119, 9, 1, 'nacklace4', 'http://localhost:8081/mittag/upload/index.php?route=product/product&amp;path=20&amp;product_id=42', 'catalog/ring/F8BA6461CEBFEB8EBA1E1D614F36A909C7F4E1C0.jpg', 0),
 (118, 9, 1, 'necklace5', 'http://localhost:8081/mittag/upload/index.php?route=product/product&amp;path=20&amp;product_id=42', 'catalog/ring/SB295_1.jpg', 0),
 (117, 7, 1, 'nacklace12', 'http://www.mittag.com.tw/index.php?route=product/product&amp;path=20_27&amp;product_id=41', 'catalog/ring/4530098.jpg', 0),
 (121, 10, 1, 'demo4', 'http://localhost:8081/mittag/upload/index.php?route=product/product&amp;path=20&amp;product_id=42', 'catalog/thumb_big_share_picture_1366260549.jpg', 0),
 (120, 10, 1, 'demo3', 'http://localhost:8081/mittag/upload/index.php?route=product/product&amp;path=20&amp;product_id=42', 'catalog/ring/2bc6950d-f2ee-49b6-8032-7ea65921a8ab.jpg', 0);
+=======
+(398, 7, 1, 'banner2018_packaging_02', 'http://www.mittag.com.tw/index.php?route=information/information&amp;information_id=9', 'catalog/Activities/banners_NOT_AD/banner2018_packaging_02.jpg', 10),
+(119, 9, 1, 'nacklace4', 'http://localhost:8081/mittag/upload/index.php?route=product/product&amp;path=20&amp;product_id=42', 'catalog/ring/F8BA6461CEBFEB8EBA1E1D614F36A909C7F4E1C0.jpg', 0),
+(118, 9, 1, 'necklace5', 'http://localhost:8081/mittag/upload/index.php?route=product/product&amp;path=20&amp;product_id=42', 'catalog/ring/SB295_1.jpg', 0),
+(399, 7, 1, 'banner2018006', 'http://www.mittag.com.tw/index.php?route=product/product&amp;path=18&amp;product_id=214', 'catalog/Activities/banners_NOT_AD/banner2018006.jpg', 11),
+(121, 10, 1, 'demo4', 'http://localhost:8081/mittag/upload/index.php?route=product/product&amp;path=20&amp;product_id=42', 'catalog/thumb_big_share_picture_1366260549.jpg', 0),
+(120, 10, 1, 'demo3', 'http://localhost:8081/mittag/upload/index.php?route=product/product&amp;path=20&amp;product_id=42', 'catalog/ring/2bc6950d-f2ee-49b6-8032-7ea65921a8ab.jpg', 0),
+(397, 7, 1, 'banner2018007', 'http://www.mittag.com.tw/index.php?route=product/category&amp;path=24', 'catalog/Activities/banners_NOT_AD/banner2018007.jpg', 9),
+(396, 7, 1, 'banner2018_packaging_01', 'http://www.mittag.com.tw/index.php?route=information/information&amp;information_id=9', 'catalog/Activities/banners_NOT_AD/banner2018_packaging_01.jpg', 8),
+(394, 7, 1, 'banner2018003', '', 'catalog/Activities/banners_NOT_AD/banner2018003.jpg', 6),
+(395, 7, 1, 'banner2018005', 'http://www.mittag.com.tw/index.php?route=product/product&amp;path=17&amp;product_id=306', 'catalog/Activities/banners_NOT_AD/banner2018005.jpg', 7),
+(392, 7, 1, 'banner2018002', '', 'catalog/Activities/banners_NOT_AD/banner2018002.jpg', 4),
+(393, 7, 1, 'banner2018004', 'http://www.mittag.com.tw/index.php?route=product/product&amp;path=25&amp;product_id=345', 'catalog/Activities/banners_NOT_AD/banner2018004.jpg', 5),
+(389, 7, 1, 'website_readiness_celebration', 'http://www.mittag.com.tw/index.php?route=product/product&amp;path=60&amp;product_id=349', 'catalog/Activities/2018_001_web_celebration/celebration_ad_web_banner_20180307_1.gif', 1),
+(391, 7, 1, 'banner2018001', 'http://www.mittag.com.tw/index.php?route=product/product&amp;path=18&amp;product_id=222', 'catalog/Activities/banners_NOT_AD/banner2018001.jpg', 3),
+(390, 7, 1, 'banner2018_free_shipping', 'http://www.mittag.com.tw/index.php?route=information/information&amp;information_id=6', 'catalog/Activities/banners_NOT_AD/banner2018_free_shipping.jpg', 2);
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -373,9 +456,20 @@ INSERT INTO `oc_cart` (`cart_id`, `api_id`, `customer_id`, `session_id`, `extraD
 (18, 0, 8, 'icmvankqdju32j5shr6nlfcd61', '[]', '請選擇戒圍', '0', '', '0', '', 56, 0, '[]', 1, '2017-09-11 09:00:30'),
 (19, 0, 8, 'icmvankqdju32j5shr6nlfcd61', '[]', '請選擇戒圍', '0', '', '0', '', 60, 0, '[]', 1, '2017-09-11 09:00:41'),
 (20, 0, 8, 'icmvankqdju32j5shr6nlfcd61', '[]', '14號(1.8cm)', '', '', '', '', 92, 0, '[]', 1, '2017-09-11 09:00:55'),
+<<<<<<< HEAD
 (25, 0, 9, 'vtu569cnl4ho2dlker5u0rh0v4', '[]', '請選擇戒圍', '', '', '', '耳針式耳環', 91, 0, '[]', 1, '2017-09-13 11:09:35'),
 (26, 0, 9, 'vtu569cnl4ho2dlker5u0rh0v4', '[]', '4號(1.3cm)', '', '', '', '', 92, 0, '[]', 1, '2017-09-13 11:43:47'),
 (31, 0, 6, 'm51mcpf68qahp0o3pith20n1o0', '[]', '4號(1.3cm)', '', '', '', '耳夾式耳環', 81, 0, '[]', 1, '2017-11-04 17:10:54');
+=======
+(31, 0, 6, 'm51mcpf68qahp0o3pith20n1o0', '[]', '4號(1.3cm)', '', '', '', '耳夾式耳環', 81, 0, '[]', 1, '2017-11-04 17:10:54'),
+(55, 0, 1, 'fkgcfct2gi79i25vjav9l0oss7', '', '', '', '', '', '', 123, 0, '[]', 1, '2017-12-07 00:03:50'),
+(59, 0, 1, 'fkgcfct2gi79i25vjav9l0oss7', '', '', '', '', '', '', 119, 0, '[]', 1, '2017-12-10 14:19:08'),
+(67, 0, 18, 'flvfk40lgl8nk3hal33lpgkl72', '', '', '', '', '', '', 122, 0, '[]', 1, '2018-01-28 17:50:14'),
+(73, 0, 19, 'flvfk40lgl8nk3hal33lpgkl72', '', '', '', '', '', '', 98, 0, '[]', 1, '2018-01-28 18:50:49'),
+(74, 0, 19, 'flvfk40lgl8nk3hal33lpgkl72', '', '', '', '', '', '', 119, 0, '[]', 1, '2018-01-28 18:50:49'),
+(79, 0, 20, 'flvfk40lgl8nk3hal33lpgkl72', '', '', '', '', '', '', 117, 0, '[]', 1, '2018-01-28 18:54:18'),
+(87, 0, 23, 'rs657d5faum8q97k6bjqj094o2', '[]', '', '', '', '', '', 131, 0, '[]', 1, '2018-02-25 17:12:16');
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -400,6 +494,7 @@ CREATE TABLE `oc_category` (
 --
 
 INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`, `sort_order`, `status`, `date_added`, `date_modified`) VALUES
+<<<<<<< HEAD
 (25, '', 0, 1, 1, 3, 1, '2009-01-31 01:04:25', '2017-05-08 13:27:30'),
 (20, '', 0, 1, 1, 1, 1, '2009-01-05 21:49:43', '2017-05-08 13:26:34'),
 (24, '', 0, 1, 1, 5, 1, '2009-01-20 02:36:26', '2017-05-08 13:29:29'),
@@ -408,6 +503,17 @@ INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`,
 (33, '', 0, 1, 1, 6, 1, '2009-02-03 14:17:55', '2017-05-08 13:29:56'),
 (34, '', 0, 1, 4, 7, 1, '2009-02-03 14:18:11', '2017-05-08 13:30:12'),
 (60, '', 0, 1, 1, 8, 1, '2017-09-10 13:34:04', '2017-10-28 22:34:46');
+=======
+(25, '', 0, 1, 1, 4, 1, '2009-01-31 01:04:25', '2018-03-18 20:56:55'),
+(20, '', 0, 1, 1, 5, 1, '2009-01-05 21:49:43', '2018-03-18 20:58:16'),
+(24, '', 0, 1, 1, 6, 1, '2009-01-20 02:36:26', '2018-03-18 20:59:25'),
+(18, '', 0, 1, 1, 2, 1, '2009-01-05 21:49:15', '2018-03-18 20:55:05'),
+(17, '', 0, 1, 1, 3, 1, '2009-01-03 21:08:57', '2018-03-18 20:56:02'),
+(33, '', 0, 1, 1, 8, 1, '2009-02-03 14:17:55', '2018-03-18 21:01:20'),
+(34, '', 0, 1, 1, 7, 1, '2009-02-03 14:18:11', '2018-03-18 21:00:18'),
+(60, '', 0, 1, 1, 9, 1, '2017-09-10 13:34:04', '2018-03-18 21:02:16'),
+(61, '', 0, 1, 1, 1, 1, '2018-03-10 22:12:24', '2018-03-18 20:54:02');
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -422,13 +528,19 @@ CREATE TABLE `oc_category_description` (
   `description` text NOT NULL,
   `meta_title` varchar(255) NOT NULL,
   `meta_description` varchar(255) NOT NULL,
+<<<<<<< HEAD
   `meta_keyword` varchar(255) NOT NULL
+=======
+  `meta_keyword` varchar(255) NOT NULL,
+  `mouseover` varchar(255) NOT NULL
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- 資料表的匯出資料 `oc_category_description`
 --
 
+<<<<<<< HEAD
 INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `description`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
 (33, 1, 'silverware', '', 'silverware', '', ''),
 (17, 1, 'bracelet', '', 'bracelet', '', ''),
@@ -438,6 +550,18 @@ INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `de
 (18, 1, 'necklace', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;\r\n', 'necklace', '', ''),
 (24, 1, 'baby shower gift', '', 'baby shower gift', '', ''),
 (60, 1, 'activities', '', 'activities', '', '');
+=======
+INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `description`, `meta_title`, `meta_description`, `meta_keyword`, `mouseover`) VALUES
+(33, 1, 'silverware', '', 'mittag_silverware', '手做 手作 handmade 銀飾 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 tiffany georg jensen 喬治傑生 dienes', '手做 手作 handmade 銀飾 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 tiffany georg jensen 喬治傑生 dienes', ''),
+(20, 1, 'earring', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;\r\n', 'mittag_earring', '手做 手作 handmade 銀飾 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 tiffany georg jensen 喬治傑生 dienes', '手做 手作 handmade 銀飾 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 tiffany georg jensen 喬治傑生 dienes', ''),
+(34, 1, 'others', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;\r\n', 'mittag_others', '手做 手作 handmade 銀飾 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 tiffany georg jensen 喬治傑生 dienes', '手做 手作 handmade 銀飾 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 tiffany georg jensen 喬治傑生 dienes', ''),
+(18, 1, 'necklace', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;\r\n', 'mittag_necklace', '手做 手作 handmade 銀飾 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 tiffany georg jensen 喬治傑生 dienes', '手做 手作 handmade 銀飾 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 tiffany georg jensen 喬治傑生 dienes', ''),
+(24, 1, 'baby shower gift', '', 'mittag_baby_shower_gift', '手做 手作 handmade 銀飾 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 tiffany georg jensen 喬治傑生 dienes', '手做 手作 handmade 銀飾 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 tiffany georg jensen 喬治傑生 dienes', ''),
+(60, 1, 'activities', '', 'mittag_activities', '手做 手作 handmade 銀飾 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 tiffany georg jensen 喬治傑生 dienes', '手做 手作 handmade 銀飾 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 tiffany georg jensen 喬治傑生 dienes', ''),
+(17, 1, 'bracelet', '', 'mittag_bracelet', '手做 手作 handmade 銀飾 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 tiffany georg jensen 喬治傑生 dienes', '手做 手作 handmade 銀飾 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 tiffany georg jensen 喬治傑生 dienes', ''),
+(25, 1, 'ring', '', 'mittag_ring', '手做 手作 handmade 銀飾 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 tiffany georg jensen 喬治傑生 dienes', '手做 手作 handmade 銀飾 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 tiffany georg jensen 喬治傑生 dienes', ''),
+(61, 1, 'hot products', '', 'mittag_hot_products', '手做 手作 handmade 銀飾 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 tiffany georg jensen 喬治傑生 dienes', '手做 手作 handmade 銀飾 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 tiffany georg jensen 喬治傑生 dienes', '');
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -474,7 +598,12 @@ INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
 (17, 17, 0),
 (33, 33, 0),
 (34, 34, 0),
+<<<<<<< HEAD
 (60, 60, 0);
+=======
+(60, 60, 0),
+(61, 61, 0);
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -500,7 +629,12 @@ INSERT INTO `oc_category_to_layout` (`category_id`, `store_id`, `layout_id`) VAL
 (24, 0, 0),
 (33, 0, 0),
 (34, 0, 0),
+<<<<<<< HEAD
 (60, 0, 14);
+=======
+(60, 0, 14),
+(61, 0, 0);
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -525,7 +659,12 @@ INSERT INTO `oc_category_to_store` (`category_id`, `store_id`) VALUES
 (25, 0),
 (33, 0),
 (34, 0),
+<<<<<<< HEAD
 (60, 0);
+=======
+(60, 0),
+(61, 0);
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -599,7 +738,11 @@ INSERT INTO `oc_country` (`country_id`, `name`, `iso_code_2`, `iso_code_3`, `add
 (49, 'Congo', 'CG', 'COG', '', 0, 1),
 (50, 'Cook Islands', 'CK', 'COK', '', 0, 1),
 (51, 'Costa Rica', 'CR', 'CRI', '', 0, 1),
+<<<<<<< HEAD
 (52, 'Cote D''Ivoire', 'CI', 'CIV', '', 0, 1),
+=======
+(52, 'Cote D\'Ivoire', 'CI', 'CIV', '', 0, 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (53, 'Croatia', 'HR', 'HRV', '', 0, 1),
 (54, 'Cuba', 'CU', 'CUB', '', 0, 1),
 (55, 'Cyprus', 'CY', 'CYP', '', 0, 1),
@@ -662,7 +805,11 @@ INSERT INTO `oc_country` (`country_id`, `name`, `iso_code_2`, `iso_code_3`, `add
 (113, 'South Korea', 'KR', 'KOR', '', 0, 1),
 (114, 'Kuwait', 'KW', 'KWT', '', 0, 1),
 (115, 'Kyrgyzstan', 'KG', 'KGZ', '', 0, 1),
+<<<<<<< HEAD
 (116, 'Lao People''s Democratic Republic', 'LA', 'LAO', '', 0, 1),
+=======
+(116, 'Lao People\'s Democratic Republic', 'LA', 'LAO', '', 0, 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (117, 'Latvia', 'LV', 'LVA', '', 0, 1),
 (118, 'Lebanon', 'LB', 'LBN', '', 0, 1),
 (119, 'Lesotho', 'LS', 'LSO', '', 0, 1),
@@ -895,7 +1042,11 @@ CREATE TABLE `oc_currency` (
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
+<<<<<<< HEAD
 (1, '新台幣', 'TWD', 'NT', '', '0', 1.00000000, 1, '2017-11-04 13:11:14'),
+=======
+(1, '新台幣', 'TWD', 'NT', '', '0', 1.00000000, 1, '2018-04-19 10:24:00'),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (2, '人民幣', 'CNY', '¥', '', '2', 0.21980000, 1, '2017-10-29 16:47:02'),
 (3, '港幣', 'HKD', 'HK', '', '2', 0.25799999, 1, '2017-10-29 16:47:02'),
 (4, '英鎊', 'GBP', '£', '', '2', 0.02520000, 1, '2017-10-29 16:47:02'),
@@ -939,6 +1090,7 @@ CREATE TABLE `oc_customer` (
 --
 
 INSERT INTO `oc_customer` (`customer_id`, `customer_group_id`, `store_id`, `language_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `password`, `salt`, `cart`, `wishlist`, `newsletter`, `address_id`, `custom_field`, `ip`, `status`, `approved`, `safe`, `token`, `code`, `date_added`) VALUES
+<<<<<<< HEAD
 (1, 1, 0, 1, 'Wayne', 'Lin', 'Anikiwayne@gmail.com', '0932000181', '', '12eca92ea753df4f35b677bf4f60770a394a9504', 'gCWM1mrvz', NULL, NULL, 1, 1, '', '220.135.38.215', 1, 1, 0, '', '', '2016-11-12 11:10:23'),
 (2, 1, 0, 0, 'lin', 'lingwei', 'linjohnwayne@gmail.com', '02222222222222', '', '8342c503c5170e86952cda5ec2f41b18b7390db7', 'brn6KxUy8', NULL, NULL, 1, 0, '', '', 1, 1, 0, '', '', '2016-11-24 16:32:19'),
 (3, 3, 0, 1, '榮斌', '吳', 'ukjames312@hotmail.com', '0952829779', '', '456baa956b1fb7181b99e34112544112e0c6f755', 'dFxCn2Qxy', NULL, NULL, 1, 2, '{"1":"","3":"","4":"","2":""}', '61.228.18.67', 1, 1, 0, '', '', '2017-03-15 08:47:19'),
@@ -948,6 +1100,12 @@ INSERT INTO `oc_customer` (`customer_id`, `customer_group_id`, `store_id`, `lang
 (7, 3, 0, 1, '姆士', '詹', 'ukjames312312@gmail.com', '0952829779', '', 'de3366f39c150a5a0040f7f5fb942e7bcbbe2c82', 'yNvyxSRBv', NULL, NULL, 1, 6, '{"1":"2015-07-14","3":"5","4":"2017-08-30","2":"3"}', '61.228.19.76', 1, 1, 0, '', '', '2017-09-10 10:33:53'),
 (8, 1, 0, 1, '老詹', '吳', 'ukjames312312312@gmail.com', '0923232323', '', '6a0bfe5ae620aa100a7b25fe678fe2799dec1f5b', 'MQMWqTJyz', NULL, NULL, 1, 7, '{"1":"2014-11-03","4":"","2":"3","3":"5"}', '61.228.19.76', 1, 1, 0, '', '', '2017-09-11 08:59:57'),
 (9, 1, 0, 1, 'wei', 'lin', 'lingwei005@gmail.com', '0911672251', '', 'a142f940cc36d48497213e25fe274e1cf094214a', 'S4OcgUb6n', NULL, NULL, 1, 8, '{"1":"2017-09-08","4":"","2":"","3":"6"}', '59.115.237.71', 1, 1, 0, '', '', '2017-09-13 08:33:22');
+=======
+(4, 3, 0, 1, 'James', 'Wu', 'ukjames312@gmail.com', '02-2222222222', '', '9d81cca9f1330bfe73fd1394b5fc14987e2acfdf', 'KwuGCsCqk', NULL, NULL, 0, 3, '', '36.229.134.49', 1, 1, 0, '', '', '2017-05-19 14:33:08'),
+(21, 1, 0, 1, '詹姆士', '', 'ukjames312@hotmail.com', '0952829779', '', 'd9f51a94e956d40de769b73fb148b397d1679e05', 'NTkA49UdZ', NULL, NULL, 1, 18, '', '36.229.135.221', 1, 1, 0, '', '', '2018-02-07 21:29:05'),
+(9, 1, 0, 1, 'wei', 'lin', 'lingwei005@gmail.com', '0911672251', '', 'a142f940cc36d48497213e25fe274e1cf094214a', 'S4OcgUb6n', NULL, NULL, 1, 8, '{\"1\":\"2017-09-08\",\"4\":\"\",\"2\":\"\",\"3\":\"6\"}', '36.230.99.197', 1, 1, 0, '', '', '2017-09-13 08:33:22'),
+(17, 1, 0, 1, 'LingWei', 'Lin', 'fisher_lin_005@hotmail.com', '', '', '5f6a8d2edd6eaedaa4d57d2d4088dc864707298f', '7lpZWo1uQ', NULL, NULL, 0, 14, '', '223.140.238.253', 1, 1, 0, '', '', '2018-01-27 10:30:57');
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -1038,6 +1196,7 @@ CREATE TABLE `oc_customer_ip` (
 --
 
 INSERT INTO `oc_customer_ip` (`customer_ip_id`, `customer_id`, `ip`, `date_added`) VALUES
+<<<<<<< HEAD
 (1, 1, '223.140.141.91', '2016-11-12 11:10:23'),
 (2, 3, '118.163.131.163', '2017-03-15 08:47:20'),
 (3, 3, '36.229.222.221', '2017-05-04 13:37:54'),
@@ -1053,6 +1212,18 @@ INSERT INTO `oc_customer_ip` (`customer_ip_id`, `customer_id`, `ip`, `date_added
 (13, 7, '61.228.19.76', '2017-09-10 10:33:54'),
 (14, 8, '61.228.19.76', '2017-09-11 08:59:57'),
 (15, 9, '59.115.237.71', '2017-09-13 08:33:23');
+=======
+(5, 4, '36.229.150.4', '2017-05-19 14:33:09'),
+(6, 4, '36.229.211.100', '2017-05-23 21:56:53'),
+(30, 4, '36.229.134.49', '2018-02-05 10:32:43'),
+(26, 17, '223.140.238.253', '2018-01-27 10:30:57'),
+(12, 4, '61.228.19.76', '2017-09-10 08:17:17'),
+(31, 21, '36.229.135.221', '2018-02-07 21:29:05'),
+(15, 9, '59.115.237.71', '2017-09-13 08:33:23'),
+(18, 9, '61.228.26.132', '2017-11-29 08:53:00'),
+(20, 9, '36.229.211.42', '2017-12-12 12:57:23'),
+(22, 9, '36.230.99.197', '2018-01-08 10:19:02');
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -1082,6 +1253,7 @@ INSERT INTO `oc_customer_login` (`customer_login_id`, `email`, `ip`, `total`, `d
 (6, 'lingwei', '118.163.131.163', 6, '2017-03-13 14:41:35', '2017-03-13 17:29:44'),
 (8, 'lingwei', '36.229.150.4', 1, '2017-05-19 14:29:01', '2017-05-19 14:29:01'),
 (11, 'lingwei', '36.229.211.100', 5, '2017-05-23 14:43:21', '2017-05-23 14:44:07'),
+<<<<<<< HEAD
 (10, 'ukjames312@hotmail.com', '36.229.150.4', 1, '2017-05-19 14:30:51', '2017-05-19 14:30:51'),
 (12, '', '::1', 2, '2017-08-21 14:17:18', '2017-10-23 14:52:43'),
 (14, 'admin', '220.135.38.215', 1, '2017-09-08 20:58:22', '2017-09-08 20:58:22'),
@@ -1090,6 +1262,21 @@ INSERT INTO `oc_customer_login` (`customer_login_id`, `email`, `ip`, `total`, `d
 (17, 'ukjames312@gmail.com', '59.115.237.71', 1, '2017-09-13 08:23:40', '2017-09-13 08:23:40'),
 (18, 'ligwei005@gmail.com', '59.115.237.71', 1, '2017-09-13 09:10:30', '2017-09-13 09:10:30'),
 (19, 'admin', '::1', 1, '2017-10-21 13:50:05', '2017-10-21 13:50:05');
+=======
+(27, 'anikiwayne@gmail.com', '220.135.38.215', 8, '2018-02-20 14:03:22', '2018-03-25 22:47:36'),
+(12, '', '::1', 2, '2017-08-21 14:17:18', '2017-10-23 14:52:43'),
+(14, 'admin', '220.135.38.215', 8, '2017-09-08 20:58:22', '2018-03-25 20:36:20'),
+(16, 'ukjames', '61.228.19.76', 2, '2017-09-10 22:33:52', '2017-09-10 22:33:57'),
+(18, 'ligwei005@gmail.com', '59.115.237.71', 1, '2017-09-13 09:10:30', '2017-09-13 09:10:30'),
+(19, 'admin', '::1', 1, '2017-10-21 13:50:05', '2017-10-21 13:50:05'),
+(21, 'lingwei', '36.229.208.124', 1, '2017-11-20 16:13:13', '2017-11-20 16:13:13'),
+(22, 'aniki_wayne@yahoo.com.tw', '::1', 3, '2017-11-22 13:08:11', '2017-11-22 13:08:18'),
+(23, 'lingwei', '61.228.26.132', 2, '2017-11-29 08:52:01', '2017-11-29 08:52:50'),
+(24, 'admin', '223.136.156.241', 1, '2017-12-10 14:18:49', '2017-12-10 14:18:49'),
+(25, 'aniki_wayne@yahoo.com.tw', '223.136.156.241', 1, '2017-12-10 14:18:57', '2017-12-10 14:18:57'),
+(26, 'limgwei005@gmail.com', '36.230.99.197', 4, '2018-01-08 10:18:41', '2018-01-08 10:18:56'),
+(28, 'aniki_wayne@yahoo.com.tw', '220.135.38.215', 1, '2018-02-20 14:03:34', '2018-02-20 14:03:34');
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -1120,6 +1307,7 @@ CREATE TABLE `oc_customer_reward` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 --
 -- 資料表的匯出資料 `oc_customer_reward`
 --
@@ -1127,6 +1315,8 @@ CREATE TABLE `oc_customer_reward` (
 INSERT INTO `oc_customer_reward` (`customer_reward_id`, `customer_id`, `order_id`, `description`, `points`, `date_added`) VALUES
 (1, 2, 0, '', 5, '2017-05-18 13:48:15');
 
+=======
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 -- --------------------------------------------------------
 
 --
@@ -1162,6 +1352,7 @@ CREATE TABLE `oc_customer_transaction` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 --
 -- 資料表的匯出資料 `oc_customer_transaction`
 --
@@ -1170,6 +1361,8 @@ INSERT INTO `oc_customer_transaction` (`customer_transaction_id`, `customer_id`,
 (1, 2, 0, '', '0.0000', '2017-05-18 13:47:24'),
 (2, 2, 0, '', '30.0000', '2017-05-18 13:47:42');
 
+=======
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 -- --------------------------------------------------------
 
 --
@@ -1206,6 +1399,7 @@ CREATE TABLE `oc_custom_field` (
   `sort_order` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 --
 -- 資料表的匯出資料 `oc_custom_field`
 --
@@ -1216,6 +1410,8 @@ INSERT INTO `oc_custom_field` (`custom_field_id`, `type`, `value`, `validation`,
 (2, 'select', '', '', 'account', 0, 7),
 (3, 'select', '', '', 'account', 1, 6);
 
+=======
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 -- --------------------------------------------------------
 
 --
@@ -1228,6 +1424,7 @@ CREATE TABLE `oc_custom_field_customer_group` (
   `required` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 --
 -- 資料表的匯出資料 `oc_custom_field_customer_group`
 --
@@ -1238,6 +1435,8 @@ INSERT INTO `oc_custom_field_customer_group` (`custom_field_id`, `customer_group
 (3, 1, 0),
 (4, 1, 0);
 
+=======
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 -- --------------------------------------------------------
 
 --
@@ -1250,6 +1449,7 @@ CREATE TABLE `oc_custom_field_description` (
   `name` varchar(128) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 --
 -- 資料表的匯出資料 `oc_custom_field_description`
 --
@@ -1260,6 +1460,8 @@ INSERT INTO `oc_custom_field_description` (`custom_field_id`, `language_id`, `na
 (3, 1, '性別'),
 (4, 1, '最在意的日期');
 
+=======
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 -- --------------------------------------------------------
 
 --
@@ -1272,6 +1474,7 @@ CREATE TABLE `oc_custom_field_value` (
   `sort_order` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 --
 -- 資料表的匯出資料 `oc_custom_field_value`
 --
@@ -1284,6 +1487,8 @@ INSERT INTO `oc_custom_field_value` (`custom_field_value_id`, `custom_field_id`,
 (5, 3, 0),
 (6, 3, 0);
 
+=======
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 -- --------------------------------------------------------
 
 --
@@ -1297,6 +1502,7 @@ CREATE TABLE `oc_custom_field_value_description` (
   `name` varchar(128) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 --
 -- 資料表的匯出資料 `oc_custom_field_value_description`
 --
@@ -1309,6 +1515,8 @@ INSERT INTO `oc_custom_field_value_description` (`custom_field_value_id`, `langu
 (5, 1, 3, '男'),
 (6, 1, 3, '女');
 
+=======
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 -- --------------------------------------------------------
 
 --
@@ -1440,8 +1648,35 @@ INSERT INTO `oc_extension` (`extension_id`, `type`, `code`) VALUES
 (32, 'shipping', 'pickup'),
 (33, 'module', 'latest'),
 (34, 'module', 'bestseller'),
+<<<<<<< HEAD
 (35, 'module', 'simple_blog'),
 (36, 'module', 'simple_blog_category');
+=======
+(47, 'payment', 'ecpaylogistic'),
+(37, 'shipping', 'free'),
+(46, 'shipping', 'ecpaylogistic');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `oc_fb_logins`
+--
+
+CREATE TABLE `oc_fb_logins` (
+  `id` int(6) UNSIGNED NOT NULL,
+  `fb_id` longtext,
+  `customer_id` longtext,
+  `fb_ts` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- 資料表的匯出資料 `oc_fb_logins`
+--
+
+INSERT INTO `oc_fb_logins` (`id`, `fb_id`, `customer_id`, `fb_ts`) VALUES
+(1, '951034951712031', '12', '2017-12-29 15:14:50'),
+(2, 'undefined', '13', '2017-12-30 03:10:58');
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -1560,6 +1795,7 @@ CREATE TABLE `oc_information_description` (
 --
 
 INSERT INTO `oc_information_description` (`information_id`, `language_id`, `title`, `description`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
+<<<<<<< HEAD
 (5, 1, ' 尺寸測量/對照表: ', '&lt;p class=&quot;MsoNormal&quot;&gt;&lt;b&gt;&lt;font face=&quot;Arial Black&quot;&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;戒指圍&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;(&lt;/span&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;請提供國際圍號數&lt;/span&gt;&lt;/font&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;font-size: 10pt;&quot;&gt;&lt;font face=&quot;Arial Black&quot;&gt;)&lt;/font&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot;&gt;&lt;span style=&quot;font-size: 10pt; font-family: 新細明體;&quot;&gt;手指大小&lt;/span&gt;&lt;span style=&quot;font-size: 10pt; font-family: 新細明體;&quot;&gt;會隨時間和天氣而改變&lt;/span&gt;&lt;span style=&quot;font-size: 10pt; font-family: 新細明體;&quot;&gt;，&lt;/span&gt;&lt;span style=&quot;font-size: 10pt; font-family: 新細明體;&quot;&gt;請&lt;/span&gt;&lt;span style=&quot;font-size: 10pt; font-family: 新細明體;&quot;&gt;不要測量過冷或過熱的手指，因這會影響戒指的尺寸。也請不要忘記左手與右手之間的尺寸會有很大分別。&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot;&gt;&lt;img src=&quot;http://www.mittag.com.tw/image/catalog/mittag ring size.jpg&quot; style=&quot;width: 802px;&quot;&gt;&lt;span style=&quot;font-size: 10pt; font-family: 新細明體;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot;&gt;&lt;span style=&quot;font-size: 10pt; font-family: 新細明體;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot;&gt;&lt;b&gt;&lt;span style=&quot;font-size:10.0pt;font-family:&amp;quot;新細明體&amp;quot;,serif;mso-ascii-font-family:Calibri;\r\nmso-ascii-theme-font:minor-latin;mso-fareast-theme-font:minor-fareast;\r\nmso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:\r\nArial;mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:\r\nAR-SA&quot;&gt;項鍊長度參考圖&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;font-size:10.0pt;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;\r\nmso-ascii-theme-font:minor-latin;mso-fareast-font-family:新細明體;mso-fareast-theme-font:\r\nminor-fareast;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;\r\nmso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA&quot;&gt;:&lt;/span&gt;&lt;/b&gt;&lt;span style=&quot;font-size: 10pt; font-family: 新細明體;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot;&gt;&lt;img src=&quot;http://www.mittag.com.tw/image/catalog/mittag necklace size01.jpg&quot; style=&quot;width: 802px;&quot;&gt;&lt;span style=&quot;font-size: 10pt; font-family: 新細明體;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;\r\n', ' 尺寸測量/對照表: ', '', '');
 INSERT INTO `oc_information_description` (`information_id`, `language_id`, `title`, `description`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
 (3, 1, '購買注意事項', '&lt;p class=&quot;MsoNormal&quot;&gt;&lt;span style=&quot;font-size: 10pt; font-family: 新細明體, serif;&quot;&gt;並非所有款式皆有生產各號數尺寸，歡迎下單前先確認&lt;/span&gt;&lt;span style=&quot;font-size:\r\n10.0pt;font-family:&amp;quot;新細明體&amp;quot;,serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:\r\nminor-latin;mso-fareast-font-family:新細明體;mso-fareast-theme-font:minor-fareast;\r\nmso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:\r\nArial&quot;&gt;有無現貨或您需要的尺寸&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;font-size:10.0pt;mso-hansi-font-family:\r\nArial;mso-bidi-font-family:Arial&quot;&gt;; &lt;/span&gt;&lt;span style=&quot;font-size:10.0pt;\r\nfont-family:&amp;quot;新細明體&amp;quot;,serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:\r\nminor-latin;mso-fareast-font-family:新細明體;mso-fareast-theme-font:minor-fareast;\r\nmso-hansi-font-family:Arial;mso-bidi-font-family:Arial&quot;&gt;如果沒有現貨，需約&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;font-size:10.0pt;mso-bidi-font-family:Arial&quot;&gt;2&lt;/span&gt;&lt;span style=&quot;font-size:10.0pt;font-family:&amp;quot;新細明體&amp;quot;,serif;mso-ascii-font-family:Calibri;\r\nmso-ascii-theme-font:minor-latin;mso-fareast-font-family:新細明體;mso-fareast-theme-font:\r\nminor-fareast;mso-hansi-font-family:Arial;mso-bidi-font-family:Arial&quot;&gt;週的等待時間。&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;font-size:10.0pt;mso-bidi-font-family:Arial&quot;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot;&gt;\r\n\r\n&lt;b&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;font-size:10.0pt;\r\nfont-family:&amp;quot;Calibri&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:\r\n新細明體;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;\r\nmso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;\r\nmso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA&quot;&gt;Payment/&lt;/span&gt;&lt;span style=&quot;font-size:10.0pt;font-family:&amp;quot;新細明體&amp;quot;,serif;mso-ascii-font-family:Calibri;\r\nmso-ascii-theme-font:minor-latin;mso-fareast-theme-font:minor-fareast;\r\nmso-hansi-theme-font:minor-fareast;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;\r\nmso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:\r\nZH-TW;mso-bidi-language:AR-SA&quot;&gt;付款方式&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;font-size:\r\n10.0pt;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;\r\nmso-fareast-font-family:新細明體;mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:\r\n新細明體;mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;\r\nmso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:\r\nZH-TW;mso-bidi-language:AR-SA&quot;&gt;: &lt;/span&gt;&lt;/b&gt;&lt;span style=&quot;font-size:10.0pt;\r\nfont-family:&amp;quot;新細明體&amp;quot;,serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:\r\nminor-latin;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;\r\nmso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;\r\nmso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA&quot;&gt;一旦&lt;/span&gt;&lt;span style=&quot;font-size: 10pt; font-family: 新細明體, serif;&quot;&gt;確認訂單後&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;font-size:\r\n10.0pt;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;\r\nmso-fareast-font-family:新細明體;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:\r\nminor-latin;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;\r\nmso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA&quot;&gt;mittag&lt;/span&gt;&lt;span style=&quot;font-size:10.0pt;font-family:&amp;quot;新細明體&amp;quot;,serif;mso-ascii-font-family:Calibri;\r\nmso-ascii-theme-font:minor-latin;mso-fareast-theme-font:minor-fareast;\r\nmso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:\r\n&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;\r\nmso-fareast-language:ZH-TW;mso-bidi-language:AR-SA&quot;&gt;會提供匯款帳號&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot;&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;font-size:10.0pt;\r\nmso-bidi-font-family:Arial;color:black;mso-themecolor:text1&quot;&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n&lt;!--[if gte mso 9]&gt;&lt;xml&gt;\r\n &lt;o:OfficeDocumentSettings&gt;\r\n  &lt;o:RelyOnVML&gt;&lt;/o:RelyOnVML&gt;\r\n  &lt;o:AllowPNG&gt;&lt;/o:AllowPNG&gt;\r\n &lt;/o:OfficeDocumentSettings&gt;\r\n&lt;/xml&gt;&lt;![endif]--&gt;\r\n\r\n&lt;!--[if gte mso 9]&gt;&lt;xml&gt;\r\n &lt;w:WordDocument&gt;\r\n  &lt;w:View&gt;Normal&lt;/w:View&gt;\r\n  &lt;w:Zoom&gt;0&lt;/w:Zoom&gt;\r\n  &lt;w:TrackMoves&gt;&lt;/w:TrackMoves&gt;\r\n  &lt;w:TrackFormatting&gt;&lt;/w:TrackFormatting&gt;\r\n  &lt;w:PunctuationKerning&gt;&lt;/w:PunctuationKerning&gt;\r\n  &lt;w:DrawingGridVerticalSpacing&gt;10 pt&lt;/w:DrawingGridVerticalSpacing&gt;\r\n  &lt;w:DisplayHorizontalDrawingGridEvery&gt;0&lt;/w:DisplayHorizontalDrawingGridEvery&gt;\r\n  &lt;w:DisplayVerticalDrawingGridEvery&gt;2&lt;/w:DisplayVerticalDrawingGridEvery&gt;\r\n  &lt;w:ValidateAgainstSchemas&gt;&lt;/w:ValidateAgainstSchemas&gt;\r\n  &lt;w:SaveIfXMLInvalid&gt;false&lt;/w:SaveIfXMLInvalid&gt;\r\n  &lt;w:IgnoreMixedContent&gt;false&lt;/w:IgnoreMixedContent&gt;\r\n  &lt;w:AlwaysShowPlaceholderText&gt;false&lt;/w:AlwaysShowPlaceholderText&gt;\r\n  &lt;w:DoNotPromoteQF&gt;&lt;/w:DoNotPromoteQF&gt;\r\n  &lt;w:LidThemeOther&gt;EN-US&lt;/w:LidThemeOther&gt;\r\n  &lt;w:LidThemeAsian&gt;ZH-TW&lt;/w:LidThemeAsian&gt;\r\n  &lt;w:LidThemeComplexScript&gt;X-NONE&lt;/w:LidThemeComplexScript&gt;\r\n  &lt;w:Compatibility&gt;\r\n   &lt;w:SpaceForUL&gt;&lt;/w:SpaceForUL&gt;\r\n   &lt;w:BalanceSingleByteDoubleByteWidth&gt;&lt;/w:BalanceSingleByteDoubleByteWidth&gt;\r\n   &lt;w:DoNotLeaveBackslashAlone&gt;&lt;/w:DoNotLeaveBackslashAlone&gt;\r\n   &lt;w:ULTrailSpace&gt;&lt;/w:ULTrailSpace&gt;\r\n   &lt;w:DoNotExpandShiftReturn&gt;&lt;/w:DoNotExpandShiftReturn&gt;\r\n   &lt;w:AdjustLineHeightInTable&gt;&lt;/w:AdjustLineHeightInTable&gt;\r\n   &lt;w:BreakWrappedTables&gt;&lt;/w:BreakWrappedTables&gt;\r\n   &lt;w:SnapToGridInCell&gt;&lt;/w:SnapToGridInCell&gt;\r\n   &lt;w:WrapTextWithPunct&gt;&lt;/w:WrapTextWithPunct&gt;\r\n   &lt;w:UseAsianBreakRules&gt;&lt;/w:UseAsianBreakRules&gt;\r\n   &lt;w:DontGrowAutofit&gt;&lt;/w:DontGrowAutofit&gt;\r\n   &lt;w:SplitPgBreakAndParaMark&gt;&lt;/w:SplitPgBreakAndParaMark&gt;\r\n   &lt;w:EnableOpenTypeKerning&gt;&lt;/w:EnableOpenTypeKerning&gt;\r\n   &lt;w:DontFlipMirrorIndents&gt;&lt;/w:DontFlipMirrorIndents&gt;\r\n   &lt;w:OverrideTableStyleHps&gt;&lt;/w:OverrideTableStyleHps&gt;\r\n   &lt;w:UseFELayout&gt;&lt;/w:UseFELayout&gt;\r\n  &lt;/w:Compatibility&gt;\r\n  &lt;m:mathPr&gt;\r\n   &lt;m:mathFont m:val=&quot;Cambria Math&quot;&gt;&lt;/m:mathFont&gt;\r\n   &lt;m:brkBin m:val=&quot;before&quot;&gt;&lt;/m:brkBin&gt;\r\n   &lt;m:brkBinSub m:val=&quot;&amp;#45;-&quot;&gt;&lt;/m:brkBinSub&gt;\r\n   &lt;m:smallFrac m:val=&quot;off&quot;&gt;&lt;/m:smallFrac&gt;\r\n   &lt;m:dispDef&gt;&lt;/m:dispDef&gt;\r\n   &lt;m:lMargin m:val=&quot;0&quot;&gt;&lt;/m:lMargin&gt;\r\n   &lt;m:rMargin m:val=&quot;0&quot;&gt;&lt;/m:rMargin&gt;\r\n   &lt;m:defJc m:val=&quot;centerGroup&quot;&gt;&lt;/m:defJc&gt;\r\n   &lt;m:wrapIndent m:val=&quot;1440&quot;&gt;&lt;/m:wrapIndent&gt;\r\n   &lt;m:intLim m:val=&quot;subSup&quot;&gt;&lt;/m:intLim&gt;\r\n   &lt;m:naryLim m:val=&quot;undOvr&quot;&gt;&lt;/m:naryLim&gt;\r\n  &lt;/m:mathPr&gt;&lt;/w:WordDocument&gt;\r\n&lt;/xml&gt;&lt;![endif]--&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;\r\n &lt;w:LatentStyles DefLockedState=&quot;false&quot; DefUnhideWhenUsed=&quot;false&quot;\r\n  DefSemiHidden=&quot;false&quot; DefQFormat=&quot;false&quot; DefPriority=&quot;99&quot;\r\n  LatentStyleCount=&quot;381&quot;&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;0&quot; QFormat=&quot;true&quot; Name=&quot;Normal&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; QFormat=&quot;true&quot; Name=&quot;heading 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;heading 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;heading 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;heading 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;heading 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;heading 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;heading 7&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;heading 8&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;9&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;heading 9&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;index 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;index 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;index 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;index 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;index 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;index 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;index 7&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;index 8&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;index 9&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; Name=&quot;toc 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; Name=&quot;toc 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; Name=&quot;toc 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; Name=&quot;toc 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; Name=&quot;toc 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; Name=&quot;toc 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; Name=&quot;toc 7&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; Name=&quot;toc 8&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; Name=&quot;toc 9&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Normal Indent&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;footnote text&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;annotation text&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;header&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;footer&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;index heading&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;35&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;caption&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;table of figures&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;envelope address&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;envelope return&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;footnote reference&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;annotation reference&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;line number&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;page number&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;endnote reference&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;endnote text&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;table of authorities&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;macro&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;toa heading&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List Bullet&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List Number&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List Bullet 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List Bullet 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List Bullet 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List Bullet 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List Number 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List Number 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List Number 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List Number 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;10&quot; QFormat=&quot;true&quot; Name=&quot;Title&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Closing&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Signature&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;1&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; Name=&quot;Default Paragraph Font&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Body Text&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Body Text Indent&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List Continue&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List Continue 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List Continue 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List Continue 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;List Continue 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Message Header&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;11&quot; QFormat=&quot;true&quot; Name=&quot;Subtitle&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Salutation&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Date&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Body Text First Indent&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Body Text First Indent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Note Heading&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Body Text 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Body Text 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Body Text Indent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Body Text Indent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Block Text&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Hyperlink&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;FollowedHyperlink&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;22&quot; QFormat=&quot;true&quot; Name=&quot;Strong&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;20&quot; QFormat=&quot;true&quot; Name=&quot;Emphasis&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Document Map&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Plain Text&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;E-mail Signature&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;HTML Top of Form&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;HTML Bottom of Form&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Normal (Web)&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;HTML Acronym&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;HTML Address&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;HTML Cite&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;HTML Code&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;HTML Definition&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;HTML Keyboard&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;HTML Preformatted&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;HTML Sample&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;HTML Typewriter&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;HTML Variable&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Normal Table&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;annotation subject&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;No List&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Outline List 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Outline List 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Outline List 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Simple 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Simple 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Simple 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Classic 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Classic 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Classic 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Classic 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Colorful 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Colorful 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Colorful 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Columns 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Columns 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Columns 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Columns 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Columns 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Grid 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Grid 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Grid 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Grid 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Grid 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Grid 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Grid 7&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Grid 8&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table List 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table List 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table List 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table List 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table List 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table List 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table List 7&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table List 8&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table 3D effects 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table 3D effects 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table 3D effects 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Contemporary&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Elegant&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Professional&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Subtle 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Subtle 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Web 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Web 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Web 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Balloon Text&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; Name=&quot;Table Grid&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Table Theme&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Note Level 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Note Level 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Note Level 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Note Level 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Note Level 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Note Level 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Note Level 7&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Note Level 8&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; UnhideWhenUsed=&quot;true&quot;\r\n   Name=&quot;Note Level 9&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; Name=&quot;Placeholder Text&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;1&quot; QFormat=&quot;true&quot; Name=&quot;No Spacing&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; Name=&quot;Light Shading&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; Name=&quot;Light List&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; Name=&quot;Light Grid&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; Name=&quot;Medium Shading 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; Name=&quot;Medium Shading 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; Name=&quot;Medium List 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; Name=&quot;Medium List 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; Name=&quot;Medium Grid 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; Name=&quot;Medium Grid 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; Name=&quot;Medium Grid 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; Name=&quot;Dark List&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; Name=&quot;Colorful Shading&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; Name=&quot;Colorful List&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; Name=&quot;Colorful Grid&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; Name=&quot;Light Shading Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; Name=&quot;Light List Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; Name=&quot;Light Grid Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; Name=&quot;Medium Shading 1 Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; Name=&quot;Medium Shading 2 Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; Name=&quot;Medium List 1 Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; SemiHidden=&quot;true&quot; Name=&quot;Revision&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;34&quot; QFormat=&quot;true&quot;\r\n   Name=&quot;List Paragraph&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;29&quot; QFormat=&quot;true&quot; Name=&quot;Quote&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;30&quot; QFormat=&quot;true&quot;\r\n   Name=&quot;Intense Quote&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; Name=&quot;Medium List 2 Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; Name=&quot;Medium Grid 1 Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; Name=&quot;Medium Grid 2 Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; Name=&quot;Medium Grid 3 Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; Name=&quot;Dark List Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; Name=&quot;Colorful Shading Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; Name=&quot;Colorful List Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; Name=&quot;Colorful Grid Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; Name=&quot;Light Shading Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; Name=&quot;Light List Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; Name=&quot;Light Grid Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; Name=&quot;Medium Shading 1 Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; Name=&quot;Medium Shading 2 Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; Name=&quot;Medium List 1 Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; Name=&quot;Medium List 2 Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; Name=&quot;Medium Grid 1 Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; Name=&quot;Medium Grid 2 Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; Name=&quot;Medium Grid 3 Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; Name=&quot;Dark List Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; Name=&quot;Colorful Shading Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; Name=&quot;Colorful List Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; Name=&quot;Colorful Grid Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; Name=&quot;Light Shading Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; Name=&quot;Light List Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; Name=&quot;Light Grid Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; Name=&quot;Medium Shading 1 Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; Name=&quot;Medium Shading 2 Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; Name=&quot;Medium List 1 Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; Name=&quot;Medium List 2 Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; Name=&quot;Medium Grid 1 Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; Name=&quot;Medium Grid 2 Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; Name=&quot;Medium Grid 3 Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; Name=&quot;Dark List Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; Name=&quot;Colorful Shading Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; Name=&quot;Colorful List Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; Name=&quot;Colorful Grid Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; Name=&quot;Light Shading Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; Name=&quot;Light List Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; Name=&quot;Light Grid Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; Name=&quot;Medium Shading 1 Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; Name=&quot;Medium Shading 2 Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; Name=&quot;Medium List 1 Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; Name=&quot;Medium List 2 Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; Name=&quot;Medium Grid 1 Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; Name=&quot;Medium Grid 2 Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; Name=&quot;Medium Grid 3 Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; Name=&quot;Dark List Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; Name=&quot;Colorful Shading Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; Name=&quot;Colorful List Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; Name=&quot;Colorful Grid Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; Name=&quot;Light Shading Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; Name=&quot;Light List Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; Name=&quot;Light Grid Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; Name=&quot;Medium Shading 1 Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; Name=&quot;Medium Shading 2 Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; Name=&quot;Medium List 1 Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; Name=&quot;Medium List 2 Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; Name=&quot;Medium Grid 1 Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; Name=&quot;Medium Grid 2 Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; Name=&quot;Medium Grid 3 Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; Name=&quot;Dark List Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; Name=&quot;Colorful Shading Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; Name=&quot;Colorful List Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; Name=&quot;Colorful Grid Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;60&quot; Name=&quot;Light Shading Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;61&quot; Name=&quot;Light List Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;62&quot; Name=&quot;Light Grid Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;63&quot; Name=&quot;Medium Shading 1 Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;64&quot; Name=&quot;Medium Shading 2 Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;65&quot; Name=&quot;Medium List 1 Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;66&quot; Name=&quot;Medium List 2 Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;67&quot; Name=&quot;Medium Grid 1 Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;68&quot; Name=&quot;Medium Grid 2 Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;69&quot; Name=&quot;Medium Grid 3 Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;70&quot; Name=&quot;Dark List Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;71&quot; Name=&quot;Colorful Shading Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;72&quot; Name=&quot;Colorful List Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;73&quot; Name=&quot;Colorful Grid Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;19&quot; QFormat=&quot;true&quot;\r\n   Name=&quot;Subtle Emphasis&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;21&quot; QFormat=&quot;true&quot;\r\n   Name=&quot;Intense Emphasis&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;31&quot; QFormat=&quot;true&quot;\r\n   Name=&quot;Subtle Reference&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;32&quot; QFormat=&quot;true&quot;\r\n   Name=&quot;Intense Reference&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;33&quot; QFormat=&quot;true&quot; Name=&quot;Book Title&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;37&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; Name=&quot;Bibliography&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;39&quot; SemiHidden=&quot;true&quot;\r\n   UnhideWhenUsed=&quot;true&quot; QFormat=&quot;true&quot; Name=&quot;TOC Heading&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;41&quot; Name=&quot;Plain Table 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;42&quot; Name=&quot;Plain Table 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;43&quot; Name=&quot;Plain Table 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;44&quot; Name=&quot;Plain Table 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;45&quot; Name=&quot;Plain Table 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;40&quot; Name=&quot;Grid Table Light&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot; Name=&quot;Grid Table 1 Light&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;Grid Table 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;Grid Table 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;Grid Table 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;Grid Table 5 Dark&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot; Name=&quot;Grid Table 6 Colorful&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot; Name=&quot;Grid Table 7 Colorful&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;\r\n   Name=&quot;Grid Table 1 Light Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;Grid Table 2 Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;Grid Table 3 Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;Grid Table 4 Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;Grid Table 5 Dark Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;\r\n   Name=&quot;Grid Table 6 Colorful Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;\r\n   Name=&quot;Grid Table 7 Colorful Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;\r\n   Name=&quot;Grid Table 1 Light Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;Grid Table 2 Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;Grid Table 3 Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;Grid Table 4 Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;Grid Table 5 Dark Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;\r\n   Name=&quot;Grid Table 6 Colorful Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;\r\n   Name=&quot;Grid Table 7 Colorful Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;\r\n   Name=&quot;Grid Table 1 Light Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;Grid Table 2 Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;Grid Table 3 Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;Grid Table 4 Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;Grid Table 5 Dark Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;\r\n   Name=&quot;Grid Table 6 Colorful Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;\r\n   Name=&quot;Grid Table 7 Colorful Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;\r\n   Name=&quot;Grid Table 1 Light Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;Grid Table 2 Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;Grid Table 3 Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;Grid Table 4 Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;Grid Table 5 Dark Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;\r\n   Name=&quot;Grid Table 6 Colorful Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;\r\n   Name=&quot;Grid Table 7 Colorful Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;\r\n   Name=&quot;Grid Table 1 Light Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;Grid Table 2 Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;Grid Table 3 Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;Grid Table 4 Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;Grid Table 5 Dark Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;\r\n   Name=&quot;Grid Table 6 Colorful Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;\r\n   Name=&quot;Grid Table 7 Colorful Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;\r\n   Name=&quot;Grid Table 1 Light Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;Grid Table 2 Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;Grid Table 3 Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;Grid Table 4 Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;Grid Table 5 Dark Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;\r\n   Name=&quot;Grid Table 6 Colorful Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;\r\n   Name=&quot;Grid Table 7 Colorful Accent 6&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot; Name=&quot;List Table 1 Light&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;List Table 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;List Table 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;List Table 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;List Table 5 Dark&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot; Name=&quot;List Table 6 Colorful&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot; Name=&quot;List Table 7 Colorful&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;\r\n   Name=&quot;List Table 1 Light Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;List Table 2 Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;List Table 3 Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;List Table 4 Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;List Table 5 Dark Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;\r\n   Name=&quot;List Table 6 Colorful Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;\r\n   Name=&quot;List Table 7 Colorful Accent 1&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;\r\n   Name=&quot;List Table 1 Light Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;List Table 2 Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;List Table 3 Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;List Table 4 Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;List Table 5 Dark Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;\r\n   Name=&quot;List Table 6 Colorful Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;\r\n   Name=&quot;List Table 7 Colorful Accent 2&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;\r\n   Name=&quot;List Table 1 Light Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;List Table 2 Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;List Table 3 Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;List Table 4 Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;List Table 5 Dark Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;\r\n   Name=&quot;List Table 6 Colorful Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;\r\n   Name=&quot;List Table 7 Colorful Accent 3&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;\r\n   Name=&quot;List Table 1 Light Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;List Table 2 Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;List Table 3 Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;List Table 4 Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;List Table 5 Dark Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;\r\n   Name=&quot;List Table 6 Colorful Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;\r\n   Name=&quot;List Table 7 Colorful Accent 4&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;46&quot;\r\n   Name=&quot;List Table 1 Light Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;47&quot; Name=&quot;List Table 2 Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;48&quot; Name=&quot;List Table 3 Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;49&quot; Name=&quot;List Table 4 Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;50&quot; Name=&quot;List Table 5 Dark Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;51&quot;\r\n   Name=&quot;List Table 6 Colorful Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=&quot;52&quot;\r\n   Name=&quot;List Table 7 Colorful Accent 5&quot;&gt;&lt;/w:LsdException&gt;\r\n  &lt;w:LsdException Locked=&quot;false&quot; Priority=', '購買注意事項', '', '');
@@ -1571,6 +1807,15 @@ INSERT INTO `oc_information_description` (`information_id`, `language_id`, `titl
 (7, 1, 'FAQ', '&lt;p&gt;Q&lt;/p&gt;&lt;p&gt;A&lt;/p&gt;&lt;p&gt;Q&lt;/p&gt;&lt;p&gt;A&lt;/p&gt;', 'FAQ', '', ''),
 (8, 1, '聯絡mittag', '&lt;p&gt;mittag 聯絡方式&lt;/p&gt;', 'MITTAG CONTACT', '', ''),
 (9, 1, '產品包裝', '&lt;p&gt;產品包裝&lt;/p&gt;', '產品包裝', '', '');
+=======
+(3, 1, '購買注意事項', '&lt;span id=&quot;docs-internal-guid-5ddf155d-c80d-1000-1a5b-ff179b172b68&quot;&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;h4 style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;1.並非所有款式皆有生產各號數尺寸(戒指/手環類)，請先詢問有無現貨。如果沒有現貨，需約2週的等待時間。請務必看清楚商品標示與尺寸是否合適您。&lt;/h4&gt;&lt;p style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;h4 style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;2.商品在拍攝過程中的光線、角度…等因素會產生些微的顏色差距。對於色差要求甚高的買家，建議您多考慮清楚後再購買。&lt;/h4&gt;&lt;p style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;h4 style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;3.全部商品因屬自行設計並手工製作，非國外批貨回國銷售，請勿殺價。&lt;/h4&gt;&lt;p style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;h4 style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;4.商品因為是手工製作所以“並非”每一件設計都能百分之百相同，如果您有顧慮，歡迎先詢問。&lt;/h4&gt;&lt;p style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;h4 style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;5.全產品皆提供mittag品牌包裝（依產品屬性不同，會有原木珠寶盒或真皮皮套的差異）、品牌保證卡、品牌提袋等…&lt;/h4&gt;&lt;p style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;h4 style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;6.項鍊大部分會搭配40cm或45cm的925純銀鍊子，而某些款式的設計會搭配較特殊長度的925純銀鍊子或皮繩。在上游銀鍊廠商生產供貨會有變動的狀況下，mittag保有925純銀鍊子搭配款式的變更權利。&lt;/h4&gt;&lt;p style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;h4 style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;7.手鍊配置長度是：幼兒12cm，女士16cm，男士20cm；若有其他尺寸需求請另提出。 在上游銀鍊廠商生產供貨會有變動的狀況下，mittag保有925純銀鍊子搭配款式的變更權利。&lt;/h4&gt;&lt;p style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;h4 style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;8.買方有商品七天鑑賞期權益，由商品寄出當日起算十日內(含假日)，無條件更換其他商品(更換之產品價金另行退補)，但須由買方負擔更換往來運輸費用，並僅提供一次更換。&lt;/h4&gt;&lt;p style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;h4 style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;9‧收到商品時，請務必在收到七日內(含假日)確認商品內容是否有誤，逾期恕不受理。&lt;/h4&gt;&lt;p style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;h4 style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;10‧若商品出現瑕疵，可提供全額退費或更換商品(更換之產品價金另行退補)，並由mittag全額負擔商品回寄之運輸費用。&lt;/h4&gt;&lt;p style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;h4 style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;11‧商品瑕疵的定義為缺少零件或產品受損或不完整之情形。&lt;/h4&gt;&lt;p style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;h4 style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;12‧若需要辦理退換貨，請於收到貨後七日內(含假日)，寫信至 mittagnatureme@gmail.com 或是line@ID:@xof2871h，我們會有專人和您聯絡退換貨事宜。&lt;/h4&gt;&lt;p style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;h4 style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;13‧退換貨時請將商品包裝妥當寄回，待我們收到貨品確認無誤後，將於七個工作天內退款給您。&lt;/h4&gt;&lt;p style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;h4 style=&quot;line-height: 1.38; margin-top: 0pt; margin-bottom: 6pt; text-indent: -24pt; padding: 0pt 0pt 0pt 24pt;&quot;&gt;14‧若因買家個人因素退貨，商品來回運費以及退款產生的銀行手續費30元，均須由買家負擔。&lt;/h4&gt;&lt;/font&gt;&lt;/span&gt;', '購買注意事項', '', ''),
+(5, 1, ' 尺寸測量/對照表: ', '&lt;h4&gt;&lt;/h4&gt;&lt;h3&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;&lt;b&gt;項鍊長： &lt;/b&gt;(以下為mittag標準配置，若有其他需求請於下單前提出，謝謝。)&lt;/font&gt;&lt;/h3&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;女士項鍊長40cm+5cm延長鍊&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;男士項鍊長45cm+5cm延長鍊&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;其他鍊長會依照墬子設計而有所更動，您可以參考下圖得知各公分數所配帶出來的長度比例。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;img src=&quot;http://www.mittag.com.tw/image/catalog/Brand/Product_Sizing/mittag_necklace_size_run2.jpg&quot; style=&quot;width: 680px;&quot;&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h3&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;/h3&gt;&lt;h3&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;/h3&gt;&lt;h3&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;&lt;b&gt;手鍊長：&lt;/b&gt;&lt;/font&gt;&lt;/h3&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;因為手鍊相較於手環來說較有彈性，您僅需要以捲尺測量您的手圍來確認購買下單時尺寸是符合您的需求。&lt;/font&gt;&lt;/h4&gt;&lt;h4 style=&quot;font-family: &amp;quot;Open Sans&amp;quot;, sans-serif; color: rgb(0, 0, 0);&quot;&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;mittag出廠的固定尺碼如下&lt;/font&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;(以下為mittag標準配置，若有其他需求請於下單前提出，謝謝。)&lt;/font&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;：&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;寶寶手鍊長12cm&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;女士手鍊長16cm&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;男士手鍊長20cm&amp;nbsp;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;img src=&quot;http://www.mittag.com.tw/image/catalog/Brand/Product_Sizing/mittag_bracelet_measuring_steps.jpg&quot; style=&quot;width: 680px;&quot;&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h3&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;&lt;b&gt;手環圍：&lt;/b&gt;(請依照下方圖示測量)&lt;/font&gt;&lt;/h3&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;A. 可用捲尺測量手掌最寬處。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;B. 測量時用拇指壓住捲尺標示為「0」的地方開始計算&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;C. 擠壓您的手掌取得壓縮時的最小手掌長度，這會是您戴手環時手掌能夠捲曲穿過手環的最小體積&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot;&gt;&lt;font color=&quot;#636363&quot;&gt;D. 依照您的尺寸，對照mittag的手環尺寸(S號：手環內直徑5.5cm)(M號：直徑&lt;/font&gt;&lt;font color=&quot;#636363&quot;&gt;手環內直徑6.0cm)(L號：手環內直徑6.5cm)來選擇您適合的大小&lt;/font&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;&amp;nbsp; &amp;nbsp; (若選擇手環尺寸過小，將無法穿戴；若選擇尺寸過大，則寬鬆容易掉落；皆非最佳選擇)。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;img src=&quot;http://www.mittag.com.tw/image/catalog/Brand/Product_Sizing/mittag_bracelet_size_run2.jpg&quot; style=&quot;width: 680px;&quot;&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;備註1：並非所有款式皆有生產各號數尺寸(戒指/手環類)，請先詢問有無現貨。如果沒有現貨，需約2週的等待時間。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;備註2：若有其他尺寸需求(超出S/M/L範圍)請於下單前提出，需約2週的等待時間，謝謝。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h3&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;&lt;b&gt;戒指圍：&lt;/b&gt;(請提供國際圍號數，謝謝。)&lt;/font&gt;&lt;/h3&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;您可以將已有並穿戴習慣的戒指，以一般的尺量測它的內圍直徑，然後對照下方“戒圍尺寸對照表”的國際圍的尺寸。要注意戒指應能舒適地緊貼您的手指；緊密程度應該足以讓戒指不致掉下，而又鬆得讓它能滑過手指關節。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;img src=&quot;http://www.mittag.com.tw/image/catalog/Brand/Product_Sizing/mittag_ring_measuring_steps.jpg&quot; style=&quot;width: 680px;&quot;&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;&lt;img src=&quot;http://www.mittag.com.tw/image/catalog/Brand/Product_Sizing/mittag_ring_size_run1.jpg&quot; style=&quot;width: 680px;&quot;&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;備註1：並非所有款式皆有生產各號數尺寸(戒指/手環類)，請先詢問有無現貨。如果沒有現貨，需約2週的等待時間。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot;&gt;&lt;font color=&quot;#636363&quot;&gt;備註&lt;/font&gt;&lt;font color=&quot;#636363&quot;&gt;2：如果您要購買的為寬版戒(戒寬0.8cm以上)，國際戒圍工具量出來的尺寸還要再加半號至1號。(而天氣熱的時候，手指會比平時大上約半號，可以視情況配戴較細的戒指。)&lt;/font&gt;&lt;/font&gt;&lt;/h4&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;\r\n', ' 尺寸測量/對照表: ', '', ''),
+(9, 1, '產品包裝', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;全產品皆提供mittag品牌包裝、品牌保證卡、品牌提袋等…&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;產品全包裝皆為台灣製&lt;/font&gt;&lt;/h4&gt;&lt;h4 style=&quot;font-family: &amp;quot;Open Sans&amp;quot;, sans-serif;&quot;&gt;&lt;font color=&quot;#636363&quot; style=&quot;&quot;&gt;如以下四圖所示，&lt;/font&gt;&lt;/h4&gt;&lt;h4 style=&quot;font-family: &amp;quot;Open Sans&amp;quot;, sans-serif;&quot;&gt;&lt;font color=&quot;#636363&quot;&gt;1.&amp;nbsp;真皮皮套僅用於手環產品包裝之用。&lt;/font&gt;&lt;/h4&gt;&lt;h4 style=&quot;font-family: &amp;quot;Open Sans&amp;quot;, sans-serif;&quot;&gt;&lt;font color=&quot;#636363&quot;&gt;2. 原木珠寶盒用於項鍊、手鍊、戒指、耳環產品包裝之用。&lt;/font&gt;&lt;/h4&gt;&lt;h4 style=&quot;font-family: &amp;quot;Open Sans&amp;quot;, sans-serif;&quot;&gt;&lt;font color=&quot;#636363&quot;&gt;3. 其餘如品牌提袋、品牌保證卡、拭銀布等皆同。&lt;/font&gt;&lt;/h4&gt;&lt;h4 style=&quot;font-family: &amp;quot;Open Sans&amp;quot;, sans-serif;&quot;&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;img src=&quot;http://www.mittag.com.tw/image/catalog/Brand/packaging/packaging_style3.jpg&quot; style=&quot;width: 570px;&quot;&gt;&lt;img src=&quot;http://www.mittag.com.tw/image/catalog/Brand/packaging/packaging_style4.jpg&quot; style=&quot;width: 570px;&quot;&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;', '產品包裝', '', ''),
+(6, 1, '配送和售後服務說明', '&lt;h4&gt;&lt;img src=&quot;http://www.mittag.com.tw/image/catalog/Brand/after_service_and_delivery/delivery_service.jpg&quot; style=&quot;width: 570px;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;/h4&gt;&lt;h3&gt;&lt;b&gt;&lt;font color=&quot;#636363&quot;&gt;配送:&lt;/font&gt;&lt;/b&gt;&lt;/h3&gt;&lt;h4&gt;&lt;ul&gt;&lt;li&gt;&lt;font color=&quot;#636363&quot;&gt;台灣全區超商取貨服務費用由mittag支付，海外地區運費(NT$500)須由買方自行支付。&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;font color=&quot;#636363&quot;&gt;若有緊急取貨要求，須搭配快遞、宅配等，運費須由買方自行支付。&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;font color=&quot;#636363&quot;&gt;mittag並不提供面交服務。&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;img src=&quot;http://www.mittag.com.tw/image/catalog/Brand/after_service_and_delivery/after_service.jpg&quot; style=&quot;width: 570px;&quot;&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h3&gt;&lt;b&gt;&lt;font color=&quot;#636363&quot;&gt;售後服務:&lt;/font&gt;&lt;/b&gt;&lt;/h3&gt;&lt;h4&gt;&lt;ul&gt;&lt;li&gt;&lt;font color=&quot;#636363&quot;&gt;您所購得的商品享有終身免費清洗服務(不包含因為磨損而需要拋光的情況)。&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;font color=&quot;#636363&quot;&gt;商品享有一年保固期(自購買日期起算)。過保固期間若有維修需求(如：尺寸變更)，費用將依所需維修程度酌收，感謝您的體諒。&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;font color=&quot;#636363&quot;&gt;由於全部商品皆為mittag自行設計製作之產品，mittag提供完整的售後維修能力，讓您的權益不會受損或打折。&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/h4&gt;', '配送和售後服務說明', '', ''),
+(7, 1, 'FAQ', '&lt;h4&gt;&lt;img src=&quot;http://www.mittag.com.tw/image/catalog/Brand/FAQ/FAQ.jpg&quot; style=&quot;width: 570px;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;/h4&gt;&lt;h4&gt;&lt;b&gt;&lt;font color=&quot;#636363&quot;&gt;Q：請問是否有實體店面？&lt;/font&gt;&lt;/b&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;b&gt;A：&lt;/b&gt;mittag目前只有網路銷售，沒有實體店面可以現場選購喔。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;b&gt;&lt;font color=&quot;#636363&quot;&gt;Q：我急著送禮給朋友，可否選擇面交或自取？&lt;/font&gt;&lt;/b&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;b&gt;A：&lt;/b&gt;沒有面交或自取服務喔，緊急狀況可以先跟mittag討論應變處理方式，謝謝您！&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;b&gt;&lt;font color=&quot;#636363&quot;&gt;Q：請問接受客製訂單嗎？比如說白金或K金?&lt;/font&gt;&lt;/b&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;b&gt;A：&lt;/b&gt;可以的。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;b&gt;&lt;font color=&quot;#636363&quot;&gt;Q：拭銀布髒了可以清洗嗎？&lt;/font&gt;&lt;/b&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;b&gt;A：&lt;/b&gt;不可以，拭銀布預先添加了銀器的洗滌劑和防汙劑，一旦用水清洗就破壞了拭銀布的功能。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;b&gt;&lt;font color=&quot;#636363&quot;&gt;Q：最佳保養方式？&lt;/font&gt;&lt;/b&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;b&gt;A：飾品類：&lt;/b&gt;純銀飾品最好的保存方法就是常常戴它，愈戴愈亮。不佩戴時可收進密封袋，盡量隔絕空氣和溼氣。絕對不要任意放置於浴室/廚房，導致加速氧化。購買銀飾皆附贈拭銀布一塊，可以自行擦拭。擦拭鍊子請格外小心，銀質地較軟，細銀鍊不當拉扯易斷。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;b&gt;餐具類：&lt;/b&gt;由於植物在腐爛過程中常會產生硫化氫（H2S）氣體，空氣中少量的硫化氫能與銀發生反應，使銀失去光澤帶有黑色。如果把銀餐具與含硫食物（像是雞蛋、洋蔥等）放在一起，這種變黑的過程會進行得很快。所以銀器餐具使用後請洗淨，並擦拭乾淨，與食物分開收納。&lt;/font&gt;&lt;/h4&gt;', 'FAQ', '', ''),
+(4, 1, '關於mittag', '&lt;h4&gt;&lt;/h4&gt;&lt;h4&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;b&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;mittag成立於2012，主要產品為銀飾/銀器...館內商品皆mittag自行設計並手工製作。&lt;/font&gt;&lt;/b&gt;&lt;/h4&gt;&lt;h4&gt;&lt;b style=&quot;color: inherit; font-family: inherit;&quot;&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;mittag是2個英文單字的結合：mit &amp;amp; tag → mit brand → 因為，我們是來自台灣的品牌！我們以mit而感到驕傲！我們熱愛mit！我們支持mit！我們堅持全程mit (包含所有包裝) ！&lt;/font&gt;&lt;/b&gt;&lt;/h4&gt;&lt;h4&gt;&lt;img src=&quot;http://www.mittag.com.tw/image/catalog/Brand/About_mittag/designing_handmade3.jpg&quot; style=&quot;width: 570px;&quot;&gt;&lt;img src=&quot;http://www.mittag.com.tw/image/catalog/Brand/About_mittag/design_workshop3.jpg&quot; style=&quot;width: 570px;&quot;&gt;&lt;b style=&quot;color: inherit; font-family: inherit;&quot;&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;/h4&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;h4&gt;&lt;b&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;/h4&gt;&lt;h4&gt;&lt;b&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;mittag 同時還是德文：lunch break ﹝午間﹞&lt;/font&gt;&lt;/b&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;每天“朝9晚8”在充滿中央空調的高級辦公室辛勤工作的你，是不是已經忘記微風打在臉上時的輕柔，雨滴穿落指間時的冰涼？是不是也很久沒看過夕陽的絢麗，很久沒體驗擁抱家人、朋友時的溫度？是不是已經忘記自己是為了誰而奮鬥，為了甚麼而奮戰？是不是想不起上一次發自內心的笑是何時，因為感動而落淚是何時？是不是已經習慣科技帶來的便利而遺忘手感的溫度與獨特性；我們能完全體會，因為我們也完全經歷...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;mittag→ lunch break→午間，是整天忙碌工作中的一小小段時間(lunch break)可以完全屬於自己，做自己。在這段lunch break你得以回歸自然(nature)，回歸自我(me)；如同品牌想要傳達的反璞歸真，忠於自我的意境(NatureME)。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;img src=&quot;http://www.mittag.com.tw/image/catalog/Brand/About_mittag/nature_style_branding2.jpg&quot; style=&quot;width: 570px;&quot;&gt;&lt;img src=&quot;http://www.mittag.com.tw/image/catalog/Brand/About_mittag/nature_style_branding3.jpg&quot; style=&quot;width: 570px;&quot;&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;b&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;mittag的設計風格：簡約、自然&lt;/font&gt;&lt;/b&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin-left: 25px;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;簡約：不過多的設計、純粹的感動&lt;/font&gt;&lt;/b&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin-left: 25px;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;自然：自然的材質、樸實的質感&lt;/font&gt;&lt;/b&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;b&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;mittag的商品保證:&lt;/font&gt;&lt;/b&gt;&lt;/h4&gt;&lt;h4&gt;&lt;ul&gt;&lt;li&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;全商品皆為“mittag自行設計製作”，非國外批貨回國銷售。&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;全商品皆為“手工打造”，表面會有一定手感，無法接受者請勿購買。&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;所有商品出貨前皆經過嚴謹的“手工”拋光，非電鍍處理。&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;“925純銀”，表面沒有電鍍其他合金，不易致過敏。&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;嚴選“天然”寶石，非採用人造或是合成寶石。&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;全程MIT，包含品牌包裝、提袋等...&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/h4&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', '品牌故事', '', ''),
+(8, 1, '聯絡mittag', '&lt;p&gt;mittag 聯絡方式&lt;/p&gt;', 'MITTAG CONTACT', '', '');
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -1921,8 +2166,14 @@ CREATE TABLE `oc_modification` (
 --
 
 INSERT INTO `oc_modification` (`modification_id`, `name`, `code`, `author`, `version`, `link`, `xml`, `status`, `date_added`) VALUES
+<<<<<<< HEAD
 (1, '无需FTP配置使用OCMOD方式上传安装扩充功能', 'noftp_ocmod', 'opencart.cn', '1.1.1', 'http://www.opencart.cn', '<modification>\r\n    <name>无需FTP配置使用OCMOD方式上传安装扩充功能</name>\r\n	<version>1.1.1</version>\r\n	<link>http://www.opencart.cn</link>\r\n	<author>opencart.cn</author>\r\n	<code>noftp_ocmod</code>\r\n\r\n	<file path="admin/controller/extension/installer.php">\r\n		<operation>\r\n			<search ><![CDATA[''url''  => str_replace(''&amp;'', ''&'', $this->url->link(''extension/installer/ftp'', ''token='' . $this->session->data[''token''], ''SSL'')),]]></search>\r\n			<add position="replace"><![CDATA[''url''  => str_replace(''&amp;'', ''&'', $this->url->link(''extension/installer/localcopy'', ''token='' . $this->session->data[''token''], ''SSL'')),]]></add>\r\n		</operation>\r\n\r\n		<operation>\r\n			<search><![CDATA[public function unzip() {]]></search>\r\n			<add position="before"><![CDATA[			\r\n	public function localcopy() {\r\n		$this->load->language(''extension/installer'');\r\n\r\n		$json = array();\r\n\r\n		if (!$this->user->hasPermission(''modify'', ''extension/installer'')) {\r\n			$json[''error''] = $this->language->get(''error_permission'');\r\n		}\r\n\r\n        \r\n        $directory = DIR_UPLOAD  . str_replace(array(''../'', ''..\\\\'', ''..''), '''', $this->request->post[''path'']) . ''/upload/'';\r\n        \r\n\r\n		if (!is_dir($directory)) {\r\n			$json[''error''] = $this->language->get(''error_directory'');\r\n		}\r\n\r\n		if (!$json) {\r\n			// Get a list of files ready to upload\r\n			$files = array();\r\n\r\n			$path = array($directory . ''*'');\r\n\r\n			while (count($path) != 0) {\r\n				$next = array_shift($path);\r\n\r\n				foreach (glob($next) as $file) {\r\n					if (is_dir($file)) {\r\n						$path[] = $file . ''/*'';\r\n					}\r\n\r\n					$files[] = $file;\r\n				}\r\n			}\r\n\r\n			$root = dirname(DIR_APPLICATION).''/'';\r\n\r\n			foreach ($files as $file) {\r\n				// Upload everything in the upload directory\r\n				$destination = $root.substr($file, strlen($directory));\r\n\r\n				if (is_dir($file)) {\r\n					$list = glob(rtrim($destination, ''/'').''/*'');\r\n\r\n					if (!file_exists($destination)) {\r\n						if (!mkdir($destination)) {\r\n							$json[''error''] = sprintf($this->language->get(''error_ftp_directory''), $destination);\r\n						}\r\n					}\r\n				}\r\n\r\n				if (is_file($file)) {\r\n					if (!copy($file, $destination)) {\r\n						$json[''error''] = sprintf($this->language->get(''error_ftp_file''), $file);\r\n					}\r\n				}\r\n			}\r\n		}\r\n\r\n		$this->response->addHeader(''Content-Type: application/json'');\r\n		$this->response->setOutput(json_encode($json));\r\n	}]]></add>\r\n		</operation>\r\n	</file>	\r\n</modification>', 1, '2017-10-28 23:03:05'),
 (2, 'Local copy OCMOD by iSenseLabs', 'isensealabs_quickfix_ocmod', 'iSenseLabs', '1.3', 'http://isenselabs.com', '<modification>\r\n    <name>Local copy OCMOD by iSenseLabs</name>\r\n	<version>1.3</version>\r\n	<link>http://isenselabs.com</link>\r\n	<author>iSenseLabs</author>\r\n	<code>isensealabs_quickfix_ocmod</code>\r\n\r\n	<file path="admin/controller/extension/installer.php">\r\n		<operation error="skip">\r\n			<search ><![CDATA[''url''  => str_replace(''&amp;'', ''&'', $this->url->link(''extension/installer/ftp'', ''token='' . $this->session->data[''token''],]]></search>\r\n			<add position="replace"><![CDATA[''url''  => str_replace(''&amp;'', ''&'', $this->url->link(''extension/installer/localcopy'', ''token='' . $this->session->data[''token''],]]></add>\r\n		</operation>\r\n\r\n		<operation>\r\n			<search><![CDATA[public function unzip() {]]></search>\r\n			<add position="before"><![CDATA[			\r\n	public function localcopy() {\r\n		$this->load->language(''extension/installer'');\r\n\r\n		$json = array();\r\n\r\n		if (!$this->user->hasPermission(''modify'', ''extension/installer'')) {\r\n			$json[''error''] = $this->language->get(''error_permission'');\r\n		}\r\n\r\n		if (VERSION == ''2.0.0.0'') {\r\n		    $directory = DIR_DOWNLOAD  . str_replace(array(''../'', ''..\\\\'', ''..''), '''', $this->request->post[''path'']) . ''/upload/'';\r\n		} else {\r\n		    $directory = DIR_UPLOAD  . str_replace(array(''../'', ''..\\\\'', ''..''), '''', $this->request->post[''path'']) . ''/upload/'';\r\n		}\r\n\r\n		if (!is_dir($directory)) {\r\n			$json[''error''] = $this->language->get(''error_directory'');\r\n		}\r\n\r\n		if (!$json) {\r\n			// Get a list of files ready to upload\r\n			$files = array();\r\n\r\n			$path = array($directory . ''*'');\r\n\r\n			while (count($path) != 0) {\r\n				$next = array_shift($path);\r\n\r\n				foreach (glob($next) as $file) {\r\n					if (is_dir($file)) {\r\n						$path[] = $file . ''/*'';\r\n					}\r\n\r\n					$files[] = $file;\r\n				}\r\n			}\r\n\r\n			$root = dirname(DIR_APPLICATION).''/'';\r\n\r\n			foreach ($files as $file) {\r\n				// Upload everything in the upload directory\r\n				$destination = substr($file, strlen($directory));\r\n\r\n				// Update from newer OpenCart versions:\r\n				if (substr($destination, 0, 5) == ''admin'') {\r\n					$destination = DIR_APPLICATION . substr($destination, 5);\r\n				} else if (substr($destination, 0, 7) == ''catalog'') {\r\n					$destination = DIR_CATALOG . substr($destination, 7);\r\n				} else if (substr($destination, 0, 5) == ''image'') {\r\n					$destination = DIR_IMAGE . substr($destination, 5);\r\n				} else if (substr($destination, 0, 6) == ''system'') {\r\n					$destination = DIR_SYSTEM . substr($destination, 6);\r\n				} else {\r\n					$destination = $root.$destination;\r\n				}\r\n\r\n				if (is_dir($file)) {\r\n					if (!file_exists($destination)) {\r\n						if (!mkdir($destination)) {\r\n							$json[''error''] = sprintf($this->language->get(''error_ftp_directory''), $destination);\r\n						}\r\n					}\r\n				}\r\n\r\n				if (is_file($file)) {\r\n					if (!copy($file, $destination)) {\r\n						$json[''error''] = sprintf($this->language->get(''error_ftp_file''), $file);\r\n					}\r\n				}\r\n			}\r\n		}\r\n\r\n		$this->response->addHeader(''Content-Type: application/json'');\r\n		$this->response->setOutput(json_encode($json));\r\n	}]]></add>\r\n		</operation>\r\n	</file>	\r\n</modification>\r\n', 1, '2017-10-28 23:58:12');
+=======
+(1, '无需FTP配置使用OCMOD方式上传安装扩充功能', 'noftp_ocmod', 'opencart.cn', '1.1.1', 'http://www.opencart.cn', '<modification>\r\n    <name>无需FTP配置使用OCMOD方式上传安装扩充功能</name>\r\n	<version>1.1.1</version>\r\n	<link>http://www.opencart.cn</link>\r\n	<author>opencart.cn</author>\r\n	<code>noftp_ocmod</code>\r\n\r\n	<file path=\"admin/controller/extension/installer.php\">\r\n		<operation>\r\n			<search ><![CDATA[\'url\'  => str_replace(\'&amp;\', \'&\', $this->url->link(\'extension/installer/ftp\', \'token=\' . $this->session->data[\'token\'], \'SSL\')),]]></search>\r\n			<add position=\"replace\"><![CDATA[\'url\'  => str_replace(\'&amp;\', \'&\', $this->url->link(\'extension/installer/localcopy\', \'token=\' . $this->session->data[\'token\'], \'SSL\')),]]></add>\r\n		</operation>\r\n\r\n		<operation>\r\n			<search><![CDATA[public function unzip() {]]></search>\r\n			<add position=\"before\"><![CDATA[			\r\n	public function localcopy() {\r\n		$this->load->language(\'extension/installer\');\r\n\r\n		$json = array();\r\n\r\n		if (!$this->user->hasPermission(\'modify\', \'extension/installer\')) {\r\n			$json[\'error\'] = $this->language->get(\'error_permission\');\r\n		}\r\n\r\n        \r\n        $directory = DIR_UPLOAD  . str_replace(array(\'../\', \'..\\\\\', \'..\'), \'\', $this->request->post[\'path\']) . \'/upload/\';\r\n        \r\n\r\n		if (!is_dir($directory)) {\r\n			$json[\'error\'] = $this->language->get(\'error_directory\');\r\n		}\r\n\r\n		if (!$json) {\r\n			// Get a list of files ready to upload\r\n			$files = array();\r\n\r\n			$path = array($directory . \'*\');\r\n\r\n			while (count($path) != 0) {\r\n				$next = array_shift($path);\r\n\r\n				foreach (glob($next) as $file) {\r\n					if (is_dir($file)) {\r\n						$path[] = $file . \'/*\';\r\n					}\r\n\r\n					$files[] = $file;\r\n				}\r\n			}\r\n\r\n			$root = dirname(DIR_APPLICATION).\'/\';\r\n\r\n			foreach ($files as $file) {\r\n				// Upload everything in the upload directory\r\n				$destination = $root.substr($file, strlen($directory));\r\n\r\n				if (is_dir($file)) {\r\n					$list = glob(rtrim($destination, \'/\').\'/*\');\r\n\r\n					if (!file_exists($destination)) {\r\n						if (!mkdir($destination)) {\r\n							$json[\'error\'] = sprintf($this->language->get(\'error_ftp_directory\'), $destination);\r\n						}\r\n					}\r\n				}\r\n\r\n				if (is_file($file)) {\r\n					if (!copy($file, $destination)) {\r\n						$json[\'error\'] = sprintf($this->language->get(\'error_ftp_file\'), $file);\r\n					}\r\n				}\r\n			}\r\n		}\r\n\r\n		$this->response->addHeader(\'Content-Type: application/json\');\r\n		$this->response->setOutput(json_encode($json));\r\n	}]]></add>\r\n		</operation>\r\n	</file>	\r\n</modification>', 1, '2017-10-28 23:03:05'),
+(2, 'Local copy OCMOD by iSenseLabs', 'isensealabs_quickfix_ocmod', 'iSenseLabs', '1.3', 'http://isenselabs.com', '<modification>\r\n    <name>Local copy OCMOD by iSenseLabs</name>\r\n	<version>1.3</version>\r\n	<link>http://isenselabs.com</link>\r\n	<author>iSenseLabs</author>\r\n	<code>isensealabs_quickfix_ocmod</code>\r\n\r\n	<file path=\"admin/controller/extension/installer.php\">\r\n		<operation error=\"skip\">\r\n			<search ><![CDATA[\'url\'  => str_replace(\'&amp;\', \'&\', $this->url->link(\'extension/installer/ftp\', \'token=\' . $this->session->data[\'token\'],]]></search>\r\n			<add position=\"replace\"><![CDATA[\'url\'  => str_replace(\'&amp;\', \'&\', $this->url->link(\'extension/installer/localcopy\', \'token=\' . $this->session->data[\'token\'],]]></add>\r\n		</operation>\r\n\r\n		<operation>\r\n			<search><![CDATA[public function unzip() {]]></search>\r\n			<add position=\"before\"><![CDATA[			\r\n	public function localcopy() {\r\n		$this->load->language(\'extension/installer\');\r\n\r\n		$json = array();\r\n\r\n		if (!$this->user->hasPermission(\'modify\', \'extension/installer\')) {\r\n			$json[\'error\'] = $this->language->get(\'error_permission\');\r\n		}\r\n\r\n		if (VERSION == \'2.0.0.0\') {\r\n		    $directory = DIR_DOWNLOAD  . str_replace(array(\'../\', \'..\\\\\', \'..\'), \'\', $this->request->post[\'path\']) . \'/upload/\';\r\n		} else {\r\n		    $directory = DIR_UPLOAD  . str_replace(array(\'../\', \'..\\\\\', \'..\'), \'\', $this->request->post[\'path\']) . \'/upload/\';\r\n		}\r\n\r\n		if (!is_dir($directory)) {\r\n			$json[\'error\'] = $this->language->get(\'error_directory\');\r\n		}\r\n\r\n		if (!$json) {\r\n			// Get a list of files ready to upload\r\n			$files = array();\r\n\r\n			$path = array($directory . \'*\');\r\n\r\n			while (count($path) != 0) {\r\n				$next = array_shift($path);\r\n\r\n				foreach (glob($next) as $file) {\r\n					if (is_dir($file)) {\r\n						$path[] = $file . \'/*\';\r\n					}\r\n\r\n					$files[] = $file;\r\n				}\r\n			}\r\n\r\n			$root = dirname(DIR_APPLICATION).\'/\';\r\n\r\n			foreach ($files as $file) {\r\n				// Upload everything in the upload directory\r\n				$destination = substr($file, strlen($directory));\r\n\r\n				// Update from newer OpenCart versions:\r\n				if (substr($destination, 0, 5) == \'admin\') {\r\n					$destination = DIR_APPLICATION . substr($destination, 5);\r\n				} else if (substr($destination, 0, 7) == \'catalog\') {\r\n					$destination = DIR_CATALOG . substr($destination, 7);\r\n				} else if (substr($destination, 0, 5) == \'image\') {\r\n					$destination = DIR_IMAGE . substr($destination, 5);\r\n				} else if (substr($destination, 0, 6) == \'system\') {\r\n					$destination = DIR_SYSTEM . substr($destination, 6);\r\n				} else {\r\n					$destination = $root.$destination;\r\n				}\r\n\r\n				if (is_dir($file)) {\r\n					if (!file_exists($destination)) {\r\n						if (!mkdir($destination)) {\r\n							$json[\'error\'] = sprintf($this->language->get(\'error_ftp_directory\'), $destination);\r\n						}\r\n					}\r\n				}\r\n\r\n				if (is_file($file)) {\r\n					if (!copy($file, $destination)) {\r\n						$json[\'error\'] = sprintf($this->language->get(\'error_ftp_file\'), $file);\r\n					}\r\n				}\r\n			}\r\n		}\r\n\r\n		$this->response->addHeader(\'Content-Type: application/json\');\r\n		$this->response->setOutput(json_encode($json));\r\n	}]]></add>\r\n		</operation>\r\n	</file>	\r\n</modification>\r\n', 1, '2017-10-28 23:58:12'),
+(3, 'Installation without FTP settings', 'no_ftp', 'karapuz (support@ka-station.com)', '1.2.0', 'http://www.opencart.com/index.php?route=extension/extension/info&extension_id=19862', '<modification>\r\n		<id></id>\r\n		<name>Installation without FTP settings</name>\r\n		<code>no_ftp</code>\r\n		<version>1.2.0</version>\r\n		<author>karapuz (support@ka-station.com)</author>\r\n		<link>http://www.opencart.com/index.php?route=extension/extension/info&amp;extension_id=19862</link>\r\n		<file path=\"admin/controller/extension/installer.php\">\n		<operation>\n			<search  index=\"0\"><![CDATA[$data[\'button_continue\'] =]]></search>\n			<add position=\"after\"><![CDATA[//karapuz (no_ftp.ocmod.xml) \n		$data[\'text_upload_without_ftp\'] = $this->language->get(\'text_upload_without_ftp\');\n		$data[\'help_upload_without_ftp\'] = $this->language->get(\'help_upload_without_ftp\');\n		$data[\'upload_without_ftp\'] = false;\n///karapuz (no_ftp.ocmod.xml) ]]></add>\n		</operation>\n		<operation>\n			<search  index=\"0\"><![CDATA[\'extension/installer/ftp\']]></search>\n			<add position=\"replace\"><![CDATA[\'extension/installer/file_tp_wrapper\']]></add>\n		</operation>\n		<operation>\n			<search  index=\"0\"><![CDATA[function ftp(]]></search>\n			<add position=\"before\"><![CDATA[//karapuz (no_ftp.ocmod.xml) \n	static public function cpy($source, $dest) {\n		if(is_dir($source)) {\n			$dir_handle = opendir($source);\n			while ($file = readdir($dir_handle)) {\n				if ($file != \".\" && $file != \"..\") {\n					if (is_dir($source . \"/\" . $file)) {\n						if (!is_dir($dest . \"/\" . $file)) {\n							mkdir($dest . \"/\" . $file);\n						}\n						self::cpy($source . \"/\" . $file, $dest . \"/\" . $file);\n					} else {\n						copy($source . \"/\" . $file, $dest . \"/\" . $file);\n					}\n				}\n			}\n			closedir($dir_handle);\n		} else {\n			copy($source, $dest);\n		}\n	}\n	\n	protected function copyUpload() {\n		$json = array();\n		\n		$directory = DIR_UPLOAD . str_replace(array(\'../\', \'..\\\\\', \'..\'), \'\', $this->request->post[\'path\']) . \'/upload/\';\n\n		if (!is_dir($directory)) {\n			$json[\'error\'] = $this->language->get(\'error_directory\');\n			return $json;\n		}\n\n		self::cpy($directory, dirname(DIR_APPLICATION));\n		\n		return $json;\n	}\n	\n	/*\n		This wrapper is used because some hostings block calls to URLs containing \'/ftp\'. It\n		brokes installation process.\n	*/\n	public function file_tp_wrapper() {\n		return $this->ftp();\n	}\n///karapuz (no_ftp.ocmod.xml) ]]></add>\n		</operation>\n		<operation>\n			<search  index=\"0\"><![CDATA[if (!$this->config->get(\'config_ftp_status\')]]></search>\n			<add position=\"before\"><![CDATA[//karapuz (no_ftp.ocmod.xml) \n		if (!empty($this->request->post[\'upload_without_ftp\'])) {\n			$json = $this->copyUpload();\n			$this->response->addHeader(\'Content-Type: application/json\');\n			$this->response->setOutput(json_encode($json));\n			return;			\n		}\n///karapuz (no_ftp.ocmod.xml) ]]></add>\n		</operation>\n	</file>\n	<file path=\"admin/language/en-gb/extension/installer.php\">\n		<operation>\n			<search  index=\"0\"><![CDATA[$_[\'text_clear\']]]></search>\n			<add position=\"after\"><![CDATA[//karapuz (no_ftp.ocmod.xml) \n$_[\'text_upload_without_ftp\'] = \'Upload Without FTP\';\r\n$_[\'help_upload_without_ftp\'] = \'When the checkbox is set, files from the archive will be unpacked to the store directory directly without connecting to it through FTP\';\n///karapuz (no_ftp.ocmod.xml) ]]></add>\n		</operation>\n	</file>\n	<file path=\"admin/language/english/extension/installer.php\">\n		<operation>\n			<search  index=\"0\"><![CDATA[$_[\'text_clear\']]]></search>\n			<add position=\"after\"><![CDATA[//karapuz (no_ftp.ocmod.xml) \n$_[\'text_upload_without_ftp\'] = \'Upload Without FTP\';\n$_[\'help_upload_without_ftp\'] = \'When the checkbox is set, files from the archive will be unpacked to the store directory directly without connecting to it through FTP\';\n///karapuz (no_ftp.ocmod.xml) ]]></add>\n		</operation>\n	</file>\n	<file path=\"admin/view/template/extension/installer.tpl\">\n		<operation>\n			<search  index=\"0\"><![CDATA[<form class=\"form]]></search>\n			<add position=\"after\"><![CDATA[<?php /* //karapuz (no_ftp.ocmod.xml)  */?>\n					<div class=\"form-group\">\n            <label class=\"col-sm-2 control-label\" for=\"input-upload_without_ftp\"><span data-toggle=\"tooltip\" title=\"<?php echo $help_upload_without_ftp; ?>\"><?php echo $text_upload_without_ftp; ?></span></label>\n            <div class=\"col-sm-10\">\n              <div class=\"checkbox\">\n                <label>\n                  <?php if ($upload_without_ftp) { ?>\n                  <input type=\"checkbox\" name=\"upload_without_ftp\" value=\"1\" checked=\"checked\" id=\"input-upload_without_ftp\" />\n                  <?php } else { ?>\n                  <input type=\"checkbox\" name=\"upload_without_ftp\" value=\"1\" id=\"input-upload_without_ftp\" />\n                  <?php } ?>\n                  &nbsp; </label>\n              </div>\n            </div>\n          </div>\n<?php /* ///karapuz (no_ftp.ocmod.xml)  */?>]]></add>\n		</operation>\n		<operation>\n			<search  index=\"0\"><![CDATA[timer = setInterval(]]></search>\n			<add position=\"before\"><![CDATA[<?php /* //karapuz (no_ftp.ocmod.xml)  */?>\n	if (typeof(timer) != \'undefined\' && timer) {\n		clearInterval(timer);	\n	}\n<?php /* ///karapuz (no_ftp.ocmod.xml)  */?>]]></add>\n		</operation>\n		<operation>\n			<search  index=\"0\"><![CDATA[n next()]]></search>\n			<add position=\"after\"><![CDATA[<?php /* //karapuz (no_ftp.ocmod.xml)  */?>\n		var custom_params = \'\';\n		if ($(\'#input-upload_without_ftp\').prop(\'checked\')) {\n			custom_params = \'&upload_without_ftp=1\';\n		}\n<?php /* ///karapuz (no_ftp.ocmod.xml)  */?>]]></add>\n		</operation>\n		<operation>\n			<search  index=\"0\"><![CDATA[\'path=\' + data.path]]></search>\n			<add position=\"replace\"><![CDATA[\'path=\' + data.path + custom_params]]></add>\n		</operation>\n	</file>\n</modification>', 1, '2017-12-23 00:54:23');
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -1942,6 +2193,7 @@ CREATE TABLE `oc_module` (
 --
 
 INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
+<<<<<<< HEAD
 (30, 'Category', 'banner', '{"name":"Category","banner_id":"6","width":"182","height":"182","status":"1"}'),
 (29, 'Home Page', 'carousel', '{"name":"Home Page","banner_id":"8","width":"130","height":"100","status":"1"}'),
 (28, 'Home Page', 'featured', '{"name":"Home Page","product":["43","40","42","30"],"limit":"4","width":"200","height":"200","status":"1"}'),
@@ -1952,6 +2204,18 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (36, 'newest', 'bestseller', '{"name":"newest","limit":"999","width":"200","height":"200","status":"0"}'),
 (37, 'newest prod', 'latest', '{"name":"newest prod","limit":"20","width":"200","height":"200","status":"1"}'),
 (38, 'blog', 'html', '{"name":"blog","module_description":{"1":{"title":"blog","description":"&lt;p&gt;sdaffsafsadfsdfdsfsadfdsafdsafsfsafsafsafsafsfsfdd&lt;\\/p&gt;"}},"status":"1"}');
+=======
+(30, 'Category', 'banner', '{\"name\":\"Category\",\"banner_id\":\"6\",\"width\":\"182\",\"height\":\"182\",\"status\":\"1\"}'),
+(29, 'Home Page', 'carousel', '{\"name\":\"Home Page\",\"banner_id\":\"8\",\"width\":\"130\",\"height\":\"100\",\"status\":\"1\"}'),
+(28, 'Home Page', 'featured', '{\"name\":\"Home Page\",\"product\":[\"43\",\"40\",\"42\",\"30\"],\"limit\":\"4\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}'),
+(27, 'Home Page', 'slideshow', '{\"name\":\"Home Page\",\"banner_id\":\"7\",\"width\":\"1140\",\"height\":\"500\",\"status\":\"1\"}'),
+(31, 'Banner 1', 'banner', '{\"name\":\"Banner 1\",\"banner_id\":\"6\",\"width\":\"182\",\"height\":\"182\",\"status\":\"1\"}'),
+(32, 'Home Page Slideshow2', 'slideshow', '{\"name\":\"Home Page Slideshow2\",\"banner_id\":\"9\",\"width\":\"680\",\"height\":\"380\",\"status\":\"0\"}'),
+(33, 'slideshow3', 'slideshow', '{\"name\":\"slideshow3\",\"banner_id\":\"10\",\"width\":\"680\",\"height\":\"380\",\"status\":\"0\"}'),
+(36, 'newest', 'bestseller', '{\"name\":\"newest\",\"limit\":\"999\",\"width\":\"200\",\"height\":\"200\",\"status\":\"0\"}'),
+(37, 'newest prod', 'latest', '{\"name\":\"newest prod\",\"limit\":\"20\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}'),
+(38, 'blog', 'html', '{\"name\":\"blog\",\"module_description\":{\"1\":{\"title\":\"blog\",\"description\":\"&lt;p&gt;sdaffsafsadfsdfdsfsadfdsafdsafsfsafsafsafsafsfsfdd&lt;\\/p&gt;\"}},\"status\":\"1\"}');
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -2164,6 +2428,10 @@ CREATE TABLE `oc_order` (
   `shipping_custom_field` text NOT NULL,
   `shipping_method` varchar(128) NOT NULL,
   `shipping_code` varchar(128) NOT NULL,
+<<<<<<< HEAD
+=======
+  `extraShippingFee` int(255) NOT NULL DEFAULT '0',
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
   `comment` text NOT NULL,
   `total` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `order_status_id` int(11) NOT NULL DEFAULT '0',
@@ -2187,6 +2455,7 @@ CREATE TABLE `oc_order` (
 -- 資料表的匯出資料 `oc_order`
 --
 
+<<<<<<< HEAD
 INSERT INTO `oc_order` (`order_id`, `invoice_no`, `invoice_prefix`, `store_id`, `store_name`, `store_url`, `customer_id`, `customer_group_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `custom_field`, `payment_firstname`, `payment_lastname`, `payment_company`, `payment_address_1`, `payment_address_2`, `payment_city`, `payment_postcode`, `payment_country`, `payment_country_id`, `payment_zone`, `payment_zone_id`, `payment_address_format`, `payment_custom_field`, `payment_method`, `payment_code`, `shipping_firstname`, `shipping_lastname`, `shipping_company`, `shipping_address_1`, `shipping_address_2`, `shipping_city`, `shipping_postcode`, `shipping_country`, `shipping_country_id`, `shipping_zone`, `shipping_zone_id`, `shipping_address_format`, `shipping_custom_field`, `shipping_method`, `shipping_code`, `comment`, `total`, `order_status_id`, `affiliate_id`, `commission`, `marketing_id`, `tracking`, `language_id`, `currency_id`, `currency_code`, `currency_value`, `ip`, `forwarded_ip`, `user_agent`, `accept_language`, `date_added`, `date_modified`) VALUES
 (1, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 0, 1, '林', '先生', 'Anikiwayne@gmail.com', '0932000181', '0932000181', '[]', '林', '先生', '', '中山路中山區', '', '台北市', '10001', '台灣', 206, '台中市', 3143, '', '[]', '貨到付款', 'cod', '林', '先生', '', '中山路中山區', '', '台北市', '10001', '台灣', 206, '台中市', 3143, '', '[]', '固定運費', 'flat.flat', '店家的話', '105.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '223.136.181.231', '', 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_1 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/14A403 Safari/602.1', 'zh-tw', '2016-11-11 11:06:36', '2016-11-11 11:06:54'),
 (2, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 1, 1, 'Wayne', 'Lin', 'Anikiwayne@gmail.com', '0932000181', '', '', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '貨到付款', 'cod', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '固定運費', 'flat.flat', '', '105.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '223.140.141.91', '', 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_1 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/14A403 Safari/602.1', 'zh-tw', '2016-11-12 11:10:49', '2016-11-12 11:10:55'),
@@ -2297,6 +2566,135 @@ INSERT INTO `oc_order` (`order_id`, `invoice_no`, `invoice_prefix`, `store_id`, 
 (106, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 9, 1, 'wei', 'lin', 'lingwei005@gmail.com', '0911672251', '', '{"1":"2017-09-08","4":"","2":"","3":"6"}', 'wei', 'lin', '', '中和南山路', '', '中和', '', '台灣', 206, '新北市', 3137, '', '[]', '銀行轉帳', 'bank_transfer', 'wei', 'lin', '', '中和南山路', '', '中和', '', '台灣', 206, '新北市', 3137, '', '[]', '固定運費', 'flat.flat', '', '3505.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '59.115.237.71', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4', '2017-09-13 11:22:31', '2017-09-13 11:22:31'),
 (107, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag2/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{"1":"2017-07-19 21:22"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', '', '2855.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-10-23 20:52:58', '2017-10-23 20:52:58'),
 (108, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag2/', 0, 1, 'test', 'test', 'anikiwayne@gmail.com', '0932000181', '', '{"4":"","3":""}', 'test', 'test', '', 'dfsfsfs', '', 'Redwood City', '1111', '台灣', 206, '台北市', 3135, '', '[]', '銀行轉帳', 'bank_transfer', 'test', 'test', '', 'dfsfsfs', '', 'Redwood City', '1111', '台灣', 206, '台北市', 3135, '', '[]', '固定運費', 'flat.flat', '', '2405.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-11-04 17:25:04', '2017-11-04 17:25:06');
+=======
+INSERT INTO `oc_order` (`order_id`, `invoice_no`, `invoice_prefix`, `store_id`, `store_name`, `store_url`, `customer_id`, `customer_group_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `custom_field`, `payment_firstname`, `payment_lastname`, `payment_company`, `payment_address_1`, `payment_address_2`, `payment_city`, `payment_postcode`, `payment_country`, `payment_country_id`, `payment_zone`, `payment_zone_id`, `payment_address_format`, `payment_custom_field`, `payment_method`, `payment_code`, `shipping_firstname`, `shipping_lastname`, `shipping_company`, `shipping_address_1`, `shipping_address_2`, `shipping_city`, `shipping_postcode`, `shipping_country`, `shipping_country_id`, `shipping_zone`, `shipping_zone_id`, `shipping_address_format`, `shipping_custom_field`, `shipping_method`, `shipping_code`, `extraShippingFee`, `comment`, `total`, `order_status_id`, `affiliate_id`, `commission`, `marketing_id`, `tracking`, `language_id`, `currency_id`, `currency_code`, `currency_value`, `ip`, `forwarded_ip`, `user_agent`, `accept_language`, `date_added`, `date_modified`) VALUES
+(1, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 0, 1, '林', '先生', 'Anikiwayne@gmail.com', '0932000181', '0932000181', '[]', '林', '先生', '', '中山路中山區', '', '台北市', '10001', '台灣', 206, '台中市', 3143, '', '[]', '貨到付款', 'cod', '林', '先生', '', '中山路中山區', '', '台北市', '10001', '台灣', 206, '台中市', 3143, '', '[]', '固定運費', 'flat.flat', 0, '店家的話', '105.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '223.136.181.231', '', 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_1 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/14A403 Safari/602.1', 'zh-tw', '2016-11-11 11:06:36', '2016-11-11 11:06:54'),
+(2, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 1, 1, 'Wayne', 'Lin', 'Anikiwayne@gmail.com', '0932000181', '', '', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '貨到付款', 'cod', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '固定運費', 'flat.flat', 0, '', '105.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '223.140.141.91', '', 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_1 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/14A403 Safari/602.1', 'zh-tw', '2016-11-12 11:10:49', '2016-11-12 11:10:55'),
+(3, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 0, 1, '容為', '林', 'Anikiwayne@gmail.com', '0932000181', '', '[]', '容為', '林', '', 'Test123', '', 'Taipei', '1000', '台灣', 206, '台北市', 3135, '', '[]', '銀行轉帳', 'bank_transfer', '容為', '林', '', 'Test123', '', 'Taipei', '1000', '台灣', 206, '台北市', 3135, '', '[]', '固定運費', 'flat.flat', 0, '', '99999999999.9999', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '223.136.214.50', '', 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_1 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/14A403 Safari/602.1', 'zh-tw', '2017-01-07 14:59:00', '2017-01-07 14:59:00'),
+(4, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 0, 1, '尾盤', '這', 'Anikiwayne@gmail.com', '000000000000', '', '[]', '尾盤', '這', '', 'Gggghg', '', 'Taipei', '100', '台灣', 206, '台中市', 3143, '', '[]', '銀行轉帳', 'bank_transfer', '尾盤', '這', '', 'Gggghg', '', 'Taipei', '100', '台灣', 206, '台中市', 3143, '', '[]', '固定運費', 'flat.flat', 0, 'Hiho', '105.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '223.136.44.164', '', 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_1 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/14A403 Safari/602.1', 'zh-tw', '2017-01-21 12:18:06', '2017-01-21 12:18:06'),
+(5, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 0, 1, '林', '先生', 'aniki1111@yahoo.com', '091111', '', '[]', '林', '先生', '', '100 taipie', '', 'taipei', '100', '台灣', 206, '台北市', 3135, '', '[]', '銀行轉帳', 'bank_transfer', '林', '先生', '', '100 taipie', '', 'taipei', '100', '台灣', 206, '台北市', 3135, '', '[]', '固定運費', 'flat.flat', 0, '', '205.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '223.136.155.206', '', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-02-04 15:03:52', '2017-02-04 15:04:03'),
+(6, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.jungwei.com.tw/mittag.com.tw/', 3, 1, '榮斌', '吳', 'ukjames312@hotmail.com', '0952829779', '', '', '榮斌', '吳', '', '中和區南山路250巷12-1號', '', '新北市', '', '台灣', 206, '新北市', 3137, '', '[]', '銀行轉帳', 'bank_transfer', '榮斌', '吳', '', '中和區南山路250巷12-1號', '', '新北市', '', '台灣', 206, '新北市', 3137, '', '[]', '固定運費', 'flat.flat', 0, '', '305.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '36.229.222.221', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4', '2017-05-05 11:03:59', '2017-05-05 11:04:12'),
+(7, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.jungwei.com.tw/mittag.com.tw/', 3, 1, '榮斌', '吳', 'ukjames312@hotmail.com', '0952829779', '', '', '榮斌', '吳', '', '中和區南山路250巷12-1號', '', '新北市', '', '台灣', 206, '新北市', 3137, '', '[]', '銀行轉帳', 'bank_transfer', '榮斌', '吳', '', '中和區南山路250巷12-1號', '', '新北市', '', '台灣', 206, '新北市', 3137, '', '[]', '固定運費', 'flat.flat', 0, '', '4755.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '61.228.18.67', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4', '2017-05-09 09:17:44', '2017-05-09 09:19:12'),
+(8, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 1, 1, 'Wayne', 'Lin', 'Anikiwayne@gmail.com', '0932000181', '', '', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '銀行轉帳', 'bank_transfer', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '固定運費', 'flat.flat', 0, '1234', '4705.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-19 15:07:55', '2017-08-19 15:08:14'),
+(9, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 1, 1, 'Wayne', 'Lin', 'Anikiwayne@gmail.com', '0932000181', '', '', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '銀行轉帳', 'bank_transfer', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '固定運費', 'flat.flat', 0, '', '5605.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-19 15:15:29', '2017-08-19 15:15:49'),
+(10, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 1, 1, 'Wayne', 'Lin', 'Anikiwayne@gmail.com', '0932000181', '', '', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '銀行轉帳', 'bank_transfer', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-19 15:18:17', '2017-08-19 15:18:19'),
+(11, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 1, 1, 'Wayne', 'Lin', 'Anikiwayne@gmail.com', '0932000181', '', '', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '銀行轉帳', 'bank_transfer', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '固定運費', 'flat.flat', 0, '', '3205.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-19 15:32:57', '2017-08-19 15:32:59'),
+(12, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 1, 1, 'Wayne', 'Lin', 'Anikiwayne@gmail.com', '0932000181', '', '', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '銀行轉帳', 'bank_transfer', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-19 15:35:09', '2017-08-19 15:35:10'),
+(13, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 1, 1, 'Wayne', 'Lin', 'Anikiwayne@gmail.com', '0932000181', '', '', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '銀行轉帳', 'bank_transfer', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '固定運費', 'flat.flat', 0, '', '3805.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-19 15:41:23', '2017-08-19 15:41:25'),
+(14, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 1, 1, 'Wayne', 'Lin', 'Anikiwayne@gmail.com', '0932000181', '', '', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '銀行轉帳', 'bank_transfer', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-20 01:03:04', '2017-08-20 01:03:04'),
+(15, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 1, 1, 'Wayne', 'Lin', 'Anikiwayne@gmail.com', '0932000181', '', '', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '銀行轉帳', 'bank_transfer', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-20 01:08:51', '2017-08-20 01:11:23'),
+(16, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 1, 1, 'Wayne', 'Lin', 'Anikiwayne@gmail.com', '0932000181', '', '', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '銀行轉帳', 'bank_transfer', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '固定運費', 'flat.flat', 0, '', '3805.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-20 01:32:30', '2017-08-20 01:32:32'),
+(17, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '7105.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-20 15:50:37', '2017-08-20 15:50:57'),
+(18, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-20 15:53:24', '2017-08-20 15:53:25'),
+(19, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-20 20:57:50', '2017-08-20 20:57:50'),
+(20, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-20 20:59:16', '2017-08-20 21:21:53'),
+(21, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '6655.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-20 21:24:18', '2017-08-20 21:24:20'),
+(22, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-20 21:44:35', '2017-08-20 21:44:37'),
+(23, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-20 21:46:35', '2017-08-20 21:46:37'),
+(24, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '3205.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-20 21:48:06', '2017-08-20 21:48:07'),
+(25, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '6205.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-20 21:52:16', '2017-08-20 21:52:18'),
+(26, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-20 23:15:24', '2017-08-20 23:15:25'),
+(27, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-20 23:19:25', '2017-08-20 23:19:25'),
+(28, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-20 23:28:07', '2017-08-20 23:38:46'),
+(29, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 20:20:25', '2017-08-21 20:20:25'),
+(30, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 20:25:09', '2017-08-21 20:25:09'),
+(31, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 20:26:00', '2017-08-21 20:26:00'),
+(32, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 20:31:47', '2017-08-21 20:31:47'),
+(33, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 20:34:02', '2017-08-21 20:34:02'),
+(34, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 20:51:00', '2017-08-21 20:51:00'),
+(35, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 20:51:41', '2017-08-21 20:51:43'),
+(36, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 22:05:50', '2017-08-21 22:05:50'),
+(37, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 22:29:37', '2017-08-21 22:29:37'),
+(38, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 22:30:41', '2017-08-21 22:30:42'),
+(39, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 22:47:56', '2017-08-21 22:47:58'),
+(40, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 22:48:23', '2017-08-21 22:55:11'),
+(41, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 22:55:31', '2017-08-21 22:58:33'),
+(42, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 23:03:33', '2017-08-21 23:03:36'),
+(43, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 23:26:35', '2017-08-21 23:26:35'),
+(44, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 23:30:07', '2017-08-21 23:30:07'),
+(45, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 23:41:11', '2017-08-21 23:41:11'),
+(46, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 23:43:14', '2017-08-21 23:43:14'),
+(47, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 23:46:01', '2017-08-21 23:46:04'),
+(48, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 23:48:54', '2017-08-21 23:48:55'),
+(49, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 23:51:49', '2017-08-21 23:51:49'),
+(50, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 23:55:40', '2017-08-21 23:55:40'),
+(51, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-21 23:59:52', '2017-08-21 23:59:53'),
+(52, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-22 00:16:37', '2017-08-22 00:16:38'),
+(53, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-22 00:18:26', '2017-08-22 00:18:26'),
+(54, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-22 00:20:13', '2017-08-22 00:20:14'),
+(55, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-22 00:21:12', '2017-08-22 00:21:12'),
+(56, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-22 00:21:45', '2017-08-22 00:21:45'),
+(57, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-22 00:22:02', '2017-08-22 00:22:02'),
+(58, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-22 00:22:27', '2017-08-22 00:22:27'),
+(59, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-22 00:23:01', '2017-08-22 00:23:01'),
+(60, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-22 00:24:51', '2017-08-22 00:24:52'),
+(61, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-22 00:36:31', '2017-08-22 00:36:32'),
+(62, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-24 23:12:10', '2017-08-24 23:12:13'),
+(63, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-24 23:13:29', '2017-08-24 23:13:30'),
+(64, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-24 23:46:38', '2017-08-24 23:46:39'),
+(65, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-25 00:01:57', '2017-08-25 00:01:58'),
+(66, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-25 00:02:47', '2017-08-25 00:02:48'),
+(67, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-25 21:50:33', '2017-08-25 21:50:35'),
+(68, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-25 21:56:35', '2017-08-25 21:56:36'),
+(69, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-25 23:12:16', '2017-08-25 23:12:17'),
+(70, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-25 23:26:03', '2017-08-25 23:26:04'),
+(71, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-25 23:26:47', '2017-08-25 23:26:47'),
+(72, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-25 23:27:53', '2017-08-25 23:27:54'),
+(73, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-25 23:40:10', '2017-08-25 23:40:11'),
+(74, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-25 23:41:49', '2017-08-25 23:41:50'),
+(75, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-25 23:43:36', '2017-08-25 23:43:37'),
+(76, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-25 23:45:26', '2017-08-25 23:45:27');
+INSERT INTO `oc_order` (`order_id`, `invoice_no`, `invoice_prefix`, `store_id`, `store_name`, `store_url`, `customer_id`, `customer_group_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `custom_field`, `payment_firstname`, `payment_lastname`, `payment_company`, `payment_address_1`, `payment_address_2`, `payment_city`, `payment_postcode`, `payment_country`, `payment_country_id`, `payment_zone`, `payment_zone_id`, `payment_address_format`, `payment_custom_field`, `payment_method`, `payment_code`, `shipping_firstname`, `shipping_lastname`, `shipping_company`, `shipping_address_1`, `shipping_address_2`, `shipping_city`, `shipping_postcode`, `shipping_country`, `shipping_country_id`, `shipping_zone`, `shipping_zone_id`, `shipping_address_format`, `shipping_custom_field`, `shipping_method`, `shipping_code`, `extraShippingFee`, `comment`, `total`, `order_status_id`, `affiliate_id`, `commission`, `marketing_id`, `tracking`, `language_id`, `currency_id`, `currency_code`, `currency_value`, `ip`, `forwarded_ip`, `user_agent`, `accept_language`, `date_added`, `date_modified`) VALUES
+(77, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-25 23:50:03', '2017-08-25 23:50:04'),
+(78, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 00:20:54', '2017-08-26 00:20:54'),
+(79, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 00:37:34', '2017-08-26 00:37:35'),
+(80, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 00:46:17', '2017-08-26 00:46:17'),
+(81, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 00:50:22', '2017-08-26 00:50:22'),
+(82, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 00:53:28', '2017-08-26 00:53:30'),
+(83, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 01:08:43', '2017-08-26 01:08:44'),
+(84, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 01:10:01', '2017-08-26 01:10:03'),
+(85, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 10:39:33', '2017-08-26 10:39:34'),
+(86, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 10:40:45', '2017-08-26 10:40:46'),
+(87, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 11:15:15', '2017-08-26 11:15:16'),
+(88, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 11:16:50', '2017-08-26 11:16:51'),
+(89, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 11:18:04', '2017-08-26 11:18:05'),
+(90, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 11:22:08', '2017-08-26 11:22:09'),
+(91, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 11:23:31', '2017-08-26 11:23:32'),
+(92, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2855.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 12:34:00', '2017-08-26 12:34:01'),
+(93, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 12:44:13', '2017-08-26 12:44:14'),
+(94, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 12:48:49', '2017-08-26 12:48:50'),
+(95, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 12:50:14', '2017-08-26 12:50:15'),
+(96, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2905.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 13:43:53', '2017-08-26 13:43:56'),
+(97, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 13:49:56', '2017-08-26 13:49:57'),
+(98, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 13:58:27', '2017-08-26 13:58:28'),
+(99, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 14:05:04', '2017-08-26 14:05:05'),
+(100, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-26 14:06:32', '2017-08-26 14:06:33'),
+(101, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '貨到付款', 'cod', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-08-28 20:56:48', '2017-08-28 20:56:48'),
+(102, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 1, 1, 'Wayne', 'Lin', 'Anikiwayne@gmail.com', '0932000181', '', '', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '貨到付款', 'cod', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '固定運費', 'flat.flat', 0, '', '5.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '220.135.38.215', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-09-08 20:58:49', '2017-09-08 20:58:50'),
+(103, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 4, 1, 'James', 'Wu', 'ukjames312@gmail.com', '02-2222222222', '', '', 'James', 'Wu', '', 'Gfdrest gytrews', '', 'Taipei', '', '台灣', 206, '新北市', 3137, '', '[]', '貨到付款', 'cod', 'James', 'Wu', '', 'Gfdrest gytrews', '', 'Taipei', '', '台灣', 206, '新北市', 3137, '', '[]', '固定運費', 'flat.flat', 0, '', '10555.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '61.228.19.76', '', 'Mozilla/5.0 (iPad; CPU OS 10_3_3 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) CriOS/61.0.3163.73 Mobile/14G60 Safari/602.1', 'zh-tw', '2017-09-10 08:36:35', '2017-09-10 08:36:47'),
+(104, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 4, 1, 'James', 'Wu', 'ukjames312@gmail.com', '02-2222222222', '', '', 'James', 'Wu', '', 'Gfdrest gytrews', '', 'Taipei', '', '台灣', 206, '新北市', 3137, '', '[]', '銀行轉帳', 'bank_transfer', 'James', 'Wu', '', 'Gfdrest gytrews', '', 'Taipei', '', '台灣', 206, '新北市', 3137, '', '[]', '固定運費', 'flat.flat', 0, '', '10805.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '61.228.19.76', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4', '2017-09-10 12:00:43', '2017-09-10 12:00:51'),
+(105, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 9, 1, 'wei', 'lin', 'lingwei005@gmail.com', '0911672251', '', '{\"1\":\"2017-09-08\",\"4\":\"\",\"2\":\"\",\"3\":\"6\"}', 'wei', 'lin', '', '中和南山路', '', '中和', '', '台灣', 206, '新北市', 3137, '', '[]', '銀行轉帳', 'bank_transfer', 'wei', 'lin', '', '中和南山路', '', '中和', '', '台灣', 206, '新北市', 3137, '', '[]', '固定運費', 'flat.flat', 0, '', '6655.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '59.115.237.71', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4', '2017-09-13 09:11:28', '2017-09-13 09:12:52'),
+(106, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 9, 1, 'wei', 'lin', 'lingwei005@gmail.com', '0911672251', '', '{\"1\":\"2017-09-08\",\"4\":\"\",\"2\":\"\",\"3\":\"6\"}', 'wei', 'lin', '', '中和南山路', '', '中和', '', '台灣', 206, '新北市', 3137, '', '[]', '銀行轉帳', 'bank_transfer', 'wei', 'lin', '', '中和南山路', '', '中和', '', '台灣', 206, '新北市', 3137, '', '[]', '固定運費', 'flat.flat', 0, '', '3505.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '59.115.237.71', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4', '2017-09-13 11:22:31', '2017-09-13 11:22:31'),
+(107, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag2/', 6, 1, '林', '測試', 'aniki_wayne@yahoo.com.tw', '091111111', '09123123123', '{\"1\":\"2017-07-19 21:22\"}', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', '測試', '', '弟只弟只', '', '弟只', '', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2855.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-10-23 20:52:58', '2017-10-23 20:52:58'),
+(108, 0, 'INV-2013-00', 0, 'MITTAG', 'http://localhost/mittag2/', 0, 1, 'test', 'test', 'anikiwayne@gmail.com', '0932000181', '', '{\"4\":\"\",\"3\":\"\"}', 'test', 'test', '', 'dfsfsfs', '', 'Redwood City', '1111', '台灣', 206, '台北市', 3135, '', '[]', '銀行轉帳', 'bank_transfer', 'test', 'test', '', 'dfsfsfs', '', 'Redwood City', '1111', '台灣', 206, '台北市', 3135, '', '[]', '固定運費', 'flat.flat', 0, '', '2405.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '::1', '', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,ja;q=0.2', '2017-11-04 17:25:04', '2017-11-04 17:25:06'),
+(109, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 1, 1, 'Wayne', 'Lin', 'Anikiwayne@gmail.com', '0932000181', '', '', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '銀行轉帳', 'bank_transfer', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '固定運費', 'flat.flat', 0, '', '24691361.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '220.135.38.215', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36', 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6', '2017-11-25 01:26:43', '2017-11-25 01:26:48'),
+(110, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 1, 1, 'Wayne', 'Lin', 'Anikiwayne@gmail.com', '0932000181', '', '', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '銀行轉帳', 'bank_transfer', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '固定運費', 'flat.flat', 0, '', '5805.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '220.135.38.215', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36', 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6', '2017-11-25 10:22:57', '2017-11-25 10:23:00'),
+(111, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 9, 1, 'wei', 'lin', 'lingwei005@gmail.com', '0911672251', '', '{\"1\":\"2017-09-08\",\"4\":\"\",\"2\":\"\",\"3\":\"6\"}', 'wei', 'lin', '', '中和南山路', '', '中和', '', '台灣', 206, '新北市', 3137, '', '[]', '銀行轉帳', 'bank_transfer', 'wei', 'lin', '', '中和南山路', '', '中和', '', '台灣', 206, '新北市', 3137, '', '[]', '固定運費', 'flat.flat', 0, 'pls ship out asap', '3405.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '61.228.26.132', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36', 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7', '2017-11-29 09:01:20', '2017-11-29 09:05:43'),
+(112, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 0, 1, 'lin', 'test', 'testsetes@gmail.com', '09123123', '', '{\"4\":\"\",\"3\":\"\"}', 'lin', 'test', '', '地址台灣中山區', '', '台北', '', '台灣', 206, '澎湖縣', 3151, '', '[]', '貨到付款', 'cod', 'lin', 'test', '', '地址台灣中山區', '', '台北', '', '台灣', 206, '澎湖縣', 3151, '', '[]', '固定運費', 'flat.flat', 0, '', '12345683.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '220.135.38.215', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36', 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6', '2017-12-06 23:25:42', '2017-12-06 23:25:45'),
+(113, 1, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 1, 1, 'Wayne', 'Lin', 'Anikiwayne@gmail.com', '0932000181', '', '', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '貨到付款', 'cod', 'Wayne', 'Lin', '', 'Taiwan', '', 'Taipei', '', '台灣', 206, '台北市', 3135, '', '[]', '固定運費', 'flat.flat', 0, '', '55.0000', 1, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '220.135.38.215', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36', 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6', '2017-12-06 23:30:18', '2018-01-17 21:58:40'),
+(114, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 9, 1, 'wei', 'lin', 'lingwei005@gmail.com', '0911672251', '', '{\"1\":\"2017-09-08\",\"4\":\"\",\"2\":\"\",\"3\":\"6\"}', 'wei', 'lin', '', '中和南山路', '', '中和', '', '台灣', 206, '新北市', 3137, '', '[]', '銀行轉帳', 'bank_transfer', 'wei', 'lin', '', '中和南山路', '', '中和', '', '台灣', 206, '新北市', 3137, '', '[]', '固定運費', 'flat.flat', 123, 'pls ship out asap', '5950.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '36.230.99.197', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36', 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7', '2018-01-08 10:20:44', '2018-01-20 15:07:26'),
+(115, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 0, 1, '林', '', 'Anikiwayne@gmail.com', '0932000111', '', '[]', '林', '', '', '', '', '', '', '台灣', 206, '', 0, '', '[]', '銀行轉帳', 'bank_transfer', '林', '', '', '', '', '', '', '台灣', 206, '', 0, '', '[]', '固定運費', 'flat.flat', 123456789, 'Hi', '2940.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '223.140.154.40', '', 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_2 like Mac OS X) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0 Mobile/14C92 Safari/602.1', 'zh-tw', '2018-01-27 09:05:13', '2018-01-27 11:16:45'),
+(116, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 0, 1, '測試先生', '', 'anikiwayne@gmail.com', '0932000181', '', '[]', '測試先生', '', '', '', '', '', '', '台灣', 206, '', 0, '', '[]', '銀行轉帳', 'bank_transfer', '測試先生', '', '', '', '', '', '', '台灣', 206, '', 0, '', '[]', '固定運費', 'flat.flat', 0, '', '2750.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '223.140.154.40', '', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36', 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6', '2018-01-27 11:40:09', '2018-01-27 11:40:12'),
+(117, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 0, 1, '林', '', 'anikiwayne@gmail.com', '0932000181', '', '[]', '林', '', '', '', '', '', '', '台灣', 206, '', 0, '', '[]', '銀行轉帳', 'bank_transfer', '林', '', '', '', '', '', '', '台灣', 206, '', 0, '', '[]', '統一超商取貨', 'ecpaylogistic.unimart', 0, '', '230.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '220.135.38.215', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36', 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6', '2018-02-04 21:52:47', '2018-02-04 21:52:47'),
+(118, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 0, 1, 'lin', '', 'lingwei005@gmail.com', '0911672251', '', '[]', 'lin', '', '', '', '', '', '', '台灣', 206, '', 0, '', '[]', '銀行轉帳', 'bank_transfer', 'lin', '', '', '', '', '', '', '台灣', 206, '', 0, '', '[]', '固定運費', 'flat.flat', 300, 'asap', '2750.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '36.229.134.49', '', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36', 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7', '2018-02-05 14:55:57', '2018-02-05 14:58:42'),
+(119, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 21, 1, '詹姆士', '', 'ukjames312@hotmail.com', '0952829779', '', '', '詹姆士', '吳', '', '中和區南山路250巷12-1號', '', '新北市', '23570', '台灣', 206, '新北市', 3137, '', '[]', '銀行轉帳', 'bank_transfer', '詹姆士', '吳', '', '中和區南山路250巷12-1號', '', '新北市', '23570', '台灣', 206, '新北市', 3137, '', '[]', '固定運費', 'flat.flat', 2147483647, '可不可以在過年前寄到', '2800.0000', 12, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '36.229.135.221', '', 'Mozilla/5.0 (iPad; CPU OS 11_2_5 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) CriOS/64.0.3282.112 Mobile/15D60 Safari/604.1', 'zh-tw', '2018-02-07 21:38:36', '2018-02-25 13:56:24'),
+(120, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 0, 1, '林', '', 'anikiwayne@gmail.com', '0932000181', '', '[]', '林', '', '', '', '', '', '', '台灣', 206, '', 0, '', '[]', '銀行轉帳', 'bank_transfer', '林', '', '', '', '', '', '', '台灣', 206, '', 0, '', '[]', '統一超商取貨', 'ecpaylogistic.unimart', 0, '', '180.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '220.135.38.215', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36', 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6', '2018-02-20 01:32:37', '2018-02-20 01:32:37'),
+(121, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 0, 1, '林', '', 'anikiwayne@gmail.com', '0932000181', '', '[]', '林', '', '', '', '', '', '', '台灣', 206, '', 0, '', '[]', '免費', 'free_checkout', '林', '', '', '', '', '', '', '台灣', 206, '', 0, '', '[]', '固定運費', 'flat.flat', 0, '', '0.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '220.135.38.215', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36', 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6', '2018-02-25 16:58:39', '2018-02-25 16:58:39'),
+(122, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 23, 1, '林', '', 'linjohnwayne@gmail.com', '0932000181', '', '', '林', '', '', '', '', '', '', '台灣', 206, '', 0, '', '[]', '免費', 'free_checkout', '林', '', '', '', '', '', '', '台灣', 206, '', 0, '', '[]', '固定運費', 'flat.flat', 0, '', '0.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '220.135.38.215', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36', 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6', '2018-02-25 17:12:37', '2018-02-25 17:12:37'),
+(123, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 0, 1, '林', '', 'anikiwayne@gmail.com', '0932000181', '', '[]', '林', '', '', '', '', '', '', '台灣', 206, '', 0, '', '[]', '銀行轉帳', 'bank_transfer', '林', '', '', '', '', '', '', '台灣', 206, '', 0, '', '[]', '固定運費', 'flat.flat', 0, '', '2750.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '220.135.38.215', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6', '2018-03-25 10:48:24', '2018-03-25 10:48:24'),
+(124, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 0, 1, '林', 'test', 'anikiwayne@gmail.com', '09123456798', '', '[]', '林', 'test', '', '台北次測試', '', '台北', '1246', '台灣', 206, '花蓮縣', 3154, '', '[]', '銀行轉帳', 'bank_transfer', '林', 'test', '', '台北次測試', '', '台北', '1246', '台灣', 206, '花蓮縣', 3154, '', '[]', '固定運費', 'flat.flat', 0, '', '2500.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '220.135.38.215', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6', '2018-04-04 13:04:09', '2018-04-04 13:04:09'),
+(125, 0, 'INV-2013-00', 0, 'MITTAG', 'http://www.mittag.com.tw/', 0, 1, '林', 'test', 'anikiwayne@gmail.com', '0923000181', '', '[]', '林', 'test', '', '台北次測試', '', '台北', '123', '台灣', 206, '台南市', 3149, '', '[]', '銀行轉帳', 'bank_transfer', '林', 'test', '', '台北次測試', '', '台北', '123', '台灣', 206, '台南市', 3149, '', '[]', '固定運費', 'flat.flat', 0, '', '9900.0000', 0, 0, '0.0000', 0, '', 1, 1, 'TWD', '1.00000000', '220.135.38.215', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6', '2018-04-05 10:14:51', '2018-04-05 10:14:51');
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -2412,7 +2810,24 @@ INSERT INTO `oc_order_history` (`order_history_id`, `order_id`, `order_status_id
 (75, 103, 1, 0, '', '2017-09-10 08:36:47'),
 (76, 104, 12, 1, '銀行轉帳付款說明\n\n玉山分行\n\n★確定入帳後，我們會立即幫您處理，感謝您的支持與愛護★', '2017-09-10 12:00:51'),
 (77, 105, 12, 1, '銀行轉帳付款說明\n\n玉山分行\n\n★確定入帳後，我們會立即幫您處理，感謝您的支持與愛護★', '2017-09-13 09:12:52'),
+<<<<<<< HEAD
 (78, 108, 12, 1, '銀行轉帳付款說明\n\n玉山分行\n\n★確定入帳後，我們會立即幫您處理，感謝您的支持與愛護★', '2017-11-04 17:25:06');
+=======
+(78, 108, 12, 1, '銀行轉帳付款說明\n\n玉山分行\n\n★確定入帳後，我們會立即幫您處理，感謝您的支持與愛護★', '2017-11-04 17:25:06'),
+(79, 109, 12, 1, '銀行轉帳付款說明\n\n玉山分行\n\n★確定入帳後，我們會立即幫您處理，感謝您的支持與愛護★', '2017-11-25 01:26:48'),
+(80, 110, 12, 1, '銀行轉帳付款說明\n\n玉山分行\n\n★確定入帳後，我們會立即幫您處理，感謝您的支持與愛護★', '2017-11-25 10:23:00'),
+(81, 111, 12, 1, '銀行轉帳付款說明\n\n玉山分行\n\n★確定入帳後，我們會立即幫您處理，感謝您的支持與愛護★', '2017-11-29 09:05:43'),
+(82, 112, 1, 0, '', '2017-12-06 23:25:45'),
+(83, 113, 1, 0, '', '2017-12-06 23:30:19'),
+(84, 114, 12, 1, '銀行轉帳付款說明\n\n玉山分行\n\n★確定入帳後，我們會立即幫您處理，感謝您的支持與愛護★', '2018-01-08 10:25:11'),
+(85, 114, 12, 0, '111111111111111111111111', '2018-01-17 21:52:39'),
+(86, 113, 1, 1, 'fdsafsadfdsa', '2018-01-17 21:58:40'),
+(87, 115, 12, 1, '銀行轉帳付款說明\n\n台灣銀行(004)\r\n007004753139\r\n\r\n\n\n★確定入帳後，我們會立即幫您處理，感謝您的支持與愛護★', '2018-01-27 09:05:15'),
+(88, 115, 12, 1, 'jfisfjoijfiojfdoijiojifojosidfjsjis', '2018-01-27 11:16:45'),
+(89, 116, 12, 1, '銀行轉帳付款說明\n\n台灣銀行(004)\r\n007004753139\r\n\r\n\n\n★確定入帳後，我們會立即幫您處理，感謝您的支持與愛護★', '2018-01-27 11:40:12'),
+(90, 118, 12, 1, '銀行轉帳付款說明\n\n台灣銀行(004)\r\n007004753139\r\n\r\n\n\n★確定入帳後，我們會立即幫您處理，感謝您的支持與愛護★', '2018-02-05 14:56:19'),
+(91, 119, 12, 1, '銀行轉帳付款說明\n\n台灣銀行(004)\r\n007004753139\r\n\r\n\n\n★確定入帳後，我們會立即幫您處理，感謝您的支持與愛護★', '2018-02-07 21:39:27');
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -2552,10 +2967,17 @@ INSERT INTO `oc_order_product` (`order_product_id`, `order_id`, `extraDetail`, `
 (73, 64, 'Array', '', '', '', '', '', 81, 'test2', 'test1', 2, '0.0000', '0.0000', '0.0000', 0),
 (74, 65, 'Array', '', '', '', '', '', 81, 'test2', 'test1', 3, '0.0000', '0.0000', '0.0000', 0),
 (75, 66, 'Array', '', '', '', '', '', 81, 'test2', 'test1', 2, '0.0000', '0.0000', '0.0000', 0),
+<<<<<<< HEAD
 (76, 67, '["u8acbu9078u64c7u6212u570d","u624bu934au9577u5ea60","u624bu74b0u5167u570du76f4u5f910","u8033u74b0u5f62u5f0f"]', '', '', '', '', '', 67, 'train bracelet 火車手鍊', 'BL313', 1, '2900.0000', '2900.0000', '0.0000', 0),
 (77, 67, '["4u865f(1.3cm)","u624bu934au9577u5ea616","u624bu74b0u5167u570du76f4u5f916.5","u8033u74b0u5f62u5f0fu8033u593eu5f0fu8033u74b0"]', '', '', '', '', '', 81, 'test2', 'test1', 1, '0.0000', '0.0000', '0.0000', 0),
 (78, 68, '["u8acbu9078u64c7u6212u570d","u624bu934au9577u5ea60","u624bu74b0u5167u570du76f4u5f910","u8033u74b0u5f62u5f0f"]', '', '', '', '', '', 67, 'train bracelet 火車手鍊', 'BL313', 1, '2900.0000', '2900.0000', '0.0000', 0),
 (79, 68, '["4u865f(1.3cm)","u624bu934au9577u5ea616","u624bu74b0u5167u570du76f4u5f916.5","u8033u74b0u5f62u5f0fu8033u593eu5f0fu8033u74b0"]', '', '', '', '', '', 81, 'test2', 'test1', 1, '0.0000', '0.0000', '0.0000', 0),
+=======
+(76, 67, '[\"u8acbu9078u64c7u6212u570d\",\"u624bu934au9577u5ea60\",\"u624bu74b0u5167u570du76f4u5f910\",\"u8033u74b0u5f62u5f0f\"]', '', '', '', '', '', 67, 'train bracelet 火車手鍊', 'BL313', 1, '2900.0000', '2900.0000', '0.0000', 0),
+(77, 67, '[\"4u865f(1.3cm)\",\"u624bu934au9577u5ea616\",\"u624bu74b0u5167u570du76f4u5f916.5\",\"u8033u74b0u5f62u5f0fu8033u593eu5f0fu8033u74b0\"]', '', '', '', '', '', 81, 'test2', 'test1', 1, '0.0000', '0.0000', '0.0000', 0),
+(78, 68, '[\"u8acbu9078u64c7u6212u570d\",\"u624bu934au9577u5ea60\",\"u624bu74b0u5167u570du76f4u5f910\",\"u8033u74b0u5f62u5f0f\"]', '', '', '', '', '', 67, 'train bracelet 火車手鍊', 'BL313', 1, '2900.0000', '2900.0000', '0.0000', 0),
+(79, 68, '[\"4u865f(1.3cm)\",\"u624bu934au9577u5ea616\",\"u624bu74b0u5167u570du76f4u5f916.5\",\"u8033u74b0u5f62u5f0fu8033u593eu5f0fu8033u74b0\"]', '', '', '', '', '', 81, 'test2', 'test1', 1, '0.0000', '0.0000', '0.0000', 0),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (80, 69, '[]', '', '', '', '', '', 81, 'test2', 'test1', 2, '0.0000', '0.0000', '0.0000', 0),
 (81, 69, '[]', '', '', '', '', '', 81, 'test2', 'test1', 1, '0.0000', '0.0000', '0.0000', 0),
 (82, 69, '[]', '', '', '', '', '', 67, 'train bracelet 火車手鍊', 'BL313', 1, '2900.0000', '2900.0000', '0.0000', 0),
@@ -2607,7 +3029,32 @@ INSERT INTO `oc_order_product` (`order_product_id`, `order_id`, `extraDetail`, `
 (128, 106, '[]', '請選擇戒圍', '', '', '', '耳針式耳環', 91, 'earring test 01', 'ER777', 1, '3500.0000', '3500.0000', '0.0000', 0),
 (129, 107, '', '', '', '', '', '', 68, 'train necklace 火車項鍊', 'NL343', 1, '2850.0000', '2850.0000', '0.0000', 0),
 (130, 107, '', '', '', '', '', '', 81, 'test2', 'test1', 1, '0.0000', '0.0000', '0.0000', 0),
+<<<<<<< HEAD
 (131, 108, '[]', '請選擇戒圍', '0', '', '0', '', 69, 'train baby bracelet 火車寶寶手鍊', 'BB307', 1, '2400.0000', '2400.0000', '0.0000', 0);
+=======
+(131, 108, '[]', '請選擇戒圍', '0', '', '0', '', 69, 'train baby bracelet 火車寶寶手鍊', 'BB307', 1, '2400.0000', '2400.0000', '0.0000', 0),
+(132, 109, '', '', '', '', '', '', 118, '手鍊全文案填寫測試', 'BR TEST001', 1, '12345678.0000', '12345678.0000', '0.0000', 0),
+(133, 109, '[]', '請選擇戒圍', '', '', '', '', 121, '銀器全文案填寫測試', 'SW TEST001', 1, '12345678.0000', '12345678.0000', '0.0000', 0),
+(134, 110, '[]', '請選擇戒圍', '', '40', '', '', 108, '鑽石心項鍊', 'NL715', 1, '2650.0000', '2650.0000', '0.0000', 0),
+(135, 110, '[]', '請選擇戒圍', '', '40', '', '', 113, '捲紙兔項鍊', 'NL711', 1, '3150.0000', '3150.0000', '0.0000', 0),
+(136, 111, '', '', '', '', '', '', 112, '鴨子項鍊', 'NL712', 1, '3400.0000', '3400.0000', '0.0000', 0),
+(137, 112, '[]', '請選擇戒圍', '', '', '', '', 120, '彌月禮全資料測試', 'BB TEST001', 1, '12345678.0000', '12345678.0000', '0.0000', 0),
+(138, 113, '[]', '請選擇戒圍', '', '', '', '', 125, '德國結戒指', 'RG703', 1, '50.0000', '50.0000', '0.0000', 0),
+(139, 114, '', '', '', '', '', '', 107, '小提琴項鍊', 'NL716', 1, '3550.0000', '3550.0000', '0.0000', 0),
+(140, 114, '', '', '', '', '', '', 109, '大象項鍊', 'NL714', 1, '2400.0000', '2400.0000', '0.0000', 0),
+(141, 115, '[]', '', '', '', '', '', 106, '麥穗項鍊', 'NL717', 1, '2940.0000', '2940.0000', '0.0000', 0),
+(142, 116, '[]', '', '', '', '', '', 123, '王冠手鍊', 'NL716', 1, '2750.0000', '2750.0000', '0.0000', 0),
+(143, 117, '[]', '', '', '', '', '', 125, '德國結戒指', 'RG703', 3, '50.0000', '150.0000', '0.0000', 0),
+(144, 118, '[]', '請選擇戒圍', '16', '', '', '', 123, '王冠手鍊', 'NL716', 1, '2750.0000', '2750.0000', '0.0000', 0),
+(145, 119, '[]', '', '', '', '', '', 123, '王冠手鍊', 'NL716', 1, '2750.0000', '2750.0000', '0.0000', 0),
+(146, 119, '[]', '', '', '', '', '', 125, '德國結戒指', 'RG703', 1, '50.0000', '50.0000', '0.0000', 0),
+(147, 120, '[]', '', '', '', '', '', 125, '德國結戒指', 'RG703', 2, '50.0000', '100.0000', '0.0000', 0),
+(148, 121, '[]', '', '', '', '', '', 131, 'test1', 'test1', 1, '0.0000', '0.0000', '0.0000', 0),
+(149, 122, '[]', '', '', '', '', '', 131, 'test1', 'test1', 1, '0.0000', '0.0000', '0.0000', 0),
+(150, 123, '[]', '', '', '', '', '', 366, '樹木a項鍊', 'NL809', 1, '2750.0000', '2750.0000', '0.0000', 0),
+(151, 124, '[]', '', '', '', '', '', 343, '小汽車手鍊', 'BL805', 1, '2500.0000', '2500.0000', '0.0000', 0),
+(152, 125, '[]', '', '', '', '', '', 345, '超能m戒指', 'RG804', 1, '9900.0000', '9900.0000', '0.0000', 0);
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -2986,7 +3433,62 @@ INSERT INTO `oc_order_total` (`order_total_id`, `order_id`, `code`, `title`, `va
 (279, 107, 'total', '帳單總計', '2855.0000', 9),
 (280, 108, 'sub_total', '商品總計', '2400.0000', 1),
 (281, 108, 'shipping', '固定運費', '5.0000', 3),
+<<<<<<< HEAD
 (282, 108, 'total', '帳單總計', '2405.0000', 9);
+=======
+(282, 108, 'total', '帳單總計', '2405.0000', 9),
+(283, 109, 'sub_total', '商品總計', '24691356.0000', 1),
+(284, 109, 'shipping', '固定運費', '5.0000', 3),
+(285, 109, 'total', '帳單總計', '24691361.0000', 9),
+(286, 110, 'sub_total', '商品總計', '5800.0000', 1),
+(287, 110, 'shipping', '固定運費', '5.0000', 3),
+(288, 110, 'total', '帳單總計', '5805.0000', 9),
+(289, 111, 'sub_total', '商品總計', '3400.0000', 1),
+(290, 111, 'shipping', '固定運費', '5.0000', 3),
+(291, 111, 'total', '帳單總計', '3405.0000', 9),
+(292, 112, 'sub_total', '商品總計', '12345678.0000', 1),
+(293, 112, 'shipping', '固定運費', '5.0000', 3),
+(294, 112, 'total', '帳單總計', '12345683.0000', 9),
+(295, 113, 'sub_total', '商品總計', '50.0000', 1),
+(296, 113, 'shipping', '固定運費', '5.0000', 3),
+(297, 113, 'total', '帳單總計', '55.0000', 9),
+(298, 114, 'sub_total', '商品總計', '5950.0000', 1),
+(299, 114, 'shipping', '固定運費', '0.0000', 3),
+(300, 114, 'total', '帳單總計', '5950.0000', 9),
+(301, 115, 'sub_total', '商品總計', '2940.0000', 1),
+(302, 115, 'shipping', '固定運費', '0.0000', 3),
+(303, 115, 'total', '帳單總計', '2940.0000', 9),
+(304, 116, 'sub_total', '商品總計', '2750.0000', 1),
+(305, 116, 'shipping', '固定運費', '0.0000', 3),
+(306, 116, 'total', '帳單總計', '2750.0000', 9),
+(307, 117, 'sub_total', '商品總計', '150.0000', 1),
+(308, 117, 'shipping', '統一超商取貨', '80.0000', 3),
+(309, 117, 'total', '帳單總計', '230.0000', 9),
+(310, 118, 'sub_total', '商品總計', '2750.0000', 1),
+(311, 118, 'shipping', '固定運費', '0.0000', 3),
+(312, 118, 'total', '帳單總計', '2750.0000', 9),
+(313, 119, 'sub_total', '商品總計', '2800.0000', 1),
+(314, 119, 'shipping', '固定運費', '0.0000', 3),
+(315, 119, 'total', '帳單總計', '2800.0000', 9),
+(316, 120, 'sub_total', '商品總計', '100.0000', 1),
+(317, 120, 'shipping', '統一超商取貨', '80.0000', 3),
+(318, 120, 'total', '帳單總計', '180.0000', 9),
+(319, 121, 'sub_total', '商品總計', '0.0000', 1),
+(320, 121, 'shipping', '固定運費', '0.0000', 3),
+(321, 121, 'total', '帳單總計', '0.0000', 9),
+(322, 122, 'sub_total', '商品總計', '0.0000', 1),
+(323, 122, 'shipping', '固定運費', '0.0000', 3),
+(324, 122, 'total', '帳單總計', '0.0000', 9),
+(325, 123, 'sub_total', '商品總計', '2750.0000', 1),
+(326, 123, 'shipping', '固定運費', '0.0000', 3),
+(327, 123, 'total', '帳單總計', '2750.0000', 9),
+(328, 124, 'sub_total', '商品總計', '2500.0000', 1),
+(329, 124, 'shipping', '固定運費', '0.0000', 3),
+(330, 124, 'total', '帳單總計', '2500.0000', 9),
+(331, 125, 'sub_total', '商品總計', '9900.0000', 1),
+(332, 125, 'shipping', '固定運費', '0.0000', 3),
+(333, 125, 'total', '帳單總計', '9900.0000', 9);
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -3026,10 +3528,20 @@ CREATE TABLE `oc_product` (
   `mpn` varchar(64) NOT NULL,
   `location` varchar(128) NOT NULL,
   `texture` varchar(255) NOT NULL,
+<<<<<<< HEAD
   `deliveringTime` varchar(255) NOT NULL,
   `deliveringExtra` text NOT NULL,
   `earingType` varchar(255) NOT NULL,
   `extraDetail` varchar(255) NOT NULL,
+=======
+  `deliveringTime` varchar(255) NOT NULL DEFAULT '1',
+  `deliveringExtra` text NOT NULL,
+  `earingType` varchar(255) NOT NULL,
+  `extraDetail` varchar(255) NOT NULL,
+  `extraDetail2` varchar(255) NOT NULL,
+  `extraDetail3` varchar(255) NOT NULL,
+  `extraDetail4` varchar(255) NOT NULL,
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
   `quantity` int(4) NOT NULL DEFAULT '0',
   `stock_status_id` int(11) NOT NULL,
   `ringSizeStart` int(11) NOT NULL,
@@ -3040,6 +3552,7 @@ CREATE TABLE `oc_product` (
   `price` int(15) NOT NULL DEFAULT '0',
   `points` int(8) NOT NULL DEFAULT '0',
   `tax_class_id` int(11) NOT NULL,
+<<<<<<< HEAD
   `braceWidth` decimal(15,2) NOT NULL DEFAULT '0.00',
   `braceLong` decimal(15,2) NOT NULL DEFAULT '0.00',
   `braceSeleLen` varchar(100) NOT NULL,
@@ -3053,6 +3566,22 @@ CREATE TABLE `oc_product` (
   `length` decimal(15,2) NOT NULL DEFAULT '0.00',
   `width` decimal(15,2) NOT NULL DEFAULT '0.00',
   `height` decimal(15,2) NOT NULL DEFAULT '0.00',
+=======
+  `braceWidth` decimal(15,1) NOT NULL DEFAULT '0.0',
+  `braceLong` decimal(15,1) NOT NULL DEFAULT '0.0',
+  `braceSeleLen` varchar(100) NOT NULL,
+  `braceletDiameter` varchar(11) NOT NULL,
+  `braceletDiameterMax` varchar(255) NOT NULL,
+  `braceHeight` decimal(15,1) NOT NULL DEFAULT '0.0',
+  `necklaceLength` varchar(255) NOT NULL,
+  `date_available` date NOT NULL DEFAULT '0000-00-00',
+  `braceNote` text NOT NULL,
+  `weight` decimal(15,1) NOT NULL DEFAULT '0.0',
+  `weight_class_id` int(11) NOT NULL DEFAULT '0',
+  `length` decimal(15,1) NOT NULL DEFAULT '0.0',
+  `width` decimal(15,1) NOT NULL DEFAULT '0.0',
+  `height` decimal(15,1) NOT NULL DEFAULT '0.0',
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
   `secondaryNote` varchar(255) NOT NULL,
   `length_class_id` int(11) NOT NULL DEFAULT '0',
   `subtract` tinyint(1) NOT NULL DEFAULT '1',
@@ -3071,6 +3600,7 @@ CREATE TABLE `oc_product` (
 -- 資料表的匯出資料 `oc_product`
 --
 
+<<<<<<< HEAD
 INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `texture`, `deliveringTime`, `deliveringExtra`, `earingType`, `extraDetail`, `quantity`, `stock_status_id`, `ringSizeStart`, `ringSizeEnd`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `braceWidth`, `braceLong`, `braceSeleLen`, `braceletDiameter`, `braceHeight`, `necklaceLength`, `date_available`, `braceNote`, `weight`, `weight_class_id`, `length`, `width`, `height`, `secondaryNote`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `viewed`, `date_added`, `date_modified`, `activity_title`, `activity_desc`, `eng_name`) VALUES
 (60, 'RG314', '', '', '', '', '', '', 'Taiwan', '', '約14個工作天，不包含運送時間', '', '', '', 1, 7, 0, 0, 'catalog/!IMG_6396_ok_pinkoi.jpg', 0, 1, 3000, 0, 0, '0.00', '0.00', '', '', '0.00', '', '2013-11-22', '                                        ', '100.00', 2, '100.00', '100.00', '100.00', '', 2, 0, 1, 1, 1, 19, '2017-05-08 16:45:42', '2017-11-04 21:38:28', '', '', ''),
 (59, 'RG304', '', '', '', '', '', '', 'Taiwan', '', '', '', '', '', 0, 6, 0, 0, 'catalog/!IMG_0479_OK-pinkoi.jpg', 0, 1, 4700, 0, 0, '0.00', '0.00', '0', '0', '0.00', '', '2013-05-18', '', '100.00', 2, '123.00', '456.00', '789.00', '', 2, 1, 1, 1, 1, 7, '2017-05-08 15:54:49', '2017-05-08 15:55:05', '', '', ''),
@@ -3093,6 +3623,223 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (94, 'BL701', '', '', '', '', '', '', 'Taiwan', '925銀', '約14個工作天，不包含運送時間', '&lt;ul&gt;&lt;li&gt;12341234321421421&lt;/li&gt;&lt;li&gt;dsafsafsafdsafsafdsafdsd&lt;/li&gt;&lt;/ul&gt;', '', '', 5, 7, 0, 0, 'catalog/!IMG_3989_ok_pinkoi.jpg', 0, 1, 2650, 0, 0, '33.11', '20.11', '', '', '44.00', '', '2017-09-11', 'fsafjioafjioads &lt;br/&gt;\r\nfds &lt;br/&gt;\r\nafdsafdsa &lt;br/&gt;\r\nfdsaf &lt;br/&gt;\r\nasf &lt;br/&gt;\r\nasfsa &lt;br/&gt;\r\nfsa &lt;br/&gt;\r\nfsda &lt;br/&gt;\r\nfsad &lt;br/&gt;\r\nf &lt;br/&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ', '0.00', 1, '23.00', '1.00', '1.00', '備註二', 1, 1, 1, 1, 1, 116, '2017-09-11 09:39:52', '2017-11-04 20:35:45', 'sdfsafdsafsdfsdfsad', '&lt;p&gt;&lt;img draggable=&quot;true&quot; data-bukket-ext-bukket-draggable=&quot;true&quot; src=&quot;http://localhost/mittag2/image/catalog/!IMG_3889_ok_pinkoi.jpg&quot; style=&quot;width: 750px;&quot;&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;huihuihiuhiu&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'kaisahei'),
 (95, ',uy,o.tio', '', '', '', '', '', '', 'Taiwan', '925銀', '約14個工作天，不包含運送時間。', '', '', '', 1, 7, 0, 0, 'catalog/mittag act 01.jpg', 0, 1, 0, 0, 0, '0.00', '0.00', '', '', '0.00', '', '2017-09-13', '', '0.00', 1, '0.00', '0.00', '0.00', '', 1, 1, 1, 1, 1, 8, '2017-09-13 09:50:52', '2017-09-13 10:24:12', '', '', ''),
 (96, 'fisher001', '', '', '', '', '', '', 'Taiwan', '925銀', '3天', '', '', '', 1, 7, 3, 9, 'catalog/!IMG_0465_OK-pinkoi.jpg', 0, 1, 0, 0, 0, '0.00', '0.00', '', '', '0.00', '', '2017-09-13', '', '0.00', 1, '0.00', '0.00', '0.00', '', 1, 1, 1, 1, 1, 0, '2017-09-13 09:55:06', '2017-09-13 11:44:57', '', '', '');
+=======
+INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `texture`, `deliveringTime`, `deliveringExtra`, `earingType`, `extraDetail`, `extraDetail2`, `extraDetail3`, `extraDetail4`, `quantity`, `stock_status_id`, `ringSizeStart`, `ringSizeEnd`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `braceWidth`, `braceLong`, `braceSeleLen`, `braceletDiameter`, `braceletDiameterMax`, `braceHeight`, `necklaceLength`, `date_available`, `braceNote`, `weight`, `weight_class_id`, `length`, `width`, `height`, `secondaryNote`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `viewed`, `date_added`, `date_modified`, `activity_title`, `activity_desc`, `eng_name`) VALUES
+(194, 'NL344', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL344/NL344_02_S.jpg', 0, 1, 2950, 0, 0, '0.0', '0.0', '', '', '', '0.0', '45', '2018-03-02', '                                                            ', '0.0', 1, '1.2', '0.6', '1.7', '', 1, 1, 1, 1, 1, 0, '2018-03-02 16:44:00', '2018-03-11 10:28:24', '', '', 'comma a necklace'),
+(195, 'NL345', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL345/NL345_02_S.jpg', 0, 1, 3600, 0, 0, '0.0', '0.0', '', '', '', '0.0', '45', '2018-03-02', '                                        ', '0.0', 1, '2.0', '0.2', '2.0', '', 1, 1, 1, 1, 1, 1, '2018-03-02 16:49:28', '2018-03-07 16:31:45', '', '', 'yearning necklace'),
+(180, 'RG309', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 6, 9, 'catalog/Ring(RG)/RG309/RG309_mix.gif', 0, 1, 4750, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-02', '                                                            ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 0, '2018-03-02 11:28:18', '2018-03-18 14:39:09', '', '', 'chasing ice ring'),
+(181, 'NL334', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL334/NL334_01_S.jpg', 0, 1, 4000, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-02', '                                        ', '0.0', 1, '0.9', '0.9', '4.0', '', 1, 1, 1, 1, 1, 1, '2018-03-02 15:24:05', '2018-03-07 16:29:27', '', '', 'chandelier necklace'),
+(182, 'NL335', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '本產品可選擇45cm 925純銀項鍊或45cm真皮皮繩，購買時請註明，謝謝！', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL335/NL335_03_S.jpg', 0, 1, 5550, 0, 0, '0.0', '0.0', '', '', '', '0.0', '45', '2018-03-02', '                                                            ', '0.0', 1, '2.8', '0.7', '3.9', '', 1, 1, 1, 1, 1, 0, '2018-03-02 15:33:12', '2018-03-07 16:29:40', '', '', 'shield necklace'),
+(183, 'BL312', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL312/BL312_mix.gif', 0, 1, 2350, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-02', '                                                                                ', '0.0', 1, '0.8', '0.2', '1.7', '', 1, 1, 1, 1, 1, 0, '2018-03-02 15:38:36', '2018-03-18 12:45:57', '', '', 'eye bracelet'),
+(184, 'NL336', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL336/NL336_mix.gif', 0, 1, 3800, 0, 0, '0.0', '0.0', '', '', '', '0.0', '45', '2018-03-02', '                                                                                                                        ', '0.0', 1, '1.7', '0.4', '3.0', '', 1, 1, 1, 1, 1, 0, '2018-03-02 15:42:12', '2018-03-18 13:44:18', '', '', 'finger print necklace'),
+(185, 'NL337', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL337/NL337_01_S.jpg', 0, 1, 6050, 0, 0, '0.0', '0.0', '', '', '', '0.0', '60', '2018-03-02', '                                        ', '0.0', 1, '3.6', '0.3', '3.9', '', 1, 1, 1, 1, 1, 0, '2018-03-02 15:52:55', '2018-03-07 16:30:08', '', '', 'shell necklace'),
+(186, 'NL338', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL338/NL338_04_S.jpg', 0, 1, 3300, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-02', '                                                                                ', '0.0', 1, '1.8', '0.5', '1.1', '', 1, 1, 1, 1, 1, 2, '2018-03-02 15:59:15', '2018-03-11 16:13:46', '', '', 'V necklace'),
+(187, 'BL313', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL313/BL313_mix.gif', 0, 1, 2900, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-02', '                                                                                                    ', '0.0', 1, '2.4', '0.1', '0.6', '', 1, 1, 1, 1, 1, 0, '2018-03-02 16:04:07', '2018-03-18 12:46:51', '', '', 'train bracelet'),
+(188, 'NL339', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL339/NL339_03_S.jpg', 0, 1, 2200, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-02', '                                                            ', '0.0', 1, '0.8', '0.2', '1.7', '', 1, 1, 1, 1, 1, 0, '2018-03-02 16:09:58', '2018-03-11 10:25:01', '', '', 'eye necklace'),
+(189, 'NL340', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL340/NL340_mix.gif', 0, 1, 4600, 0, 0, '0.0', '0.0', '', '', '', '0.0', '60', '2018-03-02', '                                                                                ', '0.0', 1, '2.3', '0.5', '2.1', '', 1, 1, 1, 1, 1, 1, '2018-03-02 16:16:44', '2018-03-18 13:45:11', '', '', 'circle necklace'),
+(190, 'BL314', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL314/BL314_01_S.jpg', 0, 1, 4300, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-02', '                                                            ', '0.0', 1, '2.0', '0.2', '2.0', '', 1, 1, 1, 1, 1, 0, '2018-03-02 16:21:54', '2018-03-11 10:26:11', '', '', 'yearning bracelet'),
+(191, 'NL342', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL342/NL342_02_S.jpg', 0, 1, 2750, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-02', '                                                            ', '0.0', 1, '1.9', '0.4', '2.9', '', 1, 1, 1, 1, 1, 0, '2018-03-02 16:26:17', '2018-03-11 10:26:47', '', '', 'balloon necklace'),
+(192, 'BL315', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL315/BL315_01_S.jpg', 0, 1, 3400, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-02', '                                                            ', '0.0', 1, '1.8', '0.5', '1.1', '', 1, 1, 1, 1, 1, 1, '2018-03-02 16:33:13', '2018-03-11 10:27:21', '', '', 'V bracelet'),
+(193, 'NL343', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL343/NL343_02_S.jpg', 0, 1, 2850, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-02', '                                                            ', '0.0', 1, '2.4', '0.1', '0.6', '', 1, 1, 1, 1, 1, 1, '2018-03-02 16:38:33', '2018-03-11 16:15:08', '', '', 'train necklace'),
+(179, 'NL333', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL333/NL333_mix.gif', 0, 1, 4500, 0, 0, '0.0', '0.0', '', '', '', '0.0', '50', '2018-03-02', '                                                            ', '0.0', 1, '1.1', '0.5', '4.6', '', 1, 1, 1, 1, 1, 1, '2018-03-02 11:23:42', '2018-03-18 13:43:30', '', '', 'feather necklace'),
+(132, 'RG301', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 5, 12, 'catalog/Ring(RG)/RG301/RG301_mix.gif', 0, 1, 4950, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-02-27', '                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 27, '2018-02-27 21:48:31', '2018-03-18 14:34:04', '', '', 'matches ring'),
+(133, 'RG302', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 4, 12, 'catalog/Ring(RG)/RG302/RG302_02_S.jpg', 0, 1, 3400, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-02-27', '                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 40, '2018-02-27 22:10:35', '2018-03-11 09:47:40', '', '', 'snake eins ring'),
+(134, 'RG303', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 6, 10, 'catalog/Ring(RG)/RG303/RG303_02_S.jpg', 0, 1, 3000, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-02-28', '                                                                                                                                                                                                                                                ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 18, '2018-02-28 12:53:16', '2018-03-11 09:48:02', '', '', 'snake zwei ring'),
+(135, 'RG304', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 4, 12, 'catalog/Ring(RG)/RG304/RG304_mix.gif', 0, 1, 4700, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-02-28', '                                                                                                                                                                                                                                                                                        ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 15, '2018-02-28 13:37:02', '2018-03-18 14:34:55', '', '', 'snake drei ring'),
+(137, 'NL301', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL301/NL301_06_S.jpg', 0, 1, 3100, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-02-28', '                                                                                                                                            ', '0.0', 1, '1.3', '0.5', '0.8', '', 1, 1, 1, 1, 1, 7, '2018-02-28 13:56:21', '2018-03-11 16:06:45', '', '', 'bean heart necklace'),
+(138, 'NL302', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL302/NL302_mix.gif', 0, 1, 5900, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-02-28', '                                                                                                                                                                ', '0.0', 1, '1.3', '1.3', '2.3', '', 1, 1, 1, 1, 1, 5, '2018-02-28 14:13:36', '2018-03-18 13:32:17', '', '', 'honeycomb necklace'),
+(139, 'NL304', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL304/NL304_02_S.jpg', 0, 1, 2100, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-02-28', '                                                                                                                                                                                    ', '0.0', 1, '0.8', '0.8', '1.4', '', 1, 1, 1, 1, 1, 4, '2018-02-28 14:20:27', '2018-03-11 16:07:15', '', '', 'comma necklace'),
+(140, 'BB301', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/BABY(BB)/BB301/BB301_03_S.jpg', 0, 1, 2300, 0, 0, '0.0', '0.0', '12', '', '', '0.0', '', '2018-02-28', '                                                                                                                                                                                                        ', '0.0', 1, '1.5', '0.3', '0.9', '', 1, 1, 1, 1, 1, 19, '2018-02-28 14:35:45', '2018-03-18 21:10:59', '', '', 'bb laughing heart bracelet'),
+(141, 'BB302', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/BABY(BB)/BB302/BB302_mix.gif', 0, 1, 2800, 0, 0, '0.0', '0.0', '12', '', '', '0.0', '', '2018-02-28', '                                                                                                                                                                                    ', '0.0', 1, '1.5', '0.3', '0.9', '', 1, 1, 1, 1, 1, 7, '2018-02-28 14:46:54', '2018-03-18 21:12:07', '', '', 'bb seed of hope bracelet'),
+(142, 'BB303', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/BABY(BB)/BB303/BB303_mix.gif', 0, 1, 2800, 0, 0, '0.0', '0.0', '12', '', '', '0.0', '', '2018-02-28', '                                                                                                                                                                                                                                                ', '0.0', 1, '1.7', '0.3', '0.9', '', 1, 1, 1, 1, 1, 8, '2018-02-28 14:51:57', '2018-03-18 21:13:08', '', '', 'bb wealthy mountain bracelet'),
+(143, 'BB304', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/BABY(BB)/BB304/BB304_01_S.jpg', 0, 1, 2900, 0, 0, '0.0', '0.0', '12', '', '', '0.0', '', '2018-02-28', '                                                                                                                                                                ', '0.0', 1, '1.8', '0.3', '1.2', '', 1, 1, 1, 1, 1, 6, '2018-02-28 15:01:10', '2018-03-18 21:13:54', '', '', 'bb brezel bracelet'),
+(144, 'BB305', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/BABY(BB)/BB305/BB305_02_S.jpg', 0, 1, 3200, 0, 0, '0.0', '0.0', '12', '', '', '0.0', '', '2018-02-28', '                                                                                                                                                                ', '0.0', 1, '1.4', '0.4', '2.2', '', 1, 1, 1, 1, 1, 6, '2018-02-28 15:24:00', '2018-03-18 21:14:37', '', '', 'bb infinity snake bracelet'),
+(145, 'NL308', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL308/NL308_02_S.jpg', 0, 1, 3400, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-02-28', '                                                                                                                        ', '0.0', 1, '1.8', '0.3', '1.2', '', 1, 1, 1, 1, 1, 2, '2018-02-28 15:32:25', '2018-03-11 09:54:43', '', '', 'brezel necklace'),
+(155, 'NL311', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL311/NL311_mix.gif', 0, 1, 3200, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-01', '                                                                                                                                                                ', '0.0', 1, '1.4', '0.4', '1.3', '', 1, 1, 1, 1, 1, 2, '2018-03-01 21:35:07', '2018-03-18 13:34:10', '', '', 'star fruit necklace'),
+(147, 'BL302', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL302/BL302_03_S.jpg', 0, 1, 2600, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-02-28', '                                                                                                                                                                ', '0.0', 1, '1.5', '0.3', '0.9', '', 1, 1, 1, 1, 1, 2, '2018-02-28 15:57:42', '2018-03-11 09:55:54', '', '', 'laughing heart bracelet'),
+(148, 'BL303', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL303/BL303_mix.gif', 0, 1, 3100, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-02-28', '                                                                                                                        ', '0.0', 1, '1.5', '0.3', '0.9', '', 1, 1, 1, 1, 1, 0, '2018-02-28 20:51:22', '2018-03-18 12:40:33', '', '', 'seed of hope bracelet'),
+(149, 'BL304', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL304/BL304_mix.gif', 0, 1, 3100, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-02-28', '                                                                                                    ', '0.0', 1, '1.7', '0.3', '0.9', '', 1, 1, 1, 1, 1, 0, '2018-02-28 20:58:21', '2018-03-18 12:41:25', '', '', 'wealthy mountain bracelet'),
+(150, 'BL305', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL305/BL305_mix.gif', 0, 1, 3200, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-02-28', '                                                                                                                        ', '0.0', 1, '1.8', '0.3', '1.2', '', 1, 1, 1, 1, 1, 0, '2018-02-28 21:11:52', '2018-03-18 12:42:21', '', '', 'brezel bracelet'),
+(151, 'BL306', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL306/BL306_mix.gif', 0, 1, 3500, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-02-28', '                                                                                                                        ', '0.0', 1, '1.4', '0.4', '2.2', '', 1, 1, 1, 1, 1, 1, '2018-02-28 21:22:53', '2018-03-18 12:43:18', '', '', 'infinity snake bracelet'),
+(152, 'NL309', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL309/NL309_02_S.jpg', 0, 1, 3000, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-02-28', '                                                                                                    ', '0.0', 1, '1.4', '0.4', '2.2', '', 1, 1, 1, 1, 1, 8, '2018-02-28 21:31:41', '2018-03-11 16:08:32', '', '', 'infinity snake necklace'),
+(153, 'NL310', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL310/NL310_03_S.jpg', 0, 1, 3500, 0, 0, '0.0', '0.0', '', '', '', '0.0', '45', '2018-02-28', '                                                                                                    ', '0.0', 1, '1.5', '0.4', '1.5', '', 1, 1, 1, 1, 1, 17, '2018-02-28 21:48:43', '2018-03-11 10:00:22', '', '', 'donuts necklace'),
+(213, 'BL401', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL401/BL401_mix.gif', 0, 1, 2550, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-03', '                                                            ', '0.0', 1, '1.3', '0.1', '1.6', '', 1, 1, 1, 1, 1, 0, '2018-03-03 22:23:40', '2018-03-18 12:47:51', '', '', 'lucky charm bracelet'),
+(212, 'RG401', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 4, 10, 'catalog/Ring(RG)/RG401/RG401_03_S.jpg', 0, 1, 2600, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-03', '                                        ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 3, '2018-03-03 22:15:23', '2018-03-07 16:49:41', '', '', 'typhoon eye ring'),
+(156, 'BL308', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL308/BL308_mix.gif', 0, 1, 3700, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-01', '                                                                                ', '0.0', 1, '1.4', '0.4', '1.3', '', 1, 1, 1, 1, 1, 2, '2018-03-01 23:27:21', '2018-03-18 12:44:15', '', '', 'star fruit bracelet'),
+(157, 'NL312', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL312/NL312_mix.gif', 0, 1, 3500, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-01', '                                                                                                    ', '0.0', 1, '1.8', '0.6', '2.6', '', 1, 1, 1, 1, 1, 0, '2018-03-01 23:33:01', '2018-03-18 13:35:07', '', '', 'cross eins necklace'),
+(158, 'NL314', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL314/NL314_03_S.jpg', 0, 1, 3100, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-01', '                                                            ', '0.0', 1, '1.5', '0.5', '0.9', '', 1, 1, 1, 1, 1, 0, '2018-03-01 23:38:33', '2018-03-07 16:25:58', '', '', 'libra necklace'),
+(159, 'BL309', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL309/BL309_01_S.jpg', 0, 1, 4100, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-01', '                                                            ', '0.0', 1, '1.5', '0.4', '1.5', '', 1, 1, 1, 1, 1, 1, '2018-03-01 23:44:43', '2018-03-11 10:06:36', '', '', 'donuts zwei bracelet'),
+(160, 'RG305', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 6, 11, 'catalog/Ring(RG)/RG305/RG305_mix.gif', 0, 1, 3200, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-01', '                                                                                                    ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 2, '2018-03-01 23:50:55', '2018-03-18 14:36:01', '', '', 'donuts ring'),
+(161, 'NL316', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL316/NL316_mix.gif', 0, 1, 5350, 0, 0, '0.4', '1.5', '', '', '', '1.5', '60', '2018-03-02', '                                                            ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 1, '2018-03-02 09:00:51', '2018-03-18 13:36:04', '', '', 'donuts waterfall necklace'),
+(162, 'NL317', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL317/NL317_mix.gif', 0, 1, 5300, 0, 0, '0.0', '0.0', '', '', '', '0.0', '50', '2018-03-02', '                                                                                                    ', '0.0', 1, '2.6', '0.6', '3.4', '', 1, 1, 1, 1, 1, 0, '2018-03-02 09:06:10', '2018-03-18 13:36:51', '', '', 'cross a necklace'),
+(163, 'NL318', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL318/NL318_mix.gif', 0, 1, 4100, 0, 0, '0.0', '0.0', '', '', '', '0.0', '45', '2018-03-02', '                                                                                                    ', '0.0', 1, '2.0', '0.9', '2.9', '', 1, 1, 1, 1, 1, 6, '2018-03-02 09:15:21', '2018-03-18 13:38:22', '', '', 'cross b necklace'),
+(164, 'NL320', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL320/NL320_04_S.jpg', 0, 1, 5400, 0, 0, '0.0', '0.0', '', '', '', '0.0', '50', '2018-03-02', '                                        ', '0.0', 1, '1.9', '0.6', '1.8', '', 1, 1, 1, 1, 1, 0, '2018-03-02 09:21:22', '2018-03-07 16:27:05', '', '', 'travel light necklace'),
+(165, 'NL322', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL322/NL322_01_S.jpg', 0, 1, 5400, 0, 0, '0.0', '0.0', '', '', '', '0.0', '50', '2018-03-02', '                                                            ', '0.0', 1, '2.4', '0.8', '2.4', '', 1, 1, 1, 1, 1, 1, '2018-03-02 09:36:17', '2018-03-11 10:13:20', '', '', 'cross earth a necklace'),
+(166, 'NL323', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL323/NL323_02_S.jpg', 0, 1, 4550, 0, 0, '0.0', '0.0', '', '', '', '0.0', '50', '2018-03-02', '                                        ', '0.0', 1, '2.4', '0.2', '2.4', '', 1, 1, 1, 1, 1, 0, '2018-03-02 09:42:14', '2018-03-07 16:27:38', '', '', 'cross earth b necklace'),
+(167, 'NL324', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL324/NL324_mix.gif', 0, 1, 3150, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-02', '                                                                                                    ', '0.0', 1, '0.8', '0.5', '1.6', '', 1, 1, 1, 1, 1, 0, '2018-03-02 09:47:17', '2018-03-18 13:39:47', '', '', 'chasing ice necklace'),
+(168, 'NL327', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL327/NL327_mix.gif', 0, 1, 3600, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-02', '                                                                                                    ', '0.0', 1, '2.7', '0.5', '1.1', '', 1, 1, 1, 1, 1, 1, '2018-03-02 09:55:49', '2018-03-18 13:40:52', '', '', 'smile swing necklace'),
+(169, 'BL310', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL310/BL310_mix.gif', 0, 1, 3450, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-02', '                                                                                ', '0.0', 1, '0.8', '0.5', '1.6', '', 1, 1, 1, 1, 1, 0, '2018-03-02 10:00:48', '2018-03-18 12:45:09', '', '', 'chasing ice necklace'),
+(170, 'NL328', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL328/NL328_01_S.jpg', 0, 1, 6200, 0, 0, '0.0', '0.0', '', '', '', '0.0', '45', '2018-03-02', '                                                            ', '0.0', 1, '2.5', '0.5', '3.5', '', 1, 1, 1, 1, 1, 1, '2018-03-02 10:07:26', '2018-03-07 16:28:24', '', '', 'blast necklace'),
+(173, 'RG306', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 4, 13, 'catalog/Ring(RG)/RG306/RG306_mix.gif', 0, 1, 3900, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-02', '                                                                                                                        ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 3, '2018-03-02 10:47:45', '2018-03-18 14:36:46', '', '', 'super ring'),
+(172, 'NL329', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL329/NL329_mix.gif', 0, 1, 3600, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-02', '                                                            ', '0.0', 1, '1.8', '0.4', '1.9', '', 1, 1, 1, 1, 1, 0, '2018-03-02 10:14:16', '2018-03-18 13:41:36', '', '', 'say cheese necklace'),
+(174, 'NL330', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL330/NL330_mix.gif', 0, 1, 4650, 0, 0, '0.0', '0.0', '', '', '', '0.0', '45', '2018-03-02', '                                                                                                                                            ', '0.0', 1, '3.3', '0.6', '2.0', '', 1, 1, 1, 1, 1, 2, '2018-03-02 10:55:21', '2018-03-18 13:42:25', '', '', 'paper plane necklace'),
+(175, 'RG307', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 5, 13, 'catalog/Ring(RG)/RG307/RG307_mix.gif', 0, 1, 3450, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-02', '                                                                                                                        ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 1, '2018-03-02 11:02:32', '2018-03-18 14:37:47', '', '', 'finger print ring'),
+(176, 'BL311', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL311/BL311_01_S.jpg', 0, 1, 3500, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-02', '                                                                                ', '0.0', 1, '2.7', '0.5', '1.1', '', 1, 1, 1, 1, 1, 0, '2018-03-02 11:08:07', '2018-03-11 16:12:31', '', '', 'smile swing bracelet'),
+(177, 'RG308', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 5, 9, 'catalog/Ring(RG)/RG308/RG308_mix.gif', 0, 1, 3350, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-02', '                                                                                ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 0, '2018-03-02 11:14:10', '2018-03-18 14:38:28', '', '', 'knot ring'),
+(178, 'NL332', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL332/NL332_01_S.jpg', 0, 1, 2800, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-02', '                                        ', '0.0', 1, '1.1', '0.5', '1.7', '', 1, 1, 1, 1, 1, 0, '2018-03-02 11:19:19', '2018-03-07 16:29:03', '', '', 'summer field necklace'),
+(196, 'RG310', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 9, 14, 'catalog/Ring(RG)/RG310/RG310_01_S.jpg', 0, 1, 3700, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-02', '                                        ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 0, '2018-03-02 20:55:48', '2018-03-07 16:48:41', '', '', 'eternal m ring'),
+(197, 'RG311', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 5, 9, 'catalog/Ring(RG)/RG311/RG311_01_S.jpg', 0, 1, 3050, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-02', '                                                                                ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 0, '2018-03-02 20:59:42', '2018-03-11 10:30:35', '', '', 'eternal f ring'),
+(198, 'BB307', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/BABY(BB)/BB307/BB307_mix.gif', 0, 1, 2400, 0, 0, '0.0', '0.0', '12', '', '', '0.0', '', '2018-03-02', '                                                                                                    ', '0.0', 1, '2.4', '0.1', '0.6', '', 1, 1, 1, 1, 1, 4, '2018-03-02 21:08:06', '2018-03-18 21:15:41', '', '', 'bb train bracelet'),
+(199, 'NL347', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL347/NL347_mix.gif', 0, 1, 3100, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-02', '                                                            ', '0.0', 1, '1.5', '0.4', '1.9', '', 1, 1, 1, 1, 1, 4, '2018-03-02 21:12:45', '2018-03-18 13:46:01', '', '', 'sailboat necklace'),
+(200, 'NL348', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL348/NL348_02_S.jpg', 0, 1, 4550, 0, 0, '0.0', '0.0', '', '', '', '0.0', '45', '2018-03-02', '                                        ', '0.0', 1, '0.8', '0.8', '3.8', '', 1, 1, 1, 1, 1, 0, '2018-03-02 21:19:05', '2018-03-07 16:32:48', '', '', 'peapod necklace'),
+(201, 'RG313', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 1, 18, 'catalog/Ring(RG)/RG313/RG313_mix.gif', 0, 1, 4600, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-02', '                                                                                                    ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 0, '2018-03-02 21:31:21', '2018-03-18 14:40:06', '', '', 'firm m ring'),
+(202, 'RG314', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 1, 18, 'catalog/Ring(RG)/RG314/RG314_mix.gif', 0, 1, 3000, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-02', '                                                                                ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 0, '2018-03-02 21:38:23', '2018-03-18 14:41:02', '', '', 'firm f ring'),
+(203, 'NL350', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL350/NL350_02_S.jpg', 0, 1, 4550, 0, 0, '0.0', '0.0', '', '', '', '0.0', '45', '2018-03-02', '                                        ', '0.0', 1, '2.5', '0.5', '1.6', '', 1, 1, 1, 1, 1, 2, '2018-03-02 21:46:10', '2018-03-07 16:33:03', '', '', 'V a necklace'),
+(204, 'NL351', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL351/NL351_02_S.jpg', 0, 1, 3550, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-02', '                                        ', '0.0', 1, '4.0', '0.2', '1.7', '', 1, 1, 1, 1, 1, 1, '2018-03-02 21:49:47', '2018-03-07 16:33:17', '', '', 'plane necklace'),
+(205, 'NL354', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL354/NL354_mix.gif', 0, 1, 2400, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-02', '                                                                                ', '0.0', 1, '1.3', '0.1', '1.6', '', 1, 1, 1, 1, 1, 1, '2018-03-02 21:56:02', '2018-03-18 13:46:52', '', '', 'lucky charm necklace'),
+(206, 'JNL401', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/JNL401/JNL401_mix.gif', 0, 1, 3950, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-02', '                                                                                                    ', '0.0', 1, '1.1', '0.5', '1.5', '', 1, 1, 1, 1, 1, 0, '2018-03-02 22:02:39', '2018-03-18 13:48:25', '', '', 'dot necklace'),
+(207, 'NL401', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL401/NL401_mix.gif', 0, 1, 2650, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-02', '                                                                                ', '0.0', 1, '2.0', '0.4', '1.9', '', 1, 1, 1, 1, 1, 13, '2018-03-02 22:07:03', '2018-03-18 13:50:34', '', '', 'seedling necklace'),
+(208, 'NL402', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL402/NL402_04_S.jpg', 0, 1, 3400, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-02', '                                                            ', '0.0', 1, '2.0', '0.8', '2.9', '', 1, 1, 1, 1, 1, 1, '2018-03-02 22:19:17', '2018-03-11 10:37:41', '', '', 'antlers f necklace'),
+(209, 'NL403', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL403/NL403_01_S.jpg', 0, 1, 3900, 0, 0, '0.0', '0.0', '', '', '', '0.0', '45', '2018-03-02', '                                        ', '0.0', 1, '2.8', '0.8', '3.6', '', 1, 1, 1, 1, 1, 11, '2018-03-02 22:25:33', '2018-03-07 16:34:28', '', '', 'antlers m necklace'),
+(210, 'JER401', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '耳針式耳環', '', '', '', '', 1, 7, 0, 0, 'catalog/Earring(ER)/JER401/JER401_mix.gif', 0, 1, 3400, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-02', '                                                                                ', '0.0', 1, '1.0', '0.5', '1.2', '', 1, 1, 1, 1, 1, 8, '2018-03-02 22:29:57', '2018-03-18 20:48:36', '', '', 'dot earrings'),
+(211, 'NL404', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL404/NL404_01_S.jpg', 0, 1, 2100, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-02', '                                                            ', '0.0', 1, '1.2', '0.1', '1.6', '', 1, 1, 1, 1, 1, 5, '2018-03-02 22:37:06', '2018-03-11 10:39:20', '', '', 'brave necklace'),
+(214, 'NL405', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL405/NL405_mix.gif', 0, 1, 3300, 0, 0, '0.0', '0.0', '', '', '', '0.0', '45', '2018-03-03', '                                                                                ', '0.0', 1, '1.6', '0.3', '1.7', '', 1, 1, 1, 1, 1, 6, '2018-03-03 22:31:05', '2018-03-18 13:51:29', '', '', 'horseshoe m necklace'),
+(215, 'ER401', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '耳針式耳環', '', '', '', '', 1, 7, 0, 0, 'catalog/Earring(ER)/ER401/ER401_mix.gif', 0, 1, 1950, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-04', '                                                            ', '0.0', 1, '0.7', '0.4', '0.7', '', 1, 1, 1, 1, 1, 3, '2018-03-04 08:44:28', '2018-03-18 20:45:04', '', '', '+x earrings'),
+(216, 'NL406', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL406/NL406_01_S.jpg', 0, 1, 3100, 0, 0, '0.2', '1.5', '', '', '', '1.5', '40', '2018-03-04', '尺寸為單一圓圈大小，本商品含有兩個圓圈...                                        ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 3, '2018-03-04 08:55:03', '2018-03-11 10:51:56', '', '', 'complete necklace'),
+(217, 'BL402', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL402/BL402_01_S.jpg', 0, 1, 2250, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-04', '                    ', '0.0', 1, '1.2', '0.1', '1.6', '', 1, 1, 1, 1, 1, 1, '2018-03-04 09:02:20', '2018-03-07 16:09:50', '', '', 'brave bracelet'),
+(218, 'ER402', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '耳針式耳環', '', '', '', '', 1, 7, 0, 0, 'catalog/Earring(ER)/ER402/ER402_03_S.jpg', 0, 1, 2400, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-04', '                                        ', '0.0', 1, '0.8', '0.2', '1.7', '', 1, 1, 1, 1, 1, 2, '2018-03-04 09:06:33', '2018-03-07 16:19:48', '', '', 'eye earrings'),
+(219, 'JBL401', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/JBL401/JBL401_mix.gif', 0, 1, 3400, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-04', '                                                            ', '0.0', 1, '1.0', '0.5', '1.2', '', 1, 1, 1, 1, 1, 1, '2018-03-04 09:15:00', '2018-03-18 12:52:15', '', '', 'dot bracelet'),
+(220, 'ER403', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '耳針式耳環', '', '', '', '', 1, 7, 0, 0, 'catalog/Earring(ER)/ER403/ER403_mix.gif', 0, 1, 1850, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-04', '                                                            ', '0.0', 1, '0.6', '0.3', '0.9', '', 1, 1, 1, 1, 1, 3, '2018-03-04 09:18:44', '2018-03-18 20:46:30', '', '', 'comma earrings'),
+(221, 'NL407', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL407/NL407_mix.gif', 0, 1, 3050, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-04', '                                                            ', '0.0', 1, '2.2', '0.3', '2.0', '', 1, 1, 1, 1, 1, 1, '2018-03-04 09:26:49', '2018-03-18 13:52:19', '', '', 'slow living necklace'),
+(222, 'NL408', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL408/NL408_mix.gif', 0, 1, 5550, 0, 0, '0.0', '0.0', '', '', '', '0.0', '90', '2018-03-04', '                                        ', '0.0', 1, '4.0', '0.3', '3.3', '', 1, 1, 1, 1, 1, 10, '2018-03-04 09:53:20', '2018-03-18 13:53:10', '', '', 'slow living G necklace'),
+(223, 'BL403', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL403/BL403_01_S.jpg', 0, 1, 3600, 0, 0, '0.2', '1.5', '16', '', '', '1.5', '', '2018-03-04', '尺寸標示為單一圓圈的大小，本商品內含2個圓圈...                    ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 2, '2018-03-04 10:04:41', '2018-03-07 16:10:07', '', '', 'complete bracelet'),
+(224, 'BL404', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL404/BL404_mix.gif', 0, 1, 2600, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-04', '                                                                                ', '0.0', 1, '1.0', '0.2', '1.4', '', 1, 1, 1, 1, 1, 1, '2018-03-04 10:10:45', '2018-03-18 12:48:39', '', '', 'snowflake bracelet'),
+(227, 'ER405', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '耳針式耳環', '', '', '', '', 1, 7, 0, 0, 'catalog/Earring(ER)/ER405/ER405_mix.gif', 0, 1, 1800, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-04', '                                                            ', '0.0', 1, '1.0', '0.2', '1.0', '', 1, 1, 1, 1, 1, 3, '2018-03-04 10:45:18', '2018-03-18 20:45:45', '', '', 'Mr. big earrings'),
+(226, 'JRG401', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 3, 10, 'catalog/Ring(RG)/JRG401/JRG401_mix.gif', 0, 1, 4250, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-04', '                                                                                                    ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 5, '2018-03-04 10:29:29', '2018-03-18 14:42:12', '', '', 'dot ring'),
+(228, 'NL410', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL410/NL410_02_S.jpg', 0, 1, 2250, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-04', '                                        ', '0.0', 1, '2.3', '0.3', '1.0', '', 1, 1, 1, 1, 1, 1, '2018-03-04 10:50:54', '2018-03-07 16:35:47', '', '', 'cloud necklace'),
+(229, 'JBL402', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/JBL402/JBL402_mix.gif', 0, 1, 4250, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-04', '                                                            ', '0.0', 1, '1.1', '0.5', '1.9', '', 1, 1, 1, 1, 1, 2, '2018-03-04 10:56:20', '2018-03-18 12:52:57', '', '', 'dot a bracelet'),
+(230, 'RG402', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 5, 10, 'catalog/Ring(RG)/RG402/RG402_mix.gif', 0, 1, 3200, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-04', '                                                                                ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 1, '2018-03-04 11:01:08', '2018-03-18 14:44:08', '', '', 'holding hands ring'),
+(231, 'ER406', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '耳針式耳環', '', '', '', '', 1, 7, 0, 0, 'catalog/Earring(ER)/ER406/ER406_02_S.jpg', 0, 1, 2600, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-04', '                                        ', '0.0', 1, '1.0', '0.2', '2.0', '', 1, 1, 1, 1, 1, 2, '2018-03-04 11:06:56', '2018-03-07 16:20:36', '', '', 'finger print earrings'),
+(232, 'NL411', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL411/NL411_mix.gif', 0, 1, 2300, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-04', '                                                            ', '0.0', 1, '2.4', '0.2', '1.3', '', 1, 1, 1, 1, 1, 2, '2018-03-04 11:13:06', '2018-03-18 13:53:52', '', '', 'xxx necklace'),
+(234, 'JNL402', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '本商品有許多穿戴方式，請注意附圖的照片圖示。', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/JNL402/JNL402_mix.gif', 0, 1, 5650, 0, 0, '0.5', '1.1', '', '', '', '1.9', '90', '2018-03-04', '&lt;div&gt;1. 尺寸標示為單一“點”的尺寸，本商品含有兩個“點”飾品...&lt;/div&gt;&lt;div&gt;2. 本產品使用之寶石為黑色尖晶石&lt;/div&gt;                                                                                                    ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 3, '2018-03-04 11:57:04', '2018-03-18 13:49:20', '', '', 'dots necklace'),
+(235, 'RG403', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '若有其他尺寸需求請先告知...', '', '', '', 1, 7, 3, 6, 'catalog/Ring(RG)/RG403/RG403_04_S.jpg', 0, 1, 3750, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-04', '                    ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 2, '2018-03-04 12:53:37', '2018-03-07 16:50:08', '', '', 'mirror ring'),
+(236, 'NL412', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL412/NL412_mix.gif', 0, 1, 2450, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-04', '                                                                                ', '0.0', 1, '1.0', '0.2', '1.4', '', 1, 1, 1, 1, 1, 0, '2018-03-04 13:03:27', '2018-03-18 13:54:35', '', '', 'snowflake necklace'),
+(237, 'BL405', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL405/BL405_mix.gif', 0, 1, 3150, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-04', '                                                            ', '0.0', 1, '1.7', '0.3', '1.1', '', 1, 1, 1, 1, 1, 1, '2018-03-04 13:08:51', '2018-03-18 12:49:27', '', '', 'good lock bracelet'),
+(238, 'RG404', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '若有其他尺寸需求，請告知...', '', '', '', 1, 7, 3, 10, 'catalog/Ring(RG)/RG404/RG404_mix.gif', 0, 1, 3400, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-04', '                                                            ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 0, '2018-03-04 13:14:08', '2018-03-18 14:45:02', '', '', 'thumbtack ring'),
+(239, 'NL413', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL413/NL413_mix.gif', 0, 1, 2200, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-04', '                                                                                ', '0.0', 1, '0.8', '0.2', '1.0', '', 1, 1, 1, 1, 1, 1, '2018-03-04 13:18:28', '2018-03-18 13:55:25', '', '', 'horseshoe f necklace'),
+(240, 'NL414', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL414/NL414_02_S.jpg', 0, 1, 5000, 0, 0, '0.0', '0.0', '', '', '', '0.0', '45', '2018-03-04', '                                        ', '0.0', 1, '4.2', '0.4', '2.3', '', 1, 1, 1, 1, 1, 1, '2018-03-04 13:23:38', '2018-03-07 16:36:36', '', '', 'rail necklace'),
+(241, 'ER407', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '耳針式耳環', '', '', '', '', 1, 7, 0, 0, 'catalog/Earring(ER)/ER407/ER407_03_S.jpg', 0, 1, 3700, 0, 0, '0.3', '1.0', '', '', '', '1.0', '', '2018-03-04', '尺寸標示為單一物件尺寸，本商品共含三個物件，可以每日按照服裝搭配自行挑選配戴。                                        ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 4, '2018-03-04 13:30:36', '2018-03-07 16:20:48', '', '', 'leaves earrings'),
+(242, 'JRG402', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '本商品之寶石為黑色尖晶石', '', '', '', 1, 7, 3, 10, 'catalog/Ring(RG)/JRG402/JRG402_mix.gif', 0, 1, 4300, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-04', '                                        ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 3, '2018-03-04 13:36:14', '2018-03-18 14:43:08', '', '', 'dot a ring'),
+(243, 'NL415', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL415/NL415_mix.gif', 0, 1, 2600, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-04', '                                        ', '0.0', 1, '1.7', '0.3', '1.1', '', 1, 1, 1, 1, 1, 1, '2018-03-04 13:41:46', '2018-03-18 13:56:09', '', '', 'good lock necklace'),
+(244, 'RG405', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '若需要其他尺寸，請告知。', '', '', '', 1, 7, 10, 13, 'catalog/Ring(RG)/RG405/RG405_03_S.jpg', 0, 1, 4850, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-04', '                                        ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 1, '2018-03-04 13:47:41', '2018-03-11 11:10:55', '', '', 'ridge ring'),
+(245, 'RG406', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '若需要其他尺寸，請告知。', '', '', '', 1, 7, 9, 12, 'catalog/Ring(RG)/RG406/RG406_mix.gif', 0, 1, 3700, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-04', '                                                            ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 1, '2018-03-04 13:53:43', '2018-03-18 14:45:41', '', '', 'ridge m ring'),
+(246, 'RG407', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '若有需其他尺寸，請告知。', '', '', '', 1, 7, 6, 10, 'catalog/Ring(RG)/RG407/RG407_mix.gif', 0, 1, 2900, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-04', '                                        ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 0, '2018-03-04 13:58:36', '2018-03-18 14:46:45', '', '', 'ridge f ring'),
+(248, 'ER408', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '耳針式耳環', '', '', '', '', 1, 7, 0, 0, 'catalog/Earring(ER)/ER408/ER408_mix.gif', 0, 1, 2600, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-04', '                                                            ', '0.0', 1, '1.0', '0.2', '1.4', '', 1, 1, 1, 1, 1, 3, '2018-03-04 14:18:36', '2018-03-18 20:47:30', '', '', 'snowflake earrings'),
+(253, 'ER409', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Earring(ER)/ER409/ER409_01_S.jpg', 0, 1, 2150, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-04', '                    ', '0.0', 1, '1.3', '1.3', '0.1', '', 1, 1, 1, 1, 1, 3, '2018-03-04 15:00:47', '2018-03-07 16:21:12', '', '', 'thumbtack earrings'),
+(251, 'NL417', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL417/NL417_mix.gif', 0, 1, 2800, 0, 0, '0.0', '0.0', '', '', '', '0.0', '45', '2018-03-04', '                                        ', '0.0', 1, '4.1', '0.5', '2.3', '', 1, 1, 1, 1, 1, 1, '2018-03-04 14:47:58', '2018-03-18 13:57:00', '', '', 'heartbeat necklace'),
+(252, 'RG408', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 3, 10, 'catalog/Ring(RG)/RG408/RG408_mix.gif', 0, 1, 3600, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-04', '                                                            ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 2, '2018-03-04 14:54:23', '2018-03-18 14:47:29', '', '', 'circle ring');
+INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `texture`, `deliveringTime`, `deliveringExtra`, `earingType`, `extraDetail`, `extraDetail2`, `extraDetail3`, `extraDetail4`, `quantity`, `stock_status_id`, `ringSizeStart`, `ringSizeEnd`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `braceWidth`, `braceLong`, `braceSeleLen`, `braceletDiameter`, `braceletDiameterMax`, `braceHeight`, `necklaceLength`, `date_available`, `braceNote`, `weight`, `weight_class_id`, `length`, `width`, `height`, `secondaryNote`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `viewed`, `date_added`, `date_modified`, `activity_title`, `activity_desc`, `eng_name`) VALUES
+(254, 'RG409', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '若有需其他尺寸，請告知。', '', '', '', 1, 7, 7, 12, 'catalog/Ring(RG)/RG409/RG409_03_S.jpg', 0, 1, 3350, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-04', '                    ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 1, '2018-03-04 15:05:37', '2018-03-07 16:51:29', '', '', 'intersection ring'),
+(255, 'NL419', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL419/NL419_mix.gif', 0, 1, 2350, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-04', '                                                            ', '0.0', 1, '1.4', '0.2', '1.3', '', 1, 1, 1, 1, 1, 1, '2018-03-04 15:11:27', '2018-03-18 13:57:53', '', '', 'trees necklace'),
+(256, 'RG410', '', '', '', '', '', '', 'Taiwan', '白金/香檳金/玫瑰金', '0', '', '', '若有其他尺寸需求，請告知。', '', '', '', 1, 7, 6, 10, 'catalog/Ring(RG)/RG410/RG410_mix.gif', 0, 1, 38500, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-04', '                                        ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 2, '2018-03-04 15:18:16', '2018-03-18 14:48:37', '', '', 'triple ring'),
+(257, 'BL406', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL406/BL406_mix.gif', 0, 1, 3150, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-04', '                                        ', '0.0', 1, '2.4', '0.2', '1.3', '', 1, 1, 1, 1, 1, 1, '2018-03-04 15:30:58', '2018-03-18 12:50:13', '', '', 'xxx bracelet'),
+(258, 'BL407', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL407/BL407_04_S.jpg', 0, 1, 2300, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-04', '                    ', '0.0', 1, '0.8', '0.2', '1.0', '', 1, 1, 1, 1, 1, 1, '2018-03-04 15:35:18', '2018-03-07 16:11:14', '', '', 'horseshoe f bracelet'),
+(259, 'NL420', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL420/NL420_01_S.jpg', 0, 1, 2400, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-04', '                    ', '0.0', 1, '0.5', '0.5', '1.8', '', 1, 1, 1, 1, 1, 1, '2018-03-04 15:38:55', '2018-03-07 16:37:29', '', '', 'thorn necklace'),
+(260, 'NL421', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL421/NL421_04_S.jpg', 0, 1, 2850, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-04', '                                                            ', '0.0', 1, '2.9', '0.1', '0.6', '', 1, 1, 1, 1, 1, 1, '2018-03-04 15:43:05', '2018-03-11 11:15:31', '', '', 'rectangle necklace'),
+(261, 'NL422', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL422/NL422_02_S.jpg', 0, 1, 2850, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-04', '                                                            ', '0.0', 1, '2.8', '0.2', '1.1', '', 1, 1, 1, 1, 1, 1, '2018-03-04 15:48:11', '2018-03-11 11:16:02', '', '', 'bear v necklace'),
+(262, 'BL408', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL408/BL408_mix.gif', 0, 1, 2900, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-04', '                                        ', '0.0', 1, '2.9', '0.1', '0.6', '', 1, 1, 1, 1, 1, 1, '2018-03-04 15:54:05', '2018-03-18 12:51:06', '', '', 'rectangle beacelet'),
+(263, 'BL409', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL409/BL409_02_S.jpg', 0, 1, 2900, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-04', '                    ', '0.0', 1, '2.8', '0.2', '1.1', '', 1, 1, 1, 1, 1, 1, '2018-03-04 16:00:50', '2018-03-07 16:11:43', '', '', 'bear v bracelet'),
+(264, 'NL701', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL701/NL701_05_S.jpg', 0, 1, 2500, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-04', '                                                            ', '0.0', 1, '0.7', '0.4', '1.1', '', 1, 1, 1, 1, 1, 1, '2018-03-04 16:05:29', '2018-03-11 11:16:48', '', '', 'square heart necklace'),
+(265, 'NL702', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL702/NL702_mix.gif', 0, 1, 2500, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-04', '                                                                                                    ', '0.0', 1, '0.7', '0.4', '1.1', '', 1, 1, 1, 1, 1, 2, '2018-03-04 16:09:48', '2018-03-18 14:04:24', '', '', 'round heart necklace'),
+(266, 'NL703', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL703/NL703_mix.gif', 0, 1, 2800, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-04', '                                                                                ', '0.0', 1, '0.9', '0.4', '1.9', '', 1, 1, 1, 1, 1, 0, '2018-03-04 16:15:59', '2018-03-18 14:05:33', '', '', 'gem rabbit necklace'),
+(267, 'NL704', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL704/NL704_mix.gif', 0, 1, 2800, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-04', '                                                                                                    ', '0.0', 1, '1.0', '1.0', '2.0', '', 1, 1, 1, 1, 1, 1, '2018-03-04 16:20:17', '2018-03-18 14:06:29', '', '', 'ballet starfish necklace'),
+(268, 'BL701', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL701/BL701_mix.gif', 0, 1, 2650, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-04', '                                                            ', '0.0', 1, '0.7', '0.4', '1.1', '', 1, 1, 1, 1, 1, 1, '2018-03-04 16:27:54', '2018-03-18 12:54:12', '', '', 'square heart bracelet'),
+(269, 'BL702', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL702/BL702_mix.gif', 0, 1, 2650, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-04', '                                                            ', '0.0', 1, '0.7', '0.4', '1.1', '', 1, 1, 1, 1, 1, 1, '2018-03-04 16:33:26', '2018-03-18 12:55:18', '', '', 'round heart bracelet'),
+(270, 'BL703', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL703/BL703_mix.gif', 0, 1, 2950, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-04', '                                        ', '0.0', 1, '0.9', '0.4', '1.9', '', 1, 1, 1, 1, 1, 2, '2018-03-04 16:38:05', '2018-03-18 12:56:04', '', '', 'gem rabbit bracelet'),
+(271, 'BL704', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '&lt;h4&gt;&lt;br&gt;&lt;/h4&gt;', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL704/BL704_mix.gif', 0, 1, 2950, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-04', '                                                            ', '0.0', 1, '1.0', '1.0', '2.0', '', 1, 1, 1, 1, 1, 1, '2018-03-04 16:44:04', '2018-03-18 12:56:45', '', '', 'ballet starfish bracelet'),
+(272, 'NL705', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL705/NL705_mix.gif', 0, 1, 2700, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-04', '                                                                                                                        ', '0.0', 1, '1.0', '0.4', '1.3', '', 1, 1, 1, 1, 1, 2, '2018-03-04 16:51:20', '2018-03-18 14:07:21', '', '', 'succulent heart necklace'),
+(273, 'BL705', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL705/BL705_mix.gif', 0, 1, 2850, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-04', '                                        ', '0.0', 1, '1.0', '0.4', '1.3', '', 1, 1, 1, 1, 1, 1, '2018-03-04 16:58:42', '2018-03-18 12:57:31', '', '', 'succulent heart bracelet'),
+(274, 'NL706', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL706/NL706_04_S.jpg', 0, 1, 2700, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-04', '                                        ', '0.0', 1, '0.8', '0.7', '1.7', '', 1, 1, 1, 1, 1, 1, '2018-03-04 21:12:12', '2018-03-11 11:20:48', '', '', 'petals necklace'),
+(275, 'BL706', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL706/BL706_mix.gif', 0, 1, 2850, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-04', '                                                            ', '0.0', 1, '0.8', '0.7', '1.7', '', 1, 1, 1, 1, 1, 1, '2018-03-04 21:17:08', '2018-03-18 12:58:17', '', '', 'petals bracelet'),
+(276, 'BB701', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/BABY(BB)/BB701/BB701_03_S.jpg', 0, 1, 2700, 0, 0, '0.0', '0.0', '12', '', '', '0.0', '', '2018-03-04', '                                                                                                    ', '0.0', 1, '1.1', '0.2', '0.8', '', 1, 1, 1, 1, 1, 4, '2018-03-04 21:25:02', '2018-03-18 21:16:31', '', '', 'bb chick bracelet'),
+(277, 'BL707', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL707/BL707_mix.gif', 0, 1, 3000, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-04', '                                                                                ', '0.0', 1, '1.1', '0.2', '0.8', '', 1, 1, 1, 1, 1, 1, '2018-03-04 21:30:20', '2018-03-18 13:04:41', '', '', 'chick bracelet'),
+(278, 'NL707', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL707/NL707_03_S.jpg', 0, 1, 2850, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-04', '                    ', '0.0', 1, '1.1', '0.2', '0.8', '', 1, 1, 1, 1, 1, 0, '2018-03-04 21:34:26', '2018-03-07 16:40:03', '', '', 'chick necklace'),
+(279, 'RG701', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 7, 12, 'catalog/Ring(RG)/RG701/RG701_mix.gif', 0, 1, 3100, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-04', '                                                                                ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 2, '2018-03-04 21:39:53', '2018-03-18 14:49:37', '', '', 'feather ring'),
+(280, 'NL708', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL708/NL708_mix.gif', 0, 1, 3576, 0, 0, '0.0', '0.0', '', '', '', '0.0', '45', '2018-03-04', '                                                                                ', '0.0', 1, '1.2', '0.7', '1.8', '', 1, 1, 1, 1, 1, 2, '2018-03-04 21:45:56', '2018-03-18 14:08:18', '', '', 'balloon a necklace'),
+(281, 'NL709', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL709/NL709_mix.gif', 0, 1, 3450, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-04', '                                                                                ', '0.0', 1, '1.5', '0.4', '1.8', '', 1, 1, 1, 1, 1, 1, '2018-03-04 21:54:01', '2018-03-18 14:09:09', '', '', 'lemon necklace'),
+(282, 'BL708', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL708/BL708_mix.gif', 0, 1, 4250, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-04', '                                        ', '0.0', 1, '1.5', '0.4', '1.8', '', 1, 1, 1, 1, 1, 2, '2018-03-04 21:58:21', '2018-03-18 13:05:27', '', '', 'lemon bracelet'),
+(283, 'NL710', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL710/NL710_mix.gif', 0, 1, 2350, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-05', '                                                                                ', '0.0', 1, '1.8', '0.4', '1.7', '', 1, 1, 1, 1, 1, 2, '2018-03-05 10:42:14', '2018-03-18 14:09:52', '', '', 'bow necklace'),
+(284, 'BL709', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL709/BL709_mix.gif', 0, 1, 2500, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-05', '                                                                                ', '0.0', 1, '1.8', '0.4', '1.7', '', 1, 1, 1, 1, 1, 2, '2018-03-05 10:49:51', '2018-03-18 13:06:27', '', '', 'bow bracelet'),
+(285, 'RG702', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '若有其他尺寸需求，請告知。', '', '', '', 1, 7, 7, 12, 'catalog/Ring(RG)/RG702/RG702_mix.gif', 0, 1, 3300, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-05', '                                                            ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 1, '2018-03-05 10:58:49', '2018-03-18 14:50:27', '', '', 'drip ring'),
+(286, 'ER701', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '耳針式耳環', '', '', '', '', 1, 7, 0, 0, 'catalog/Earring(ER)/ER701/ER701_02_S.jpg', 0, 1, 3000, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-05', '                                                            ', '0.0', 1, '0.7', '0.4', '0.7', '', 1, 1, 1, 1, 1, 7, '2018-03-05 11:08:42', '2018-03-11 16:20:54', '', '', 'hearts earring'),
+(287, 'NL711', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL711/NL711_mix.gif', 0, 1, 3150, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-05', '                                                                                ', '0.0', 1, '1.5', '0.9', '1.1', '', 1, 1, 1, 1, 1, 2, '2018-03-05 11:15:15', '2018-03-18 14:10:35', '', '', 'paper rabbit necklace'),
+(288, 'BL710', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL710/BL710_mix.gif', 0, 1, 3950, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-05', '                                        ', '0.0', 1, '1.5', '0.9', '1.1', '', 1, 1, 1, 1, 1, 1, '2018-03-05 11:20:54', '2018-03-18 13:07:22', '', '', 'paper rabbit bracelet'),
+(289, 'NL712', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL712/NL712_mix.gif', 0, 1, 3400, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-05', '                                                            ', '0.0', 1, '1.3', '0.6', '1.5', '', 1, 1, 1, 1, 1, 1, '2018-03-05 11:28:00', '2018-03-18 14:11:18', '', '', 'duck necklace'),
+(290, 'BL711', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL711/BL711_mix.gif', 0, 1, 4200, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-05', '                                                            ', '0.0', 1, '1.3', '0.6', '1.5', '', 1, 1, 1, 1, 1, 1, '2018-03-05 11:33:17', '2018-03-18 13:08:10', '', '', 'duck bracelet'),
+(291, 'RG703', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '若有其他尺寸需求，請告知。', '', '', '', 1, 7, 7, 11, 'catalog/Ring(RG)/RG703/RG703_mix.gif', 0, 1, 2950, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-05', '                                        ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 1, '2018-03-05 11:39:32', '2018-03-18 14:51:17', '', '', 'brezel ring'),
+(292, 'NL713', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL713/NL713_mix.gif', 0, 1, 5500, 0, 0, '0.0', '0.0', '', '', '', '0.0', '60', '2018-03-05', '                                        ', '0.0', 1, '2.3', '0.3', '2.3', '', 1, 1, 1, 1, 1, 1, '2018-03-05 11:45:22', '2018-03-18 14:11:57', '', '', 'lifebuoy necklace'),
+(293, 'NL714', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL714/NL714_01_S.jpg', 0, 1, 2400, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-05', '                                                            ', '0.0', 1, '1.3', '0.3', '0.9', '', 1, 1, 1, 1, 1, 4, '2018-03-05 11:49:17', '2018-03-11 16:23:48', '', '', 'elephant necklace'),
+(294, 'BL712', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL712/BL712_mix.gif', 0, 1, 2550, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-05', '                                        ', '0.0', 1, '1.3', '0.3', '0.9', '', 1, 1, 1, 1, 1, 2, '2018-03-05 11:53:57', '2018-03-18 13:08:55', '', '', 'elephant bracelet'),
+(295, 'NL715', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL715/NL715_04_S.jpg', 0, 1, 2650, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-05', '                                        ', '0.0', 1, '1.0', '0.3', '1.2', '', 1, 1, 1, 1, 1, 2, '2018-03-05 12:46:07', '2018-03-11 11:28:54', '', '', 'diamond heart necklace'),
+(296, 'BL713', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL713/BL713_01_S.jpg', 0, 1, 2800, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-05', '                    ', '0.0', 1, '1.0', '0.3', '1.2', '', 1, 1, 1, 1, 1, 1, '2018-03-05 12:53:04', '2018-03-07 16:15:05', '', '', 'diamond heart bracelet'),
+(297, 'RG704', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '若有其他尺寸需求，請告知。', '', '', '', 1, 7, 8, 11, 'catalog/Ring(RG)/RG704/RG704_mix.gif', 0, 1, 3800, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-05', '                                                            ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 1, '2018-03-05 12:59:12', '2018-03-18 14:52:11', '', '', 'breakout ring'),
+(298, 'NL716', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL716/NL716_mix.gif', 0, 1, 3550, 0, 0, '0.0', '0.0', '', '', '', '0.0', '45', '2018-03-05', '                                                            ', '0.0', 1, '1.0', '0.5', '3.1', '', 1, 1, 1, 1, 1, 1, '2018-03-05 13:05:11', '2018-03-18 14:13:20', '', '', 'violin necklace'),
+(299, 'RG705', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '若有其他尺寸需求，請告知。', '', '', '', 1, 7, 7, 11, 'catalog/Ring(RG)/RG705/RG705_mix.gif', 0, 1, 1950, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-05', '                                                                                ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 2, '2018-03-05 13:10:31', '2018-03-18 14:52:47', '', '', 'turning ring'),
+(300, 'NL717', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL717/NL717_mix.gif', 0, 1, 2600, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-05', '                                                                                                    ', '0.0', 1, '0.9', '0.4', '2.4', '', 1, 1, 1, 1, 1, 2, '2018-03-05 13:17:14', '2018-03-18 14:14:42', '', '', 'wheat necklace'),
+(301, 'NL718', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL718/NL718_mix.gif', 0, 1, 2600, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-05', '                                                            ', '0.0', 1, '0.9', '0.4', '2.4', '', 1, 1, 1, 1, 1, 1, '2018-03-05 13:23:04', '2018-03-18 14:15:17', '', '', 'wheat a necklace'),
+(302, 'BL714', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL714/BL714_mix.gif', 0, 1, 2750, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-05', '                                        ', '0.0', 1, '0.9', '0.4', '2.4', '', 1, 1, 1, 1, 1, 1, '2018-03-05 13:27:30', '2018-03-18 13:09:42', '', '', 'wheat a bracelet'),
+(303, 'NL719', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL719/NL719_mix.gif', 0, 1, 3500, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-05', '                                                            ', '0.0', 1, '0.9', '0.9', '1.8', '', 1, 1, 1, 1, 1, 1, '2018-03-05 13:32:18', '2018-03-18 14:16:02', '', '', 'eggplant necklace'),
+(304, 'BL715', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL715/BL715_mix.gif', 0, 1, 4250, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-05', '                                        ', '0.0', 1, '0.9', '0.9', '1.8', '', 1, 1, 1, 1, 1, 0, '2018-03-05 13:36:17', '2018-03-18 13:10:22', '', '', 'eggplant bracelet'),
+(305, 'NL720', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL720/NL720_mix.gif', 0, 1, 2600, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-05', '                                                                                ', '0.0', 1, '1.0', '0.3', '1.3', '', 1, 1, 1, 1, 1, 3, '2018-03-05 13:40:48', '2018-03-18 14:16:32', '', '', 'crown necklace'),
+(306, 'BL716', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL716/BL716_mix.gif', 0, 1, 2750, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-05', '                                        ', '0.0', 1, '1.0', '0.3', '1.3', '', 1, 1, 1, 1, 1, 6, '2018-03-05 13:44:42', '2018-03-18 13:11:11', '', '', 'crown bracelet'),
+(307, 'RG706', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 9, 13, 'catalog/Ring(RG)/RG706/RG706_mix.gif', 0, 1, 5950, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-05', '                                                            ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 1, '2018-03-05 14:02:04', '2018-03-18 14:53:53', '', '', 'mountains ring'),
+(308, 'NL721', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL721/NL721_mix.gif', 0, 1, 3250, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-05', '                                                                                ', '0.0', 1, '1.5', '0.8', '1.2', '', 1, 1, 1, 1, 1, 4, '2018-03-05 14:09:50', '2018-03-18 14:17:24', '', '', 'birdie necklace'),
+(309, 'BL717', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL717/BL717_mix.gif', 0, 1, 4050, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-05', '                                        ', '0.0', 1, '1.5', '0.8', '1.2', '', 1, 1, 1, 1, 1, 4, '2018-03-05 14:18:42', '2018-03-18 13:12:01', '', '', 'birdie bracelet'),
+(310, 'NL722', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL722/NL722_mix.gif', 0, 1, 2700, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-05', '                                                            ', '0.0', 1, '1.6', '0.4', '0.8', '', 1, 1, 1, 1, 1, 1, '2018-03-05 14:22:48', '2018-03-18 14:18:10', '', '', 'paper plane a necklace'),
+(311, 'BL718', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL718/BL718_mix.gif', 0, 1, 2850, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-05', '                                                            ', '0.0', 1, '1.6', '0.4', '0.8', '', 1, 1, 1, 1, 1, 2, '2018-03-05 14:27:44', '2018-03-18 13:12:54', '', '', 'paper plane a bracelet'),
+(312, 'RG707', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '若有其他尺寸需求，請告知。', '', '', '', 1, 7, 7, 11, 'catalog/Ring(RG)/RG707/RG707_mix.gif', 0, 1, 2700, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-05', '                                                            ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 1, '2018-03-05 14:34:10', '2018-03-18 14:54:57', '', '', 'undertone ring'),
+(313, 'RG708', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '若有其他尺寸需求，請告知。', '', '', '', 1, 7, 7, 11, 'catalog/Ring(RG)/RG708/RG708_mix.gif', 0, 1, 3900, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-05', '                                        ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 2, '2018-03-05 14:40:35', '2018-03-18 14:55:47', '', '', 'cutting ring'),
+(314, 'NL723', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL723/NL723_mix.gif', 0, 1, 2000, 0, 0, '0.4', '0.5', '', '', '', '1.0', '40', '2018-03-05', '&lt;p&gt;1. 本產品尺寸以字母&quot;O&quot;為例，若有其他字母需求則依所選字母的實際尺寸為主。&lt;/p&gt;&lt;p&gt;2. 本產品有A~Z 26個字母可供選擇。&lt;/p&gt;&lt;p&gt;3. 本產品價格包含A~Z字母中&lt;u&gt;擇一&lt;/u&gt;，並&lt;u&gt;含925純銀項鍊乙條&lt;/u&gt;的價格。&lt;/p&gt;&lt;p&gt;4. 若有需要增加更多的字母，請&lt;a href=&quot;http://www.mittag.com.tw/index.php?route=product/product&amp;amp;path=34&amp;amp;product_id=316&quot; target=&quot;_blank&quot; style=&quot;background-color: rgb(255, 255, 0);&quot;&gt;&lt;font color=&quot;#ff0000&quot;&gt;按此處&lt;/font&gt;&lt;/a&gt;選購。&lt;br&gt;&lt;/p&gt;                                                                                                                                                                ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 10, '2018-03-05 14:45:50', '2018-03-18 14:18:49', '', '', 'alphabet necklace'),
+(315, 'BL719', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL719/BL719_mix.gif', 0, 1, 2150, 0, 0, '0.4', '0.5', '16', '', '', '1.0', '', '2018-03-05', '&lt;p&gt;1. 本產品尺寸以字母&quot;J&quot;為例，若有其他字母需求則依所選字母的實際尺寸為主。&lt;/p&gt;&lt;p&gt;2. 本產品有A~Z 26個字母可供選擇。&lt;/p&gt;&lt;p&gt;3. 本產品價格包含A~Z字母中&lt;u&gt;擇一&lt;/u&gt;，並&lt;u&gt;含925純銀手鍊乙條&lt;/u&gt;的價格。&lt;/p&gt;&lt;p&gt;4. 若有需要增加更多的字母，請&lt;a href=&quot;http://www.mittag.com.tw/index.php?route=product/product&amp;amp;path=34&amp;amp;product_id=316&quot; target=&quot;_blank&quot;&gt;&lt;font style=&quot;background-color: rgb(255, 255, 0);&quot; color=&quot;#ff0000&quot;&gt;按此處&lt;/font&gt;&lt;/a&gt;選購。&lt;/p&gt;                                                                                                                                                                ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 6, '2018-03-05 14:51:56', '2018-03-18 13:13:35', '', '', 'alphabet bracelet'),
+(316, 'OT701', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Others(OT)/OT701/OT701_03_S.jpg', 0, 1, 1000, 0, 0, '0.4', '0.5', '', '', '', '1.0', '', '2018-03-05', '                    ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 7, '2018-03-05 20:41:49', '2018-03-07 16:46:30', '', '', 'alphabet others'),
+(317, 'NL724', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL724/NL724_mix.gif', 0, 1, 3135, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-05', '                                                                                ', '0.0', 1, '1.2', '0.5', '1.4', '', 1, 1, 1, 1, 1, 2, '2018-03-05 20:58:47', '2018-03-18 14:19:34', '', '', 'shell necklace necklace'),
+(318, 'BL720', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL720/BL720_mix.gif', 0, 1, 3300, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-05', '                                        ', '0.0', 1, '1.2', '0.5', '1.4', '', 1, 1, 1, 1, 1, 3, '2018-03-05 21:04:05', '2018-03-18 13:14:37', '', '', 'shell bracelet'),
+(319, 'NL725', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL725/NL725_01_S.jpg', 0, 1, 2600, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-05', '                                        ', '0.0', 1, '1.3', '0.3', '1.6', '', 1, 1, 1, 1, 1, 5, '2018-03-05 21:08:51', '2018-03-11 13:09:42', '', '', 'triangle necklace'),
+(320, 'BL721', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL721/BL721_mix.gif', 0, 1, 2750, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-05', '                                        ', '0.0', 1, '1.3', '0.3', '1.6', '', 1, 1, 1, 1, 1, 2, '2018-03-05 21:12:54', '2018-03-18 13:15:26', '', '', 'triangle bracelet'),
+(321, 'NL726', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL726/NL726_01_S.jpg', 0, 1, 2000, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-05', '                                                            ', '0.0', 1, '0.9', '0.3', '1.7', '', 1, 1, 1, 1, 1, 1, '2018-03-05 21:18:42', '2018-03-20 22:12:33', '', '', 'pomelo necklace'),
+(322, 'BL722', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL722/BL722_01_S.jpg', 0, 1, 2150, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-05', '                    ', '0.0', 1, '0.9', '0.3', '1.7', '', 1, 1, 1, 1, 1, 1, '2018-03-05 21:22:39', '2018-03-07 16:17:43', '', '', 'pomelo bracelet'),
+(323, 'RG709', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '若有其他尺寸需求，請告知。', '', '', '', 1, 7, 7, 12, 'catalog/Ring(RG)/RG709/RG709_mix.gif', 0, 1, 2350, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-05', '                                                            ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 3, '2018-03-05 21:28:20', '2018-03-18 14:56:35', '', '', 'square heart ring'),
+(324, 'RG710', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '若有其他尺寸需求，請告知。', '', '', '', 1, 7, 7, 12, 'catalog/Ring(RG)/RG710/RG710_mix.gif', 0, 1, 2350, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-05', '                                        ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 2, '2018-03-05 21:34:55', '2018-03-18 14:57:29', '', '', 'round heart ring'),
+(325, 'NL801', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL801/NL801_mix.gif', 0, 1, 4050, 0, 0, '0.0', '0.0', '', '', '', '0.0', '45', '2018-03-05', '                                                            ', '0.0', 1, '1.0', '1.1', '1.9', '', 1, 1, 1, 1, 1, 2, '2018-03-05 21:54:02', '2018-03-18 14:20:39', '', '', 'tumbler necklace'),
+(326, 'BL801', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL801/BL801_mix.gif', 0, 1, 4900, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-05', '                                        ', '0.0', 1, '1.0', '1.1', '1.9', '', 1, 1, 1, 1, 1, 1, '2018-03-05 22:12:05', '2018-03-18 13:16:29', '', '', 'tumbler bracelet'),
+(327, 'NL802', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL802/NL802_mix.gif', 0, 1, 2200, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-05', '                                                            ', '0.0', 1, '4.4', '0.3', '1.2', '', 1, 1, 1, 1, 1, 0, '2018-03-05 22:16:13', '2018-03-18 14:21:26', '', '', 'tube necklace'),
+(328, 'BL802', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL802/BL802_03_S.jpg', 0, 1, 2200, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-06', '                    ', '0.0', 1, '4.4', '0.3', '1.2', '', 1, 1, 1, 1, 1, 1, '2018-03-06 21:50:34', '2018-03-07 16:18:14', '', '', 'tube bracelet'),
+(329, 'NL803', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL803/NL803_mix.gif', 0, 1, 2200, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-06', '                                                            ', '0.0', 1, '4.0', '0.3', '1.0', '', 1, 1, 1, 1, 1, 0, '2018-03-06 21:55:52', '2018-03-18 14:22:12', '', '', 'square tube necklace'),
+(330, 'BL803', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL803/BL803_mix.gif', 0, 1, 2200, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-06', '                                        ', '0.0', 1, '4.0', '0.3', '1.0', '', 1, 1, 1, 1, 1, 0, '2018-03-06 21:59:55', '2018-03-18 13:17:17', '', '', 'square tube bracelet'),
+(331, 'RG801', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '若有其他尺寸需求，請告知。', '', '', '', 1, 7, 7, 10, 'catalog/Ring(RG)/RG801/RG801_mix.gif', 0, 1, 3400, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-06', '                                        ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 2, '2018-03-06 22:05:01', '2018-03-18 14:58:55', '', '', 'square ring'),
+(332, 'RG802', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 6, 12, 'catalog/Ring(RG)/RG802/RG802_mix.gif', 0, 1, 2800, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-06', '                                                            ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 2, '2018-03-06 22:11:14', '2018-03-18 14:59:42', '', '', 'ripple ring'),
+(333, 'NL804', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL804/NL804_mix.gif', 0, 1, 3050, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-06', '                                                            ', '0.0', 1, '1.7', '0.5', '1.5', '', 1, 1, 1, 1, 1, 1, '2018-03-06 22:18:43', '2018-03-20 22:11:29', '', '', 'tree necklace'),
+(334, 'NL805', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL805/NL805_mix.gif', 0, 1, 2600, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-06', '                                                            ', '0.0', 1, '1.1', '0.6', '1.3', '', 1, 1, 1, 1, 1, 1, '2018-03-06 22:27:11', '2018-03-18 14:23:50', '', '', 'lucky charm a necklace'),
+(335, 'BL804', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL804/BL804_mix.gif', 0, 1, 2750, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-06', '                                        ', '0.0', 1, '1.1', '0.6', '1.3', '', 1, 1, 1, 1, 1, 1, '2018-03-06 22:31:23', '2018-03-18 13:18:06', '', '', 'lucky charm a bracelet'),
+(336, 'RG803', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '若有其他尺寸需求，請告知。', '', '', '', 1, 7, 7, 11, 'catalog/Ring(RG)/RG803/RG803_01_S.jpg', 0, 1, 4100, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-06', '                    ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 2, '2018-03-06 22:36:41', '2018-03-07 16:54:35', '', '', 'wave ring'),
+(337, 'BB801', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/BABY(BB)/BB801/BB801_01_S.jpg', 0, 1, 3150, 0, 0, '0.0', '0.0', '12', '', '', '0.0', '', '2018-03-06', '                                                                                ', '0.0', 1, '1.7', '0.3', '1.1', '', 1, 1, 1, 1, 1, 6, '2018-03-06 22:52:24', '2018-03-18 21:17:18', '', '', 'bb good lock bracelet'),
+(338, 'BB802', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/BABY(BB)/BB802/BB802_mix.gif', 0, 1, 2300, 0, 0, '0.0', '0.0', '12', '', '', '0.0', '', '2018-03-06', '                                                                                                    ', '0.0', 1, '0.8', '0.2', '1.0', '', 1, 1, 1, 1, 1, 5, '2018-03-06 22:56:00', '2018-03-18 21:18:11', '', '', 'bb horseshoe f bracelet'),
+(339, 'BB803', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/BABY(BB)/BB803/BB803_mix.gif', 0, 1, 2650, 0, 0, '0.0', '0.0', '12', '', '', '0.0', '', '2018-03-06', '                                                                                                    ', '0.0', 1, '0.7', '0.4', '1.1', '', 1, 1, 1, 1, 1, 4, '2018-03-06 22:59:48', '2018-03-18 21:19:21', '', '', 'bb square heart bracelet'),
+(340, 'BB804', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/BABY(BB)/BB804/BB804_03_S.jpg', 0, 1, 2650, 0, 0, '0.0', '0.0', '12', '', '', '0.0', '', '2018-03-06', '                                                                                ', '0.0', 1, '0.7', '0.4', '1.1', '', 1, 1, 1, 1, 1, 4, '2018-03-06 23:04:31', '2018-03-18 21:20:04', '', '', 'bb round heart bracelet'),
+(341, 'BB805', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/BABY(BB)/BB805/BB805_mix.gif', 0, 1, 2750, 0, 0, '0.0', '0.0', '12', '', '', '0.0', '', '2018-03-06', '                                                                                                    ', '0.0', 1, '1.0', '0.3', '1.3', '', 1, 1, 1, 1, 1, 11, '2018-03-06 23:09:15', '2018-03-18 21:28:17', '', '', 'bb crown bracelet'),
+(342, 'NL806', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL806/NL806_01_S.jpg', 0, 1, 2350, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-06', '                                        ', '0.0', 1, '1.2', '0.3', '1.3', '', 1, 1, 1, 1, 1, 4, '2018-03-06 23:17:55', '2018-03-11 13:17:50', '', '', 'car necklace'),
+(343, 'BL805', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL805/BL805_mix.gif', 0, 1, 2500, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-06', '                                                            ', '0.0', 1, '1.2', '0.3', '1.3', '', 1, 1, 1, 1, 1, 4, '2018-03-06 23:23:19', '2018-03-18 13:18:54', '', '', 'car bracelet'),
+(344, 'BB806', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/BABY(BB)/BB806/BB806_mix.gif', 0, 1, 2500, 0, 0, '0.0', '0.0', '12', '', '', '0.0', '', '2018-03-06', '                                                                                ', '0.0', 1, '1.2', '0.3', '1.3', '', 1, 1, 1, 1, 1, 16, '2018-03-06 23:28:52', '2018-03-18 21:21:09', '', '', 'bb car bracelet'),
+(345, 'RG804', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '若有其他尺寸需求，請告知。', '', '', '', 1, 7, 10, 14, 'catalog/Ring(RG)/RG804/RG804_mix.gif', 0, 1, 9900, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-06', '                                        ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 18, '2018-03-06 23:36:22', '2018-03-18 15:00:27', '', '', 'Super m ring'),
+(346, 'NL807', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '本產品配置之項鍊為真皮銀扣項鍊。', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL807/NL807_mix.gif', 0, 1, 3600, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-06', '                                        ', '0.0', 1, '1.7', '0.9', '2.0', '', 1, 1, 1, 1, 1, 10, '2018-03-06 23:42:27', '2018-03-18 14:24:34', '', '', 'curly heart necklace'),
+(347, 'NL808', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL808/NL808_mix.gif', 0, 1, 1550, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-06', '                                                            ', '0.0', 1, '0.6', '0.3', '1.3', '', 1, 1, 1, 1, 1, 12, '2018-03-06 23:48:00', '2018-03-18 14:25:18', '', '', 'lotus leaf necklace'),
+(348, 'BL806', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL806/BL806_1_mix.gif', 0, 1, 1700, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-06', '                                                                                                    ', '0.0', 1, '0.6', '0.3', '1.3', '', 1, 1, 1, 1, 1, 6, '2018-03-06 23:52:40', '2018-03-18 13:29:22', '', '', 'lotus leaf bracelet'),
+(349, 'activity_2018_001', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Activities/2018_001_web_celebration/celebration_ad_web_banner_20180307_icon1.jpg', 0, 1, 0, 0, 0, '0.0', '0.0', '', '', '', '0.0', '', '2018-03-07', '                                                                                                                                                                                                                                                                                                                                                                                                                                                        ', '0.0', 1, '0.0', '0.0', '0.0', '', 1, 1, 1, 1, 1, 47, '2018-03-07 13:23:44', '2018-03-22 10:25:46', 'celebration for mittag website readiness', '&lt;h3&gt;&lt;img src=&quot;http://www.mittag.com.tw/image/catalog/Activities/2018_001_web_celebration/celebration_ad_web_banner_20180307_1.gif&quot; style=&quot;width: 1140px;&quot;&gt;&lt;b style=&quot;color: inherit; font-family: inherit;&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;/h3&gt;&lt;h3&gt;&lt;b style=&quot;color: inherit; font-family: inherit;&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;活動內容：&lt;/font&gt;&lt;/b&gt;&lt;/h3&gt;&lt;h4&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;為慶祝官網成立，即日起至2018年5月13日〈母親節〉前在mittag官網完成加入會員並下單購買，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;全品項皆享9折優惠，同時購買2件以上再加送勇敢項鍊乙條。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;可以順道將五月的母親節禮物一起先準備好...&lt;/font&gt;&lt;/h4&gt;&lt;p&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;b&gt;備註：&lt;/b&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;1. 首先，請您於mittag官網上完成簡單的加入會員。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;2. 優惠活動僅限於mittag官方網站(www.mittag.com.tw)下單，其餘入口網站不在此列。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;3. 活動時間(2018年5月13日)為購買之最後時間，若需於母親節前收到商品，請盡早下單；若有問題請告知。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;4. 選購之產品包含mittag品牌包裝（依產品類別不同，會有原木珠寶盒或真皮皮套的差異）、品牌保證卡、品牌提袋等…。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&amp;nbsp; &amp;nbsp; 詳細可&lt;/font&gt;&lt;a href=&quot;http://www.mittag.com.tw/index.php?route=information/information&amp;amp;information_id=9&quot; target=&quot;_blank&quot; style=&quot;&quot;&gt;&lt;font style=&quot;background-color: rgb(255, 255, 0);&quot; color=&quot;#0000ff&quot;&gt;連結mittag品牌包裝&lt;/font&gt;&lt;/a&gt;&lt;font color=&quot;#636363&quot;&gt;。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;5. 贈品勇敢項鍊也為手工製作與拋光，詳細可&lt;/font&gt;&lt;a href=&quot;http://www.mittag.com.tw/index.php?route=product/product&amp;amp;path=18&amp;amp;product_id=211&quot; target=&quot;_blank&quot; style=&quot;background-color: rgb(255, 255, 0);&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;連結商品&lt;/font&gt;&lt;/a&gt;&lt;font color=&quot;#636363&quot;&gt;。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;6. 贈品勇敢項鍊包裝則以簡約包裝隨同購買產品一併出貨，恕不提供品牌包裝〈詳如以下圖示〉。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;img src=&quot;http://www.mittag.com.tw/image/catalog/Activities/2018_001_web_celebration/activity_20180310_simple_packaging.jpg&quot; style=&quot;width: 570px;&quot;&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;', 'celebration for mittag website readiness'),
+(366, 'NL809', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL809/NL809.gif', 0, 1, 2750, 0, 0, '0.0', '0.0', '', '', '', '0.0', '40', '2018-03-20', '                                                            ', '0.0', 1, '1.1', '0.6', '2.2', '', 1, 1, 1, 1, 1, 3, '2018-03-20 21:30:50', '2018-03-20 21:44:09', '', '', 'tree a necklace'),
+(367, 'BL807', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Bracelet(BL)/BL807/BL807.gif', 0, 1, 3550, 0, 0, '0.0', '0.0', '16', '', '', '0.0', '', '2018-03-20', '                                        ', '0.0', 1, '1.1', '0.6', '2.2', '', 1, 1, 1, 1, 1, 1, '2018-03-20 21:43:11', '2018-03-20 22:10:42', '', '', 'tree a bracelet'),
+(368, 'NL810', '', '', '', '', '', '', 'Taiwan', '925銀', '1', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/Necklace(NL)/NL810/NL810.gif', 0, 1, 4950, 0, 0, '0.0', '0.0', '', '', '', '0.0', '45', '2018-03-20', '                                        ', '0.0', 1, '2.5', '0.8', '3.5', '', 1, 1, 1, 1, 1, 4, '2018-03-20 21:56:11', '2018-03-20 22:09:44', '', '', 'cross c necklace'),
+(369, 'BB807', '', '', '', '', '', '', 'Taiwan', '925銀', '0', '', '', '', '', '', '', 1, 7, 0, 0, 'catalog/BABY(BB)/BB807/BB807_03_S.jpg', 0, 1, 1750, 0, 0, '0.0', '0.0', '12', '', '', '0.0', '', '2018-03-20', '                    ', '0.0', 1, '0.9', '0.3', '1.7', '', 1, 1, 1, 1, 1, 2, '2018-03-20 22:08:20', '0000-00-00 00:00:00', '', '', 'bb pomelo bracelet');
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -3129,6 +3876,7 @@ CREATE TABLE `oc_product_description` (
 --
 
 INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
+<<<<<<< HEAD
 (57, 1, 'firm m  ring 堅毅男戒', '&lt;p&gt;六邊型是最堅固的結構，&lt;/p&gt;&lt;p&gt;所以我們設計最堅固的firm ring給鋼鐵般意志的你；&lt;/p&gt;&lt;p&gt;永不妥協，永不放棄，永遠只做自己。&lt;br&gt;&lt;/p&gt;', '', 'firm m  ring', '', ''),
 (58, 1, 'typhoon eye ring 颱風眼戒指', '&lt;p&gt;颱風來時，&lt;/p&gt;&lt;p&gt;大家都謹慎的做好各項防颱措施以防範它所帶來的災害，&lt;/p&gt;&lt;p&gt;但是颱風眼區域內通常無狂風亦無暴雨，&lt;/p&gt;&lt;p&gt;天上只有薄薄的雲,還能看見太陽或星星。&lt;/p&gt;&lt;p&gt; 所以，您說說看這是不是最好的護身符呢？&lt;/p&gt;&lt;p&gt;當尾戒也超合適喔...&lt;/p&gt;&lt;p&gt;颱風來時，&lt;/p&gt;&lt;p&gt;大家都謹慎的做好各項防颱措施以防範它所帶來的災害，&lt;/p&gt;&lt;p&gt;但是颱風眼區域內通常無狂風亦無暴雨，&lt;/p&gt;&lt;p&gt;天上只有薄薄的雲,還能看見太陽或星星。&lt;/p&gt;&lt;p&gt;所以，您說說看這是不是最好的護身符呢？&lt;/p&gt;&lt;p&gt;當尾戒也超合適喔...&lt;/p&gt;', '', 'typhoon eye ring', '', ''),
 (59, 1, 'snake drei ring 蜿蜒蛇戒指', '&lt;p&gt;整個戒身都是上下蜿蜒弧度，&lt;/p&gt;&lt;p&gt;加上半霧面半鏡面的表面對比處理，&lt;/p&gt;&lt;p&gt;讓此款充滿張力的設計更增生命力。&lt;br&gt;&lt;/p&gt;', '', 'snake drei ring', '', ''),
@@ -3151,6 +3899,225 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 (94, 1, 'activity test', '&lt;p&gt;帶上方心請放心; 我的芳心只屬於你…帶上方心請放心; 我的芳心只屬於你…帶上方心請放心; 我的芳心只屬於你…&lt;/p&gt;&lt;p&gt;帶上方心請放心; 我的芳心只屬於你…帶上方心請放心; 我的芳心只屬於你…&lt;/p&gt;&lt;p&gt;帶上方心請放心; 我的芳心只屬於你…帶上方心請放心; 我的芳心只屬於你…帶上方心請放心; 我的芳心只屬於你…&lt;br&gt;&lt;/p&gt;', '3333333333333', 'bracelet test 01', 't111111111111', '22222222222222'),
 (56, 1, 'chasing ice ring 逐冰戒指', '&lt;p&gt;氣溫又升高,夏末秋初如何消暑呢?&lt;/p&gt;&lt;p&gt;戴上chasing ice來一趟逐冰之旅為自己降溫一下吧! &lt;/p&gt;&lt;p&gt;不規則的多角切面設計,讓您怎麼轉都bling bling!&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jungwei.com.tw/mittag.com.tw/image/catalog/RG309商品說明表.jpg&quot; style=&quot;width: 750px;&quot; draggable=&quot;true&quot; data-bukket-ext-bukket-draggable=&quot;true&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', 'chasing ice ring', '', ''),
 (60, 1, 'firm f ring 堅毅女戒', '&lt;p&gt;六邊型是最堅固的結構，&lt;/p&gt;&lt;p&gt;所以我們設計最堅固的firm ring給鋼鐵般意志的妳；&lt;/p&gt;&lt;p&gt;永不妥協，永不放棄，永遠做自己。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;本款有對戒選項喔~&lt;/p&gt;', '', 'firm f ring', '', '');
+=======
+(132, 1, '火柴戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;在設計師完成這項設計的試戴期間，總是招來驚艷的目光，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;因為細緻中帶有強烈的個人風格設計，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;許多人在當時看到就下了訂單，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;這可說是mittag的未上市熱門款呢…&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot; face=&quot;Arial&quot;&gt;未來的一年，也要用力幫自己擦出火花，點亮未來喔~&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_RG301_matches_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(148, 1, '希望種子手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;用深藏在內部的love孕育seed of hope！&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL303_seed_of_hope_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(134, 1, '盤尾蛇戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;本款是mittag設計師非常喜愛的作品；&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;遠看像是鑲上了寶石的吸引目光焦點，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;近看才發現是生動蜿蜒的snake zwei。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_RG303_snake_zwei_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(87, 1, '41111111111111111111111', '', '', '11111111111', '', ''),
+(158, 1, '天秤項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;開口或沉默？&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;行動或靜止？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;轉彎或直行？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;總是像天秤一樣左右搖擺，難以抉擇…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL314_libra_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(159, 1, '甜甜圈zwei手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;這麼sweet的東西怎麼可以獨享呢！&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;當然要把它戴出門跟大夥一同分享囉~~&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL309_donuts_zwei_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(157, 1, '十字架eins項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;如果你跟我們一樣欣賞朱銘，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;相信你也會喜歡這款cross eins。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;本款可以兩面配戴，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;鏡面或刻面就依服裝或心情決定囉…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL312_cross_eins_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(139, 1, '逗號項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我們的故事就像逗號的出現，到此刻只寫了一小部分，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;還有許多未完待續的情節發展，等待我們共同攜手寫下去...&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL304_comma_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(133, 1, '好奇蛇戒指', '&lt;h4 style=&quot;&quot;&gt;&lt;font color=&quot;#636363&quot;&gt;好奇的揚首顧盼，外頭的世界究竟有多寬廣，多繽紛呢？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_RG302_snake_eins_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(140, 1, 'bb笑心手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;一個咧嘴而笑的心，看了就有好心情！&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;寶貝戴上了它感覺也將快樂開心都一同戴上了~&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BB301_bb_laughing_heart_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(141, 1, 'bb希望種子手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;寶貝就像一顆種子，希望它怎麼長成就要怎麼栽培。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;用心許個願，讓這顆希望種子成長為挺拔、堅定、可靠的大樹！&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BB302_bb_seed_of_hope_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(142, 1, 'bb元寶山手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;想祝福寶貝有個富裕的未來，無論是財富、知識、健康、幸福、愛…，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;就許一個wealthy mountain給寶貝吧！&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BB303_bb_wealthy_mountain_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(143, 1, 'bb德國結手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;愛情與麵包不能兩全？&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;可以！德國結麵包辦到了！&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;愛心的美貌外表、麵包的務實用途，中間打個結讓彼此牢牢繫住。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;從此愛情與麵包再也不分離…&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BB304_bb_brezel_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(144, 1, 'bb無限8手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;剛出生的寶寶要送給他/她怎樣的一個吉祥物呢？&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;當然是有無限祝福意義的無限8〈無限發〉手鍊囉~&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BB305_bb_infinity_snake_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(145, 1, '德國結項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;愛情與麵包不能兩全？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;p&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt; 可以！德國結麵包辦到了！&lt;/font&gt;&lt;/h4&gt;&lt;p&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;愛心的美貌外表、麵包的務實用途，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;中間打個結讓彼此牢牢繫住，從此愛情與麵包再也不分離…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL308_brezel_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(147, 1, '笑心手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;一個咧嘴而笑的心，看了就有好心情！&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;戴上了它感覺也將快樂開心都一同戴上了~&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL302_laughing_heart_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(149, 1, '元寶山手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;無論是財富,知識,健康,幸福,愛…，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;就許一個wealthy mountain給自己吧！&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL304_wealthy_mountain_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(150, 1, '德國結手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;愛情與麵包不能兩全？&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;可以！德國結麵包辦到了！&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;愛心的美貌外表、麵包的務實用途，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;中間打個結讓彼此牢牢繫住，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;從此愛情與麵包再也不分離…&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BL305_brezel_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(138, 1, '蜂窩項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;戴上honeycomb出門總會有人興奮的說：「這不是小熊維尼的最愛嗎？ 」&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;哦！也許，但是確定的是honeycomb可是mittag某設計師的最愛喔...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;Honeycomb的製作過程是相對的耗時及繁瑣，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;從拉銀線開始再手工慢慢捲曲成型，不斷的再退火再整型，才會出現蜂窩造型，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;之後還必須將“每一條”銀線的間縫處焊接牢，焊完一面再焊牢另一面，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;最後檢查完再焊第三面補強.。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;處理完後再一根一根銀線仔細拋光好，才會將honeycomb交到您手上.。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font face=&quot;Arial&quot; color=&quot;#636363&quot;&gt;所以，世界上是不會有長得一模一樣的honeycomb喔...&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL302_honeycomb_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(151, 1, '無限8手鍊', '&lt;h4&gt;無窮或無限大，數學符號為&lt;span style=&quot;color: rgb(99, 99, 99); font-size: 12pt; font-family: 新細明體, serif;&quot;&gt;∞&lt;/span&gt;&lt;span style=&quot;color: rgb(99, 99, 99); font-family: inherit;&quot;&gt;，&lt;/span&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;span style=&quot;font-family: 新細明體, serif; font-size: 12pt;&quot;&gt;∞&lt;/span&gt;就像不同視野看到的數字8有著“無限8，無限發”的美意。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&quot;To infinity and beyond！到達無窮，超越無窮！&quot;&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL306_infinity_snake_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(152, 1, '無限8項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;無窮或無限大，數學符號為&lt;span style=&quot;font-size: 12pt; font-family: 新細明體, serif;&quot;&gt;∞&lt;/span&gt;&lt;span style=&quot;font-family: inherit;&quot;&gt;，&lt;/span&gt;&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;span style=&quot;font-size:12.0pt;mso-bidi-font-size:11.0pt;\r\nfont-family:&amp;quot;新細明體&amp;quot;,serif;mso-ascii-theme-font:minor-fareast;mso-fareast-theme-font:\r\nminor-fareast;mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;\r\nmso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:\r\nZH-TW;mso-bidi-language:AR-SA&quot;&gt;∞&lt;/span&gt;就像不同視野看到的數字8，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有著&quot;無限8，無限發&quot;的美意... &lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&quot;To infinity and beyond！到達無窮，超越無窮！&quot;&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL309_infinity_snake_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(153, 1, '甜甜圈項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;這麼sweet的東西怎麼可以獨享呢？&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;當然要把它戴出門跟大夥一同分享囉~~&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL310_donuts_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(155, 1, '星果項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;曾有外國朋友說：「台灣有兩種水果好可愛，一種像星星,一種像鈴鐺」；&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;想了好久...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;啊！原來是楊桃跟蓮霧！！！&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;既然如此，一定要戴上可愛的star fruit切片來宣示一下囉~&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL311_star_fruit_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(137, 1, '豆子心項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;一顆如豆子般鼓鼓的、飽飽的心，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;裏頭裝的是滿滿的思念與愛嗎？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL301_bean_heart_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(156, 1, '星果手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;曾有外國朋友說：「台灣有兩種水果好可愛，一種像星星，一種像鈴鐺」；&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;想了好久...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;啊！原來是楊桃跟蓮霧！！！&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;既然如此，一定要戴上可愛的star fruit切片來宣示一下主權囉~&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL308_star_fruit_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(135, 1, '蜿蜒蛇戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;整個戒身都是上下蜿蜒弧度，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;加上半霧面半鏡面的表面對比處理，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;讓此款充滿張力的設計更增生命力。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_RG304_snake_drei_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(160, 1, '甜甜圈戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;這麼sweet的東西怎麼可以獨享呢！&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;當然要把它戴出門跟大夥一同分享囉~&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;甜甜圈戒指在打樣試戴階段就受到許多注目禮與詢問。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;每一個甜甜圈出門前都經過非常繁複的工序才會到您手上喔…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_RG305_donuts_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(161, 1, '甜甜圈瀑布項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;這麼sweet的東西怎麼可以獨享呢？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;當然要把它戴出門跟大夥一同分享囉~~&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;2個甜甜圈串起的項鍊，好像瀑布般的滑出夢幻甜點，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;一圈又一圈，連綿不絕的...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;您還可以發揮創意用不同的方式穿戴它喔~~&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL316_donuts_waterfall_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(162, 1, '十字架a項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;光亮奪目的十字架，內部隱藏著深刻的切紋，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;如同被隱藏在最底層的情感，深刻而內斂..&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL317_cross_a_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(163, 1, '十字架b項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;正反兩面皆可配戴的十字架，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有鏡面與刻面的佩戴方式可選擇，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;可依服裝或心情決定囉…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL318_cross_b_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(164, 1, '輕旅行項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;厭煩了一成不變的日子？&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;想提起包包就出發旅行去？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;想一個人短暫流浪的時候就戴上travel light，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;一起到陽光氾濫的國境之南輕旅行吧！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL320_travel_light_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(165, 1, '十字地球a項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&quot;天下的水要聚在一處，使旱地露出來。事就這樣成了。神稱旱地為地，稱水的聚處為海。&quot; (聖經創世記)&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL322_cross_earth_a_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(166, 1, '十字地球b項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&quot;天下的水要聚在一處，使旱地露出來。事就這樣成了。神稱旱地為地，稱水的聚處為海。&quot; (聖經創世記)&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL323_cross_earth_b_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(167, 1, '逐冰項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;炎炎夏日如何消暑？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;戴上chasing ice來一趟逐冰之旅為自己降溫一下吧！&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;不規則的多角切面，讓您怎麼轉都bling bling！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL324_chasing_ice_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(168, 1, '微笑鞦韆項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;童年的嬉戲，您最懷念哪一樣？&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;對我們來說，是鞦韆！&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;從小玩到大，到出社會以後每每看到鞦韆還是要用力盪一下，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;因為鞦韆勾起的回憶是純真的，對未來充滿期待的童心...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;所以既使現在已經&quot;不小&quot;了，還是會奮力盪鞦韆！&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;提醒自己還有夢想，提醒自己不要忘記保有赤子之心。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL327_smile_swing_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(169, 1, '逐冰手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;氣溫頻頻飆新高，盛夏如何消暑呢？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;戴上chasing ice來一趟逐冰之旅為自己降溫一下吧！&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;不規則的多角切面設計，讓您怎麼轉都bling bling！&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL310_chasing_ice_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(170, 1, '爆破項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;充滿爆炸感的粗曠設計，搭配45cm黑色真皮繩+925純銀扣頭；&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;Polo衫型男必備超man性格單品。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL328_blast_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(173, 1, '超能戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;戴上Super ring就感覺像超人一樣擁有無限可能！&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;簡約的設計讓男生或女生都可以輕易的super super喔~&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_RG306_Super_ring_超能戒指', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(172, 1, '誰起司項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;以浮雕手法刻出起司切片，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;刻意留下起司切片刀紋，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;看了就好想咬一口！&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;戴上&quot;say cheese&quot;記得要露出拍照時的招牌甜美笑容喔~&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL329_say_cheese_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(174, 1, '紙飛機項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;小時候和同伴們比賽誰折的紙飛機飛得高飛得遠，總會朝著紙飛機頭哈口氣，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;好像這樣就會為紙飛機注入生命與能量，可以勇敢的迎風飛翔~&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;疲累的時候，也別忘記幫自己哈口氣，加個油喔！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL330_paper_plane_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(175, 1, '指紋戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;指紋的獨一無二代表每個獨特的個體。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;請舉起你的手與我們一同宣示：「我，獨一無二！我，無可取代！」&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_RG307_finger_print_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(176, 1, '微笑鞦韆手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;童年的嬉戲，您最懷念哪一樣？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;p&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;對我們來說，是鞦韆！&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;從小玩到大，到出社會以後每每看到鞦韆還是要用力盪一下，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;因為鞦韆勾起的回憶是純真的，對未來充滿期待的...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;所以既使現在已經&quot;不小&quot;了，還是會奮力盪鞦韆，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;提醒自己還有夢想，提醒自己不要忘記保有赤子之心。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL311_smile_swing_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(177, 1, '結戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;老實說，knot ring並不是新設計，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;只是mittag的米米設計師實在太喜歡戴它了，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;總是焦不離孟,孟不離焦的出席各種場合...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;既然這麼喜歡，當然不能獨享，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;邀請大夥來發覺knot ring令人迷戀的原因~&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_RG308_knot_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(178, 1, '夏日麥田項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;這幾天的天氣，就是我們心中summer field的景象；&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;絢麗的陽光，涼爽的溫度，微微的風；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;就連夏日麥田都被風吹拂得舒服的微傾著頭，自在的享受當下...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL332_summer_field_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(179, 1, '羽毛項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;設計師大山的巧思，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;一邊是羽毛紋濃密排列的質感，一邊是光可鑑人的鏡面處理，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;衝突的對比,讓人想移開視線都難...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;正反兩面都可以配戴，要不就看當天的風把羽毛吹向哪一邊囉~&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL333_feather_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(180, 1, '逐冰戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;氣溫又升高，夏末秋初如何消暑呢？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;戴上chasing ice來一趟逐冰之旅為自己降溫一下吧！&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;不規則的多角切面設計，讓您怎麼轉都bling bling！&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_RG309_chasing_ice_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(181, 1, '水晶吊燈項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有甚麼比夢幻奢華的水晶吊燈，更適合搭配浪漫的燭光晚餐呢？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;周五的夜晚，就是要戴上它去約會！&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL334_chandelier_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(182, 1, '盾牌項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;盾牌是保護裝備的一種，主要用來阻擋外來攻擊。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;表面的盾徽設計傳達了身分、階級、血統、功勳等訊息。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;mittag的盾徽設計採用獅子圖騰，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;因為獅子代表的是慷慨、愛、勇氣、智慧、正義、權力、富貴等許多避邪納吉的涵義；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;一次就把所有祝福都無保留的送給認真、永不放棄的你。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL335_shield_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(183, 1, '眼睛手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;這個設計的演變其實是一個美麗的意外，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;原先的設計是一片極簡的小葉子，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;但是在處理背面的時候，設計師興之所至的隨它的型狀做了一隻眼睛，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;後來越看越有趣的反而讓眼睛喧賓奪主搶了葉子的主位...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;眼睛或葉子，兩面都可以配戴，感覺大不同喔！&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL312_eye_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(184, 1, '指紋項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;指紋的獨一無二代表每個獨特的個體。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;請挺起胸與我們一同宣示：&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;「我，獨一無二！我，無可取代！」&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL336_finger_print_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(185, 1, '貝殼項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;貝殼，是傳遞浪漫的信物；&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;在海邊拾起貝殼時總覺得這是不是誰從遠方捎來問候…&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;是的，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我們在貝殼項鍊裏藏了情書，貝殼的中心點是一顆愛心，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;外圍是許多數字9組成的螺旋，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&quot;愛你99&quot;就是mittag偷偷為貝殼項鍊注入的隱藏信息...&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL337_shell_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(186, 1, 'V項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;V代表甚麼？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;勝利(victory)？&amp;nbsp; &amp;nbsp; 情人(valentine)？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;維納斯(Venus)？&amp;nbsp; &amp;nbsp; 吸血鬼(vampire)？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;V有各種可能...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;對我們來說，V像是一個愛心，有著對稱的美，也有著開心的笑臉...&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;正反兩面做不同質感處理，都可以配戴，感覺大不同喔！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL338_V_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(187, 1, '火車手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;童年，快樂那麼垂手可得，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;手裡一部小火材盒汽車就可以環遊世界；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;長大了，環遊世界的夢想還存在嗎？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;喚醒你的夢想，環遊世界從環島開始，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;和我們一起搭上環島火車，先好好走遍自家土地，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;就會發現台灣，其實很美。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL313_train_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(188, 1, '眼睛項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;這個設計的演變其實是一個美麗的意外，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;原先的設計是一片極簡的小葉子，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;但是在處理背面的時候，設計師興之所至的隨它的型狀做了一隻眼睛，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;後來越看越有趣的反而讓眼睛喧賓奪主搶了葉子的主位...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;眼睛或葉子，兩面都可以配戴，感覺大不同喔！&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL339_eye_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(189, 1, '可圈可點項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;小時寫作文，如果老師覺得句子寫得可圈可點，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;就會在句子旁邊用紅色毛筆畫下一整串的圈圈，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;那真是對寫作人最棒的鼓舞了！！&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有空別忘了時常幫自己或身旁的人也&quot;可圈可點&quot;一下，注入動力喔~&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;此設計有著書寫書法的揮毫感，簡約又詩意！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL340_circle_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(190, 1, '思念手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;鈕扣，總令人思念...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;p&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;思念母親一針一線的為我們縫補衣扣；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;思念好久不見的她/他衣領上有著特別的扣子。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我們收集每一件舊衣拆下來的鈕扣，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;收集每一件衣裳陪伴我們度過的時光，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;收集每一個鈕扣帶給我們的故事；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;每一個鈕扣都是回憶與思念…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL314_yearning_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(191, 1, '熱氣球項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;戴上它，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;心情也不知不覺的跟著熱氣球一樣high上天~&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;blue mood，速速退散！&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL342_balloon_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(192, 1, 'V手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;V代表甚麼？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;勝利(victory)？情人(valentine)？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;維納斯(Venus)？吸血鬼(vampire)？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;V有各種可能...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;對我們來說，V像是一個愛心，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有著對稱的美，也有著開心的笑臉...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;正反兩面做不同質感處理，都可以配戴，感覺大不同！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BL315_V_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(193, 1, '火車項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;童年，快樂那麼垂手可得，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;手裡一部火柴盒小汽車就可以環遊世界；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;長大了，環遊世界的夢想還存在嗎？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;喚醒你的夢想，環遊世界從環島開始，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;和我們一起搭上環島火車，先好好走遍自家土地，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;會發現台灣，其實很美很美。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL343_train_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(194, 1, '逗號a項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;逗號，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;是稍作休息，是為了更長的句子做準備；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;而我們的故事也只寫到了一半，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;還有許多未完待續的未來，等著我們一起寫下去…&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL344_comma_a_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(195, 1, '思念項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;鈕扣，總令人思念...&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;思念母親一針一線的為我們縫補衣扣；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;思念好久不見的她/他衣領上有著特別的扣子，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我們收集每一個鈕扣帶給我們的故事與思念，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;回憶每一件衣裳伴我們度過的時光…&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL345_yearning_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生');
+INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
+(196, 1, '永恆男戒', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;越簡單的設計越永恆，Eternal, starts from here...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;永恆，從這一刻開始...&amp;nbsp;&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_RG310_eternal_m_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(197, 1, '永恆女戒', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;越簡單的設計越永恆，Eternal, starts from here...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;永恆，從這一刻開始...&amp;nbsp;&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_RG311_eternal_f_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(198, 1, 'bb火車手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;童年，快樂那麼垂手可得，手裡一部小火材盒汽車就可以環遊世界；&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;長大了，環遊世界的夢想還存在嗎？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;幫寶貝戴上追逐夢想的BB火車手鍊，一起搭上環遊世界的夢想列車吧！&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;本款手鍊結尾可幫寶貝選擇小鈴鐺或是小銀片吊飾~&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BB307_BB_train_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(199, 1, '帆船項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;其實，你該知道，不只男人的心底住了一個流浪的靈魂…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;揚帆而起，乘風破浪，開啟一趟屬於自己的冒險…，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;即刻───啟程.&amp;nbsp;&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL347_sailboat_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(200, 1, '豌豆夾項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;豌豆夾有著&quot;豐收&quot;的意涵，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我們想藉此祝福大家有個豐收的旅程，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;無論是在生活上、在家庭裡、在工作上、在社交圈、在興趣創作中，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;都能夠多產、豐收、無虞...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL348_peapod_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(201, 1, '堅毅男戒', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;六邊型是最堅固的結構，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;所以我們設計最堅固的firm ring給鋼鐵般意志的你；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;永不妥協，永不放棄，永遠只做自己。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_RG313_firm_m_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(202, 1, '堅毅女戒', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;六邊型是最堅固的結構，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;所以我們設計最堅固的firm ring給鋼鐵般意志的妳；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;永不妥協，永不放棄，永遠做自己。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_RG314_firm_f_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(203, 1, 'V a項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;V代表甚麼？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;p&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;勝利(victory)？情人(valentine)？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;維納斯(Venus)？吸血鬼(vampire)？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;V有各種可能...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;對我們來說，V像是一個愛心，有著對稱的美，也有著開心的笑臉...&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;正反兩面做不同質感處理，都可以配戴，感覺大不同！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL350_V_a_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(204, 1, '飛機項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;微微往右上傾的設計，是暗示正要起飛的期待心情...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;正要起飛的戀情，正要起飛的事業，正要起飛的旅程，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;樣樣都是令人期待的心情。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL351_plane_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(205, 1, '幸運草項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;你知道這四片葉子各代表什麼意思嗎？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;前三片葉子各代表love(愛情)、faith(信仰)和hope(希望)，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;稀少而珍貴的第四片葉子代表luck(幸運)。&lt;/font&gt;&lt;/h4&gt;&lt;p&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;所以...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;找到屬於你的lucky charm了嗎？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL354_lucky_charm_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(206, 1, '點項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;黑色，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;是低調奢華的顏色，不容忽視的強烈存在感；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;如標點符號的句點，&quot;small but powerful！&quot;。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;又如同奧黛麗赫本的出現，優雅而經典。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_JNL401_dot_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(207, 1, '豆苗項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;新的一年，你許下願望了嗎？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;每一個念頭就像一顆種子，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;你只要將它埋到土裡，動手澆水，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;希望就會發芽成豆苗，夢想也跟著慢慢成真…&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL401_seedling_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(208, 1, '鹿角f項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;鹿，有許多好的意涵；&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;鹿在戰鬥時能夠勇猛應對，追求勝利。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;鹿也象徵著長壽，因此被許多長輩喜愛著。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;鹿角代表能將事務加以條理化、分析；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;因此帶來靈感、理想，象徵充滿活力的人。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;這麼多優點，怎能不趕快帶一個呢？&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL402_antlers_f_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(209, 1, '鹿角m項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;比起&quot;antlers f&quot;的柔和，這款(antlers m)是相對剛硬的設計。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;鹿，有許多好的意涵；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;鹿在戰鬥時能夠勇猛應對，追求勝利。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;鹿也象徵著長壽，因此被許多長輩喜愛著。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;鹿角代表能將事務加以條理化、分析；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;因此帶來靈感、理想，象徵充滿活力的人。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;這麼多優點，怎能不趕快帶一個呢？&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL403_antlers_m_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(210, 1, '點耳環', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;黑色，低調奢華的顏色。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;是不容忽視的強烈存在感；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;如標點符號的句點，&quot;small but powerful&quot;！&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt; 又如同奧黛麗赫本的出現，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;優雅而經典...&lt;/font&gt;&lt;/h4&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;', '', 'mittag_JER401_dot_earrings', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(367, 1, '樹木a手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;直挺的佇立在地球上，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;樹皮上累積的是歲月走過的痕跡...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;謝謝大樹，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;辛苦撐起重擔，成為我們最大的靠山。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL807_tree_a_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(211, 1, '勇敢項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;隨著閱歷的增長，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;很多時候會不自覺的放棄某些很美好的情感...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;隨時提醒自己：&lt;/font&gt;&lt;/h4&gt;&lt;p&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;dare to hope, to believe, to love!&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt; 勇敢希望，勇敢相信，勇敢去愛！&lt;/font&gt;&lt;/h4&gt;&lt;p&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;每一個墬子都是手工個別敲字喔~&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL404_brave_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(212, 1, '颱風眼戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;颱風來時，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;大家都謹慎的做好各項防颱措施以防範它所帶來的災害。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;但是颱風眼區域內通常無狂風亦無暴雨，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;天上只有薄薄的雲，還能看見太陽或星星。 &lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;所以，您說說看這是不是最好的護身符呢？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;當尾戒也超合適喔...&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_RG401_typhoon_eye_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(213, 1, '幸運草手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;你知道這四片葉子各代表什麼意思嗎？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;前三片葉子各代表love(愛情)、faith(信仰)和hope(希望)。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;稀少而珍貴的第四片葉子代表luck(幸運)，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;所以...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;找到屬於你的lucky charm了嗎？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL401_lucky_charm_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(214, 1, '馬蹄鐵m項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;馬代表了力量與活力，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;收到馬蹄鐵形的禮物時也會因此獲得好運連連的祝福。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;現在，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;立馬為自己戴上幸運馬蹄讓自己馬力十足，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;一馬當先！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL405_horseshoe_m_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(215, 1, '加乘耳環', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;戴在耳垂上，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有時自然呈現&quot;加號&quot;，有時呈現&quot;乘號&quot;，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;又加法又乘法，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;讓新的一年，做什麼都事半功倍，加倍豐收！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_ER401_+x_earrings', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(216, 1, '圓滿項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;Everything is completed when you are with me.&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;p&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;h4&gt; &lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;兩個各自獨立飽滿的圓緊緊相扣在一起，構成了圓圓滿滿的祝福。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我們，就是要圓圓滿滿的！&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL406_complete_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(217, 1, '勇敢手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;隨著閱歷的增長，很多時候會不自覺的放棄某些很美好的情感...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;隨時提醒自己：&lt;/font&gt;&lt;/h4&gt;&lt;p&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;dare to hope, to believe, to love! &lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;勇敢希望，勇敢相信，勇敢去愛！&lt;/font&gt;&lt;/h4&gt;&lt;p&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;每一個墬子都是手工個別敲字喔~&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BL402_brave_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(218, 1, '眼睛耳環', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;這個設計的演變其實是一個美麗的意外，&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;原先的設計是一片極簡的小葉子，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;但是在處理背面的時候，設計師興之所至的隨它的型狀做了一隻眼睛，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;後來反而讓眼睛喧賓奪主搶了葉子的主位...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;眼睛或葉子，兩面都可以配戴，感覺大不同喔！&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;耳環可以選擇眼睛為正面或反面，或著一正一反喔~&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_ER402_eye_earrings', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(219, 1, '點手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我們喜歡黑色的點綴，如句點般的精準，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;黑馬般的爆發，奧黛麗赫本般的優雅。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_JBL401_dot_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(220, 1, '逗號耳環', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我們的故事就像逗號的出現，只寫了一小部分，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;還有許多未完待續的情節發展，等待我們共同攜手寫下去…&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_ER403_comma_earrings', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(221, 1, '小慢活項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;窗邊的小傢伙，用自己的步伐慢慢走著，&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;還默默的用觸角比著勝利...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;是不是在宣示牠比我們更懂得活在當下！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL407_slow_living_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(222, 1, '大慢活項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;窗邊的小傢伙，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;用自己的步伐慢慢走著，還默默的用觸角比著勝利...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;是不是在宣示牠比我們更懂得活在當下？&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL408_slow_living_G_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(223, 1, '圓滿手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;Everything is completed when you are with me.&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;兩個各自獨立飽滿的圓緊緊相扣在一起，構成了圓圓滿滿的祝福。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我們，就是要圓圓滿滿的在一起！&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL403_complete_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(224, 1, '雪花手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;雪花，一種美麗而規律的六角型結晶體。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有句話說&quot;瑞雪兆豐年&quot;，適時的冬雪預示著豐收之年；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;快戴上雪花手鍊，許下來年豐收的心願！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BL404_snowflake_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(226, 1, '點戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我們喜歡黑色的點綴，如句點般精準，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;奧黛麗赫本般優雅，黑馬般爆發。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_JRG401_dot_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(227, 1, '小大人耳環', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;這兩個可愛的小大人，駕著一葉輕舟，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;是要去哪個世外桃源呢？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;還記得慾望城市裡的mr. big？ &lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;在這裡，你也可以擁有屬於你自己的mr. big。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_ER405_Mr_big', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(228, 1, '雲朵項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;藍天，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;白雲總讓人的心情一下子放鬆開來。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;當情緒揪成一團時，不妨抬頭看看廣闊的天空與隨風起舞的雲朵...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;everything is going to be alright.&lt;/font&gt;&lt;/h4&gt;&lt;p&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有注意到兩朵雲的處理技法是相異的嗎？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;一朵是亮面，一朵是顆粒面喔~&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL410_cloud_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(229, 1, '點a手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我們喜歡黑色的點綴。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;黑色，是不容忽視的強烈存在感；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;如句點般精準，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;奧黛麗赫本般優雅，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;黑馬般爆發。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_JBL402_dot_a_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(230, 1, '牽手戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;十指緊握，是一種歸屬感。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;年長一輩的人很含蓄，稱自己的另一半叫做&quot;牽手&quot;，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;蘊意很美，不離不棄的相知相守。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;內斂、深沉，不說出口的溫柔。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_RG402_holding_hands_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(231, 1, '指紋耳環', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;指紋的獨一無二代表每個獨特的個體。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;請挺起胸與我們一同宣示：&lt;/font&gt;&lt;/h4&gt;&lt;p&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&quot; 我，獨一無二！我，無可取代！&quot;&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_ER406_finger_print_earrings', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(232, 1, 'xxx項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;在西方書信的結尾，會在自己的名字後面加上oooxxx。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;o代表著擁抱，x代表親吻，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;所以整個oooxxx的意思就上附上許多擁抱和親吻。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;因此，xxx項鍊就是kiss項鍊喔~&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL411_xxx_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(234, 1, '點點項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我們喜歡黑色的點綴。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;黑色，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;是不容忽視的強烈存在感；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;如句點般精準，奧黛麗赫本般優雅，黑馬般爆發。&lt;/font&gt;&lt;/h4&gt;&lt;p&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;配置的36&quot;鍊長激發配戴創意,&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;可捲成單圈長項鍊或雙圈短項鍊,或著多圈手鍊喔~&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_JNL402_dots_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(235, 1, '魔鏡戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;“Mirror Mirror on the Wall, Who Is the Fairest of Them All?”&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;戴上魔鏡戒指，這個問題的答案永遠是...&quot;自己&quot;；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;因為戒指表面的鏡面反射實在是擠不進其他人了，呵呵&amp;nbsp; :P&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;也適合當超性格的尾戒配戴喔~&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_RG403_mirror_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(236, 1, '雪花項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;雪花，一種美麗而規律的六角型結晶體。&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有句話說&quot;瑞雪兆豐年&quot;，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;適時的冬雪預示著豐收之年；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;快戴上雪花項鍊，許下來年豐收的心願！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL412_snowflake_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(237, 1, '如意鎖手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&quot;鎖&quot; 在古代是吉利的象徵，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;代表對健康、財富與長壽的祈願。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;如意鎖寓意長命百歲、吉祥如意，是極受歡迎的護身符。 &lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;mittag的如意鎖英文品名取作good lock，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;直譯&quot;好鎖&quot;，諧音為good luck，祝&quot;好運&quot;喔~ &lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;用good lock鎖住夢想與希望，留住美好的事物和情感~&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BL405_good_lock_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(238, 1, '圖釘戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;像是在辦公室的partition上，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;用圖釘將重要事項釘在顯眼處，提醒自己不能忘記一般...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有甚麼事是在你心裡一直不願忘記的？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有甚麼人是你想把他牢牢釘在心上的？&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_RG404_thumbtack_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(239, 1, '馬蹄鐵f項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;馬代表了力量與活力，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;收到馬蹄鐵形的禮物時也會因此獲得好運連連的祝福。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;現在，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;立馬為自己戴上幸運馬蹄讓自己馬力十足，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;一馬當先！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL413_horseshoe_f_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(240, 1, '軌道項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;時間就像是單向軌道，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;規律的、默默的往前行駛；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;軌道上的片片時刻所堆積起來的，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;是珍藏的回憶與故事。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL414_rail_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(241, 1, '葉子耳環', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;不對稱的設計，一直是我們的心頭好。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;本款除了不對稱之外，還不成對!?&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;一組三個不同的設計所組成的葉子耳環，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;非但不突兀還相處的超融洽。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_ER407_leaves_earrings', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(242, 1, '點a戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;戒身設計如豎琴般去拱著寶石臺座，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;一種希臘式的浪漫典雅正悄悄的從指尖透露出來...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_JRG402_dot_a_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(243, 1, '如意鎖項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;如意鎖寓意長命百歲,吉祥如意，是極受歡迎的護身符。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;mittag的如意鎖英文品名取作good lock，直譯&quot;好鎖&quot;，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;諧音為good luck，祝&quot;好運&quot;喔~ &lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;用good lock鎖住夢想與希望，留住美好的事物和情感~&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL415_good_lock_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(244, 1, '山稜戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;行至水窮處，坐看雲起時。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我也許無法改變山的高度，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;但是我可以選擇觀看山的角度。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_RG405_ridge_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(245, 1, '山稜m戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;人生像爬山，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;就在以為已經到山頂上了，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;才發現前面還有好多高低起伏的山要繼續走下去。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;累了~ 稍停，歇口氣...&lt;/font&gt;&lt;/h4&gt;&lt;p&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;舉步~ 再接再厲...&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_RG406_ridge_m_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(246, 1, '山稜f戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;像是走在山稜上，一邊向陽，一邊背陽；&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;像是每件事情都一體兩面。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;停下腳步，轉身，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;看到~ 全然不同的景緻。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_RG407_ridge_f_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(248, 1, '雪花耳環', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;戴在耳垂上，隨著耳勾跟著身體的律動而搖擺，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;像落下的片片雪花，想不令人注意都難...&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_ER408_snowflake_earrings', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(251, 1, '心跳項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;心跳總是誠實訴說著開不了口的話語…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;如果，沒有言語，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我們是不是能更了解彼此？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL417_heartbeat_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(252, 1, '可圈可點戒', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;小時寫作文，如果老師覺得句子寫得可圈可點，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;就會在句子旁邊用紅色毛筆畫下一整串的圈圈，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;那真是對寫作人最棒的鼓舞了！！&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有空別忘了時常幫自己或身旁的人也&quot;可圈可點&quot;一下，注入動力喔~&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;p&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;此設計有著書寫書法的揮毫感，簡約又詩意！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_RG408_circle_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(253, 1, '圖釘耳環', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;像是在辦公室的partition上，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;用圖釘將重要事項釘在顯眼處，提醒自己不能忘記一般...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有甚麼事是在你心裡一直不願忘記的？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有甚麼人是你想把他牢牢釘在心上的？&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_ER409_thumbtack_earrings', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(254, 1, '交會戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;平行線是令人感傷的，因為永遠不會相逢。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;而交會戒指是令人期待的，兩個不同方向前進的箭頭，在未來的某一點即將相會。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_RG409_intersection_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(255, 1, '木木項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;一棵樹是木，兩棵樹是木木。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;如果你姓林，就必須擁有它；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;如果你命中缺木，也必須擁有它(疑？)；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;如果你愛地球，更必須擁有它。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL419_trees_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(256, 1, '三環戒', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;由白金/玫瑰金/香檳金所組成的18K金三環戒，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;可以單獨戴一指當線戒，戴多指表現個性，或者全部戴一指顯現大器。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;多種穿戴法任你發揮~&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_RG410_triple_rings', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(257, 1, 'xxx手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;在西方書信的結尾，會在自己的名字後面加上oooxxx。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;o代表擁抱，x代表著親吻，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;oooxxx的意思就是附上許多擁抱和親吻。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;所以，xxx項鍊就是kiss項鍊喔~&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL406_xxx_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(258, 1, '馬蹄鐵f手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;馬代表了力量與活力，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;收到馬蹄鐵形的禮物時也會因此獲得好運連連的祝福。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;現在，立馬為自己戴上幸運馬蹄讓自己馬力十足，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;一馬當先！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BL407_horseshoe_f_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(259, 1, '牙刺項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;帶刺不是為了要傷害別人，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我只是想要保護自己…&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL420_thorn_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生');
+INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
+(260, 1, '矩框項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;回歸最原始的幾何圖型，一種令人莫名心安的穩定作用…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;配戴時可隨意將矩框調整成水平或垂直，各顯風情..&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL421_rectangle_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(261, 1, '黑熊v項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;會不會跟我們一樣，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;每回看見台灣黑熊頸上的v就覺得好有型？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;這下不用再羨慕，我們也可以優雅的戴上黑熊v了。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL422_bear_v_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(262, 1, '矩框手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;不用誰來給我上框架。&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我自己的框框我自己畫！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BL408_rectangle_beacelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(263, 1, '黑熊v手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;會不會跟我們一樣，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;每回看見台灣黑熊頸上的v就覺得好有型？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;這下不用再羨慕，我們也可以優雅的戴上黑熊v了。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL409_bear_v_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(264, 1, '方心項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;帶上方心請放心；我的芳心只屬於你…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL701_square_heart_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(265, 1, '圓心項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;圓圓的、厚厚的心，&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;裝載的是我對你未曾減少的思念…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL702_round_heart_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(266, 1, '寶石兔項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;像一顆圓圓的寶石，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;鏤空出兔子的影像；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;像愛麗絲夢遊仙境一樣令人充滿想像...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL703_gem_rabbit_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(267, 1, '芭蕾海星項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;海裡的星星，優雅的舞出芭蕾舞者的跳躍，隨興又自信。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL704_ballet_starfish_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(268, 1, '方心手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;帶上方心請放心；我的芳心只屬於你…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL701_square_heart_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(269, 1, '圓心手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;圓圓的，厚厚的心，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;裝載的是我對你未曾減少的思念…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL702_round_heart_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(270, 1, '寶石兔手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;像一顆圓圓的寶石，鏤空出兔子的影像；&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;像愛麗絲夢遊仙境一樣令人充滿想像...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL703_gem_rabbit_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(271, 1, '芭蕾海星手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;海裡的星星，優雅的舞出芭蕾舞者的跳躍，隨興又自信...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_ballet_starfish_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(272, 1, '多肉愛心項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;能在乾旱的氣候下生長，仍有能力保存飽滿的水；&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;多肉愛心最能夠療癒我的心。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL705_succulent_heart_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(273, 1, '多肉愛心手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;大自然的造物能力與美感總是令人讚嘆；&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;多肉愛心輕易的就能療癒我的心。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL705_succulent_heart_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(274, 1, '三瓣項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;三等份切割一個圓，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;圓弧的光線反射讓你左邊，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;右邊怎麼看都閃閃發亮...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL706_petals_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(275, 1, '三瓣手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;隨風起舞旋轉落下，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;隨身體律動折射光線，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;想不注視都難...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL706_petals_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(276, 1, 'bb小雞手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;小雞是許多客戶要求開發的產品，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;主要是送給小寶寶的禮品，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有著誕生與捧在手心上呵護的寓意。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;也有許多媽咪後來買了小雞手鍊送給自己，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;好讓自己與小寶貝帶著同樣的飾品。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BB701_bb_chick_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(366, 1, '樹木a項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;在值得紀念的日子，種下一棵樹，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;看著樹愈長大就代表紀念的日子愈長久愈珍貴。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;沒地方種樹時，就在自己胸口戴一棵樹，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;珍貴性不變，卻也能時時刻刻上心。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL809_tree_a_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(277, 1, '小雞手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;小雞是許多客戶要求開發的產品，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;主要是送給小寶寶的禮品，有著誕生與捧在手心上呵護的寓意。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;也有許多媽咪後來買了小雞手鍊送給自己，好讓自己與小寶貝帶著同樣的飾品。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BL707_chick_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(278, 1, '小雞項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;小雞純真的模樣總是討喜，令人忍不住想一直看著、微笑著...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL707_chick_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(279, 1, '羽毛戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;一邊是羽毛濃密排列的紋路，一邊是光可鑑人的鏡面處理，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;衝突的對比，讓人想移開視線都難...&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_RG701_feather_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(280, 1, '熱氣球a項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;讓簡約版的熱氣球帶你飛越邊界，四處遨遊...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL708_balloon_a_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(281, 1, '檸檬項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;夏天，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;不能免俗的，就是要來杯檸檬切片加蜂蜜水，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;酸酸甜甜的，退暑好伴侶&lt;/font&gt;...&lt;/h4&gt;', '', 'mittag_NL709_lemon_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(282, 1, '檸檬手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;檸檬總讓人聯結初戀，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;青澀的、酸苦的、難忘的回憶...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL708_lemon_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(283, 1, '蝴蝶結項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;在打結的同時是不是也將一些秘密給藏在心裡了呢？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL710_bow_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(284, 1, '蝴蝶結手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;每回為禮物打蝴蝶結時總是帶著期待的心情，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;期待看到對方拆開禮物時充滿喜悅的表情，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;自己也就跟著開心不已...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL709_bow_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(285, 1, '滴水戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;滴水穿石是這個戒指的主要設計概念。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;只要有恆心不斷努力，再困難的事都一定能完成。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_RG702_drip_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(286, 1, '方圓心耳環', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;可以自由選擇是一對方心或圓心，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;或是一方一圓所搭配而成的耳環喔~&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_ER701_hearts_earring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(287, 1, '捲紙兔項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;童趣的捲紙裁剪出長長的耳朵，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;兔子的身影一躍而出…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL711_paper_rabbit_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(288, 1, '捲紙兔手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;跳脫兔子墬飾的設計框架，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;用捲紙的概念勾勒出對兔子的想像…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL710_paper_rabbit_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(289, 1, '鴨子項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;渾圓的鴨子有著穩重的安心感，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;穩定而毫不猶豫的往自己的目標前進。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL712_duck_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(290, 1, '鴨子手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;不容小覷的自信，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;是鴨子與生俱來的可愛之處。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;無論遇上任何難題，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;都有信心跨越。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL711_duck_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(291, 1, '德國結戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;就像祈禱時雙手交叉的樣子，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;德國結麵包有著充滿想像的樣貌。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;中間打個結讓彼此牢牢繫住，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;從此愛情與麵包再也不分離…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_RG703_brezel_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(292, 1, '救生圈項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有時候胸口悶得慌，覺得自己就要淹沒了，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;無助的伸手想要抓住救生圈？&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;每個人都需要一個情感的出口，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;才不會讓過於沉重的情緒淹沒自己…&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL713_lifebuoy_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(293, 1, '大象項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;大象忠厚溫順是我們最穩重的靠山，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;默默守護著我們獲得幸運和成功。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL714_elephant_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(294, 1, '大象手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;大象力大無窮，卻性情溫和，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;是力量與和平的平衡點。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;又因象諧音「祥」，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;因此也被賦予了很多平安吉祥的寓意喔&lt;/font&gt;~&lt;/h4&gt;', '', 'mittag_BL712_elephant_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(295, 1, '鑽石心項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;鑽石般的俐落切割，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;讓這顆愛心簡潔到一句多餘的話都沒有...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL715_diamond_heart_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(296, 1, '鑽石心手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;鑽石需要經過打磨才能展現她的美，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;銀飾也是一樣的。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;細心手工打磨拋光後才能放心讓它出門到新主人手中。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL713_diamond_heart_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(297, 1, '突破戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;整體內凹的設計，卻在其中一邊轉為外凸，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;提醒自己不要安逸於舒適圈，要勇於突破。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_RG704_breakout_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(298, 1, '小提琴項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;不僅外形優美，還有極具穿透力的動人音色。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;內外皆具不愧是樂器中的女王。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL716_violin_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(299, 1, '轉折戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;走在人生路上，不經意的遇上了誰，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;讀了某本書,轉了哪個路口，整個人生的劇本就跟著改寫。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;戴上轉折戒指，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;帶上改變的勇氣，勇敢寫下自己的劇本。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_RG705_turning_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(300, 1, '麥穗項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;人生猶如行走在一片漫無邊際的麥田裡，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;每個人都在尋找最大的麥穗，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;但只有把手裡麥穗握緊，才是最珍惜當下的做法。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL717_wheat_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(301, 1, '麥穗a項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;人生猶如行走在一片漫無邊際的麥田裡，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;每個人都在尋找最大的麥穗，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;但只有把手裡麥穗握緊，才是最珍惜當下的做法。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL718_wheat_a_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(302, 1, '麥穗a手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;低頭的麥穗，內在充實飽滿，卻始終低頭，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;不張揚、不炫耀，平穩的踏出每一步。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BL714_wheat_a_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(303, 1, '茄子項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;茄子的日文(なす)，發音和達成(成す)相似。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;所以茄子象徵著願望與理想的實現。&lt;/font&gt;&lt;/h4&gt;&lt;p&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;無論是健康，快樂還是財富，立馬許自己一顆茄子吧！&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL719_eggplant_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(304, 1, '茄子手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;圓滾滾的茄子看起來就是有種不服輸的淘氣感，&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;戴著它就覺得有滿滿的勇氣...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL715_eggplant_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(305, 1, '王冠項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;王冠是客戶和我們一起設計出來的作品；&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&quot;戴上冠冕，保持信心，專心致志，預備好自己！&quot;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;是客戶與我們分享的註解；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;感恩的心情與大家共享~&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL720_crown_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(306, 1, '王冠手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;王冠賦予了權利和統治權，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;象徵著自我控制權，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;以及勇於為自己的一切負責的決心。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL716_crown_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(307, 1, '大小山戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;兩兩相望的大山小山，互相期盼著，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;等待著彼此聚首的時刻…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_RG706_mountains_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(308, 1, '小鳥項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;微微翹的嘴，圓滾滾的肚子，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;自信又淘氣的模樣是我們心目中最可愛的小鳥形象。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL721_birdie_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(309, 1, '小鳥手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;多麼希望自己也能像小鳥一樣，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;自由自在，無拘無束的飛翔著…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL717_birdie_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(310, 1, '紙飛機a項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;小時候和同伴們比賽誰折的紙飛機飛得高飛得遠，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;總會朝著紙飛機頭哈口氣，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;好像這樣就會為紙飛機注入能量，可以勇敢的迎風飛翔~&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;疲累的時候，也別忘記幫自己哈口氣，加個油喔！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL722_paper_plane_a_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(311, 1, '紙飛機a手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;紙飛機載著成千上萬的，我對妳的思念，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;翱翔盤旋在天際；&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;當我抬頭仰望妳時，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;妳是否也會停下腳步對我微笑呢？&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BL718_paper_plane_a_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(312, 1, '內斂戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;不規則、不等寬的邊緣，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;加上內凹的弧線所勾勒出的內斂戒指，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;低調的宣示與眾不同.&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_RG707_undertone_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(313, 1, '切割戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;簡潔的切割出4個坡面；&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;俐落，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;是戴上這個戒指之後的絕對直覺。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_RG708_cutting_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(314, 1, '字母項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;帶上屬於自己的幸運字母項鍊，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;專屬的幸運，任誰都搶不走。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL723_alphabet_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(315, 1, '字母手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我想拼一條我編的密碼手鍊；&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;猜猜看 &quot;I.O.U&quot;是代表&quot;I love you&quot;或是&quot;I owe you&quot;？&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL719_alphabet_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(316, 1, '字母單品', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;可以加購字母串在選購的項鍊或手鍊上喔，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;每個字母單價都是1000元呦~&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_OT701_alphabet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(317, 1, '貝殼項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;到海邊總會順手拾起幾個貝殼帶回家，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;可以豐富家中的收藏，也紀念著這趟旅行…&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;看著滿滿的收藏，是不是覺得自己是最富有的人呢？&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL724_shell_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(318, 1, '貝殼手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;雖然貝殼​像藝術品一樣美麗，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;但是它​的​形狀​​和​結構卻能​把外來​的​壓力​傳遞​到​自身​最​堅硬​的​部位，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;將受傷​的​可能性​降​到​最​低。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;妳說說看這是不是最棒的幸運符呢？&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BL720_shell_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(319, 1, '三角鐵項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;三角鐵是個很簡單的樂器，它甚至沒有個特別的名字，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;只是用它的形狀來稱呼，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;但是它的造型簡單反而更加能夠放大演出的細節。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL725_triangle_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(320, 1, '三角鐵手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;三角鐵是用金屬彎成三角形的打擊樂器，&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有一角開口，目的是防止它發出任何特異的音高，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;但三角鐵發音色清脆明亮穿透力強，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;在樂隊強奏時，其聲音可輕易的脫穎而出。　&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL721_triangle_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(321, 1, '柚子項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;在傳統結婚習俗中，柚子因為諧音「有子」，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有早生貴子的涵義，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;所以結婚喜慶之時，常以柚子當成祝福新人之吉祥物。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL726_pomelo_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(322, 1, '柚子手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;柚子渾圓胖胖的造型相當討喜，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;而且柚子與「佑子」諧音，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有吉祥的意思，也有「保祐」的意思。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL722_pomelo_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(323, 1, '方心戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;簡潔的在方塊中鏤出愛心...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;方心、芳心、放心，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;是我傳達的訊息...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_RG709_square_heart_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(324, 1, '圓心戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;像一個圓圓的戒台中間鑲了一顆透明的愛心寶石，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;小巧可愛，令人喜愛...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_RG710_round_heart_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(369, 1, 'bb柚子手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;柚子渾圓胖胖的造型相當討喜，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;而且柚子與「佑子」諧音，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有吉祥的意思，也有「保祐」的意思。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;是送給新生寶寶的好禮品喔~&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BB807_bb_pomelo_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(325, 1, '不倒翁項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有堅强的意志，不輕易被打倒，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;遇到任何挫折都能微笑面對。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我，就是不倒翁。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL801_tumbler_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(326, 1, '不倒翁手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有堅强的意志，不輕易被打倒，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;遇到任何挫折都能微笑面對。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我，就是不倒翁。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BL801_tumbler_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(327, 1, '圓管項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;微笑的弧度，優雅的寬度，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;難以忽視的長度，百搭設計非我莫屬。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL802_tube_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(328, 1, '圓管手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;微笑的弧度，優雅的寬度，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;難以忽視的長度，百搭設計非我莫屬。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BL802_tube_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(329, 1, '方管項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;穿越時光隧道，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;串起現在和過去的長廊，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;是我對你未曾停歇的思念...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL803_square_tube_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(330, 1, '方管手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;穿越時光隧道，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;串起現在和過去的長廊，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;是我對你未曾停歇的思念…&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BL803_square_tube_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(331, 1, '方型戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;中性的正方；&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;又方又正，沒有懸念...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_RG801_square_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生');
+INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
+(332, 1, '漣漪戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;如同靜靜的湖水為你泛起了漣漪，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;由內向外一圈一圈的擴散，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;跨越界限，潮涌不絕...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_RG802_ripple_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(333, 1, '樹木項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;樹木代表綿延的生命力，也有穩定與樂於助人的特質。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有篇文章說：「壓力大時就去找一棵樹吧！綠油油的樹木可以降低我們的心跳速率並減輕壓力。」&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;立刻找一顆專屬於自己的樹，並緊緊擁抱它！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL804_tree_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(334, 1, '幸運草a項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;常見的三葉草的每片葉子有其特殊的意義：&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;信仰，希望，與愛。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;如果發現了四葉草都會被視為幸運的象徵…&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;你找到你的幸運草了嗎?&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL805_lucky_charm_a_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(335, 1, '幸運草a手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;隨著風向而搖頭晃腦的幸運草，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有種隨遇而安的自在感，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;卻又擁有超級強韌的生命力，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;沒甚麼環境難得倒它，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;忍不住要向幸運草致敬。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL804_lucky_charm_a_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(336, 1, '海浪戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;潮起潮落，日復一日，&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;永恆且執著的拍打著沙灘，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;時而猛烈，時而溫柔和平靜，猶如生命中的起跌...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;海浪，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;讓我學會了平常心面對人生的每一個挑戰。&amp;nbsp;&lt;/font&gt;&amp;nbsp;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_RG803_wave_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(337, 1, 'bb如意鎖手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&quot;鎖&quot; 在古代是吉利的象徵，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;代表對健康，財富與長壽的祈願。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;如意鎖寓意長命百歲，吉祥如意，是極受歡迎的護身符。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;mittag的如意鎖英文品名取作good lock，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;直譯&quot;好鎖&quot;，諧音為good luck，祝&quot;好運&quot;喔~ &lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;用good lock鎖住夢想與希望，留住美好的事物和情感~&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BB801_bb_good_lock_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(338, 1, 'bb馬蹄鐵f手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;馬代表了力量與活力，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;收到馬蹄鐵形的禮物時也會因此獲得好運連連的祝福。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;馬年立馬為自己戴上幸運馬蹄讓自己馬力十足，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;一馬當先！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BB802_bb_horseshoe_f_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(339, 1, 'bb方心手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;帶上方心請放心；我的芳心只屬於你…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BB803_bb_square_heart_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(340, 1, 'bb圓心手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;圓圓的、厚厚的心，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;裝載的是我對你未曾減少的思念…&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BB804_bb_round_heart _bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(341, 1, 'bb王冠手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;王冠賦予了權利和統治權，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;象徵著自我控制權，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;以及勇於為自己的一切負責的決心。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BB805_bb_crown_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(342, 1, '小汽車項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;也許你也幻想過自己開著車，帶上一些簡單的行李，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;然後就率性的開往陌生的城市展開不一樣的生活，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;或許是花東，或許是紐澳，或許是歐洲…&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;這個念想，我把它掛在胸口，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;不...忘...記...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL806_car_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(343, 1, '小汽車手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;就像Vespa一樣，Beetle是太經典的車款，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;要設計小汽車墬飾，也當然要從最經典的Beetle開始發想囉~&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BL805_car_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(344, 1, 'bb小汽車手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;小朋友最喜愛的玩具之一，火柴盒小汽車，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;握在手裡就能上天下海到處冒險，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;絕對受大人小孩歡迎的彌月禮物！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_BB806_bb_car_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(345, 1, '超能m戒指', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;戴上Super m ring就感覺像超人一樣擁有無限可能！&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;俐落的線條與難以忽視的存在感...&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;好man!&amp;nbsp;&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_RG804_super_m_ring', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(368, 1, '十字架c項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;如果你跟我們一樣欣賞朱銘，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;相信你也會喜歡這款項鍊。 &lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;本款可以兩面配戴，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;鏡面或刻面就依服裝或心情決定囉…&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL810_cross_c_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(346, 1, '愛心捲項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;一圈再一圈，捲捲的愛心，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有一種甜在心的飽滿幸福感。&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_NL807_curly_heart_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(347, 1, '荷葉項鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;“出淤泥而不染，濯清漣而不妖”，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;有了荷葉的幫襯，才有了荷花出落的如此清新。&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;我願是一片荷葉，雖非目光焦點，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;卻擁有自成一方的小天地，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;自在、灑脫。&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_NL808_lotus_leaf_necklace', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(348, 1, '荷葉手鍊', '&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;小巧細緻的荷葉，&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;讓人忍不住想靠近，&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;一...親...芳...澤...&lt;/font&gt;&lt;br&gt;&lt;/h4&gt;', '', 'mittag_BL806_lotus_leaf_bracelet', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生'),
+(349, 1, '與mittag官網同慶(樂)...', '&lt;h4&gt;&lt;font color=&quot;#636363&quot; style=&quot;&quot;&gt;千呼萬喚的mittag官網終於來了！！！&lt;/font&gt;&lt;/h4&gt;&lt;h4&gt;&lt;font color=&quot;#636363&quot;&gt;趕快進來跟我們一起慶祝拿好康吧！&lt;/font&gt;&lt;/h4&gt;', '', 'mittag_website_readiness_celebration', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生', 'mittag 米查 精品 手做 手作 handmade 銀飾 飾品 簡約 台灣品牌 mit 項鍊 necklace 戒指 ring 手鍊 bracelet 手環 bangle 耳環 earring 彌月禮 babyshower 銀器 silverware 禮品 gift present 生日禮物 情人節 tiffany georg jensen 喬治傑生');
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -3198,6 +4165,7 @@ CREATE TABLE `oc_product_image` (
 --
 
 INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort_order`) VALUES
+<<<<<<< HEAD
 (2490, 69, 'catalog/!IMG_6081_ok_pinkoi.jpg', 2),
 (2483, 67, 'catalog/!IMG_5322_ok_pinkoi.jpg', 0),
 (2484, 67, 'catalog/!IMG_5358_ok_pinkoi.jpg', 0),
@@ -3257,6 +4225,920 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (2644, 93, 'catalog/IMG_1854_all_ok.jpg', 3),
 (2643, 93, 'catalog/!IMG_2191_all_ok.jpg', 2),
 (2642, 93, 'catalog/!IMG_1857_all_ok.jpg', 1);
+=======
+(6964, 157, 'catalog/Necklace(NL)/NL312/NL312_04_S.jpg', 6),
+(6963, 157, 'catalog/Necklace(NL)/NL312/NL312_03_S.jpg', 5),
+(6962, 157, 'catalog/Necklace(NL)/NL312/NL312_06_S.jpg', 4),
+(6773, 156, 'catalog/Bracelet(BL)/BL308/BL308_04_S.jpg', 4),
+(6772, 156, 'catalog/Bracelet(BL)/BL308/BL308_03_S.jpg', 3),
+(6771, 156, 'catalog/Bracelet(BL)/BL308/BL308_02_S.jpg', 2),
+(6769, 151, 'catalog/Bracelet(BL)/BL306/BL306_04_S.jpg', 5),
+(6609, 152, 'catalog/Necklace(NL)/NL309/NL309_05_S.jpg', 5),
+(6608, 152, 'catalog/Necklace(NL)/NL309/NL309_04_S.jpg', 4),
+(6607, 152, 'catalog/Necklace(NL)/NL309/NL309_03_S.jpg', 3),
+(6606, 152, 'catalog/Necklace(NL)/NL309/NL309_02_S.jpg', 2),
+(6605, 152, 'catalog/Necklace(NL)/NL309/NL309_01_S.jpg', 1),
+(6770, 156, 'catalog/Bracelet(BL)/BL308/BL308_01_S.jpg', 1),
+(6958, 155, 'catalog/Necklace(NL)/NL311/NL311_05_S.jpg', 5),
+(6181, 153, 'catalog/Necklace(NL)/NL310/NL310_01_S.jpg', 3),
+(6180, 153, 'catalog/Necklace(NL)/NL310/NL310_03_S.jpg', 2),
+(6179, 153, 'catalog/Necklace(NL)/NL310/NL310_02_S.jpg', 1),
+(6957, 155, 'catalog/Necklace(NL)/NL311/NL311_04_S.jpg', 4),
+(6956, 155, 'catalog/Necklace(NL)/NL311/NL311_03_S.jpg', 3),
+(6955, 155, 'catalog/Necklace(NL)/NL311/NL311_01_S.jpg', 2),
+(6954, 155, 'catalog/Necklace(NL)/NL311/NL311_02_S.jpg', 1),
+(6768, 151, 'catalog/Bracelet(BL)/BL306/BL306_03_S.jpg', 4),
+(6767, 151, 'catalog/Bracelet(BL)/BL306/BL306_05_S.jpg', 3),
+(6758, 149, 'catalog/Bracelet(BL)/BL304/BL304_03_S.jpg', 5),
+(6764, 150, 'catalog/Bracelet(BL)/BL305/BL305_04_S.jpg', 6),
+(6763, 150, 'catalog/Bracelet(BL)/BL305/BL305_06_S.jpg', 5),
+(6762, 150, 'catalog/Bracelet(BL)/BL305/BL305_05_S.jpg', 4),
+(6761, 150, 'catalog/Bracelet(BL)/BL305/BL305_03_S.jpg', 3),
+(6760, 150, 'catalog/Bracelet(BL)/BL305/BL305_01_S.jpg', 2),
+(6759, 150, 'catalog/Bracelet(BL)/BL305/BL305_02_S.jpg', 1),
+(6766, 151, 'catalog/Bracelet(BL)/BL306/BL306_01_S.jpg', 2),
+(6765, 151, 'catalog/Bracelet(BL)/BL306/BL306_02_S.jpg', 1),
+(6757, 149, 'catalog/Bracelet(BL)/BL304/BL304_02_S.jpg', 4),
+(6756, 149, 'catalog/Bracelet(BL)/BL304/BL304_01_S.jpg', 3),
+(6755, 149, 'catalog/Bracelet(BL)/BL304/BL304_04_S.jpg', 2),
+(6754, 149, 'catalog/Bracelet(BL)/BL304/BL304_05_S.jpg', 1),
+(6753, 148, 'catalog/Bracelet(BL)/BL303/BL303_06_S.jpg', 6),
+(6752, 148, 'catalog/Bracelet(BL)/BL303/BL303_05_S.jpg', 5),
+(6751, 148, 'catalog/Bracelet(BL)/BL303/BL303_03_S.jpg', 4),
+(6750, 148, 'catalog/Bracelet(BL)/BL303/BL303_01_S.jpg', 3),
+(6749, 148, 'catalog/Bracelet(BL)/BL303/BL303_02_S.jpg', 2),
+(6748, 148, 'catalog/Bracelet(BL)/BL303/BL303_04_S.jpg', 1),
+(6162, 147, 'catalog/Bracelet(BL)/BL302/BL302_01_S.jpg', 3),
+(6161, 147, 'catalog/Bracelet(BL)/BL302/BL302_02_S.jpg', 2),
+(6160, 147, 'catalog/Bracelet(BL)/BL302/BL302_03_S.jpg', 1),
+(6156, 145, 'catalog/Necklace(NL)/NL308/NL308_01_S.jpg', 3),
+(6155, 145, 'catalog/Necklace(NL)/NL308/NL308_02_S.jpg', 2),
+(6154, 145, 'catalog/Necklace(NL)/NL308/NL308_03_S.jpg', 1),
+(7401, 144, 'catalog/BABY(BB)/BB305/BB305_04_S.jpg', 4),
+(7400, 144, 'catalog/BABY(BB)/BB305/BB305_03_S.jpg', 3),
+(7399, 144, 'catalog/BABY(BB)/BB305/BB305_02_S.jpg', 2),
+(7398, 144, 'catalog/BABY(BB)/BB305/BB305_01_S.jpg', 1),
+(7397, 143, 'catalog/BABY(BB)/BB304/BB304_03_S.jpg', 4),
+(7396, 143, 'catalog/BABY(BB)/BB304/BB304_04_S.jpg', 3),
+(7395, 143, 'catalog/BABY(BB)/BB304/BB304_01_S.jpg', 2),
+(7394, 143, 'catalog/BABY(BB)/BB304/BB304_02_S.jpg', 1),
+(7393, 142, 'catalog/BABY(BB)/BB303/BB303_05_S.jpg', 3),
+(7392, 142, 'catalog/BABY(BB)/BB303/BB303_04_S.jpg', 2),
+(7391, 142, 'catalog/BABY(BB)/BB303/BB303_06_S.jpg', 1),
+(7390, 141, 'catalog/BABY(BB)/BB302/BB302_06_S.jpg', 6),
+(7389, 141, 'catalog/BABY(BB)/BB302/BB302_03_S.jpg', 5),
+(7388, 141, 'catalog/BABY(BB)/BB302/BB302_01_S.jpg', 4),
+(7387, 141, 'catalog/BABY(BB)/BB302/BB302_05_S.jpg', 3),
+(7386, 141, 'catalog/BABY(BB)/BB302/BB302_04_S.jpg', 2),
+(7385, 141, 'catalog/BABY(BB)/BB302/BB302_02_S.jpg', 1),
+(7384, 140, 'catalog/BABY(BB)/BB301/BB301_02_S.jpg', 3),
+(7383, 140, 'catalog/BABY(BB)/BB301/BB301_03_S.jpg', 2),
+(7382, 140, 'catalog/BABY(BB)/BB301/BB301_01_S.jpg', 1),
+(6598, 139, 'catalog/Necklace(NL)/NL304/NL304_04_S.jpg', 4),
+(6597, 139, 'catalog/Necklace(NL)/NL304/NL304_03_S.jpg', 3),
+(6596, 139, 'catalog/Necklace(NL)/NL304/NL304_02_S.jpg', 2),
+(6595, 139, 'catalog/Necklace(NL)/NL304/NL304_01_S.jpg', 1),
+(6953, 138, 'catalog/Necklace(NL)/NL302/NL302_05_S.jpg', 5),
+(6952, 138, 'catalog/Necklace(NL)/NL302/NL302_04_S.jpg', 4),
+(6951, 138, 'catalog/Necklace(NL)/NL302/NL302_01_S.jpg', 3),
+(6950, 138, 'catalog/Necklace(NL)/NL302/NL302_03_S.jpg', 2),
+(6949, 138, 'catalog/Necklace(NL)/NL302/NL302_02_S.jpg', 1),
+(6594, 137, 'catalog/Necklace(NL)/NL301/NL301_04_S.jpg', 24),
+(6593, 137, 'catalog/Necklace(NL)/NL301/NL301_06_S.jpg', 6),
+(6592, 137, 'catalog/Necklace(NL)/NL301/NL301_01_S.jpg', 5),
+(6591, 137, 'catalog/Necklace(NL)/NL301/NL301_03_S.jpg', 3),
+(6590, 137, 'catalog/Necklace(NL)/NL301/NL301_02_S.jpg', 1),
+(7235, 132, 'catalog/Ring(RG)/RG301/RG301_04_S.jpg', 5),
+(7234, 132, 'catalog/Ring(RG)/RG301/RG301_05_S.jpg', 4),
+(7233, 132, 'catalog/Ring(RG)/RG301/RG301_01_S.jpg', 3),
+(7232, 132, 'catalog/Ring(RG)/RG301/RG301_03_S.jpg', 2),
+(7231, 132, 'catalog/Ring(RG)/RG301/RG301_02_S.jpg', 1),
+(6589, 137, 'catalog/Necklace(NL)/NL301/NL301_05_S.jpg', 0),
+(6110, 134, 'catalog/Ring(RG)/RG303/RG303_05_S.jpg', 5),
+(6109, 134, 'catalog/Ring(RG)/RG303/RG303_04_S.jpg', 4),
+(6108, 134, 'catalog/Ring(RG)/RG303/RG303_03_S.jpg', 3),
+(6107, 134, 'catalog/Ring(RG)/RG303/RG303_02_S.jpg', 2),
+(6106, 134, 'catalog/Ring(RG)/RG303/RG303_01_S.jpg', 1),
+(7240, 135, 'catalog/Ring(RG)/RG304/RG304_05_S.jpg', 5),
+(7239, 135, 'catalog/Ring(RG)/RG304/RG304_04_S.jpg', 4),
+(7238, 135, 'catalog/Ring(RG)/RG304/RG304_03_S.jpg', 3),
+(7237, 135, 'catalog/Ring(RG)/RG304/RG304_02_S.jpg', 2),
+(7236, 135, 'catalog/Ring(RG)/RG304/RG304_01_S.jpg', 1),
+(6105, 133, 'catalog/Ring(RG)/RG302/RG302_04_S.jpg', 3),
+(6104, 133, 'catalog/Ring(RG)/RG302/RG302_03_S.jpg', 2),
+(6103, 133, 'catalog/Ring(RG)/RG302/RG302_02_S.jpg', 1),
+(6961, 157, 'catalog/Necklace(NL)/NL312/NL312_05_S.jpg', 3),
+(6960, 157, 'catalog/Necklace(NL)/NL312/NL312_01_S.jpg', 2),
+(6959, 157, 'catalog/Necklace(NL)/NL312/NL312_02_S.jpg', 1),
+(5468, 158, 'catalog/Necklace(NL)/NL314/NL314_06_S.jpg', 6),
+(5467, 158, 'catalog/Necklace(NL)/NL314/NL314_04_S.jpg', 5),
+(5466, 158, 'catalog/Necklace(NL)/NL314/NL314_05_S.jpg', 4),
+(5465, 158, 'catalog/Necklace(NL)/NL314/NL314_01_S.jpg', 3),
+(5464, 158, 'catalog/Necklace(NL)/NL314/NL314_03_S.jpg', 2),
+(5463, 158, 'catalog/Necklace(NL)/NL314/NL314_02_S.jpg', 1),
+(6195, 159, 'catalog/Bracelet(BL)/BL309/BL309_06_S.jpg', 0),
+(6194, 159, 'catalog/Bracelet(BL)/BL309/BL309_02_S.jpg', 0),
+(6193, 159, 'catalog/Bracelet(BL)/BL309/BL309_01_S.jpg', 0),
+(7245, 160, 'catalog/Ring(RG)/RG305/RG305_03_S.jpg', 5),
+(7244, 160, 'catalog/Ring(RG)/RG305/RG305_04_S.jpg', 4),
+(7243, 160, 'catalog/Ring(RG)/RG305/RG305_05_S.jpg', 3),
+(7242, 160, 'catalog/Ring(RG)/RG305/RG305_01_S.jpg', 2),
+(7241, 160, 'catalog/Ring(RG)/RG305/RG305_02_S.jpg', 1),
+(6969, 161, 'catalog/Necklace(NL)/NL316/NL316_04_S.jpg', 5),
+(6968, 161, 'catalog/Necklace(NL)/NL316/NL316_02_S.jpg', 4),
+(6967, 161, 'catalog/Necklace(NL)/NL316/NL316_01_S.jpg', 3),
+(6966, 161, 'catalog/Necklace(NL)/NL316/NL316_06_S.jpg', 2),
+(6965, 161, 'catalog/Necklace(NL)/NL316/NL316_05_S.jpg', 1),
+(6975, 162, 'catalog/Necklace(NL)/NL317/NL317_06_S.jpg', 0),
+(6974, 162, 'catalog/Necklace(NL)/NL317/NL317_05_S.jpg', 0),
+(6973, 162, 'catalog/Necklace(NL)/NL317/NL317_04_S.jpg', 0),
+(6972, 162, 'catalog/Necklace(NL)/NL317/NL317_03_S.jpg', 0),
+(6971, 162, 'catalog/Necklace(NL)/NL317/NL317_02_S.jpg', 0),
+(6970, 162, 'catalog/Necklace(NL)/NL317/NL317_01_S.jpg', 0),
+(6981, 163, 'catalog/Necklace(NL)/NL318/NL318_02_S.jpg', 6),
+(6980, 163, 'catalog/Necklace(NL)/NL318/NL318_01_S.jpg', 5),
+(6979, 163, 'catalog/Necklace(NL)/NL318/NL318_03_S.jpg', 4),
+(6978, 163, 'catalog/Necklace(NL)/NL318/NL318_06_S.jpg', 3),
+(6977, 163, 'catalog/Necklace(NL)/NL318/NL318_04_S.jpg', 2),
+(6976, 163, 'catalog/Necklace(NL)/NL318/NL318_05_S.jpg', 1),
+(5495, 164, 'catalog/Necklace(NL)/NL320/NL320_03_S.jpg', 4),
+(5494, 164, 'catalog/Necklace(NL)/NL320/NL320_04_S.jpg', 3),
+(5493, 164, 'catalog/Necklace(NL)/NL320/NL320_05_S.jpg', 2),
+(5492, 164, 'catalog/Necklace(NL)/NL320/NL320_02_S.jpg', 1),
+(6218, 165, 'catalog/Necklace(NL)/NL322/NL322_02_S.jpg', 6),
+(6217, 165, 'catalog/Necklace(NL)/NL322/NL322_06_S.jpg', 5),
+(6216, 165, 'catalog/Necklace(NL)/NL322/NL322_01_S.jpg', 4),
+(6215, 165, 'catalog/Necklace(NL)/NL322/NL322_08_S.jpg', 3),
+(6214, 165, 'catalog/Necklace(NL)/NL322/NL322_03_S.jpg', 2),
+(6213, 165, 'catalog/Necklace(NL)/NL322/NL322_07_S.jpg', 1),
+(5506, 166, 'catalog/Necklace(NL)/NL323/NL323_04_S.jpg', 5),
+(5505, 166, 'catalog/Necklace(NL)/NL323/NL323_02_S.jpg', 4),
+(5504, 166, 'catalog/Necklace(NL)/NL323/NL323_06_S.jpg', 3),
+(5503, 166, 'catalog/Necklace(NL)/NL323/NL323_01_S.jpg', 2),
+(5502, 166, 'catalog/Necklace(NL)/NL323/NL323_05_S.jpg', 1),
+(6985, 167, 'catalog/Necklace(NL)/NL324/NL324_02_S.jpg', 4),
+(6984, 167, 'catalog/Necklace(NL)/NL324/NL324_01_S.jpg', 3),
+(6983, 167, 'catalog/Necklace(NL)/NL324/NL324_04_S.jpg', 2),
+(6982, 167, 'catalog/Necklace(NL)/NL324/NL324_03_S.jpg', 1),
+(6988, 168, 'catalog/Necklace(NL)/NL327/NL327_03_S.jpg', 3),
+(6987, 168, 'catalog/Necklace(NL)/NL327/NL327_01_S.jpg', 2),
+(6986, 168, 'catalog/Necklace(NL)/NL327/NL327_04_S.jpg', 1),
+(6777, 169, 'catalog/Bracelet(BL)/BL310/BL310_04_S.jpg', 4),
+(6776, 169, 'catalog/Bracelet(BL)/BL310/BL310_03_S.jpg', 3),
+(6775, 169, 'catalog/Bracelet(BL)/BL310/BL310_02_S.jpg', 2),
+(6774, 169, 'catalog/Bracelet(BL)/BL310/BL310_01_S.jpg', 1),
+(5518, 170, 'catalog/Necklace(NL)/NL328/NL328_06_S.jpg', 5),
+(5517, 170, 'catalog/Necklace(NL)/NL328/NL328_02_S.jpg', 4),
+(5516, 170, 'catalog/Necklace(NL)/NL328/NL328_03_S.jpg', 3),
+(5515, 170, 'catalog/Necklace(NL)/NL328/NL328_01_S.jpg', 2),
+(5514, 170, 'catalog/Necklace(NL)/NL328/NL328_04_S.jpg', 1),
+(7250, 173, 'catalog/Ring(RG)/RG306/RG306_04_S.jpg', 5),
+(7249, 173, 'catalog/Ring(RG)/RG306/RG306_05_S.jpg', 4),
+(7248, 173, 'catalog/Ring(RG)/RG306/RG306_03_S.jpg', 3),
+(7247, 173, 'catalog/Ring(RG)/RG306/RG306_02_S.jpg', 2),
+(7246, 173, 'catalog/Ring(RG)/RG306/RG306_01_S.jpg', 1),
+(6993, 172, 'catalog/Necklace(NL)/NL329/NL329_02_S.jpg', 5),
+(6992, 172, 'catalog/Necklace(NL)/NL329/NL329_01_S.jpg', 4),
+(6991, 172, 'catalog/Necklace(NL)/NL329/NL329_05_S.jpg', 3),
+(6990, 172, 'catalog/Necklace(NL)/NL329/NL329_03_S.jpg', 2),
+(6989, 172, 'catalog/Necklace(NL)/NL329/NL329_04_S.jpg', 1),
+(6999, 174, 'catalog/Necklace(NL)/NL330/NL330_06_S.jpg', 6),
+(6998, 174, 'catalog/Necklace(NL)/NL330/NL330_07_S.jpg', 5),
+(6997, 174, 'catalog/Necklace(NL)/NL330/NL330_05_S.jpg', 4),
+(6996, 174, 'catalog/Necklace(NL)/NL330/NL330_03_S.jpg', 3),
+(6995, 174, 'catalog/Necklace(NL)/NL330/NL330_02_S.jpg', 2),
+(6994, 174, 'catalog/Necklace(NL)/NL330/NL330_01_S.jpg', 1),
+(7256, 175, 'catalog/Ring(RG)/RG307/RG307_05_S.jpg', 6),
+(7255, 175, 'catalog/Ring(RG)/RG307/RG307_06_S.jpg', 5),
+(7254, 175, 'catalog/Ring(RG)/RG307/RG307_03_S.jpg', 4),
+(7253, 175, 'catalog/Ring(RG)/RG307/RG307_02_S.jpg', 3),
+(7252, 175, 'catalog/Ring(RG)/RG307/RG307_01_S.jpg', 2),
+(7251, 175, 'catalog/Ring(RG)/RG307/RG307_04_S.jpg', 1),
+(6641, 176, 'catalog/Bracelet(BL)/BL311/BL311_01_S.jpg', 0),
+(6640, 176, 'catalog/Bracelet(BL)/BL311/BL311_02_S.jpg', 0),
+(7261, 177, 'catalog/Ring(RG)/RG308/RG308_03_S.jpg', 5),
+(7260, 177, 'catalog/Ring(RG)/RG308/RG308_04_S.jpg', 4),
+(7259, 177, 'catalog/Ring(RG)/RG308/RG308_05_S.jpg', 3),
+(7258, 177, 'catalog/Ring(RG)/RG308/RG308_02_S.jpg', 2),
+(7257, 177, 'catalog/Ring(RG)/RG308/RG308_01_S.jpg', 1),
+(5534, 178, 'catalog/Necklace(NL)/NL332/NL332_03_S.jpg', 5),
+(5533, 178, 'catalog/Necklace(NL)/NL332/NL332_05_S.jpg', 4),
+(5532, 178, 'catalog/Necklace(NL)/NL332/NL332_04_S.jpg', 3),
+(5531, 178, 'catalog/Necklace(NL)/NL332/NL332_01_S.jpg', 2),
+(5530, 178, 'catalog/Necklace(NL)/NL332/NL332_02_S.jpg', 1),
+(7004, 179, 'catalog/Necklace(NL)/NL333/NL333_04_S.jpg', 5),
+(7003, 179, 'catalog/Necklace(NL)/NL333/NL333_03_S.jpg', 4),
+(7002, 179, 'catalog/Necklace(NL)/NL333/NL333_05_S.jpg', 3),
+(7001, 179, 'catalog/Necklace(NL)/NL333/NL333_02_S.jpg', 2),
+(7000, 179, 'catalog/Necklace(NL)/NL333/NL333_01_S.jpg', 1),
+(7265, 180, 'catalog/Ring(RG)/RG309/RG309_03_S.jpg', 4),
+(7264, 180, 'catalog/Ring(RG)/RG309/RG309_04_S.jpg', 3),
+(7263, 180, 'catalog/Ring(RG)/RG309/RG309_02_S.jpg', 2),
+(7262, 180, 'catalog/Ring(RG)/RG309/RG309_01_S.jpg', 1),
+(5543, 181, 'catalog/Necklace(NL)/NL334/NL334_03_S.jpg', 4),
+(5542, 181, 'catalog/Necklace(NL)/NL334/NL334_04_S.jpg', 3),
+(5541, 181, 'catalog/Necklace(NL)/NL334/NL334_01_S.jpg', 2),
+(5540, 181, 'catalog/Necklace(NL)/NL334/NL334_02_S.jpg', 1),
+(5548, 182, 'catalog/Necklace(NL)/NL335/NL335_05_S.jpg', 5),
+(5547, 182, 'catalog/Necklace(NL)/NL335/NL335_06_S.jpg', 4),
+(5546, 182, 'catalog/Necklace(NL)/NL335/NL335_04_S.jpg', 3),
+(5545, 182, 'catalog/Necklace(NL)/NL335/NL335_02_S.jpg', 2),
+(5544, 182, 'catalog/Necklace(NL)/NL335/NL335_03_S.jpg', 1),
+(6782, 183, 'catalog/Bracelet(BL)/BL312/BL312_05_S.jpg', 5),
+(6781, 183, 'catalog/Bracelet(BL)/BL312/BL312_04_S.jpg', 4),
+(6780, 183, 'catalog/Bracelet(BL)/BL312/BL312_03_S.jpg', 3),
+(6779, 183, 'catalog/Bracelet(BL)/BL312/BL312_02_S.jpg', 2),
+(6778, 183, 'catalog/Bracelet(BL)/BL312/BL312_01_S.jpg', 1),
+(7009, 184, 'catalog/Necklace(NL)/NL336/NL336_05_S.jpg', 5),
+(7008, 184, 'catalog/Necklace(NL)/NL336/NL336_04_S.jpg', 4),
+(7007, 184, 'catalog/Necklace(NL)/NL336/NL336_03_S.jpg', 3),
+(7006, 184, 'catalog/Necklace(NL)/NL336/NL336_01_S.jpg', 2),
+(7005, 184, 'catalog/Necklace(NL)/NL336/NL336_02_S.jpg', 1),
+(5559, 185, 'catalog/Necklace(NL)/NL337/NL337_05_S.jpg', 6),
+(5558, 185, 'catalog/Necklace(NL)/NL337/NL337_06_S.jpg', 5),
+(5557, 185, 'catalog/Necklace(NL)/NL337/NL337_04_S.jpg', 4),
+(5556, 185, 'catalog/Necklace(NL)/NL337/NL337_01_S.jpg', 3),
+(5555, 185, 'catalog/Necklace(NL)/NL337/NL337_03_S.jpg', 2),
+(5554, 185, 'catalog/Necklace(NL)/NL337/NL337_02_S.jpg', 1),
+(6652, 186, 'catalog/Necklace(NL)/NL338/NL338_01_S.jpg', 6),
+(6651, 186, 'catalog/Necklace(NL)/NL338/NL338_06_S.jpg', 5),
+(6650, 186, 'catalog/Necklace(NL)/NL338/NL338_02_S.jpg', 4),
+(6649, 186, 'catalog/Necklace(NL)/NL338/NL338_04_S.jpg', 3),
+(6648, 186, 'catalog/Necklace(NL)/NL338/NL338_03_S.jpg', 2),
+(6647, 186, 'catalog/Necklace(NL)/NL338/NL338_05_S.jpg', 1),
+(6788, 187, 'catalog/Bracelet(BL)/BL313/BL313_06_S.jpg', 6),
+(6787, 187, 'catalog/Bracelet(BL)/BL313/BL313_04_S.jpg', 5),
+(6786, 187, 'catalog/Bracelet(BL)/BL313/BL313_05_S.jpg', 4),
+(6785, 187, 'catalog/Bracelet(BL)/BL313/BL313_01_S.jpg', 3),
+(6784, 187, 'catalog/Bracelet(BL)/BL313/BL313_03_S.jpg', 2),
+(6783, 187, 'catalog/Bracelet(BL)/BL313/BL313_02_S.jpg', 1),
+(6273, 188, 'catalog/Necklace(NL)/NL339/NL339_05_S.jpg', 5),
+(6272, 188, 'catalog/Necklace(NL)/NL339/NL339_04_S.jpg', 4),
+(6271, 188, 'catalog/Necklace(NL)/NL339/NL339_03_S.jpg', 3),
+(6270, 188, 'catalog/Necklace(NL)/NL339/NL339_02_S.jpg', 2),
+(6269, 188, 'catalog/Necklace(NL)/NL339/NL339_01_S.jpg', 1),
+(7014, 189, 'catalog/Necklace(NL)/NL340/NL340_04_S.jpg', 5),
+(7013, 189, 'catalog/Necklace(NL)/NL340/NL340_05_S.jpg', 4),
+(7012, 189, 'catalog/Necklace(NL)/NL340/NL340_03_S.jpg', 3),
+(7011, 189, 'catalog/Necklace(NL)/NL340/NL340_01_S.jpg', 2),
+(7010, 189, 'catalog/Necklace(NL)/NL340/NL340_02_S.jpg', 1),
+(6282, 190, 'catalog/Bracelet(BL)/BL314/BL314_02_S.jpg', 4),
+(6281, 190, 'catalog/Bracelet(BL)/BL314/BL314_04_S.jpg', 3),
+(6280, 190, 'catalog/Bracelet(BL)/BL314/BL314_03_S.jpg', 2),
+(6279, 190, 'catalog/Bracelet(BL)/BL314/BL314_01_S.jpg', 1),
+(6286, 191, 'catalog/Necklace(NL)/NL342/NL342_04_S.jpg', 0),
+(6285, 191, 'catalog/Necklace(NL)/NL342/NL342_03_S.jpg', 0),
+(6284, 191, 'catalog/Necklace(NL)/NL342/NL342_02_S.jpg', 0),
+(6283, 191, 'catalog/Necklace(NL)/NL342/NL342_01_S.jpg', 0),
+(6292, 192, 'catalog/Bracelet(BL)/BL315/BL315_04_S.jpg', 6),
+(6291, 192, 'catalog/Bracelet(BL)/BL315/BL315_03_S.jpg', 5),
+(6290, 192, 'catalog/Bracelet(BL)/BL315/BL315_06_S.jpg', 4),
+(6289, 192, 'catalog/Bracelet(BL)/BL315/BL315_05_S.jpg', 3),
+(6288, 192, 'catalog/Bracelet(BL)/BL315/BL315_02_S.jpg', 2),
+(6287, 192, 'catalog/Bracelet(BL)/BL315/BL315_01_S.jpg', 1),
+(6660, 193, 'catalog/Necklace(NL)/NL343/NL343_01_S.jpg', 2),
+(6659, 193, 'catalog/Necklace(NL)/NL343/NL343_02_S.jpg', 1),
+(6297, 194, 'catalog/Necklace(NL)/NL344/NL344_05_S.jpg', 5),
+(6296, 194, 'catalog/Necklace(NL)/NL344/NL344_03_S.jpg', 4),
+(6295, 194, 'catalog/Necklace(NL)/NL344/NL344_04_S.jpg', 3),
+(6294, 194, 'catalog/Necklace(NL)/NL344/NL344_01_S.jpg', 2),
+(6293, 194, 'catalog/Necklace(NL)/NL344/NL344_02_S.jpg', 1),
+(5592, 195, 'catalog/Necklace(NL)/NL345/NL345_06_S.jpg', 6),
+(5591, 195, 'catalog/Necklace(NL)/NL345/NL345_04_S.jpg', 5),
+(5590, 195, 'catalog/Necklace(NL)/NL345/NL345_05_S.jpg', 4),
+(5589, 195, 'catalog/Necklace(NL)/NL345/NL345_01_S.jpg', 3),
+(5588, 195, 'catalog/Necklace(NL)/NL345/NL345_03_S.jpg', 2),
+(5587, 195, 'catalog/Necklace(NL)/NL345/NL345_02_S.jpg', 1),
+(5900, 196, 'catalog/Ring(RG)/RG310/RG310_03_S.jpg', 3),
+(5899, 196, 'catalog/Ring(RG)/RG310/RG310_02_S.jpg', 2),
+(5898, 196, 'catalog/Ring(RG)/RG310/RG310_01_S.jpg', 1),
+(6301, 197, 'catalog/Ring(RG)/RG311/RG311_02_S.jpg', 2),
+(6300, 197, 'catalog/Ring(RG)/RG311/RG311_01_S.jpg', 1),
+(7404, 198, 'catalog/BABY(BB)/BB307/BB307_03_S.jpg', 3),
+(7403, 198, 'catalog/BABY(BB)/BB307/BB307_02_S.jpg', 2),
+(7402, 198, 'catalog/BABY(BB)/BB307/BB307_01_S.jpg', 1),
+(7017, 199, 'catalog/Necklace(NL)/NL347/NL347_03_S.jpg', 3),
+(7016, 199, 'catalog/Necklace(NL)/NL347/NL347_02_S.jpg', 2),
+(7015, 199, 'catalog/Necklace(NL)/NL347/NL347_01_S.jpg', 1),
+(5604, 200, 'catalog/Necklace(NL)/NL348/NL348_05_S.jpg', 6),
+(5603, 200, 'catalog/Necklace(NL)/NL348/NL348_03_S.jpg', 5),
+(5602, 200, 'catalog/Necklace(NL)/NL348/NL348_04_S.jpg', 4),
+(5601, 200, 'catalog/Necklace(NL)/NL348/NL348_06_S.jpg', 3),
+(5600, 200, 'catalog/Necklace(NL)/NL348/NL348_01_S.jpg', 2),
+(5599, 200, 'catalog/Necklace(NL)/NL348/NL348_02_S.jpg', 1),
+(7269, 201, 'catalog/Ring(RG)/RG313/RG313_03_S.jpg', 4),
+(7268, 201, 'catalog/Ring(RG)/RG313/RG313_04_S.jpg', 3),
+(7267, 201, 'catalog/Ring(RG)/RG313/RG313_02_S.jpg', 2),
+(7266, 201, 'catalog/Ring(RG)/RG313/RG313_01_S.jpg', 1),
+(7273, 202, 'catalog/Ring(RG)/RG314/RG314_04_S.jpg', 4),
+(7272, 202, 'catalog/Ring(RG)/RG314/RG314_03_S.jpg', 3),
+(7271, 202, 'catalog/Ring(RG)/RG314/RG314_01_S.jpg', 2),
+(7270, 202, 'catalog/Ring(RG)/RG314/RG314_02_S.jpg', 1),
+(5609, 203, 'catalog/Necklace(NL)/NL350/NL350_04_S.jpg', 5),
+(5608, 203, 'catalog/Necklace(NL)/NL350/NL350_05_S.jpg', 4),
+(5607, 203, 'catalog/Necklace(NL)/NL350/NL350_03_S.jpg', 3),
+(5606, 203, 'catalog/Necklace(NL)/NL350/NL350_02_S.jpg', 2),
+(5605, 203, 'catalog/Necklace(NL)/NL350/NL350_01_S.jpg', 1),
+(5611, 204, 'catalog/Necklace(NL)/NL351/NL351_02_S.jpg', 2),
+(5610, 204, 'catalog/Necklace(NL)/NL351/NL351_01_S.jpg', 1),
+(7020, 205, 'catalog/Necklace(NL)/NL354/NL354_02_S.jpg', 3),
+(7019, 205, 'catalog/Necklace(NL)/NL354/NL354_03_S.jpg', 2),
+(7018, 205, 'catalog/Necklace(NL)/NL354/NL354_01_S.jpg', 1),
+(7024, 206, 'catalog/Necklace(NL)/JNL401/JNL401_01_S.jpg', 4),
+(7023, 206, 'catalog/Necklace(NL)/JNL401/JNL401_04_S.jpg', 3),
+(7022, 206, 'catalog/Necklace(NL)/JNL401/JNL401_02_S.jpg', 2),
+(7021, 206, 'catalog/Necklace(NL)/JNL401/JNL401_03_S.jpg', 1),
+(7031, 207, 'catalog/Necklace(NL)/NL401/NL401_01_S.jpg', 0),
+(7030, 207, 'catalog/Necklace(NL)/NL401/NL401_02_S.jpg', 0),
+(7029, 207, 'catalog/Necklace(NL)/NL401/NL401_03_S.jpg', 0),
+(6319, 208, 'catalog/Necklace(NL)/NL402/NL402_04_S.jpg', 4),
+(6318, 208, 'catalog/Necklace(NL)/NL402/NL402_02_S.jpg', 3),
+(6317, 208, 'catalog/Necklace(NL)/NL402/NL402_03_S.jpg', 2),
+(6316, 208, 'catalog/Necklace(NL)/NL402/NL402_01_S.jpg', 1),
+(5625, 209, 'catalog/Necklace(NL)/NL403/NL403_04_S.jpg', 4),
+(5624, 209, 'catalog/Necklace(NL)/NL403/NL403_01_S.jpg', 3),
+(5623, 209, 'catalog/Necklace(NL)/NL403/NL403_02_S.jpg', 2),
+(5622, 209, 'catalog/Necklace(NL)/NL403/NL403_03_S.jpg', 1),
+(7381, 210, 'catalog/Earring(ER)/JER401/JER401_02_S.jpg', 2),
+(7380, 210, 'catalog/Earring(ER)/JER401/JER401_01_S.jpg', 1),
+(6325, 211, 'catalog/Necklace(NL)/NL404/NL404_04_S.jpg', 4),
+(6324, 211, 'catalog/Necklace(NL)/NL404/NL404_01_S.jpg', 3),
+(6323, 211, 'catalog/Necklace(NL)/NL404/NL404_03_S.jpg', 2),
+(6322, 211, 'catalog/Necklace(NL)/NL404/NL404_02_S.jpg', 1),
+(5914, 212, 'catalog/Ring(RG)/RG401/RG401_04_S.jpg', 4),
+(5913, 212, 'catalog/Ring(RG)/RG401/RG401_01_S.jpg', 3),
+(5912, 212, 'catalog/Ring(RG)/RG401/RG401_02_S.jpg', 2),
+(5911, 212, 'catalog/Ring(RG)/RG401/RG401_03_S.jpg', 1),
+(6791, 213, 'catalog/Bracelet(BL)/BL401/BL401_03_S.jpg', 3),
+(6790, 213, 'catalog/Bracelet(BL)/BL401/BL401_02_S.jpg', 2),
+(6789, 213, 'catalog/Bracelet(BL)/BL401/BL401_01_S.jpg', 1),
+(7036, 214, 'catalog/Necklace(NL)/NL405/NL405_03_S.jpg', 5),
+(7035, 214, 'catalog/Necklace(NL)/NL405/NL405_05_S.jpg', 4),
+(7034, 214, 'catalog/Necklace(NL)/NL405/NL405_04_S.jpg', 3),
+(7033, 214, 'catalog/Necklace(NL)/NL405/NL405_01_S.jpg', 2),
+(7032, 214, 'catalog/Necklace(NL)/NL405/NL405_02_S.jpg', 1),
+(7371, 215, 'catalog/Earring(ER)/ER401/ER401_03_S.jpg', 3),
+(7370, 215, 'catalog/Earring(ER)/ER401/ER401_02_S.jpg', 2),
+(7369, 215, 'catalog/Earring(ER)/ER401/ER401_01_S.jpg', 1),
+(6337, 216, 'catalog/Necklace(NL)/NL406/NL406_04_S.jpg', 4),
+(6336, 216, 'catalog/Necklace(NL)/NL406/NL406_02_S.jpg', 3),
+(6335, 216, 'catalog/Necklace(NL)/NL406/NL406_03_S.jpg', 2),
+(6334, 216, 'catalog/Necklace(NL)/NL406/NL406_01_S.jpg', 1),
+(5222, 217, 'catalog/Bracelet(BL)/BL402/BL402_02_S.jpg', 2),
+(5221, 217, 'catalog/Bracelet(BL)/BL402/BL402_01_S.jpg', 1),
+(5384, 218, 'catalog/Earring(ER)/ER402/ER402_01_S.jpg', 3),
+(5383, 218, 'catalog/Earring(ER)/ER402/ER402_02_S.jpg', 2),
+(5382, 218, 'catalog/Earring(ER)/ER402/ER402_03_S.jpg', 1),
+(6808, 219, 'catalog/Bracelet(BL)/JBL401/JBL401_02_S.jpg', 3),
+(6807, 219, 'catalog/Bracelet(BL)/JBL401/JBL401_03_S.jpg', 2),
+(6806, 219, 'catalog/Bracelet(BL)/JBL401/JBL401_01_S.jpg', 1),
+(7376, 220, 'catalog/Earring(ER)/ER403/ER403_02_S.jpg', 3),
+(7375, 220, 'catalog/Earring(ER)/ER403/ER403_03_S.jpg', 2),
+(7374, 220, 'catalog/Earring(ER)/ER403/ER403_01_S.jpg', 1),
+(7039, 221, 'catalog/Necklace(NL)/NL407/NL407_02_S.jpg', 3),
+(7038, 221, 'catalog/Necklace(NL)/NL407/NL407_03_S.jpg', 2),
+(7037, 221, 'catalog/Necklace(NL)/NL407/NL407_01_S.jpg', 1),
+(7042, 222, 'catalog/Necklace(NL)/NL408/NL408_03_S.jpg', 3),
+(7041, 222, 'catalog/Necklace(NL)/NL408/NL408_02_S.jpg', 2),
+(7040, 222, 'catalog/Necklace(NL)/NL408/NL408_01_S.jpg', 1),
+(5225, 223, 'catalog/Bracelet(BL)/BL403/BL403_03_S.jpg', 3),
+(5224, 223, 'catalog/Bracelet(BL)/BL403/BL403_01_S.jpg', 2),
+(5223, 223, 'catalog/Bracelet(BL)/BL403/BL403_02_S.jpg', 1),
+(6794, 224, 'catalog/Bracelet(BL)/BL404/BL404_02_S.jpg', 3),
+(6793, 224, 'catalog/Bracelet(BL)/BL404/BL404_01_S.jpg', 2),
+(6792, 224, 'catalog/Bracelet(BL)/BL404/BL404_03_S.jpg', 1),
+(7276, 226, 'catalog/Ring(RG)/JRG401/JRG401_03_S.jpg', 3),
+(7275, 226, 'catalog/Ring(RG)/JRG401/JRG401_01_S.jpg', 2),
+(7274, 226, 'catalog/Ring(RG)/JRG401/JRG401_02_S.jpg', 1),
+(7373, 227, 'catalog/Earring(ER)/ER405/ER405_01_S.jpg', 2),
+(7372, 227, 'catalog/Earring(ER)/ER405/ER405_02_S.jpg', 1),
+(5647, 228, 'catalog/Necklace(NL)/NL410/NL410_01_S.jpg', 3),
+(5646, 228, 'catalog/Necklace(NL)/NL410/NL410_02_S.jpg', 2),
+(5645, 228, 'catalog/Necklace(NL)/NL410/NL410_03_S.jpg', 1),
+(6811, 229, 'catalog/Bracelet(BL)/JBL402/JBL402_01_S.jpg', 3),
+(6810, 229, 'catalog/Bracelet(BL)/JBL402/JBL402_03_S.jpg', 2),
+(6809, 229, 'catalog/Bracelet(BL)/JBL402/JBL402_02_S.jpg', 1),
+(7283, 230, 'catalog/Ring(RG)/RG402/RG402_01_S.jpg', 4),
+(7282, 230, 'catalog/Ring(RG)/RG402/RG402_02_S.jpg', 3),
+(7281, 230, 'catalog/Ring(RG)/RG402/RG402_03_S.jpg', 2),
+(7280, 230, 'catalog/Ring(RG)/RG402/RG402_04_S.jpg', 1),
+(5392, 231, 'catalog/Earring(ER)/ER406/ER406_03_S.jpg', 3),
+(5391, 231, 'catalog/Earring(ER)/ER406/ER406_02_S.jpg', 2),
+(5390, 231, 'catalog/Earring(ER)/ER406/ER406_01_S.jpg', 1),
+(7045, 232, 'catalog/Necklace(NL)/NL411/NL411_03_S.jpg', 3),
+(7044, 232, 'catalog/Necklace(NL)/NL411/NL411_02_S.jpg', 2),
+(7043, 232, 'catalog/Necklace(NL)/NL411/NL411_01_S.jpg', 1),
+(7028, 234, 'catalog/Necklace(NL)/JNL402/JNL402_04_S.jpg', 4),
+(7027, 234, 'catalog/Necklace(NL)/JNL402/JNL402_03_S.jpg', 3),
+(7026, 234, 'catalog/Necklace(NL)/JNL402/JNL402_02_S.jpg', 2),
+(7025, 234, 'catalog/Necklace(NL)/JNL402/JNL402_01_S.jpg', 1),
+(5923, 235, 'catalog/Ring(RG)/RG403/RG403_03_S.jpg', 5),
+(5922, 235, 'catalog/Ring(RG)/RG403/RG403_02_S.jpg', 4),
+(5921, 235, 'catalog/Ring(RG)/RG403/RG403_01_S.jpg', 3),
+(5920, 235, 'catalog/Ring(RG)/RG403/RG403_05_S.jpg', 2),
+(5919, 235, 'catalog/Ring(RG)/RG403/RG403_04_S.jpg', 1),
+(7048, 236, 'catalog/Necklace(NL)/NL412/NL412_03_S.jpg', 3),
+(7047, 236, 'catalog/Necklace(NL)/NL412/NL412_02_S.jpg', 2),
+(7046, 236, 'catalog/Necklace(NL)/NL412/NL412_01_S.jpg', 1),
+(6797, 237, 'catalog/Bracelet(BL)/BL405/BL405_01_S.jpg', 3),
+(6796, 237, 'catalog/Bracelet(BL)/BL405/BL405_03_S.jpg', 2),
+(6795, 237, 'catalog/Bracelet(BL)/BL405/BL405_02_S.jpg', 1),
+(7286, 238, 'catalog/Ring(RG)/RG404/RG404_01_S.jpg', 3),
+(7285, 238, 'catalog/Ring(RG)/RG404/RG404_02_S.jpg', 2),
+(7284, 238, 'catalog/Ring(RG)/RG404/RG404_03_S.jpg', 1),
+(7051, 239, 'catalog/Necklace(NL)/NL413/NL413_01_S.jpg', 3),
+(7050, 239, 'catalog/Necklace(NL)/NL413/NL413_02_S.jpg', 2),
+(7049, 239, 'catalog/Necklace(NL)/NL413/NL413_03_S.jpg', 1),
+(5660, 240, 'catalog/Necklace(NL)/NL414/NL414_01_S.jpg', 4),
+(5659, 240, 'catalog/Necklace(NL)/NL414/NL414_04_S.jpg', 3),
+(5658, 240, 'catalog/Necklace(NL)/NL414/NL414_03_S.jpg', 2),
+(5657, 240, 'catalog/Necklace(NL)/NL414/NL414_02_S.jpg', 1),
+(5395, 241, 'catalog/Earring(ER)/ER407/ER407_02_S.jpg', 3),
+(5394, 241, 'catalog/Earring(ER)/ER407/ER407_01_S.jpg', 2),
+(5393, 241, 'catalog/Earring(ER)/ER407/ER407_03_S.jpg', 1),
+(7279, 242, 'catalog/Ring(RG)/JRG402/JRG402_02_S.jpg', 3),
+(7278, 242, 'catalog/Ring(RG)/JRG402/JRG402_03_S.jpg', 2),
+(7277, 242, 'catalog/Ring(RG)/JRG402/JRG402_01_S.jpg', 1),
+(7054, 243, 'catalog/Necklace(NL)/NL415/NL415_01_S.jpg', 0),
+(7053, 243, 'catalog/Necklace(NL)/NL415/NL415_02_S.jpg', 0),
+(7052, 243, 'catalog/Necklace(NL)/NL415/NL415_03_S.jpg', 0),
+(6383, 244, 'catalog/Ring(RG)/RG405/RG405_06_S.jpg', 5),
+(6382, 244, 'catalog/Ring(RG)/RG405/RG405_05_S.jpg', 4),
+(6381, 244, 'catalog/Ring(RG)/RG405/RG405_02_S.jpg', 3),
+(6380, 244, 'catalog/Ring(RG)/RG405/RG405_01_S.jpg', 2),
+(6379, 244, 'catalog/Ring(RG)/RG405/RG405_03_S.jpg', 1),
+(7289, 245, 'catalog/Ring(RG)/RG406/RG406_02_S.jpg', 3),
+(7288, 245, 'catalog/Ring(RG)/RG406/RG406_01_S.jpg', 2),
+(7287, 245, 'catalog/Ring(RG)/RG406/RG406_03_S.jpg', 1),
+(7292, 246, 'catalog/Ring(RG)/RG407/RG407_01_S.jpg', 3),
+(7291, 246, 'catalog/Ring(RG)/RG407/RG407_03_S.jpg', 2),
+(7290, 246, 'catalog/Ring(RG)/RG407/RG407_02_S.jpg', 1),
+(7059, 251, 'catalog/Necklace(NL)/NL417/NL417_03_S.jpg', 5),
+(7379, 248, 'catalog/Earring(ER)/ER408/ER408_01_S.jpg', 3),
+(7378, 248, 'catalog/Earring(ER)/ER408/ER408_02_S.jpg', 2),
+(7377, 248, 'catalog/Earring(ER)/ER408/ER408_03_S.jpg', 1),
+(7058, 251, 'catalog/Necklace(NL)/NL417/NL417_04_S.jpg', 4),
+(7057, 251, 'catalog/Necklace(NL)/NL417/NL417_02_S.jpg', 3),
+(7056, 251, 'catalog/Necklace(NL)/NL417/NL417_01_S.jpg', 2),
+(7055, 251, 'catalog/Necklace(NL)/NL417/NL417_05_S.jpg', 1),
+(7296, 252, 'catalog/Ring(RG)/RG408/RG408_01_S.jpg', 4),
+(7295, 252, 'catalog/Ring(RG)/RG408/RG408_02_S.jpg', 3),
+(7294, 252, 'catalog/Ring(RG)/RG408/RG408_03_S.jpg', 2),
+(7293, 252, 'catalog/Ring(RG)/RG408/RG408_04_S.jpg', 1),
+(5401, 253, 'catalog/Earring(ER)/ER409/ER409_03_S.jpg', 3),
+(5400, 253, 'catalog/Earring(ER)/ER409/ER409_02_S.jpg', 2),
+(5399, 253, 'catalog/Earring(ER)/ER409/ER409_01_S.jpg', 1),
+(5944, 254, 'catalog/Ring(RG)/RG409/RG409_02_S.jpg', 3),
+(5943, 254, 'catalog/Ring(RG)/RG409/RG409_01_S.jpg', 2),
+(5942, 254, 'catalog/Ring(RG)/RG409/RG409_03_S.jpg', 1),
+(7062, 255, 'catalog/Necklace(NL)/NL419/NL419_03_S.jpg', 3),
+(7061, 255, 'catalog/Necklace(NL)/NL419/NL419_01_S.jpg', 2),
+(7060, 255, 'catalog/Necklace(NL)/NL419/NL419_02_S.jpg', 1),
+(7300, 256, 'catalog/Ring(RG)/RG410/RG410_01_S.jpg', 4),
+(7299, 256, 'catalog/Ring(RG)/RG410/RG410_02_S.jpg', 3),
+(7298, 256, 'catalog/Ring(RG)/RG410/RG410_04_S.jpg', 2),
+(7297, 256, 'catalog/Ring(RG)/RG410/RG410_03_S.jpg', 1),
+(6801, 257, 'catalog/Bracelet(BL)/BL406/BL406_01_S.jpg', 4),
+(6800, 257, 'catalog/Bracelet(BL)/BL406/BL406_02_S.jpg', 3),
+(6799, 257, 'catalog/Bracelet(BL)/BL406/BL406_04_S.jpg', 2),
+(6798, 257, 'catalog/Bracelet(BL)/BL406/BL406_03_S.jpg', 1),
+(5239, 258, 'catalog/Bracelet(BL)/BL407/BL407_01_S.jpg', 4),
+(5238, 258, 'catalog/Bracelet(BL)/BL407/BL407_02_S.jpg', 3),
+(5237, 258, 'catalog/Bracelet(BL)/BL407/BL407_03_S.jpg', 2),
+(5236, 258, 'catalog/Bracelet(BL)/BL407/BL407_04_S.jpg', 1),
+(5674, 259, 'catalog/Necklace(NL)/NL420/NL420_03_S.jpg', 0),
+(5673, 259, 'catalog/Necklace(NL)/NL420/NL420_02_S.jpg', 0),
+(5672, 259, 'catalog/Necklace(NL)/NL420/NL420_01_S.jpg', 0),
+(6390, 260, 'catalog/Necklace(NL)/NL421/NL421_01_S.jpg', 4),
+(6389, 260, 'catalog/Necklace(NL)/NL421/NL421_02_S.jpg', 3),
+(6388, 260, 'catalog/Necklace(NL)/NL421/NL421_04_S.jpg', 2),
+(6387, 260, 'catalog/Necklace(NL)/NL421/NL421_03_S.jpg', 1),
+(6393, 261, 'catalog/Necklace(NL)/NL422/NL422_02_S.jpg', 3),
+(6394, 261, 'catalog/Necklace(NL)/NL422/NL422_01_S.jpg', 4),
+(7461, 368, 'catalog/Necklace(NL)/NL810/NL810_02_S.jpg', 5),
+(6392, 261, 'catalog/Necklace(NL)/NL422/NL422_04_S.jpg', 2),
+(6391, 261, 'catalog/Necklace(NL)/NL422/NL422_03_S.jpg', 1),
+(6805, 262, 'catalog/Bracelet(BL)/BL408/BL408_01_S.jpg', 4),
+(6804, 262, 'catalog/Bracelet(BL)/BL408/BL408_02_S.jpg', 3),
+(6803, 262, 'catalog/Bracelet(BL)/BL408/BL408_03_S.jpg', 2),
+(6802, 262, 'catalog/Bracelet(BL)/BL408/BL408_04_S.jpg', 1),
+(5249, 263, 'catalog/Bracelet(BL)/BL409/BL409_06_S.jpg', 6),
+(5248, 263, 'catalog/Bracelet(BL)/BL409/BL409_01_S.jpg', 5),
+(5247, 263, 'catalog/Bracelet(BL)/BL409/BL409_04_S.jpg', 4),
+(5246, 263, 'catalog/Bracelet(BL)/BL409/BL409_05_S.jpg', 3),
+(5245, 263, 'catalog/Bracelet(BL)/BL409/BL409_02_S.jpg', 2),
+(5244, 263, 'catalog/Bracelet(BL)/BL409/BL409_03_S.jpg', 1),
+(6397, 264, 'catalog/Necklace(NL)/NL701/NL701_05_S.jpg', 3),
+(6398, 264, 'catalog/Necklace(NL)/NL701/NL701_04_S.jpg', 4),
+(6399, 264, 'catalog/Necklace(NL)/NL701/NL701_01_S.jpg', 5),
+(7093, 265, 'catalog/Necklace(NL)/NL702/NL702_06_S.jpg', 6),
+(7092, 265, 'catalog/Necklace(NL)/NL702/NL702_05_S.jpg', 5),
+(7091, 265, 'catalog/Necklace(NL)/NL702/NL702_02_S.jpg', 4),
+(7090, 265, 'catalog/Necklace(NL)/NL702/NL702_01_S.jpg', 3),
+(7088, 265, 'catalog/Necklace(NL)/NL702/NL702_04_S.jpg', 1),
+(7089, 265, 'catalog/Necklace(NL)/NL702/NL702_03_S.jpg', 2),
+(7099, 266, 'catalog/Necklace(NL)/NL703/NL703_06_S.jpg', 6),
+(7098, 266, 'catalog/Necklace(NL)/NL703/NL703_05_S.jpg', 5),
+(7097, 266, 'catalog/Necklace(NL)/NL703/NL703_04_S.jpg', 4),
+(7096, 266, 'catalog/Necklace(NL)/NL703/NL703_01_S.jpg', 3),
+(7095, 266, 'catalog/Necklace(NL)/NL703/NL703_03_S.jpg', 2),
+(7094, 266, 'catalog/Necklace(NL)/NL703/NL703_02_S.jpg', 1),
+(7105, 267, 'catalog/Necklace(NL)/NL704/NL704_01_S.jpg', 6),
+(7104, 267, 'catalog/Necklace(NL)/NL704/NL704_06_S.jpg', 5),
+(7103, 267, 'catalog/Necklace(NL)/NL704/NL704_05_S.jpg', 4),
+(7102, 267, 'catalog/Necklace(NL)/NL704/NL704_04_S.jpg', 3),
+(7101, 267, 'catalog/Necklace(NL)/NL704/NL704_03_S.jpg', 2),
+(7100, 267, 'catalog/Necklace(NL)/NL704/NL704_02_S.jpg', 1),
+(6817, 268, 'catalog/Bracelet(BL)/BL701/BL701_06_S.jpg', 0),
+(6816, 268, 'catalog/Bracelet(BL)/BL701/BL701_05_S.jpg', 0),
+(6815, 268, 'catalog/Bracelet(BL)/BL701/BL701_04_S.jpg', 0),
+(6814, 268, 'catalog/Bracelet(BL)/BL701/BL701_03_S.jpg', 0),
+(6813, 268, 'catalog/Bracelet(BL)/BL701/BL701_02_S.jpg', 0),
+(6812, 268, 'catalog/Bracelet(BL)/BL701/BL701_01_S.jpg', 0),
+(6396, 264, 'catalog/Necklace(NL)/NL701/NL701_02_S.jpg', 2),
+(6395, 264, 'catalog/Necklace(NL)/NL701/NL701_03_S.jpg', 1),
+(6821, 269, 'catalog/Bracelet(BL)/BL702/BL702_04_S.jpg', 4),
+(6820, 269, 'catalog/Bracelet(BL)/BL702/BL702_02_S.jpg', 3),
+(6819, 269, 'catalog/Bracelet(BL)/BL702/BL702_03_S.jpg', 2),
+(6818, 269, 'catalog/Bracelet(BL)/BL702/BL702_01_S.jpg', 1),
+(6826, 270, 'catalog/Bracelet(BL)/BL703/BL703_04_S.jpg', 5),
+(6825, 270, 'catalog/Bracelet(BL)/BL703/BL703_05_S.jpg', 4),
+(6824, 270, 'catalog/Bracelet(BL)/BL703/BL703_03_S.jpg', 3),
+(6823, 270, 'catalog/Bracelet(BL)/BL703/BL703_02_S.jpg', 2),
+(6822, 270, 'catalog/Bracelet(BL)/BL703/BL703_01_S.jpg', 1),
+(6832, 271, 'catalog/Bracelet(BL)/BL704/BL704_06_S.jpg', 6),
+(6831, 271, 'catalog/Bracelet(BL)/BL704/BL704_05_S.jpg', 5),
+(6830, 271, 'catalog/Bracelet(BL)/BL704/BL704_03_S.jpg', 4),
+(6829, 271, 'catalog/Bracelet(BL)/BL704/BL704_01_S.jpg', 3),
+(6828, 271, 'catalog/Bracelet(BL)/BL704/BL704_04_S.jpg', 2),
+(6827, 271, 'catalog/Bracelet(BL)/BL704/BL704_02_S.jpg', 1),
+(7112, 272, 'catalog/Necklace(NL)/NL705/NL705_06_S.jpg', 7),
+(7111, 272, 'catalog/Necklace(NL)/NL705/NL705_01_S.jpg', 6),
+(7110, 272, 'catalog/Necklace(NL)/NL705/NL705_07_S.jpg', 5),
+(7109, 272, 'catalog/Necklace(NL)/NL705/NL705_04_S.jpg', 4),
+(7108, 272, 'catalog/Necklace(NL)/NL705/NL705_05_S.jpg', 3),
+(7107, 272, 'catalog/Necklace(NL)/NL705/NL705_03_S.jpg', 2),
+(7106, 272, 'catalog/Necklace(NL)/NL705/NL705_02_S.jpg', 1),
+(6837, 273, 'catalog/Bracelet(BL)/BL705/BL705_01_S.jpg', 5),
+(6836, 273, 'catalog/Bracelet(BL)/BL705/BL705_03_S.jpg', 4),
+(6835, 273, 'catalog/Bracelet(BL)/BL705/BL705_05_S.jpg', 3),
+(6834, 273, 'catalog/Bracelet(BL)/BL705/BL705_04_S.jpg', 2),
+(6833, 273, 'catalog/Bracelet(BL)/BL705/BL705_02_S.jpg', 1),
+(6440, 274, 'catalog/Necklace(NL)/NL706/NL706_06_S.jpg', 6),
+(6439, 274, 'catalog/Necklace(NL)/NL706/NL706_03_S.jpg', 5),
+(6438, 274, 'catalog/Necklace(NL)/NL706/NL706_02_S.jpg', 4),
+(6437, 274, 'catalog/Necklace(NL)/NL706/NL706_01_S.jpg', 3),
+(6436, 274, 'catalog/Necklace(NL)/NL706/NL706_05_S.jpg', 2),
+(6435, 274, 'catalog/Necklace(NL)/NL706/NL706_04_S.jpg', 1),
+(6844, 275, 'catalog/Bracelet(BL)/BL706/BL706_04_S.jpg', 7),
+(6843, 275, 'catalog/Bracelet(BL)/BL706/BL706_05_S.jpg', 6),
+(6842, 275, 'catalog/Bracelet(BL)/BL706/BL706_06_S.jpg', 5),
+(6841, 275, 'catalog/Bracelet(BL)/BL706/BL706_07_S.jpg', 4),
+(6840, 275, 'catalog/Bracelet(BL)/BL706/BL706_03_S.jpg', 3),
+(6839, 275, 'catalog/Bracelet(BL)/BL706/BL706_02_S.jpg', 2),
+(6838, 275, 'catalog/Bracelet(BL)/BL706/BL706_01_S.jpg', 1),
+(7407, 276, 'catalog/BABY(BB)/BB701/BB701_02_S.jpg', 0),
+(7406, 276, 'catalog/BABY(BB)/BB701/BB701_03_S.jpg', 0),
+(7405, 276, 'catalog/BABY(BB)/BB701/BB701_04_S.jpg', 0),
+(6854, 277, 'catalog/Bracelet(BL)/BL707/BL707_04_S.jpg', 5),
+(6853, 277, 'catalog/Bracelet(BL)/BL707/BL707_06_S.jpg', 4),
+(6852, 277, 'catalog/Bracelet(BL)/BL707/BL707_03_S.jpg', 3),
+(6851, 277, 'catalog/Bracelet(BL)/BL707/BL707_01_S.jpg', 2),
+(6850, 277, 'catalog/Bracelet(BL)/BL707/BL707_02_S.jpg', 1),
+(5722, 278, 'catalog/Necklace(NL)/NL707/NL707_04_S.jpg', 4),
+(5721, 278, 'catalog/Necklace(NL)/NL707/NL707_02_S.jpg', 3),
+(5720, 278, 'catalog/Necklace(NL)/NL707/NL707_03_S.jpg', 2),
+(5719, 278, 'catalog/Necklace(NL)/NL707/NL707_01_S.jpg', 1),
+(7447, 366, 'catalog/Necklace(NL)/NL809/NL809_03_S.jpg', 5),
+(7306, 279, 'catalog/Ring(RG)/RG701/RG701_06_S.jpg', 6),
+(7305, 279, 'catalog/Ring(RG)/RG701/RG701_04_S.jpg', 5),
+(7304, 279, 'catalog/Ring(RG)/RG701/RG701_05_S.jpg', 4),
+(7303, 279, 'catalog/Ring(RG)/RG701/RG701_03_S.jpg', 3),
+(7302, 279, 'catalog/Ring(RG)/RG701/RG701_01_S.jpg', 2),
+(7301, 279, 'catalog/Ring(RG)/RG701/RG701_02_S.jpg', 1),
+(7117, 280, 'catalog/Necklace(NL)/NL708/NL708_03_S.jpg', 2),
+(7118, 280, 'catalog/Necklace(NL)/NL708/NL708_02_S.jpg', 3),
+(7116, 280, 'catalog/Necklace(NL)/NL708/NL708_01_S.jpg', 1),
+(7123, 281, 'catalog/Necklace(NL)/NL709/NL709_03_S.jpg', 5),
+(7122, 281, 'catalog/Necklace(NL)/NL709/NL709_02_S.jpg', 4),
+(7121, 281, 'catalog/Necklace(NL)/NL709/NL709_01_S.jpg', 3),
+(7120, 281, 'catalog/Necklace(NL)/NL709/NL709_05_S.jpg', 2),
+(7119, 281, 'catalog/Necklace(NL)/NL709/NL709_04_S.jpg', 1),
+(6858, 282, 'catalog/Bracelet(BL)/BL708/BL708_01_S.jpg', 4),
+(6857, 282, 'catalog/Bracelet(BL)/BL708/BL708_04_S.jpg', 3),
+(6855, 282, 'catalog/Bracelet(BL)/BL708/BL708_03_S.jpg', 1),
+(6856, 282, 'catalog/Bracelet(BL)/BL708/BL708_02_S.jpg', 2),
+(7130, 283, 'catalog/Necklace(NL)/NL710/NL710_01_S.jpg', 7),
+(7129, 283, 'catalog/Necklace(NL)/NL710/NL710_02_S.jpg', 6),
+(7128, 283, 'catalog/Necklace(NL)/NL710/NL710_05_S.jpg', 5),
+(7127, 283, 'catalog/Necklace(NL)/NL710/NL710_04_S.jpg', 4),
+(7126, 283, 'catalog/Necklace(NL)/NL710/NL710_07_S.jpg', 3),
+(7125, 283, 'catalog/Necklace(NL)/NL710/NL710_03_S.jpg', 2),
+(7124, 283, 'catalog/Necklace(NL)/NL710/NL710_06_S.jpg', 1),
+(6861, 284, 'catalog/Bracelet(BL)/BL709/BL709_04_S.jpg', 3),
+(6862, 284, 'catalog/Bracelet(BL)/BL709/BL709_03_S.jpg', 4),
+(7444, 366, 'catalog/Necklace(NL)/NL809/NL809_04_S.jpg', 2),
+(6860, 284, 'catalog/Bracelet(BL)/BL709/BL709_01_S.jpg', 2),
+(6859, 284, 'catalog/Bracelet(BL)/BL709/BL709_02_S.jpg', 1),
+(7312, 285, 'catalog/Ring(RG)/RG702/RG702_06_S.jpg', 6),
+(7311, 285, 'catalog/Ring(RG)/RG702/RG702_05_S.jpg', 5),
+(7310, 285, 'catalog/Ring(RG)/RG702/RG702_04_S.jpg', 4),
+(7309, 285, 'catalog/Ring(RG)/RG702/RG702_02_S.jpg', 3),
+(7308, 285, 'catalog/Ring(RG)/RG702/RG702_03_S.jpg', 2),
+(7307, 285, 'catalog/Ring(RG)/RG702/RG702_01_S.jpg', 1),
+(6680, 286, 'catalog/Earring(ER)/ER701/ER701_01_S.jpg', 2),
+(6679, 286, 'catalog/Earring(ER)/ER701/ER701_02_S.jpg', 1),
+(7135, 287, 'catalog/Necklace(NL)/NL711/NL711_04_S.jpg', 5),
+(7134, 287, 'catalog/Necklace(NL)/NL711/NL711_05_S.jpg', 4),
+(7133, 287, 'catalog/Necklace(NL)/NL711/NL711_01_S.jpg', 3),
+(7132, 287, 'catalog/Necklace(NL)/NL711/NL711_03_S.jpg', 2),
+(7131, 287, 'catalog/Necklace(NL)/NL711/NL711_02_S.jpg', 1),
+(6870, 288, 'catalog/Bracelet(BL)/BL710/BL710_05_S.jpg', 8),
+(6869, 288, 'catalog/Bracelet(BL)/BL710/BL710_04_S.jpg', 7),
+(6868, 288, 'catalog/Bracelet(BL)/BL710/BL710_08_S.jpg', 6),
+(6867, 288, 'catalog/Bracelet(BL)/BL710/BL710_03_S.jpg', 5),
+(6866, 288, 'catalog/Bracelet(BL)/BL710/BL710_02_S.jpg', 4),
+(6865, 288, 'catalog/Bracelet(BL)/BL710/BL710_06_S.jpg', 3),
+(6864, 288, 'catalog/Bracelet(BL)/BL710/BL710_01_S.jpg', 2),
+(6863, 288, 'catalog/Bracelet(BL)/BL710/BL710_07_S.jpg', 1),
+(7142, 289, 'catalog/Necklace(NL)/NL712/NL712_05_S.jpg', 7),
+(7141, 289, 'catalog/Necklace(NL)/NL712/NL712_04_S.jpg', 6),
+(7140, 289, 'catalog/Necklace(NL)/NL712/NL712_06_S.jpg', 5),
+(7139, 289, 'catalog/Necklace(NL)/NL712/NL712_03_S.jpg', 4),
+(7138, 289, 'catalog/Necklace(NL)/NL712/NL712_07_S.jpg', 3),
+(7137, 289, 'catalog/Necklace(NL)/NL712/NL712_02_S.jpg', 2),
+(7136, 289, 'catalog/Necklace(NL)/NL712/NL712_01_S.jpg', 1),
+(6873, 290, 'catalog/Bracelet(BL)/BL711/BL711_01_S.jpg', 3),
+(6874, 290, 'catalog/Bracelet(BL)/BL711/BL711_02_S.jpg', 4),
+(6875, 290, 'catalog/Bracelet(BL)/BL711/BL711_05_S.jpg', 5),
+(6872, 290, 'catalog/Bracelet(BL)/BL711/BL711_04_S.jpg', 2),
+(6871, 290, 'catalog/Bracelet(BL)/BL711/BL711_03_S.jpg', 1),
+(7316, 291, 'catalog/Ring(RG)/RG703/RG703_04_S.jpg', 4),
+(7315, 291, 'catalog/Ring(RG)/RG703/RG703_02_S.jpg', 3),
+(7314, 291, 'catalog/Ring(RG)/RG703/RG703_03_S.jpg', 2),
+(7313, 291, 'catalog/Ring(RG)/RG703/RG703_01_S.jpg', 1),
+(7147, 292, 'catalog/Necklace(NL)/NL713/NL713_01_S.jpg', 5),
+(7146, 292, 'catalog/Necklace(NL)/NL713/NL713_03_S.jpg', 4),
+(7145, 292, 'catalog/Necklace(NL)/NL713/NL713_05_S.jpg', 3),
+(7144, 292, 'catalog/Necklace(NL)/NL713/NL713_02_S.jpg', 2),
+(7143, 292, 'catalog/Necklace(NL)/NL713/NL713_04_S.jpg', 1),
+(6700, 293, 'catalog/Necklace(NL)/NL714/NL714_02_S.jpg', 4),
+(6699, 293, 'catalog/Necklace(NL)/NL714/NL714_03_S.jpg', 3),
+(6698, 293, 'catalog/Necklace(NL)/NL714/NL714_01_S.jpg', 2),
+(6697, 293, 'catalog/Necklace(NL)/NL714/NL714_04_S.jpg', 1),
+(6880, 294, 'catalog/Bracelet(BL)/BL712/BL712_03_S.jpg', 5),
+(6879, 294, 'catalog/Bracelet(BL)/BL712/BL712_02_S.jpg', 4),
+(6878, 294, 'catalog/Bracelet(BL)/BL712/BL712_04_S.jpg', 3),
+(6877, 294, 'catalog/Bracelet(BL)/BL712/BL712_01_S.jpg', 2),
+(6876, 294, 'catalog/Bracelet(BL)/BL712/BL712_05_S.jpg', 1),
+(6489, 295, 'catalog/Necklace(NL)/NL715/NL715_05_S.jpg', 5),
+(6488, 295, 'catalog/Necklace(NL)/NL715/NL715_02_S.jpg', 4),
+(6487, 295, 'catalog/Necklace(NL)/NL715/NL715_04_S.jpg', 3),
+(6486, 295, 'catalog/Necklace(NL)/NL715/NL715_01_S.jpg', 2),
+(6485, 295, 'catalog/Necklace(NL)/NL715/NL715_03_S.jpg', 1),
+(5317, 296, 'catalog/Bracelet(BL)/BL713/BL713_02_S.jpg', 4),
+(5316, 296, 'catalog/Bracelet(BL)/BL713/BL713_03_S.jpg', 3),
+(5315, 296, 'catalog/Bracelet(BL)/BL713/BL713_01_S.jpg', 2),
+(5314, 296, 'catalog/Bracelet(BL)/BL713/BL713_04_S.jpg', 1),
+(7323, 297, 'catalog/Ring(RG)/RG704/RG704_07_S.jpg', 7),
+(7322, 297, 'catalog/Ring(RG)/RG704/RG704_06_S.jpg', 6),
+(7321, 297, 'catalog/Ring(RG)/RG704/RG704_04_S.jpg', 5),
+(7320, 297, 'catalog/Ring(RG)/RG704/RG704_02_S.jpg', 4),
+(7319, 297, 'catalog/Ring(RG)/RG704/RG704_05_S.jpg', 3),
+(7318, 297, 'catalog/Ring(RG)/RG704/RG704_03_S.jpg', 2),
+(7317, 297, 'catalog/Ring(RG)/RG704/RG704_01_S.jpg', 1),
+(7159, 298, 'catalog/Necklace(NL)/NL716/NL716_02_S.jpg', 6),
+(7158, 298, 'catalog/Necklace(NL)/NL716/NL716_05_S.jpg', 5),
+(7157, 298, 'catalog/Necklace(NL)/NL716/NL716_03_S.jpg', 4),
+(7156, 298, 'catalog/Necklace(NL)/NL716/NL716_04_S.jpg', 3),
+(7155, 298, 'catalog/Necklace(NL)/NL716/NL716_01_S.jpg', 2),
+(7154, 298, 'catalog/Necklace(NL)/NL716/NL716_06_S.jpg', 1),
+(7328, 299, 'catalog/Ring(RG)/RG705/RG705_03_S.jpg', 5),
+(7327, 299, 'catalog/Ring(RG)/RG705/RG705_02_S.jpg', 4),
+(7326, 299, 'catalog/Ring(RG)/RG705/RG705_05_S.jpg', 3),
+(7325, 299, 'catalog/Ring(RG)/RG705/RG705_01_S.jpg', 2),
+(7324, 299, 'catalog/Ring(RG)/RG705/RG705_04_S.jpg', 1),
+(7165, 300, 'catalog/Necklace(NL)/NL717/NL717_01_S.jpg', 6),
+(7164, 300, 'catalog/Necklace(NL)/NL717/NL717_05_S.jpg', 5),
+(7163, 300, 'catalog/Necklace(NL)/NL717/NL717_06_S.jpg', 4),
+(7162, 300, 'catalog/Necklace(NL)/NL717/NL717_02_S.jpg', 3),
+(7161, 300, 'catalog/Necklace(NL)/NL717/NL717_03_S.jpg', 2),
+(7160, 300, 'catalog/Necklace(NL)/NL717/NL717_04_S.jpg', 1),
+(7169, 301, 'catalog/Necklace(NL)/NL718/NL718_01_S.jpg', 4),
+(7168, 301, 'catalog/Necklace(NL)/NL718/NL718_03_S.jpg', 3),
+(7167, 301, 'catalog/Necklace(NL)/NL718/NL718_02_S.jpg', 2),
+(7166, 301, 'catalog/Necklace(NL)/NL718/NL718_04_S.jpg', 1),
+(6884, 302, 'catalog/Bracelet(BL)/BL714/BL714_04_S.jpg', 4),
+(6883, 302, 'catalog/Bracelet(BL)/BL714/BL714_03_S.jpg', 3),
+(6882, 302, 'catalog/Bracelet(BL)/BL714/BL714_01_S.jpg', 2),
+(6881, 302, 'catalog/Bracelet(BL)/BL714/BL714_02_S.jpg', 1),
+(7174, 303, 'catalog/Necklace(NL)/NL719/NL719_02_S.jpg', 5),
+(7173, 303, 'catalog/Necklace(NL)/NL719/NL719_03_S.jpg', 4),
+(7172, 303, 'catalog/Necklace(NL)/NL719/NL719_05_S.jpg', 3),
+(7171, 303, 'catalog/Necklace(NL)/NL719/NL719_01_S.jpg', 2),
+(7170, 303, 'catalog/Necklace(NL)/NL719/NL719_04_S.jpg', 1),
+(6888, 304, 'catalog/Bracelet(BL)/BL715/BL715_02_S.jpg', 4),
+(6887, 304, 'catalog/Bracelet(BL)/BL715/BL715_03_S.jpg', 3),
+(6886, 304, 'catalog/Bracelet(BL)/BL715/BL715_01_S.jpg', 2),
+(6885, 304, 'catalog/Bracelet(BL)/BL715/BL715_04_S.jpg', 1),
+(7445, 366, 'catalog/Necklace(NL)/NL809/NL809_02_S.jpg', 3),
+(7177, 305, 'catalog/Necklace(NL)/NL720/NL720_02_S.jpg', 3),
+(7175, 305, 'catalog/Necklace(NL)/NL720/NL720_03_S.jpg', 1),
+(7176, 305, 'catalog/Necklace(NL)/NL720/NL720_01_S.jpg', 2),
+(6892, 306, 'catalog/Bracelet(BL)/BL716/BL716_04_S.jpg', 4),
+(6889, 306, 'catalog/Bracelet(BL)/BL716/BL716_01_S.jpg', 1),
+(6890, 306, 'catalog/Bracelet(BL)/BL716/BL716_03_S.jpg', 2),
+(6891, 306, 'catalog/Bracelet(BL)/BL716/BL716_02_S.jpg', 3),
+(7331, 307, 'catalog/Ring(RG)/RG706/RG706_02_S.jpg', 3),
+(7332, 307, 'catalog/Ring(RG)/RG706/RG706_04_S.jpg', 4),
+(7333, 307, 'catalog/Ring(RG)/RG706/RG706_01_S.jpg', 5),
+(7330, 307, 'catalog/Ring(RG)/RG706/RG706_03_S.jpg', 2),
+(7329, 307, 'catalog/Ring(RG)/RG706/RG706_05_S.jpg', 1),
+(7183, 308, 'catalog/Necklace(NL)/NL721/NL721_01_S.jpg', 6),
+(7182, 308, 'catalog/Necklace(NL)/NL721/NL721_05_S.jpg', 5),
+(7181, 308, 'catalog/Necklace(NL)/NL721/NL721_03_S.jpg', 4),
+(7180, 308, 'catalog/Necklace(NL)/NL721/NL721_06_S.jpg', 3),
+(7179, 308, 'catalog/Necklace(NL)/NL721/NL721_02_S.jpg', 2),
+(7178, 308, 'catalog/Necklace(NL)/NL721/NL721_04_S.jpg', 1),
+(6896, 309, 'catalog/Bracelet(BL)/BL717/BL717_04_S.jpg', 4),
+(6895, 309, 'catalog/Bracelet(BL)/BL717/BL717_03_S.jpg', 3),
+(6894, 309, 'catalog/Bracelet(BL)/BL717/BL717_01_S.jpg', 2),
+(6893, 309, 'catalog/Bracelet(BL)/BL717/BL717_02_S.jpg', 1),
+(7186, 310, 'catalog/Necklace(NL)/NL722/NL722_03_S.jpg', 3),
+(7185, 310, 'catalog/Necklace(NL)/NL722/NL722_02_S.jpg', 2),
+(7184, 310, 'catalog/Necklace(NL)/NL722/NL722_01_S.jpg', 1),
+(6900, 311, 'catalog/Bracelet(BL)/BL718/BL718_01_S.jpg', 4),
+(6899, 311, 'catalog/Bracelet(BL)/BL718/BL718_04_S.jpg', 3),
+(6897, 311, 'catalog/Bracelet(BL)/BL718/BL718_03_S.jpg', 1),
+(6898, 311, 'catalog/Bracelet(BL)/BL718/BL718_02_S.jpg', 2),
+(7340, 312, 'catalog/Ring(RG)/RG707/RG707_05_S.jpg', 7),
+(7446, 366, 'catalog/Necklace(NL)/NL809/NL809_05_S.jpg', 4),
+(7337, 312, 'catalog/Ring(RG)/RG707/RG707_03_S.jpg', 4),
+(7338, 312, 'catalog/Ring(RG)/RG707/RG707_04_S.jpg', 5),
+(7339, 312, 'catalog/Ring(RG)/RG707/RG707_02_S.jpg', 6),
+(7336, 312, 'catalog/Ring(RG)/RG707/RG707_07_S.jpg', 3),
+(7335, 312, 'catalog/Ring(RG)/RG707/RG707_06_S.jpg', 2),
+(7334, 312, 'catalog/Ring(RG)/RG707/RG707_01_S.jpg', 1),
+(7346, 313, 'catalog/Ring(RG)/RG708/RG708_05_S.jpg', 14),
+(7345, 313, 'catalog/Ring(RG)/RG708/RG708_03_S.jpg', 6),
+(7344, 313, 'catalog/Ring(RG)/RG708/RG708_04_S.jpg', 5),
+(7343, 313, 'catalog/Ring(RG)/RG708/RG708_02_S.jpg', 3),
+(7342, 313, 'catalog/Ring(RG)/RG708/RG708_01_S.jpg', 2),
+(7341, 313, 'catalog/Ring(RG)/RG708/RG708_06_S.jpg', 0),
+(7191, 314, 'catalog/Necklace(NL)/NL723/NL723_03_S.jpg', 5),
+(7190, 314, 'catalog/Necklace(NL)/NL723/NL723_02_S.jpg', 4),
+(7189, 314, 'catalog/Necklace(NL)/NL723/NL723_05_S.jpg', 3),
+(7188, 314, 'catalog/Necklace(NL)/NL723/NL723_01_S.jpg', 2),
+(7187, 314, 'catalog/Necklace(NL)/NL723/NL723_04_S.jpg', 1),
+(6904, 315, 'catalog/Bracelet(BL)/BL719/BL719_03_S.jpg', 4),
+(6903, 315, 'catalog/Bracelet(BL)/BL719/BL719_02_S.jpg', 3),
+(6902, 315, 'catalog/Bracelet(BL)/BL719/BL719_04_S.jpg', 2),
+(6901, 315, 'catalog/Bracelet(BL)/BL719/BL719_01_S.jpg', 1),
+(5854, 316, 'catalog/Others(OT)/OT701/OT701_03_S.jpg', 0),
+(5853, 316, 'catalog/Others(OT)/OT701/OT701_02_S.jpg', 0),
+(5852, 316, 'catalog/Others(OT)/OT701/OT701_01_S.jpg', 0),
+(7196, 317, 'catalog/Necklace(NL)/NL724/NL724_01_S.jpg', 5),
+(7195, 317, 'catalog/Necklace(NL)/NL724/NL724_03_S.jpg', 4),
+(7194, 317, 'catalog/Necklace(NL)/NL724/NL724_04_S.jpg', 3),
+(7193, 317, 'catalog/Necklace(NL)/NL724/NL724_02_S.jpg', 2),
+(7192, 317, 'catalog/Necklace(NL)/NL724/NL724_05_S.jpg', 1),
+(6909, 318, 'catalog/Bracelet(BL)/BL720/BL720_01_S.jpg', 5),
+(6908, 318, 'catalog/Bracelet(BL)/BL720/BL720_03_S.jpg', 4),
+(6907, 318, 'catalog/Bracelet(BL)/BL720/BL720_04_S.jpg', 3),
+(6906, 318, 'catalog/Bracelet(BL)/BL720/BL720_02_S.jpg', 2),
+(6905, 318, 'catalog/Bracelet(BL)/BL720/BL720_05_S.jpg', 1),
+(6540, 319, 'catalog/Necklace(NL)/NL725/NL725_01_S.jpg', 3),
+(6539, 319, 'catalog/Necklace(NL)/NL725/NL725_02_S.jpg', 2),
+(6538, 319, 'catalog/Necklace(NL)/NL725/NL725_03_S.jpg', 1),
+(6912, 320, 'catalog/Bracelet(BL)/BL721/BL721_01_S.jpg', 3),
+(6911, 320, 'catalog/Bracelet(BL)/BL721/BL721_02_S.jpg', 2),
+(6910, 320, 'catalog/Bracelet(BL)/BL721/BL721_03_S.jpg', 1),
+(7473, 321, 'catalog/Necklace(NL)/NL726/NL726_01_S.jpg', 3),
+(7472, 321, 'catalog/Necklace(NL)/NL726/NL726_02_S.jpg', 2),
+(7471, 321, 'catalog/Necklace(NL)/NL726/NL726_03_S.jpg', 1),
+(5351, 322, 'catalog/Bracelet(BL)/BL722/BL722_01_S.jpg', 2),
+(5350, 322, 'catalog/Bracelet(BL)/BL722/BL722_02_S.jpg', 1),
+(7351, 323, 'catalog/Ring(RG)/RG709/RG709_04_S.jpg', 5),
+(7350, 323, 'catalog/Ring(RG)/RG709/RG709_01_S.jpg', 4),
+(7349, 323, 'catalog/Ring(RG)/RG709/RG709_05_S.jpg', 3),
+(7348, 323, 'catalog/Ring(RG)/RG709/RG709_02_S.jpg', 2),
+(7347, 323, 'catalog/Ring(RG)/RG709/RG709_03_S.jpg', 1),
+(7355, 324, 'catalog/Ring(RG)/RG710/RG710_02_S.jpg', 4),
+(7354, 324, 'catalog/Ring(RG)/RG710/RG710_04_S.jpg', 3),
+(7353, 324, 'catalog/Ring(RG)/RG710/RG710_01_S.jpg', 2),
+(7352, 324, 'catalog/Ring(RG)/RG710/RG710_03_S.jpg', 1),
+(7202, 325, 'catalog/Necklace(NL)/NL801/NL801_05_S.jpg', 6),
+(7201, 325, 'catalog/Necklace(NL)/NL801/NL801_02_S.jpg', 5),
+(7200, 325, 'catalog/Necklace(NL)/NL801/NL801_06_S.jpg', 4),
+(7199, 325, 'catalog/Necklace(NL)/NL801/NL801_04_S.jpg', 3),
+(7198, 325, 'catalog/Necklace(NL)/NL801/NL801_01_S.jpg', 2),
+(7197, 325, 'catalog/Necklace(NL)/NL801/NL801_03_S.jpg', 1),
+(6916, 326, 'catalog/Bracelet(BL)/BL801/BL801_03_S.jpg', 4),
+(6915, 326, 'catalog/Bracelet(BL)/BL801/BL801_02_S.jpg', 3),
+(6914, 326, 'catalog/Bracelet(BL)/BL801/BL801_04_S.jpg', 2),
+(6913, 326, 'catalog/Bracelet(BL)/BL801/BL801_01_S.jpg', 1),
+(7207, 327, 'catalog/Necklace(NL)/NL802/NL802_02_S.jpg', 5),
+(7206, 327, 'catalog/Necklace(NL)/NL802/NL802_01_S.jpg', 4),
+(7205, 327, 'catalog/Necklace(NL)/NL802/NL802_05_S.jpg', 3),
+(7204, 327, 'catalog/Necklace(NL)/NL802/NL802_04_S.jpg', 2),
+(7203, 327, 'catalog/Necklace(NL)/NL802/NL802_03_S.jpg', 1),
+(5358, 328, 'catalog/Bracelet(BL)/BL802/BL802_01_S.jpg', 3),
+(5357, 328, 'catalog/Bracelet(BL)/BL802/BL802_03_S.jpg', 2),
+(5356, 328, 'catalog/Bracelet(BL)/BL802/BL802_02_S.jpg', 1),
+(7211, 329, 'catalog/Necklace(NL)/NL803/NL803_03_S.jpg', 4),
+(7210, 329, 'catalog/Necklace(NL)/NL803/NL803_04_S.jpg', 3),
+(7209, 329, 'catalog/Necklace(NL)/NL803/NL803_02_S.jpg', 2),
+(7208, 329, 'catalog/Necklace(NL)/NL803/NL803_01_S.jpg', 1),
+(6920, 330, 'catalog/Bracelet(BL)/BL803/BL803_01_S.jpg', 4),
+(6919, 330, 'catalog/Bracelet(BL)/BL803/BL803_02_S.jpg', 3),
+(6918, 330, 'catalog/Bracelet(BL)/BL803/BL803_04_S.jpg', 2),
+(6917, 330, 'catalog/Bracelet(BL)/BL803/BL803_03_S.jpg', 1),
+(7359, 331, 'catalog/Ring(RG)/RG801/RG801_02_S.jpg', 4),
+(7358, 331, 'catalog/Ring(RG)/RG801/RG801_03_S.jpg', 3),
+(7357, 331, 'catalog/Ring(RG)/RG801/RG801_01_S.jpg', 2),
+(7356, 331, 'catalog/Ring(RG)/RG801/RG801_04_S.jpg', 1),
+(7363, 332, 'catalog/Ring(RG)/RG802/RG802_04_S.jpg', 4),
+(7364, 332, 'catalog/Ring(RG)/RG802/RG802_03_S.jpg', 5),
+(7362, 332, 'catalog/Ring(RG)/RG802/RG802_02_S.jpg', 3),
+(7361, 332, 'catalog/Ring(RG)/RG802/RG802_05_S.jpg', 2),
+(7360, 332, 'catalog/Ring(RG)/RG802/RG802_01_S.jpg', 1),
+(7470, 333, 'catalog/Necklace(NL)/NL804/NL804_02_S.jpg', 4),
+(7469, 333, 'catalog/Necklace(NL)/NL804/NL804_03_S.jpg', 3),
+(7468, 333, 'catalog/Necklace(NL)/NL804/NL804_01_S.jpg', 2),
+(7467, 333, 'catalog/Necklace(NL)/NL804/NL804_04_S.jpg', 1),
+(7219, 334, 'catalog/Necklace(NL)/NL805/NL805_01_S.jpg', 4),
+(7218, 334, 'catalog/Necklace(NL)/NL805/NL805_05_S.jpg', 3),
+(7217, 334, 'catalog/Necklace(NL)/NL805/NL805_02_S.jpg', 2),
+(7216, 334, 'catalog/Necklace(NL)/NL805/NL805_04_S.jpg', 1),
+(6924, 335, 'catalog/Bracelet(BL)/BL804/BL804_02_S.jpg', 4),
+(6923, 335, 'catalog/Bracelet(BL)/BL804/BL804_01_S.jpg', 3),
+(6922, 335, 'catalog/Bracelet(BL)/BL804/BL804_04_S.jpg', 2),
+(6921, 335, 'catalog/Bracelet(BL)/BL804/BL804_03_S.jpg', 1),
+(6017, 336, 'catalog/Ring(RG)/RG803/RG803_05_S.jpg', 5),
+(6016, 336, 'catalog/Ring(RG)/RG803/RG803_02_S.jpg', 4),
+(6015, 336, 'catalog/Ring(RG)/RG803/RG803_03_S.jpg', 3),
+(6014, 336, 'catalog/Ring(RG)/RG803/RG803_01_S.jpg', 2),
+(6013, 336, 'catalog/Ring(RG)/RG803/RG803_04_S.jpg', 1),
+(7409, 338, 'catalog/BABY(BB)/BB802/BB802_02_S.jpg', 2),
+(7408, 338, 'catalog/BABY(BB)/BB802/BB802_01_S.jpg', 1),
+(7412, 339, 'catalog/BABY(BB)/BB803/BB803_06_S.jpg', 3),
+(7411, 339, 'catalog/BABY(BB)/BB803/BB803_05_S.jpg', 2),
+(7410, 339, 'catalog/BABY(BB)/BB803/BB803_04_S.jpg', 1),
+(7414, 340, 'catalog/BABY(BB)/BB804/BB804_03_S.jpg', 2);
+INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort_order`) VALUES
+(7413, 340, 'catalog/BABY(BB)/BB804/BB804_04_S.jpg', 1),
+(7419, 341, 'catalog/BABY(BB)/BB805/BB805_03_S.jpg', 2),
+(7418, 341, 'catalog/BABY(BB)/BB805/BB805_04_S.jpg', 1),
+(6576, 342, 'catalog/Necklace(NL)/NL806/NL806_03_S.jpg', 5),
+(6575, 342, 'catalog/Necklace(NL)/NL806/NL806_01_S.jpg', 4),
+(6574, 342, 'catalog/Necklace(NL)/NL806/NL806_05_S.jpg', 3),
+(6573, 342, 'catalog/Necklace(NL)/NL806/NL806_02_S.jpg', 2),
+(6572, 342, 'catalog/Necklace(NL)/NL806/NL806_04_S.jpg', 1),
+(6930, 343, 'catalog/Bracelet(BL)/BL805/BL805_03_S.jpg', 6),
+(6929, 343, 'catalog/Bracelet(BL)/BL805/BL805_06_S.jpg', 5),
+(6928, 343, 'catalog/Bracelet(BL)/BL805/BL805_02_S.jpg', 4),
+(6927, 343, 'catalog/Bracelet(BL)/BL805/BL805_05_S.jpg', 3),
+(6926, 343, 'catalog/Bracelet(BL)/BL805/BL805_01_S.jpg', 2),
+(6925, 343, 'catalog/Bracelet(BL)/BL805/BL805_04_S.jpg', 1),
+(7417, 344, 'catalog/BABY(BB)/BB806/BB806_01_S.jpg', 3),
+(7416, 344, 'catalog/BABY(BB)/BB806/BB806_03_S.jpg', 2),
+(7415, 344, 'catalog/BABY(BB)/BB806/BB806_02_S.jpg', 1),
+(7368, 345, 'catalog/Ring(RG)/RG804/RG804_04_S.jpg', 4),
+(7367, 345, 'catalog/Ring(RG)/RG804/RG804_02_S.jpg', 3),
+(7366, 345, 'catalog/Ring(RG)/RG804/RG804_03_S.jpg', 2),
+(7365, 345, 'catalog/Ring(RG)/RG804/RG804_01_S.jpg', 1),
+(7224, 346, 'catalog/Necklace(NL)/NL807/NL807_05_S.jpg', 5),
+(7223, 346, 'catalog/Necklace(NL)/NL807/NL807_04_S.jpg', 4),
+(7222, 346, 'catalog/Necklace(NL)/NL807/NL807_01_S.jpg', 3),
+(7221, 346, 'catalog/Necklace(NL)/NL807/NL807_03_S.jpg', 2),
+(7220, 346, 'catalog/Necklace(NL)/NL807/NL807_02_S.jpg', 1),
+(7230, 347, 'catalog/Necklace(NL)/NL808/NL808_03_S.jpg', 6),
+(7229, 347, 'catalog/Necklace(NL)/NL808/NL808_05_S.jpg', 5),
+(7228, 347, 'catalog/Necklace(NL)/NL808/NL808_01_S.jpg', 4),
+(7227, 347, 'catalog/Necklace(NL)/NL808/NL808_06_S.jpg', 3),
+(7226, 347, 'catalog/Necklace(NL)/NL808/NL808_02_S.jpg', 2),
+(7225, 347, 'catalog/Necklace(NL)/NL808/NL808_04_S.jpg', 1),
+(6948, 348, 'catalog/Bracelet(BL)/BL806/BL806_03_S.jpg', 6),
+(6947, 348, 'catalog/Bracelet(BL)/BL806/BL806_05_S.jpg', 5),
+(6946, 348, 'catalog/Bracelet(BL)/BL806/BL806_01_S.jpg', 4),
+(6945, 348, 'catalog/Bracelet(BL)/BL806/BL806_04_S.jpg', 3),
+(6944, 348, 'catalog/Bracelet(BL)/BL806/BL806_02_S.jpg', 2),
+(6943, 348, 'catalog/Bracelet(BL)/BL806/BL806_06_S.jpg', 1),
+(7448, 366, 'catalog/Necklace(NL)/NL809/NL809_06_S.jpg', 6),
+(7443, 366, 'catalog/Necklace(NL)/NL809/NL809_01_S.jpg', 1),
+(7466, 367, 'catalog/Bracelet(BL)/BL807/BL807_05_S.jpg', 5),
+(7465, 367, 'catalog/Bracelet(BL)/BL807/BL807_04_S.jpg', 4),
+(7464, 367, 'catalog/Bracelet(BL)/BL807/BL807_02_S.jpg', 3),
+(7463, 367, 'catalog/Bracelet(BL)/BL807/BL807_03_S.jpg', 2),
+(7462, 367, 'catalog/Bracelet(BL)/BL807/BL807_01_S.jpg', 1),
+(7460, 368, 'catalog/Necklace(NL)/NL810/NL810_05_S.jpg', 4),
+(7459, 368, 'catalog/Necklace(NL)/NL810/NL810_03_S.jpg', 3),
+(7458, 368, 'catalog/Necklace(NL)/NL810/NL810_04_S.jpg', 2),
+(7457, 368, 'catalog/Necklace(NL)/NL810/NL810_01_S.jpg', 1),
+(7454, 369, 'catalog/BABY(BB)/BB807/BB807_01_S.jpg', 1),
+(7455, 369, 'catalog/BABY(BB)/BB807/BB807_02_S.jpg', 3),
+(7456, 369, 'catalog/BABY(BB)/BB807/BB807_03_S.jpg', 2);
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -3322,6 +5204,7 @@ CREATE TABLE `oc_product_related` (
 --
 
 INSERT INTO `oc_product_related` (`product_id`, `related_id`) VALUES
+<<<<<<< HEAD
 (57, 60),
 (60, 57),
 (65, 66),
@@ -3332,6 +5215,345 @@ INSERT INTO `oc_product_related` (`product_id`, `related_id`) VALUES
 (68, 69),
 (69, 67),
 (69, 68);
+=======
+(139, 194),
+(139, 220),
+(140, 147),
+(141, 148),
+(142, 149),
+(143, 145),
+(143, 150),
+(143, 291),
+(144, 151),
+(144, 152),
+(145, 143),
+(145, 150),
+(145, 291),
+(147, 140),
+(148, 141),
+(149, 142),
+(150, 143),
+(150, 145),
+(150, 291),
+(151, 144),
+(151, 152),
+(152, 144),
+(152, 151),
+(153, 159),
+(153, 160),
+(153, 161),
+(155, 156),
+(156, 155),
+(157, 162),
+(157, 163),
+(157, 165),
+(157, 166),
+(157, 368),
+(159, 153),
+(159, 160),
+(159, 161),
+(160, 153),
+(160, 159),
+(160, 161),
+(161, 153),
+(161, 159),
+(161, 160),
+(162, 157),
+(162, 163),
+(162, 165),
+(162, 166),
+(162, 368),
+(163, 157),
+(163, 162),
+(163, 165),
+(163, 166),
+(163, 368),
+(165, 157),
+(165, 162),
+(165, 163),
+(165, 166),
+(166, 157),
+(166, 162),
+(166, 163),
+(166, 165),
+(167, 169),
+(167, 180),
+(168, 176),
+(169, 167),
+(169, 180),
+(173, 345),
+(174, 310),
+(174, 311),
+(175, 184),
+(175, 231),
+(176, 168),
+(179, 279),
+(180, 167),
+(180, 169),
+(183, 188),
+(183, 218),
+(184, 175),
+(184, 231),
+(186, 192),
+(186, 203),
+(187, 193),
+(187, 198),
+(188, 183),
+(188, 218),
+(189, 252),
+(190, 195),
+(191, 280),
+(192, 186),
+(192, 203),
+(193, 187),
+(193, 198),
+(194, 139),
+(194, 220),
+(195, 190),
+(196, 197),
+(197, 196),
+(198, 187),
+(198, 193),
+(201, 202),
+(202, 201),
+(203, 186),
+(203, 192),
+(205, 213),
+(205, 334),
+(205, 335),
+(206, 210),
+(206, 219),
+(206, 226),
+(206, 229),
+(206, 234),
+(206, 242),
+(208, 209),
+(209, 208),
+(210, 206),
+(210, 219),
+(210, 226),
+(210, 229),
+(210, 234),
+(210, 242),
+(211, 217),
+(213, 205),
+(213, 334),
+(213, 335),
+(214, 239),
+(214, 258),
+(214, 338),
+(216, 223),
+(217, 211),
+(218, 183),
+(218, 188),
+(219, 206),
+(219, 210),
+(219, 226),
+(219, 229),
+(219, 234),
+(219, 242),
+(220, 139),
+(220, 194),
+(221, 222),
+(222, 221),
+(223, 216),
+(224, 236),
+(224, 248),
+(226, 206),
+(226, 210),
+(226, 219),
+(226, 229),
+(226, 234),
+(226, 242),
+(229, 206),
+(229, 210),
+(229, 219),
+(229, 226),
+(229, 234),
+(229, 242),
+(231, 175),
+(231, 184),
+(232, 257),
+(234, 206),
+(234, 210),
+(234, 219),
+(234, 226),
+(234, 229),
+(234, 242),
+(236, 224),
+(236, 248),
+(237, 243),
+(237, 337),
+(238, 253),
+(239, 214),
+(239, 258),
+(239, 338),
+(242, 206),
+(242, 210),
+(242, 219),
+(242, 226),
+(242, 229),
+(242, 234),
+(243, 237),
+(243, 337),
+(244, 245),
+(244, 246),
+(245, 244),
+(245, 246),
+(246, 244),
+(246, 245),
+(248, 224),
+(248, 236),
+(252, 189),
+(253, 238),
+(257, 232),
+(258, 214),
+(258, 239),
+(258, 338),
+(260, 262),
+(261, 261),
+(262, 260),
+(264, 268),
+(264, 286),
+(264, 323),
+(264, 339),
+(265, 269),
+(265, 286),
+(265, 324),
+(265, 340),
+(266, 270),
+(267, 271),
+(268, 264),
+(268, 286),
+(268, 323),
+(268, 339),
+(269, 265),
+(269, 286),
+(269, 324),
+(269, 340),
+(270, 266),
+(271, 267),
+(272, 273),
+(273, 272),
+(274, 275),
+(275, 274),
+(276, 277),
+(276, 278),
+(277, 276),
+(277, 278),
+(278, 276),
+(278, 277),
+(279, 179),
+(280, 191),
+(281, 282),
+(282, 281),
+(283, 284),
+(284, 283),
+(286, 264),
+(286, 265),
+(286, 268),
+(286, 269),
+(286, 323),
+(286, 324),
+(287, 288),
+(288, 287),
+(289, 290),
+(290, 289),
+(291, 143),
+(291, 145),
+(291, 150),
+(293, 294),
+(294, 293),
+(295, 296),
+(296, 295),
+(297, 312),
+(300, 301),
+(300, 302),
+(301, 300),
+(301, 302),
+(302, 300),
+(302, 301),
+(303, 304),
+(304, 303),
+(305, 306),
+(305, 341),
+(306, 305),
+(306, 341),
+(308, 309),
+(309, 308),
+(310, 174),
+(310, 311),
+(311, 174),
+(311, 310),
+(312, 297),
+(314, 315),
+(314, 316),
+(315, 314),
+(315, 316),
+(316, 314),
+(316, 315),
+(317, 318),
+(318, 317),
+(319, 320),
+(320, 319),
+(321, 322),
+(321, 369),
+(322, 321),
+(322, 369),
+(323, 264),
+(323, 268),
+(323, 286),
+(323, 339),
+(324, 265),
+(324, 269),
+(324, 286),
+(324, 340),
+(325, 326),
+(326, 325),
+(327, 328),
+(328, 327),
+(329, 330),
+(330, 329),
+(333, 366),
+(333, 367),
+(334, 205),
+(334, 213),
+(334, 335),
+(335, 205),
+(335, 213),
+(335, 334),
+(337, 237),
+(337, 243),
+(338, 214),
+(338, 239),
+(338, 258),
+(339, 264),
+(339, 268),
+(339, 323),
+(340, 265),
+(340, 269),
+(340, 324),
+(341, 305),
+(341, 306),
+(342, 343),
+(342, 344),
+(343, 342),
+(343, 344),
+(344, 342),
+(344, 343),
+(345, 173),
+(347, 348),
+(348, 347),
+(366, 333),
+(366, 367),
+(367, 333),
+(367, 366),
+(368, 157),
+(368, 162),
+(368, 163),
+(369, 321),
+(369, 322);
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -3378,6 +5600,7 @@ CREATE TABLE `oc_product_to_category` (
 --
 
 INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
+<<<<<<< HEAD
 (56, 25),
 (57, 25),
 (58, 25),
@@ -3398,6 +5621,249 @@ INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
 (93, 18),
 (94, 60),
 (95, 60);
+=======
+(132, 25),
+(133, 25),
+(134, 25),
+(135, 25),
+(137, 18),
+(137, 61),
+(138, 18),
+(139, 18),
+(139, 61),
+(140, 24),
+(141, 24),
+(142, 24),
+(143, 24),
+(144, 24),
+(145, 18),
+(147, 17),
+(148, 17),
+(149, 17),
+(150, 17),
+(150, 61),
+(151, 17),
+(152, 18),
+(152, 61),
+(153, 18),
+(155, 18),
+(156, 17),
+(157, 18),
+(157, 61),
+(158, 18),
+(159, 17),
+(160, 25),
+(161, 18),
+(162, 18),
+(162, 61),
+(163, 18),
+(164, 18),
+(165, 18),
+(166, 18),
+(167, 18),
+(167, 61),
+(168, 18),
+(168, 61),
+(169, 18),
+(170, 18),
+(172, 18),
+(173, 25),
+(173, 61),
+(174, 18),
+(174, 61),
+(175, 25),
+(176, 17),
+(176, 61),
+(177, 25),
+(177, 61),
+(178, 18),
+(179, 18),
+(180, 25),
+(181, 18),
+(182, 18),
+(183, 17),
+(184, 18),
+(185, 18),
+(186, 18),
+(186, 61),
+(187, 17),
+(187, 61),
+(188, 18),
+(189, 18),
+(190, 17),
+(191, 18),
+(192, 17),
+(193, 18),
+(193, 61),
+(194, 18),
+(195, 18),
+(196, 25),
+(197, 25),
+(198, 24),
+(199, 18),
+(200, 18),
+(201, 25),
+(202, 25),
+(203, 18),
+(204, 18),
+(205, 18),
+(206, 18),
+(207, 18),
+(207, 61),
+(208, 18),
+(209, 18),
+(210, 20),
+(211, 18),
+(212, 25),
+(213, 17),
+(214, 18),
+(214, 61),
+(215, 20),
+(216, 18),
+(217, 17),
+(218, 20),
+(219, 17),
+(220, 20),
+(221, 18),
+(222, 18),
+(223, 17),
+(224, 17),
+(224, 61),
+(226, 25),
+(227, 20),
+(228, 18),
+(229, 17),
+(230, 25),
+(230, 61),
+(231, 20),
+(232, 18),
+(234, 18),
+(235, 25),
+(236, 25),
+(236, 61),
+(237, 17),
+(238, 25),
+(239, 18),
+(239, 61),
+(240, 18),
+(241, 20),
+(242, 25),
+(243, 18),
+(244, 25),
+(245, 25),
+(246, 25),
+(248, 20),
+(251, 18),
+(252, 25),
+(253, 20),
+(254, 25),
+(255, 18),
+(255, 61),
+(256, 25),
+(257, 17),
+(258, 17),
+(259, 18),
+(260, 18),
+(261, 18),
+(262, 17),
+(263, 17),
+(264, 18),
+(265, 18),
+(266, 18),
+(267, 18),
+(268, 17),
+(269, 17),
+(270, 17),
+(271, 17),
+(272, 18),
+(272, 61),
+(273, 17),
+(274, 18),
+(275, 17),
+(276, 24),
+(276, 61),
+(277, 17),
+(278, 18),
+(279, 25),
+(280, 18),
+(281, 18),
+(282, 17),
+(283, 18),
+(284, 17),
+(285, 25),
+(286, 20),
+(286, 61),
+(287, 18),
+(288, 17),
+(289, 18),
+(290, 17),
+(291, 25),
+(292, 18),
+(293, 18),
+(293, 61),
+(294, 17),
+(295, 18),
+(296, 17),
+(297, 25),
+(298, 18),
+(299, 25),
+(299, 61),
+(300, 18),
+(301, 18),
+(302, 17),
+(303, 18),
+(304, 17),
+(305, 18),
+(305, 61),
+(306, 17),
+(307, 25),
+(308, 18),
+(309, 17),
+(310, 18),
+(311, 17),
+(312, 25),
+(313, 25),
+(314, 18),
+(315, 17),
+(316, 34),
+(317, 18),
+(318, 17),
+(319, 18),
+(320, 17),
+(321, 18),
+(322, 17),
+(323, 25),
+(324, 25),
+(325, 18),
+(326, 17),
+(327, 18),
+(328, 17),
+(329, 18),
+(330, 17),
+(331, 25),
+(332, 25),
+(333, 18),
+(334, 18),
+(335, 17),
+(336, 25),
+(337, 24),
+(338, 24),
+(339, 24),
+(340, 24),
+(341, 24),
+(342, 18),
+(343, 17),
+(344, 24),
+(345, 25),
+(346, 18),
+(347, 18),
+(348, 17),
+(349, 60),
+(366, 18),
+(367, 17),
+(368, 18),
+(369, 24);
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -3427,6 +5893,7 @@ CREATE TABLE `oc_product_to_layout` (
 --
 
 INSERT INTO `oc_product_to_layout` (`product_id`, `store_id`, `layout_id`) VALUES
+<<<<<<< HEAD
 (64, 0, 0),
 (62, 0, 0),
 (63, 0, 0),
@@ -3449,6 +5916,222 @@ INSERT INTO `oc_product_to_layout` (`product_id`, `store_id`, `layout_id`) VALUE
 (94, 0, 0),
 (95, 0, 0),
 (96, 0, 0);
+=======
+(132, 0, 0),
+(147, 0, 0),
+(150, 0, 0),
+(157, 0, 0),
+(141, 0, 0),
+(143, 0, 0),
+(139, 0, 0),
+(151, 0, 0),
+(135, 0, 0),
+(153, 0, 0),
+(142, 0, 0),
+(148, 0, 0),
+(144, 0, 0),
+(87, 0, 0),
+(133, 0, 0),
+(140, 0, 0),
+(137, 0, 0),
+(152, 0, 0),
+(158, 0, 0),
+(156, 0, 0),
+(134, 0, 0),
+(149, 0, 0),
+(138, 0, 0),
+(159, 0, 0),
+(145, 0, 0),
+(161, 0, 0),
+(155, 0, 0),
+(162, 0, 0),
+(160, 0, 0),
+(163, 0, 0),
+(164, 0, 0),
+(165, 0, 0),
+(166, 0, 0),
+(167, 0, 0),
+(168, 0, 0),
+(169, 0, 0),
+(170, 0, 0),
+(173, 0, 0),
+(172, 0, 0),
+(174, 0, 0),
+(175, 0, 0),
+(176, 0, 0),
+(177, 0, 0),
+(178, 0, 0),
+(179, 0, 0),
+(180, 0, 0),
+(181, 0, 0),
+(182, 0, 0),
+(183, 0, 0),
+(184, 0, 0),
+(185, 0, 0),
+(186, 0, 0),
+(187, 0, 0),
+(188, 0, 0),
+(189, 0, 0),
+(190, 0, 0),
+(191, 0, 0),
+(192, 0, 0),
+(193, 0, 0),
+(194, 0, 0),
+(195, 0, 0),
+(196, 0, 0),
+(197, 0, 0),
+(198, 0, 0),
+(199, 0, 0),
+(200, 0, 0),
+(201, 0, 0),
+(202, 0, 0),
+(203, 0, 0),
+(204, 0, 0),
+(205, 0, 0),
+(206, 0, 0),
+(207, 0, 0),
+(208, 0, 0),
+(209, 0, 0),
+(210, 0, 0),
+(211, 0, 0),
+(212, 0, 0),
+(213, 0, 0),
+(214, 0, 0),
+(215, 0, 0),
+(216, 0, 0),
+(217, 0, 0),
+(218, 0, 0),
+(219, 0, 0),
+(220, 0, 0),
+(221, 0, 0),
+(222, 0, 0),
+(223, 0, 0),
+(224, 0, 0),
+(226, 0, 0),
+(227, 0, 0),
+(228, 0, 0),
+(229, 0, 0),
+(230, 0, 0),
+(231, 0, 0),
+(232, 0, 0),
+(234, 0, 0),
+(235, 0, 0),
+(236, 0, 0),
+(237, 0, 0),
+(238, 0, 0),
+(239, 0, 0),
+(240, 0, 0),
+(241, 0, 0),
+(242, 0, 0),
+(243, 0, 0),
+(244, 0, 0),
+(245, 0, 0),
+(246, 0, 0),
+(248, 0, 0),
+(251, 0, 0),
+(252, 0, 0),
+(253, 0, 0),
+(254, 0, 0),
+(255, 0, 0),
+(256, 0, 0),
+(257, 0, 0),
+(258, 0, 0),
+(259, 0, 0),
+(260, 0, 0),
+(261, 0, 0),
+(262, 0, 0),
+(263, 0, 0),
+(264, 0, 0),
+(265, 0, 0),
+(266, 0, 0),
+(267, 0, 0),
+(268, 0, 0),
+(269, 0, 0),
+(270, 0, 0),
+(271, 0, 0),
+(272, 0, 0),
+(273, 0, 0),
+(274, 0, 0),
+(275, 0, 0),
+(276, 0, 0),
+(277, 0, 0),
+(278, 0, 0),
+(279, 0, 0),
+(280, 0, 0),
+(281, 0, 0),
+(282, 0, 0),
+(283, 0, 0),
+(284, 0, 0),
+(285, 0, 0),
+(286, 0, 0),
+(287, 0, 0),
+(288, 0, 0),
+(289, 0, 0),
+(290, 0, 0),
+(291, 0, 0),
+(292, 0, 0),
+(293, 0, 0),
+(294, 0, 0),
+(295, 0, 0),
+(296, 0, 0),
+(297, 0, 0),
+(298, 0, 0),
+(299, 0, 0),
+(300, 0, 0),
+(301, 0, 0),
+(302, 0, 0),
+(303, 0, 0),
+(304, 0, 0),
+(305, 0, 0),
+(306, 0, 0),
+(307, 0, 0),
+(308, 0, 0),
+(309, 0, 0),
+(310, 0, 0),
+(311, 0, 0),
+(312, 0, 0),
+(313, 0, 0),
+(314, 0, 0),
+(315, 0, 0),
+(316, 0, 0),
+(317, 0, 0),
+(318, 0, 0),
+(319, 0, 0),
+(320, 0, 0),
+(321, 0, 0),
+(322, 0, 0),
+(323, 0, 0),
+(324, 0, 0),
+(325, 0, 0),
+(326, 0, 0),
+(327, 0, 0),
+(328, 0, 0),
+(329, 0, 0),
+(330, 0, 0),
+(331, 0, 0),
+(332, 0, 0),
+(333, 0, 0),
+(334, 0, 0),
+(335, 0, 0),
+(336, 0, 0),
+(337, 0, 0),
+(338, 0, 0),
+(339, 0, 0),
+(340, 0, 0),
+(341, 0, 0),
+(342, 0, 0),
+(343, 0, 0),
+(344, 0, 0),
+(345, 0, 0),
+(346, 0, 0),
+(347, 0, 0),
+(348, 0, 0),
+(349, 0, 0),
+(369, 0, 0),
+(368, 0, 0),
+(367, 0, 0),
+(366, 0, 0);
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -3466,6 +6149,7 @@ CREATE TABLE `oc_product_to_store` (
 --
 
 INSERT INTO `oc_product_to_store` (`product_id`, `store_id`) VALUES
+<<<<<<< HEAD
 (56, 0),
 (57, 0),
 (58, 0),
@@ -3488,6 +6172,222 @@ INSERT INTO `oc_product_to_store` (`product_id`, `store_id`) VALUES
 (94, 0),
 (95, 0),
 (96, 0);
+=======
+(87, 0),
+(132, 0),
+(133, 0),
+(134, 0),
+(135, 0),
+(137, 0),
+(138, 0),
+(139, 0),
+(140, 0),
+(141, 0),
+(142, 0),
+(143, 0),
+(144, 0),
+(145, 0),
+(147, 0),
+(148, 0),
+(149, 0),
+(150, 0),
+(151, 0),
+(152, 0),
+(153, 0),
+(155, 0),
+(156, 0),
+(157, 0),
+(158, 0),
+(159, 0),
+(160, 0),
+(161, 0),
+(162, 0),
+(163, 0),
+(164, 0),
+(165, 0),
+(166, 0),
+(167, 0),
+(168, 0),
+(169, 0),
+(170, 0),
+(172, 0),
+(173, 0),
+(174, 0),
+(175, 0),
+(176, 0),
+(177, 0),
+(178, 0),
+(179, 0),
+(180, 0),
+(181, 0),
+(182, 0),
+(183, 0),
+(184, 0),
+(185, 0),
+(186, 0),
+(187, 0),
+(188, 0),
+(189, 0),
+(190, 0),
+(191, 0),
+(192, 0),
+(193, 0),
+(194, 0),
+(195, 0),
+(196, 0),
+(197, 0),
+(198, 0),
+(199, 0),
+(200, 0),
+(201, 0),
+(202, 0),
+(203, 0),
+(204, 0),
+(205, 0),
+(206, 0),
+(207, 0),
+(208, 0),
+(209, 0),
+(210, 0),
+(211, 0),
+(212, 0),
+(213, 0),
+(214, 0),
+(215, 0),
+(216, 0),
+(217, 0),
+(218, 0),
+(219, 0),
+(220, 0),
+(221, 0),
+(222, 0),
+(223, 0),
+(224, 0),
+(226, 0),
+(227, 0),
+(228, 0),
+(229, 0),
+(230, 0),
+(231, 0),
+(232, 0),
+(234, 0),
+(235, 0),
+(236, 0),
+(237, 0),
+(238, 0),
+(239, 0),
+(240, 0),
+(241, 0),
+(242, 0),
+(243, 0),
+(244, 0),
+(245, 0),
+(246, 0),
+(248, 0),
+(251, 0),
+(252, 0),
+(253, 0),
+(254, 0),
+(255, 0),
+(256, 0),
+(257, 0),
+(258, 0),
+(259, 0),
+(260, 0),
+(261, 0),
+(262, 0),
+(263, 0),
+(264, 0),
+(265, 0),
+(266, 0),
+(267, 0),
+(268, 0),
+(269, 0),
+(270, 0),
+(271, 0),
+(272, 0),
+(273, 0),
+(274, 0),
+(275, 0),
+(276, 0),
+(277, 0),
+(278, 0),
+(279, 0),
+(280, 0),
+(281, 0),
+(282, 0),
+(283, 0),
+(284, 0),
+(285, 0),
+(286, 0),
+(287, 0),
+(288, 0),
+(289, 0),
+(290, 0),
+(291, 0),
+(292, 0),
+(293, 0),
+(294, 0),
+(295, 0),
+(296, 0),
+(297, 0),
+(298, 0),
+(299, 0),
+(300, 0),
+(301, 0),
+(302, 0),
+(303, 0),
+(304, 0),
+(305, 0),
+(306, 0),
+(307, 0),
+(308, 0),
+(309, 0),
+(310, 0),
+(311, 0),
+(312, 0),
+(313, 0),
+(314, 0),
+(315, 0),
+(316, 0),
+(317, 0),
+(318, 0),
+(319, 0),
+(320, 0),
+(321, 0),
+(322, 0),
+(323, 0),
+(324, 0),
+(325, 0),
+(326, 0),
+(327, 0),
+(328, 0),
+(329, 0),
+(330, 0),
+(331, 0),
+(332, 0),
+(333, 0),
+(334, 0),
+(335, 0),
+(336, 0),
+(337, 0),
+(338, 0),
+(339, 0),
+(340, 0),
+(341, 0),
+(342, 0),
+(343, 0),
+(344, 0),
+(345, 0),
+(346, 0),
+(347, 0),
+(348, 0),
+(349, 0),
+(366, 0),
+(367, 0),
+(368, 0),
+(369, 0);
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -3550,6 +6450,7 @@ CREATE TABLE `oc_return` (
   `date_modified` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 --
 -- 資料表的匯出資料 `oc_return`
 --
@@ -3559,6 +6460,8 @@ INSERT INTO `oc_return` (`return_id`, `order_id`, `product_id`, `customer_id`, `
 (2, 0, 0, 0, 'test', 'test', 'anikiwayne@gmail.com', '09111111111111111111111111', 'test', 'test', 1, 0, 5, 0, 2, 'teste', '2017-07-19', '2017-07-01 17:50:12', '2017-07-01 17:50:12'),
 (3, 105, 0, 9, 'wei', 'lin', 'lingwei005@gmail.com', '0911672251', 'ring test 01', 'RG702', 1, 0, 5, 0, 2, '尺寸有誤', '2017-09-13', '2017-09-13 09:14:52', '2017-09-13 09:14:52');
 
+=======
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 -- --------------------------------------------------------
 
 --
@@ -3657,6 +6560,7 @@ CREATE TABLE `oc_review` (
   `date_modified` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 --
 -- 資料表的匯出資料 `oc_review`
 --
@@ -3666,6 +6570,8 @@ INSERT INTO `oc_review` (`review_id`, `product_id`, `customer_id`, `author`, `te
 (2, 65, 6, '林 測試', 'fdsfdasasfsafasfasfafasffasfsaf', 5, 0, '2017-10-21 20:13:45', '0000-00-00 00:00:00'),
 (3, 66, 0, 'fsdfsafsdatestsesttests', 'testsetestsetsteststtetesdffafa', 5, 0, '2017-11-05 22:10:17', '0000-00-00 00:00:00');
 
+=======
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 -- --------------------------------------------------------
 
 --
@@ -3723,6 +6629,7 @@ CREATE TABLE `oc_setting` (
 --
 
 INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `serialized`) VALUES
+<<<<<<< HEAD
 (1027, 0, 'config', 'config_error_filename', 'error.log', 0),
 (1026, 0, 'config', 'config_error_log', '1', 0),
 (1025, 0, 'config', 'config_error_display', '1', 0),
@@ -3757,6 +6664,28 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (1000, 0, 'config', 'config_ftp_port', '21', 0),
 (999, 0, 'config', 'config_ftp_hostname', 'localhost', 0),
 (998, 0, 'config', 'config_icon', 'catalog/cart.png', 0),
+=======
+(2268, 0, 'bank_transfer', 'bank_transfer_sort_order', '', 0),
+(3123, 0, 'config', 'config_error_filename', 'error.log', 0),
+(3121, 0, 'config', 'config_error_display', '1', 0),
+(3122, 0, 'config', 'config_error_log', '1', 0),
+(569, 0, 'voucher', 'voucher_sort_order', '8', 0),
+(568, 0, 'voucher', 'voucher_status', '0', 0),
+(2267, 0, 'bank_transfer', 'bank_transfer_status', '1', 0),
+(2266, 0, 'bank_transfer', 'bank_transfer_geo_zone_id', '0', 0),
+(3219, 0, 'ecpaylogistic', 'ecpaylogistic_hilife_collection_status', '1', 0),
+(3118, 0, 'config', 'config_file_max_size', '300000', 0),
+(3119, 0, 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', 0),
+(3120, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\n&quot;application/zip&quot;\r\napplication/x-zip\r\n&quot;application/x-zip&quot;\r\napplication/x-zip-compressed\r\n&quot;application/x-zip-compressed&quot;\r\napplication/rar\r\n&quot;application/rar&quot;\r\napplication/x-rar\r\n&quot;application/x-rar&quot;\r\napplication/x-rar-compressed\r\n&quot;application/x-rar-compressed&quot;\r\napplication/octet-stream\r\n&quot;application/octet-stream&quot;\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf', 0),
+(3105, 0, 'config', 'config_mail_smtp_password', '', 0),
+(3106, 0, 'config', 'config_mail_smtp_port', '25', 0),
+(3107, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
+(3108, 0, 'config', 'config_mail_alert', '[\"order\"]', 1),
+(3109, 0, 'config', 'config_mail_alert_email', '', 0),
+(3110, 0, 'config', 'config_maintenance', '0', 0),
+(3111, 0, 'config', 'config_seo_url', '0', 0),
+(3112, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai\'hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (95, 0, 'free_checkout', 'free_checkout_status', '1', 0),
 (96, 0, 'free_checkout', 'free_checkout_order_status_id', '1', 0),
 (97, 0, 'shipping', 'shipping_sort_order', '3', 0),
@@ -3767,20 +6696,33 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (102, 0, 'total', 'total_status', '1', 0),
 (560, 0, 'tax', 'tax_status', '0', 0),
 (104, 0, 'free_checkout', 'free_checkout_sort_order', '1', 0),
+<<<<<<< HEAD
 (105, 0, 'cod', 'cod_sort_order', '5', 0),
 (106, 0, 'cod', 'cod_total', '0.01', 0),
 (107, 0, 'cod', 'cod_order_status_id', '1', 0),
 (108, 0, 'cod', 'cod_geo_zone_id', '0', 0),
 (109, 0, 'cod', 'cod_status', '1', 0),
+=======
+(1054, 0, 'cod', 'cod_sort_order', '1', 0),
+(1053, 0, 'cod', 'cod_status', '0', 0),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (110, 0, 'shipping', 'shipping_status', '1', 0),
 (111, 0, 'shipping', 'shipping_estimator', '1', 0),
 (567, 0, 'coupon', 'coupon_sort_order', '4', 0),
 (566, 0, 'coupon', 'coupon_status', '0', 0),
+<<<<<<< HEAD
 (114, 0, 'flat', 'flat_sort_order', '1', 0),
 (115, 0, 'flat', 'flat_status', '1', 0),
 (116, 0, 'flat', 'flat_geo_zone_id', '0', 0),
 (117, 0, 'flat', 'flat_tax_class_id', '9', 0),
 (118, 0, 'flat', 'flat_cost', '5.00', 0),
+=======
+(2260, 0, 'flat', 'flat_sort_order', '1', 0),
+(2259, 0, 'flat', 'flat_status', '1', 0),
+(2258, 0, 'flat', 'flat_geo_zone_id', '0', 0),
+(2257, 0, 'flat', 'flat_tax_class_id', '0', 0),
+(2256, 0, 'flat', 'flat_cost', '0.00', 0),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (565, 0, 'credit', 'credit_sort_order', '7', 0),
 (564, 0, 'credit', 'credit_status', '0', 0),
 (554, 0, 'reward', 'reward_sort_order', '2', 0),
@@ -3836,6 +6778,7 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (171, 0, 'dashboard_recent', 'dashboard_recent_sort_order', '8', 0),
 (172, 0, 'dashboard_activity', 'dashboard_activity_width', '4', 0),
 (173, 0, 'dashboard_recent', 'dashboard_recent_width', '8', 0),
+<<<<<<< HEAD
 (996, 0, 'config', 'config_captcha_page', '["review","return","contact"]', 1),
 (997, 0, 'config', 'config_logo', 'catalog/mittaglogo.png', 0),
 (995, 0, 'config', 'config_captcha', '', 0),
@@ -3851,11 +6794,21 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (548, 0, 'bank_transfer', 'bank_transfer_total', '100', 0),
 (547, 0, 'bank_transfer', 'bank_transfer_bank1', '玉山分行', 0),
 (552, 0, 'bank_transfer', 'bank_transfer_sort_order', '', 0),
+=======
+(3113, 0, 'config', 'config_compression', '0', 0),
+(3114, 0, 'config', 'config_secure', '0', 0),
+(3115, 0, 'config', 'config_password', '0', 0),
+(3116, 0, 'config', 'config_shared', '0', 0),
+(3117, 0, 'config', 'config_encryption', 'Go29uBwYFd3rPW0QtVMLA3vVpulY5fMh6VQz3QhY1ls1e4c5pdhXJ5Gpzi3VttbvMjFGEMP0zixOCI7gaJhcJemcsmzPDjAQCSwx4qiIBxIvZBZ0jIOXlcEKncqFWNxVzKv2DQU5tltq4G02sFrDhHy1CYSWo9ruc4BcEcNe5bGdk9RcO3SNlzEuqOZIrU8XCLEL3smc2E1VCQfv5pC6fTJPSwehU8xpWwL3BipoC49oM5UA8uTwhT9A6lYImkEAaPm1DmGfTZvuIPfjD6VibID18bad3LDOLDh9o4N9nsUn3uKvos0bZJHk9qCX6qON3wzKR9KTwSLznEGN9IJ8GpVUhWiJr68L0XTUcnQWr4yB4xKM1AR5l6wx8ZMXz1H90ZdbEbEudAMU5Z0sx3mMpIhIvN5MrSx7IpU3XdJAzq7sDdgjNPNIbEgxGnssmSf1PpkSu808pyexpt4x9yxq4p5MyMAMocFvISELhX14AG1n85R7bs8xFYUKyUk1HpejJyy5AV76oTiexpRYCDTQ8JyH6r6R09PtzsYcIZzJkZPWFMX4ad5bwFx6fj4yIRRH8QQ21zgpCOqjGPdLtmdQ5iiTJlfopU8QtWYbE0ELFJD9Hyd6tUBVWzQKtAhjCfMk4KJjuJMeBmSKoxe7B2agZRqJlQfkuMxnqqR7wa4o7JMpXN3Ygu5WZsZjR4i2q5Jx9nHyVzPs1yLVKvPMC5a9wLyIvyLrFGfnC9TwiyWu9hNsv0uYxR49hCDn3VhuqWW9wz91fa2YmDoHzi71SwIkJ0lkymwoyLEfmFceqD6za9wTeZxMWvR7Lq9VFQXhPzfPZ1sC177Tf6JxhHBJ7mRmpXL8KDdEgxiGtc1tZQVfdmBao9DqNfMZzLPAKUdiHmlauhBmlXlipBqeos9rm8xUv7MIFjrB0MKrm7Oj6cguSDDiO3GZV6vskx6p6ygfYxEVFdag5QjHPY9kXVl0eNMMpedd0rjpuNTqM50vmK6FIu9YJ6VdD0Xtj941N4zxknPX', 0),
+(2265, 0, 'bank_transfer', 'bank_transfer_order_status_id', '12', 0),
+(2263, 0, 'bank_transfer', 'bank_transfer_bank1', '台灣銀行(004)\r\n007004753139\r\n\r\n', 0),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (555, 0, 'low_order_fee', 'low_order_fee_total', '', 0),
 (556, 0, 'low_order_fee', 'low_order_fee_fee', '', 0),
 (557, 0, 'low_order_fee', 'low_order_fee_tax_class_id', '0', 0),
 (558, 0, 'low_order_fee', 'low_order_fee_status', '0', 0),
 (559, 0, 'low_order_fee', 'low_order_fee_sort_order', '', 0),
+<<<<<<< HEAD
 (985, 0, 'config', 'config_api_id', '1', 0),
 (986, 0, 'config', 'config_stock_display', '0', 0),
 (983, 0, 'config', 'config_complete_status', '["5","3"]', 1),
@@ -3909,6 +6862,112 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (942, 0, 'config', 'config_name', 'MITTAG', 0),
 (938, 0, 'config', 'config_meta_description', 'MITTAG', 0),
 (937, 0, 'config', 'config_meta_title', 'MITTAG', 0);
+=======
+(3096, 0, 'config', 'config_ftp_port', '21', 0),
+(3097, 0, 'config', 'config_ftp_username', 'anikiwayne@mittag.com.tw', 0),
+(3098, 0, 'config', 'config_ftp_password', ' Jungweiwayne123', 0),
+(3099, 0, 'config', 'config_ftp_root', '/', 0),
+(3100, 0, 'config', 'config_ftp_status', '1', 0),
+(3101, 0, 'config', 'config_mail_protocol', 'mail', 0),
+(3102, 0, 'config', 'config_mail_parameter', '', 0),
+(3103, 0, 'config', 'config_mail_smtp_hostname', '', 0),
+(3104, 0, 'config', 'config_mail_smtp_username', '', 0),
+(3094, 0, 'config', 'config_icon', 'catalog/Brand/web_look_and_feel/web_tab_icon.jpg', 0),
+(3095, 0, 'config', 'config_ftp_hostname', 'ftp.jungwei.com.tw', 0),
+(1239, 0, 'pickup', 'pickup_sort_order', '', 0),
+(1238, 0, 'pickup', 'pickup_status', '0', 0),
+(3093, 0, 'config', 'config_logo', 'catalog/mittaglogo.png', 0),
+(3092, 0, 'config', 'config_captcha_page', '[\"review\",\"return\",\"contact\"]', 1),
+(3091, 0, 'config', 'config_captcha', '', 0),
+(3090, 0, 'config', 'config_return_status_id', '2', 0),
+(3089, 0, 'config', 'config_return_id', '0', 0),
+(3088, 0, 'config', 'config_affiliate_id', '4', 0),
+(3087, 0, 'config', 'config_affiliate_commission', '5', 0),
+(3086, 0, 'config', 'config_affiliate_auto', '0', 0),
+(3085, 0, 'config', 'config_affiliate_approval', '0', 0),
+(3084, 0, 'config', 'config_stock_checkout', '0', 0),
+(3083, 0, 'config', 'config_stock_warning', '0', 0),
+(3082, 0, 'config', 'config_stock_display', '0', 0),
+(3081, 0, 'config', 'config_api_id', '1', 0),
+(3080, 0, 'config', 'config_fraud_status_id', '12', 0),
+(3079, 0, 'config', 'config_complete_status', '[\"5\",\"3\"]', 1),
+(3078, 0, 'config', 'config_processing_status', '[\"12\",\"5\",\"3\",\"1\",\"2\"]', 1),
+(3077, 0, 'config', 'config_order_status_id', '1', 0),
+(3076, 0, 'config', 'config_checkout_id', '3', 0),
+(3075, 0, 'config', 'config_checkout_guest', '1', 0),
+(3074, 0, 'config', 'config_cart_weight', '1', 0),
+(3073, 0, 'config', 'config_invoice_prefix', 'INV-2013-00', 0),
+(3072, 0, 'config', 'config_account_id', '3', 0),
+(1237, 0, 'pickup', 'pickup_geo_zone_id', '0', 0),
+(1052, 0, 'cod', 'cod_geo_zone_id', '0', 0),
+(1051, 0, 'cod', 'cod_order_status_id', '1', 0),
+(1050, 0, 'cod', 'cod_total', '1', 0),
+(2264, 0, 'bank_transfer', 'bank_transfer_total', '100', 0),
+(3071, 0, 'config', 'config_login_attempts', '5', 0),
+(3070, 0, 'config', 'config_customer_price', '0', 0),
+(3069, 0, 'config', 'config_customer_group_display', '[\"1\"]', 1),
+(3068, 0, 'config', 'config_customer_group_id', '1', 0),
+(3067, 0, 'config', 'config_customer_search', '0', 0),
+(3066, 0, 'config', 'config_customer_activity', '0', 0),
+(3065, 0, 'config', 'config_customer_online', '0', 0),
+(3064, 0, 'config', 'config_tax_customer', '', 0),
+(3063, 0, 'config', 'config_tax_default', '', 0),
+(3062, 0, 'config', 'config_tax', '0', 0),
+(3061, 0, 'config', 'config_voucher_max', '1000', 0),
+(3060, 0, 'config', 'config_voucher_min', '1', 0),
+(3059, 0, 'config', 'config_review_guest', '1', 0),
+(3058, 0, 'config', 'config_review_status', '1', 0),
+(3057, 0, 'config', 'config_limit_admin', '20', 0),
+(3056, 0, 'config', 'config_product_count', '1', 0),
+(3055, 0, 'config', 'config_weight_class_id', '1', 0),
+(3054, 0, 'config', 'config_length_class_id', '1', 0),
+(3053, 0, 'config', 'config_currency_auto', '1', 0),
+(3052, 0, 'config', 'config_currency', 'TWD', 0),
+(3051, 0, 'config', 'config_admin_language', 'zh-TW', 0),
+(3050, 0, 'config', 'config_language', 'zh-TW', 0),
+(3049, 0, 'config', 'config_zone_id', '3135', 0),
+(3048, 0, 'config', 'config_country_id', '206', 0),
+(3047, 0, 'config', 'config_comment', '', 0),
+(3046, 0, 'config', 'config_open', '', 0),
+(3045, 0, 'config', 'config_image', 'catalog/mittaglogo.png', 0),
+(3044, 0, 'config', 'config_fax', '', 0),
+(3043, 0, 'config', 'config_telephone', '02123456789', 0),
+(3042, 0, 'config', 'config_email', 'mittagnatureme@gmail.com', 0),
+(3041, 0, 'config', 'config_geocode', '', 0),
+(3040, 0, 'config', 'config_address', 'TAIPEI TAIWAN', 0),
+(3039, 0, 'config', 'config_owner', 'MITTAG', 0),
+(3038, 0, 'config', 'config_name', 'MITTAG', 0),
+(3037, 0, 'config', 'config_layout_id', '4', 0),
+(3036, 0, 'config', 'config_theme', 'theme_default', 0),
+(2269, 0, 'google_analytics', 'google_analytics_code', '&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;\r\n&lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-101013550-1&quot;&gt;&lt;/script&gt;\r\n&lt;script&gt;\r\n  window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n  gtag(\'js\', new Date());\r\n\r\n  gtag(\'config\', \'UA-111412642-1\');\r\n&lt;/script&gt;\r\n', 0),
+(2270, 0, 'google_analytics', 'google_analytics_status', '1', 0),
+(3035, 0, 'config', 'config_meta_keyword', '', 0),
+(3034, 0, 'config', 'config_meta_description', 'MITTAG', 0),
+(3218, 0, 'ecpaylogistic', 'ecpaylogistic_hilife_collection_fee', '80', 0),
+(3212, 0, 'ecpaylogistic', 'ecpaylogistic_fami_fee', '80', 0),
+(3213, 0, 'ecpaylogistic', 'ecpaylogistic_fami_status', '1', 0),
+(3214, 0, 'ecpaylogistic', 'ecpaylogistic_fami_collection_fee', '80', 0),
+(3215, 0, 'ecpaylogistic', 'ecpaylogistic_fami_collection_status', '1', 0),
+(3216, 0, 'ecpaylogistic', 'ecpaylogistic_hilife_fee', '80', 0),
+(3217, 0, 'ecpaylogistic', 'ecpaylogistic_hilife_status', '1', 0),
+(3211, 0, 'ecpaylogistic', 'ecpaylogistic_unimart_collection_status', '1', 0),
+(3209, 0, 'ecpaylogistic', 'ecpaylogistic_unimart_status', '1', 0),
+(3210, 0, 'ecpaylogistic', 'ecpaylogistic_unimart_collection_fee', '80', 0),
+(3208, 0, 'ecpaylogistic', 'ecpaylogistic_unimart_fee', '80', 0),
+(3207, 0, 'ecpaylogistic', 'ecpaylogistic_status', '1', 0),
+(3206, 0, 'ecpaylogistic', 'ecpaylogistic_geo_zone_id', '0', 0),
+(3205, 0, 'ecpaylogistic', 'ecpaylogistic_order_status', '12', 0),
+(3204, 0, 'ecpaylogistic', 'ecpaylogistic_max_amount', '200', 0),
+(3203, 0, 'ecpaylogistic', 'ecpaylogistic_min_amount', '80', 0),
+(3202, 0, 'ecpaylogistic', 'ecpaylogistic_free_shipping_amount', '200', 0),
+(3200, 0, 'ecpaylogistic', 'ecpaylogistic_sender_name', '林測試', 0),
+(3201, 0, 'ecpaylogistic', 'ecpaylogistic_sender_cellphone', '0932000000', 0),
+(3199, 0, 'ecpaylogistic', 'ecpaylogistic_type', 'B2C', 0),
+(3198, 0, 'ecpaylogistic', 'ecpaylogistic_hashiv', '3sCugBDpQcJblfaK', 0),
+(3197, 0, 'ecpaylogistic', 'ecpaylogistic_hashkey', 'bRgRRlPIqhKxlZN6', 0),
+(3196, 0, 'ecpaylogistic', 'ecpaylogistic_mid', '3050400', 0),
+(3033, 0, 'config', 'config_meta_title', 'MITTAG', 0);
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -4094,6 +7153,7 @@ CREATE TABLE `oc_url_alias` (
 --
 
 INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
+<<<<<<< HEAD
 (914, 'category_id=20', 'desktops'),
 (730, 'manufacturer_id=8', 'apple'),
 (944, 'information_id=4', 'about_us'),
@@ -4115,16 +7175,53 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (918, 'category_id=24', 'babyshowegift'),
 (974, 'product_id=66', 'finger/print/necklace/指紋項鍊'),
 (938, 'product_id=67', 'train/bracelet/火車手鍊'),
+=======
+(1149, 'category_id=20', 'https://goo.gl/FjWkaX'),
+(730, 'manufacturer_id=8', 'apple'),
+(1160, 'information_id=4', 'https://goo.gl/hVubo8'),
+(1151, 'category_id=34', 'https://goo.gl/25qBSf'),
+(1146, 'category_id=18', 'https://goo.gl/Vmcni4'),
+(1148, 'category_id=25', 'https://goo.gl/x1eUvu'),
+(1147, 'category_id=17', 'https://goo.gl/JrU2Er'),
+(1152, 'category_id=33', 'https://goo.gl/tmC4Nk'),
+(1150, 'category_id=24', 'https://goo.gl/WkE4jw'),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (828, 'manufacturer_id=9', 'canon'),
 (829, 'manufacturer_id=5', 'htc'),
 (830, 'manufacturer_id=7', 'hewlett-packard'),
 (831, 'manufacturer_id=6', 'palm'),
 (832, 'manufacturer_id=10', 'sony'),
+<<<<<<< HEAD
 (989, 'information_id=6', 'delivery'),
 (988, 'information_id=3', 'privacy'),
 (995, 'information_id=5', 'terms'),
 (993, 'product_id=92', 'RG702'),
 (1003, 'product_id=91', 'ER777');
+=======
+(1159, 'information_id=6', 'https://goo.gl/RTt88M'),
+(1158, 'information_id=3', 'https://goo.gl/L86gbH'),
+(1154, 'information_id=5', 'https://goo.gl/2XPXdh'),
+(1132, 'product_id=133', 'goo.gl/NC8kB3'),
+(1164, 'product_id=142', 'https://goo.gl/YJZ9BP'),
+(1145, 'category_id=61', 'https://goo.gl/kP36pu'),
+(1153, 'category_id=60', 'https://goo.gl/yEZL51'),
+(1155, 'information_id=7', 'https://goo.gl/v56hVz'),
+(1156, 'information_id=9', 'https://goo.gl/2YM14y'),
+(1157, 'information_id=8', 'https://goo.gl/2gKzgH'),
+(1176, 'product_id=349', 'https://goo.gl/Qv8P6H'),
+(1162, 'product_id=140', 'https://goo.gl/9Azjun'),
+(1163, 'product_id=141', 'https://goo.gl/XtzRq1'),
+(1165, 'product_id=143', 'https://goo.gl/nM7t5z'),
+(1166, 'product_id=144', 'https://goo.gl/sjtRD3'),
+(1167, 'product_id=198', 'https://goo.gl/ReaJre'),
+(1168, 'product_id=276', 'https://goo.gl/FFvtgz'),
+(1169, 'product_id=337', 'https://goo.gl/HkWQS9'),
+(1170, 'product_id=338', 'https://goo.gl/GH9R2V'),
+(1171, 'product_id=339', 'https://goo.gl/HGe5yN'),
+(1172, 'product_id=340', 'https://goo.gl/k4H155'),
+(1173, 'product_id=344', 'https://goo.gl/9CYSJy'),
+(1174, 'product_id=341', 'https://goo.gl/itPi79');
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -4153,9 +7250,15 @@ CREATE TABLE `oc_user` (
 --
 
 INSERT INTO `oc_user` (`user_id`, `user_group_id`, `username`, `password`, `salt`, `firstname`, `lastname`, `email`, `image`, `code`, `ip`, `status`, `date_added`) VALUES
+<<<<<<< HEAD
 (1, 1, 'admin', '728e3788545e6df0f0ee86120cb2b7c8fc8a9472', 'jE5Ie3DGw', 'Wayne', 'Lin', 'anikiwayne@gmail.com', '', '', '::1', 1, '2016-11-05 08:43:30'),
 (2, 11, 'lingwei', '6f44f9bf3b942e98977499e1953e1dcfbfca8880', 'Z6bNRbbzl', 'lin', 'lingwei', 'linjohnwayne@gmail.com', '', '', '61.228.19.76', 1, '2016-11-24 16:34:30'),
 (3, 11, 'ukjames', '4e841889c218e0c90765b14b31820bffc984e5bc', '3CH8nYGdP', 'ukjames312312@gmail.com', 'james', 'ukjames312312@gmail.com', '', '', '59.115.237.71', 1, '2017-09-10 12:12:44');
+=======
+(1, 1, 'admin', '96af685c41ea56b66b22b34de41a11a3a7bfa52c', 'k2RpeBgPf', 'Wayne', 'Lin', 'anikiwayne@gmail.com', '', '', '1.164.142.123', 1, '2016-11-05 08:43:30'),
+(2, 11, 'lingwei', '6f44f9bf3b942e98977499e1953e1dcfbfca8880', 'Z6bNRbbzl', 'lin', 'lingwei', 'linjohnwayne@gmail.com', '', '', '61.228.19.76', 1, '2016-11-24 16:34:30'),
+(3, 11, 'ukjames', '4e841889c218e0c90765b14b31820bffc984e5bc', '3CH8nYGdP', 'ukjames312312@gmail.com', 'james', 'ukjames312312@gmail.com', '', '', '36.229.1.175', 1, '2017-09-10 12:12:44');
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -4174,9 +7277,15 @@ CREATE TABLE `oc_user_group` (
 --
 
 INSERT INTO `oc_user_group` (`user_group_id`, `name`, `permission`) VALUES
+<<<<<<< HEAD
 (1, '開發者', '{"access":["catalog\\/attribute","catalog\\/attribute_group","catalog\\/category","catalog\\/download","catalog\\/filter","catalog\\/information","catalog\\/manufacturer","catalog\\/option","catalog\\/product","catalog\\/recurring","catalog\\/review","common\\/column_left","common\\/filemanager","customer\\/custom_field","customer\\/customer","customer\\/customer_group","design\\/banner","design\\/language","design\\/layout","design\\/menu","design\\/theme","design\\/translation","event\\/compatibility","event\\/theme","extension\\/analytics\\/google_analytics","extension\\/captcha\\/basic_captcha","extension\\/captcha\\/google_captcha","extension\\/dashboard\\/activity","extension\\/dashboard\\/chart","extension\\/dashboard\\/customer","extension\\/dashboard\\/map","extension\\/dashboard\\/online","extension\\/dashboard\\/order","extension\\/dashboard\\/recent","extension\\/dashboard\\/sale","extension\\/event","extension\\/extension","extension\\/extension\\/analytics","extension\\/extension\\/captcha","extension\\/extension\\/dashboard","extension\\/extension\\/feed","extension\\/extension\\/fraud","extension\\/extension\\/module","extension\\/extension\\/payment","extension\\/extension\\/shipping","extension\\/extension\\/theme","extension\\/extension\\/total","extension\\/feed\\/google_base","extension\\/feed\\/google_sitemap","extension\\/feed\\/openbaypro","extension\\/fraud\\/fraudlabspro","extension\\/fraud\\/ip","extension\\/fraud\\/maxmind","extension\\/installer","extension\\/modification","extension\\/module\\/account","extension\\/module\\/affiliate","extension\\/module\\/amazon_login","extension\\/module\\/amazon_pay","extension\\/module\\/banner","extension\\/module\\/bestseller","extension\\/module\\/carousel","extension\\/module\\/category","extension\\/module\\/divido_calculator","extension\\/module\\/ebay_listing","extension\\/module\\/featured","extension\\/module\\/filter","extension\\/module\\/google_hangouts","extension\\/module\\/html","extension\\/module\\/information","extension\\/module\\/klarna_checkout_module","extension\\/module\\/latest","extension\\/module\\/laybuy_layout","extension\\/module\\/pilibaba_button","extension\\/module\\/pp_button","extension\\/module\\/pp_login","extension\\/module\\/sagepay_direct_cards","extension\\/module\\/sagepay_server_cards","extension\\/module\\/slideshow","extension\\/module\\/special","extension\\/module\\/store","extension\\/openbay","extension\\/openbay\\/amazon","extension\\/openbay\\/amazon_listing","extension\\/openbay\\/amazon_product","extension\\/openbay\\/amazonus","extension\\/openbay\\/amazonus_listing","extension\\/openbay\\/amazonus_product","extension\\/openbay\\/ebay","extension\\/openbay\\/ebay_profile","extension\\/openbay\\/ebay_template","extension\\/openbay\\/etsy","extension\\/openbay\\/etsy_product","extension\\/openbay\\/etsy_shipping","extension\\/openbay\\/etsy_shop","extension\\/openbay\\/fba","extension\\/payment\\/amazon_login_pay","extension\\/payment\\/authorizenet_aim","extension\\/payment\\/authorizenet_sim","extension\\/payment\\/bank_transfer","extension\\/payment\\/bluepay_hosted","extension\\/payment\\/bluepay_redirect","extension\\/payment\\/cardconnect","extension\\/payment\\/cardinity","extension\\/payment\\/cheque","extension\\/payment\\/cod","extension\\/payment\\/divido","extension\\/payment\\/eway","extension\\/payment\\/firstdata","extension\\/payment\\/firstdata_remote","extension\\/payment\\/free_checkout","extension\\/payment\\/g2apay","extension\\/payment\\/globalpay","extension\\/payment\\/globalpay_remote","extension\\/payment\\/klarna_account","extension\\/payment\\/klarna_checkout","extension\\/payment\\/klarna_invoice","extension\\/payment\\/laybuy","extension\\/payment\\/liqpay","extension\\/payment\\/nochex","extension\\/payment\\/paymate","extension\\/payment\\/paypoint","extension\\/payment\\/payza","extension\\/payment\\/perpetual_payments","extension\\/payment\\/pilibaba","extension\\/payment\\/pp_express","extension\\/payment\\/pp_payflow","extension\\/payment\\/pp_payflow_iframe","extension\\/payment\\/pp_pro","extension\\/payment\\/pp_pro_iframe","extension\\/payment\\/pp_standard","extension\\/payment\\/realex","extension\\/payment\\/realex_remote","extension\\/payment\\/sagepay_direct","extension\\/payment\\/sagepay_server","extension\\/payment\\/sagepay_us","extension\\/payment\\/securetrading_pp","extension\\/payment\\/securetrading_ws","extension\\/payment\\/skrill","extension\\/payment\\/twocheckout","extension\\/payment\\/web_payment_software","extension\\/payment\\/worldpay","extension\\/shipping\\/auspost","extension\\/shipping\\/citylink","extension\\/shipping\\/fedex","extension\\/shipping\\/flat","extension\\/shipping\\/free","extension\\/shipping\\/item","extension\\/shipping\\/parcelforce_48","extension\\/shipping\\/pickup","extension\\/shipping\\/royal_mail","extension\\/shipping\\/ups","extension\\/shipping\\/usps","extension\\/shipping\\/weight","extension\\/store","extension\\/theme\\/theme_default","extension\\/total\\/coupon","extension\\/total\\/credit","extension\\/total\\/handling","extension\\/total\\/klarna_fee","extension\\/total\\/low_order_fee","extension\\/total\\/reward","extension\\/total\\/shipping","extension\\/total\\/sub_total","extension\\/total\\/tax","extension\\/total\\/total","extension\\/total\\/voucher","localisation\\/country","localisation\\/currency","localisation\\/geo_zone","localisation\\/language","localisation\\/length_class","localisation\\/location","localisation\\/order_status","localisation\\/return_action","localisation\\/return_reason","localisation\\/return_status","localisation\\/stock_status","localisation\\/tax_class","localisation\\/tax_rate","localisation\\/weight_class","localisation\\/zone","marketing\\/affiliate","marketing\\/contact","marketing\\/coupon","marketing\\/marketing","report\\/affiliate","report\\/affiliate_activity","report\\/affiliate_login","report\\/customer_activity","report\\/customer_credit","report\\/customer_login","report\\/customer_online","report\\/customer_order","report\\/customer_reward","report\\/customer_search","report\\/marketing","report\\/product_purchased","report\\/product_viewed","report\\/sale_coupon","report\\/sale_order","report\\/sale_return","report\\/sale_shipping","report\\/sale_tax","sale\\/order","sale\\/recurring","sale\\/return","sale\\/voucher","sale\\/voucher_theme","setting\\/setting","setting\\/store","startup\\/compatibility","startup\\/error","startup\\/event","startup\\/login","startup\\/permission","startup\\/router","startup\\/sass","startup\\/startup","tool\\/backup","tool\\/log","tool\\/upload","user\\/api","user\\/user","user\\/user_permission","extension\\/payment\\/bank_transfer","extension\\/shipping\\/pickup","extension\\/module\\/latest","extension\\/module\\/bestseller","extension\\/module\\/simple_blog","extension\\/module\\/simple_blog_category"],"modify":["catalog\\/attribute","catalog\\/attribute_group","catalog\\/category","catalog\\/download","catalog\\/filter","catalog\\/information","catalog\\/manufacturer","catalog\\/option","catalog\\/product","catalog\\/recurring","catalog\\/review","common\\/column_left","common\\/filemanager","customer\\/custom_field","customer\\/customer","customer\\/customer_group","design\\/banner","design\\/language","design\\/layout","design\\/menu","design\\/theme","design\\/translation","event\\/compatibility","event\\/theme","extension\\/analytics\\/google_analytics","extension\\/captcha\\/basic_captcha","extension\\/captcha\\/google_captcha","extension\\/dashboard\\/activity","extension\\/dashboard\\/chart","extension\\/dashboard\\/customer","extension\\/dashboard\\/map","extension\\/dashboard\\/online","extension\\/dashboard\\/order","extension\\/dashboard\\/recent","extension\\/dashboard\\/sale","extension\\/event","extension\\/extension","extension\\/extension\\/analytics","extension\\/extension\\/captcha","extension\\/extension\\/dashboard","extension\\/extension\\/feed","extension\\/extension\\/fraud","extension\\/extension\\/module","extension\\/extension\\/payment","extension\\/extension\\/shipping","extension\\/extension\\/theme","extension\\/extension\\/total","extension\\/feed\\/google_base","extension\\/feed\\/google_sitemap","extension\\/feed\\/openbaypro","extension\\/fraud\\/fraudlabspro","extension\\/fraud\\/ip","extension\\/fraud\\/maxmind","extension\\/installer","extension\\/modification","extension\\/module\\/account","extension\\/module\\/affiliate","extension\\/module\\/amazon_login","extension\\/module\\/amazon_pay","extension\\/module\\/banner","extension\\/module\\/bestseller","extension\\/module\\/carousel","extension\\/module\\/category","extension\\/module\\/divido_calculator","extension\\/module\\/ebay_listing","extension\\/module\\/featured","extension\\/module\\/filter","extension\\/module\\/google_hangouts","extension\\/module\\/html","extension\\/module\\/information","extension\\/module\\/klarna_checkout_module","extension\\/module\\/latest","extension\\/module\\/laybuy_layout","extension\\/module\\/pilibaba_button","extension\\/module\\/pp_button","extension\\/module\\/pp_login","extension\\/module\\/sagepay_direct_cards","extension\\/module\\/sagepay_server_cards","extension\\/module\\/slideshow","extension\\/module\\/special","extension\\/module\\/store","extension\\/openbay","extension\\/openbay\\/amazon","extension\\/openbay\\/amazon_listing","extension\\/openbay\\/amazon_product","extension\\/openbay\\/amazonus","extension\\/openbay\\/amazonus_listing","extension\\/openbay\\/amazonus_product","extension\\/openbay\\/ebay","extension\\/openbay\\/ebay_profile","extension\\/openbay\\/ebay_template","extension\\/openbay\\/etsy","extension\\/openbay\\/etsy_product","extension\\/openbay\\/etsy_shipping","extension\\/openbay\\/etsy_shop","extension\\/openbay\\/fba","extension\\/payment\\/amazon_login_pay","extension\\/payment\\/authorizenet_aim","extension\\/payment\\/authorizenet_sim","extension\\/payment\\/bank_transfer","extension\\/payment\\/bluepay_hosted","extension\\/payment\\/bluepay_redirect","extension\\/payment\\/cardconnect","extension\\/payment\\/cardinity","extension\\/payment\\/cheque","extension\\/payment\\/cod","extension\\/payment\\/divido","extension\\/payment\\/eway","extension\\/payment\\/firstdata","extension\\/payment\\/firstdata_remote","extension\\/payment\\/free_checkout","extension\\/payment\\/g2apay","extension\\/payment\\/globalpay","extension\\/payment\\/globalpay_remote","extension\\/payment\\/klarna_account","extension\\/payment\\/klarna_checkout","extension\\/payment\\/klarna_invoice","extension\\/payment\\/laybuy","extension\\/payment\\/liqpay","extension\\/payment\\/nochex","extension\\/payment\\/paymate","extension\\/payment\\/paypoint","extension\\/payment\\/payza","extension\\/payment\\/perpetual_payments","extension\\/payment\\/pilibaba","extension\\/payment\\/pp_express","extension\\/payment\\/pp_payflow","extension\\/payment\\/pp_payflow_iframe","extension\\/payment\\/pp_pro","extension\\/payment\\/pp_pro_iframe","extension\\/payment\\/pp_standard","extension\\/payment\\/realex","extension\\/payment\\/realex_remote","extension\\/payment\\/sagepay_direct","extension\\/payment\\/sagepay_server","extension\\/payment\\/sagepay_us","extension\\/payment\\/securetrading_pp","extension\\/payment\\/securetrading_ws","extension\\/payment\\/skrill","extension\\/payment\\/twocheckout","extension\\/payment\\/web_payment_software","extension\\/payment\\/worldpay","extension\\/shipping\\/auspost","extension\\/shipping\\/citylink","extension\\/shipping\\/fedex","extension\\/shipping\\/flat","extension\\/shipping\\/free","extension\\/shipping\\/item","extension\\/shipping\\/parcelforce_48","extension\\/shipping\\/pickup","extension\\/shipping\\/royal_mail","extension\\/shipping\\/ups","extension\\/shipping\\/usps","extension\\/shipping\\/weight","extension\\/store","extension\\/theme\\/theme_default","extension\\/total\\/coupon","extension\\/total\\/credit","extension\\/total\\/handling","extension\\/total\\/klarna_fee","extension\\/total\\/low_order_fee","extension\\/total\\/reward","extension\\/total\\/shipping","extension\\/total\\/sub_total","extension\\/total\\/tax","extension\\/total\\/total","extension\\/total\\/voucher","localisation\\/country","localisation\\/currency","localisation\\/geo_zone","localisation\\/language","localisation\\/length_class","localisation\\/location","localisation\\/order_status","localisation\\/return_action","localisation\\/return_reason","localisation\\/return_status","localisation\\/stock_status","localisation\\/tax_class","localisation\\/tax_rate","localisation\\/weight_class","localisation\\/zone","marketing\\/affiliate","marketing\\/contact","marketing\\/coupon","marketing\\/marketing","report\\/affiliate","report\\/affiliate_activity","report\\/affiliate_login","report\\/customer_activity","report\\/customer_credit","report\\/customer_login","report\\/customer_online","report\\/customer_order","report\\/customer_reward","report\\/customer_search","report\\/marketing","report\\/product_purchased","report\\/product_viewed","report\\/sale_coupon","report\\/sale_order","report\\/sale_return","report\\/sale_shipping","report\\/sale_tax","sale\\/order","sale\\/recurring","sale\\/return","sale\\/voucher","sale\\/voucher_theme","setting\\/setting","setting\\/store","startup\\/compatibility","startup\\/error","startup\\/event","startup\\/login","startup\\/permission","startup\\/router","startup\\/sass","startup\\/startup","tool\\/backup","tool\\/log","tool\\/upload","user\\/api","user\\/user","user\\/user_permission","extension\\/payment\\/bank_transfer","extension\\/shipping\\/pickup","extension\\/module\\/latest","extension\\/module\\/bestseller","extension\\/module\\/simple_blog","extension\\/module\\/simple_blog_category"]}'),
 (10, '一般', ''),
 (11, '最高管理員', '{"access":["catalog\\/category","catalog\\/information","catalog\\/option","catalog\\/product","catalog\\/review","common\\/filemanager","customer\\/customer","design\\/banner","extension\\/analytics\\/google_analytics","extension\\/captcha\\/basic_captcha","extension\\/captcha\\/google_captcha","extension\\/dashboard\\/activity","extension\\/dashboard\\/chart","extension\\/dashboard\\/customer","extension\\/dashboard\\/map","extension\\/dashboard\\/online","extension\\/dashboard\\/order","extension\\/dashboard\\/recent","extension\\/dashboard\\/sale","extension\\/payment\\/bank_transfer","localisation\\/location","localisation\\/stock_status","marketing\\/contact","marketing\\/marketing","report\\/affiliate","report\\/affiliate_activity","report\\/affiliate_login","report\\/customer_activity","report\\/customer_credit","report\\/customer_login","report\\/customer_online","report\\/customer_order","report\\/customer_reward","report\\/customer_search","report\\/marketing","report\\/product_purchased","report\\/product_viewed","report\\/sale_order","report\\/sale_return","report\\/sale_shipping","sale\\/order","sale\\/return"],"modify":["catalog\\/attribute","catalog\\/attribute_group","catalog\\/category","catalog\\/download","catalog\\/filter","catalog\\/information","catalog\\/manufacturer","catalog\\/option","catalog\\/product","catalog\\/recurring","catalog\\/review","common\\/column_left","common\\/filemanager","customer\\/custom_field","customer\\/customer","customer\\/customer_group","design\\/banner","design\\/language","design\\/layout","design\\/menu","design\\/theme","design\\/translation","event\\/compatibility","event\\/theme","extension\\/analytics\\/google_analytics","extension\\/captcha\\/basic_captcha","extension\\/captcha\\/google_captcha","extension\\/dashboard\\/activity","extension\\/dashboard\\/chart","extension\\/dashboard\\/customer","extension\\/dashboard\\/map","extension\\/dashboard\\/online","extension\\/dashboard\\/order","extension\\/dashboard\\/recent","extension\\/dashboard\\/sale","extension\\/event","extension\\/extension","extension\\/extension\\/analytics","extension\\/extension\\/captcha","extension\\/extension\\/dashboard","extension\\/extension\\/feed","extension\\/extension\\/fraud","extension\\/extension\\/module","extension\\/extension\\/payment","extension\\/extension\\/shipping","extension\\/extension\\/theme","extension\\/extension\\/total","extension\\/feed\\/google_base","extension\\/feed\\/google_sitemap","extension\\/feed\\/openbaypro","extension\\/fraud\\/fraudlabspro","extension\\/fraud\\/ip","extension\\/fraud\\/maxmind","extension\\/installer","extension\\/modification","extension\\/module\\/account","extension\\/module\\/affiliate","extension\\/module\\/amazon_login","extension\\/module\\/amazon_pay","extension\\/module\\/banner","extension\\/module\\/bestseller","extension\\/module\\/carousel","extension\\/module\\/category","extension\\/module\\/divido_calculator","extension\\/module\\/ebay_listing","extension\\/module\\/featured","extension\\/module\\/filter","extension\\/module\\/google_hangouts","extension\\/module\\/html","extension\\/module\\/information","extension\\/module\\/klarna_checkout_module","extension\\/module\\/latest","extension\\/module\\/laybuy_layout","extension\\/module\\/pilibaba_button","extension\\/module\\/pp_button","extension\\/module\\/pp_login","extension\\/module\\/sagepay_direct_cards","extension\\/module\\/sagepay_server_cards","extension\\/module\\/slideshow","extension\\/module\\/special","extension\\/module\\/store","extension\\/openbay","extension\\/openbay\\/amazon","extension\\/openbay\\/amazon_listing","extension\\/openbay\\/amazon_product","extension\\/openbay\\/amazonus","extension\\/openbay\\/amazonus_listing","extension\\/openbay\\/amazonus_product","extension\\/openbay\\/ebay","extension\\/openbay\\/ebay_profile","extension\\/openbay\\/ebay_template","extension\\/openbay\\/etsy","extension\\/openbay\\/etsy_product","extension\\/openbay\\/etsy_shipping","extension\\/openbay\\/etsy_shop","extension\\/openbay\\/fba","extension\\/payment\\/amazon_login_pay","extension\\/payment\\/authorizenet_aim","extension\\/payment\\/authorizenet_sim","extension\\/payment\\/bank_transfer","extension\\/payment\\/bluepay_hosted","extension\\/payment\\/bluepay_redirect","extension\\/payment\\/cardconnect","extension\\/payment\\/cardinity","extension\\/payment\\/cheque","extension\\/payment\\/cod","extension\\/payment\\/divido","extension\\/payment\\/eway","extension\\/payment\\/firstdata","extension\\/payment\\/firstdata_remote","extension\\/payment\\/free_checkout","extension\\/payment\\/g2apay","extension\\/payment\\/globalpay","extension\\/payment\\/globalpay_remote","extension\\/payment\\/klarna_account","extension\\/payment\\/klarna_checkout","extension\\/payment\\/klarna_invoice","extension\\/payment\\/laybuy","extension\\/payment\\/liqpay","extension\\/payment\\/nochex","extension\\/payment\\/paymate","extension\\/payment\\/paypoint","extension\\/payment\\/payza","extension\\/payment\\/perpetual_payments","extension\\/payment\\/pilibaba","extension\\/payment\\/pp_express","extension\\/payment\\/pp_payflow","extension\\/payment\\/pp_payflow_iframe","extension\\/payment\\/pp_pro","extension\\/payment\\/pp_pro_iframe","extension\\/payment\\/pp_standard","extension\\/payment\\/realex","extension\\/payment\\/realex_remote","extension\\/payment\\/sagepay_direct","extension\\/payment\\/sagepay_server","extension\\/payment\\/sagepay_us","extension\\/payment\\/securetrading_pp","extension\\/payment\\/securetrading_ws","extension\\/payment\\/skrill","extension\\/payment\\/twocheckout","extension\\/payment\\/web_payment_software","extension\\/payment\\/worldpay","extension\\/shipping\\/auspost","extension\\/shipping\\/citylink","extension\\/shipping\\/fedex","extension\\/shipping\\/flat","extension\\/shipping\\/free","extension\\/shipping\\/item","extension\\/shipping\\/parcelforce_48","extension\\/shipping\\/pickup","extension\\/shipping\\/royal_mail","extension\\/shipping\\/sf_express","extension\\/shipping\\/ups","extension\\/shipping\\/usps","extension\\/shipping\\/weight","extension\\/store","extension\\/theme\\/theme_default","extension\\/total\\/coupon","extension\\/total\\/credit","extension\\/total\\/handling","extension\\/total\\/klarna_fee","extension\\/total\\/low_order_fee","extension\\/total\\/reward","extension\\/total\\/shipping","extension\\/total\\/sub_total","extension\\/total\\/tax","extension\\/total\\/total","extension\\/total\\/voucher","localisation\\/country","localisation\\/currency","localisation\\/geo_zone","localisation\\/language","localisation\\/length_class","localisation\\/location","localisation\\/order_status","localisation\\/return_action","localisation\\/return_reason","localisation\\/return_status","localisation\\/stock_status","localisation\\/tax_class","localisation\\/tax_rate","localisation\\/weight_class","localisation\\/zone","marketing\\/affiliate","marketing\\/contact","marketing\\/coupon","marketing\\/marketing","report\\/affiliate","report\\/affiliate_activity","report\\/affiliate_login","report\\/customer_activity","report\\/customer_credit","report\\/customer_login","report\\/customer_online","report\\/customer_order","report\\/customer_reward","report\\/customer_search","report\\/marketing","report\\/product_purchased","report\\/product_viewed","report\\/sale_coupon","report\\/sale_order","report\\/sale_return","report\\/sale_shipping","report\\/sale_tax","sale\\/order","sale\\/recurring","sale\\/return","sale\\/voucher","sale\\/voucher_theme","setting\\/setting","setting\\/store","startup\\/compatibility","startup\\/error","startup\\/event","startup\\/login","startup\\/permission","startup\\/router","startup\\/sass","startup\\/startup","tool\\/backup","tool\\/log","tool\\/upload","user\\/api","user\\/user","user\\/user_permission"]}');
+=======
+(1, '開發者', '{\"access\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/emailthanks\",\"common\\/filemanager\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/language\",\"design\\/layout\",\"design\\/menu\",\"design\\/theme\",\"design\\/translation\",\"event\\/compatibility\",\"event\\/theme\",\"extension\\/analytics\\/google_analytics\",\"extension\\/captcha\\/basic_captcha\",\"extension\\/captcha\\/google_captcha\",\"extension\\/dashboard\\/activity\",\"extension\\/dashboard\\/chart\",\"extension\\/dashboard\\/customer\",\"extension\\/dashboard\\/map\",\"extension\\/dashboard\\/online\",\"extension\\/dashboard\\/order\",\"extension\\/dashboard\\/recent\",\"extension\\/dashboard\\/sale\",\"extension\\/event\",\"extension\\/extension\",\"extension\\/extension\\/analytics\",\"extension\\/extension\\/captcha\",\"extension\\/extension\\/dashboard\",\"extension\\/extension\\/feed\",\"extension\\/extension\\/fraud\",\"extension\\/extension\\/module\",\"extension\\/extension\\/payment\",\"extension\\/extension\\/shipping\",\"extension\\/extension\\/theme\",\"extension\\/extension\\/total\",\"extension\\/feed\\/google_base\",\"extension\\/feed\\/google_sitemap\",\"extension\\/feed\\/openbaypro\",\"extension\\/fraud\\/fraudlabspro\",\"extension\\/fraud\\/ip\",\"extension\\/fraud\\/maxmind\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\\/account\",\"extension\\/module\\/affiliate\",\"extension\\/module\\/amazon_login\",\"extension\\/module\\/amazon_pay\",\"extension\\/module\\/banner\",\"extension\\/module\\/bestseller\",\"extension\\/module\\/carousel\",\"extension\\/module\\/category\",\"extension\\/module\\/divido_calculator\",\"extension\\/module\\/ebay_listing\",\"extension\\/module\\/featured\",\"extension\\/module\\/filter\",\"extension\\/module\\/google_hangouts\",\"extension\\/module\\/html\",\"extension\\/module\\/information\",\"extension\\/module\\/klarna_checkout_module\",\"extension\\/module\\/latest\",\"extension\\/module\\/laybuy_layout\",\"extension\\/module\\/pilibaba_button\",\"extension\\/module\\/pp_button\",\"extension\\/module\\/pp_login\",\"extension\\/module\\/sagepay_direct_cards\",\"extension\\/module\\/sagepay_server_cards\",\"extension\\/module\\/slideshow\",\"extension\\/module\\/special\",\"extension\\/module\\/store\",\"extension\\/openbay\",\"extension\\/openbay\\/amazon\",\"extension\\/openbay\\/amazon_listing\",\"extension\\/openbay\\/amazon_product\",\"extension\\/openbay\\/amazonus\",\"extension\\/openbay\\/amazonus_listing\",\"extension\\/openbay\\/amazonus_product\",\"extension\\/openbay\\/ebay\",\"extension\\/openbay\\/ebay_profile\",\"extension\\/openbay\\/ebay_template\",\"extension\\/openbay\\/etsy\",\"extension\\/openbay\\/etsy_product\",\"extension\\/openbay\\/etsy_shipping\",\"extension\\/openbay\\/etsy_shop\",\"extension\\/openbay\\/fba\",\"extension\\/payment\\/amazon_login_pay\",\"extension\\/payment\\/authorizenet_aim\",\"extension\\/payment\\/authorizenet_sim\",\"extension\\/payment\\/bank_transfer\",\"extension\\/payment\\/bluepay_hosted\",\"extension\\/payment\\/bluepay_redirect\",\"extension\\/payment\\/cardconnect\",\"extension\\/payment\\/cardinity\",\"extension\\/payment\\/cheque\",\"extension\\/payment\\/cod\",\"extension\\/payment\\/divido\",\"extension\\/payment\\/eway\",\"extension\\/payment\\/firstdata\",\"extension\\/payment\\/firstdata_remote\",\"extension\\/payment\\/free_checkout\",\"extension\\/payment\\/g2apay\",\"extension\\/payment\\/globalpay\",\"extension\\/payment\\/globalpay_remote\",\"extension\\/payment\\/klarna_account\",\"extension\\/payment\\/klarna_checkout\",\"extension\\/payment\\/klarna_invoice\",\"extension\\/payment\\/laybuy\",\"extension\\/payment\\/liqpay\",\"extension\\/payment\\/nochex\",\"extension\\/payment\\/paymate\",\"extension\\/payment\\/paypoint\",\"extension\\/payment\\/payza\",\"extension\\/payment\\/perpetual_payments\",\"extension\\/payment\\/pilibaba\",\"extension\\/payment\\/pp_express\",\"extension\\/payment\\/pp_payflow\",\"extension\\/payment\\/pp_payflow_iframe\",\"extension\\/payment\\/pp_pro\",\"extension\\/payment\\/pp_pro_iframe\",\"extension\\/payment\\/pp_standard\",\"extension\\/payment\\/realex\",\"extension\\/payment\\/realex_remote\",\"extension\\/payment\\/sagepay_direct\",\"extension\\/payment\\/sagepay_server\",\"extension\\/payment\\/sagepay_us\",\"extension\\/payment\\/securetrading_pp\",\"extension\\/payment\\/securetrading_ws\",\"extension\\/payment\\/skrill\",\"extension\\/payment\\/twocheckout\",\"extension\\/payment\\/web_payment_software\",\"extension\\/payment\\/worldpay\",\"extension\\/shipping\\/auspost\",\"extension\\/shipping\\/citylink\",\"extension\\/shipping\\/fedex\",\"extension\\/shipping\\/flat\",\"extension\\/shipping\\/free\",\"extension\\/shipping\\/item\",\"extension\\/shipping\\/parcelforce_48\",\"extension\\/shipping\\/pickup\",\"extension\\/shipping\\/royal_mail\",\"extension\\/shipping\\/sf_express\",\"extension\\/shipping\\/ups\",\"extension\\/shipping\\/usps\",\"extension\\/shipping\\/weight\",\"extension\\/store\",\"extension\\/theme\\/theme_default\",\"extension\\/total\\/coupon\",\"extension\\/total\\/credit\",\"extension\\/total\\/handling\",\"extension\\/total\\/klarna_fee\",\"extension\\/total\\/low_order_fee\",\"extension\\/total\\/reward\",\"extension\\/total\\/shipping\",\"extension\\/total\\/sub_total\",\"extension\\/total\\/tax\",\"extension\\/total\\/total\",\"extension\\/total\\/voucher\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"payment\\/ecpaylogistic\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/customer_search\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/ecpaylogistic_order\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"shipping\\/ECPay.Logistics.Integration\",\"shipping\\/ecpaylogistic.inc\",\"shipping\\/ecpaylogistic\",\"startup\\/compatibility\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"tool\\/backup\",\"tool\\/log\",\"tool\\/upload\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/shipping\\/ecpaylogistic\",\"extension\\/payment\\/ecpaylogistic\",\"extension\\/shipping\\/ecpaylogistic\",\"extension\\/shipping\\/ecpaylogistic\",\"extension\\/shipping\\/ecpaylogistic\",\"extension\\/payment\\/ecpaylogistic\",\"extension\\/payment\\/ecpaylogistic\",\"extension\\/payment\\/ecpaylogistic\"],\"modify\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/emailthanks\",\"common\\/filemanager\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/language\",\"design\\/layout\",\"design\\/menu\",\"design\\/theme\",\"design\\/translation\",\"event\\/compatibility\",\"event\\/theme\",\"extension\\/analytics\\/google_analytics\",\"extension\\/captcha\\/basic_captcha\",\"extension\\/captcha\\/google_captcha\",\"extension\\/dashboard\\/activity\",\"extension\\/dashboard\\/chart\",\"extension\\/dashboard\\/customer\",\"extension\\/dashboard\\/map\",\"extension\\/dashboard\\/online\",\"extension\\/dashboard\\/order\",\"extension\\/dashboard\\/recent\",\"extension\\/dashboard\\/sale\",\"extension\\/event\",\"extension\\/extension\",\"extension\\/extension\\/analytics\",\"extension\\/extension\\/captcha\",\"extension\\/extension\\/dashboard\",\"extension\\/extension\\/feed\",\"extension\\/extension\\/fraud\",\"extension\\/extension\\/module\",\"extension\\/extension\\/payment\",\"extension\\/extension\\/shipping\",\"extension\\/extension\\/theme\",\"extension\\/extension\\/total\",\"extension\\/feed\\/google_base\",\"extension\\/feed\\/google_sitemap\",\"extension\\/feed\\/openbaypro\",\"extension\\/fraud\\/fraudlabspro\",\"extension\\/fraud\\/ip\",\"extension\\/fraud\\/maxmind\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\\/account\",\"extension\\/module\\/affiliate\",\"extension\\/module\\/amazon_login\",\"extension\\/module\\/amazon_pay\",\"extension\\/module\\/banner\",\"extension\\/module\\/bestseller\",\"extension\\/module\\/carousel\",\"extension\\/module\\/category\",\"extension\\/module\\/divido_calculator\",\"extension\\/module\\/ebay_listing\",\"extension\\/module\\/featured\",\"extension\\/module\\/filter\",\"extension\\/module\\/google_hangouts\",\"extension\\/module\\/html\",\"extension\\/module\\/information\",\"extension\\/module\\/klarna_checkout_module\",\"extension\\/module\\/latest\",\"extension\\/module\\/laybuy_layout\",\"extension\\/module\\/pilibaba_button\",\"extension\\/module\\/pp_button\",\"extension\\/module\\/pp_login\",\"extension\\/module\\/sagepay_direct_cards\",\"extension\\/module\\/sagepay_server_cards\",\"extension\\/module\\/slideshow\",\"extension\\/module\\/special\",\"extension\\/module\\/store\",\"extension\\/openbay\",\"extension\\/openbay\\/amazon\",\"extension\\/openbay\\/amazon_listing\",\"extension\\/openbay\\/amazon_product\",\"extension\\/openbay\\/amazonus\",\"extension\\/openbay\\/amazonus_listing\",\"extension\\/openbay\\/amazonus_product\",\"extension\\/openbay\\/ebay\",\"extension\\/openbay\\/ebay_profile\",\"extension\\/openbay\\/ebay_template\",\"extension\\/openbay\\/etsy\",\"extension\\/openbay\\/etsy_product\",\"extension\\/openbay\\/etsy_shipping\",\"extension\\/openbay\\/etsy_shop\",\"extension\\/openbay\\/fba\",\"extension\\/payment\\/amazon_login_pay\",\"extension\\/payment\\/authorizenet_aim\",\"extension\\/payment\\/authorizenet_sim\",\"extension\\/payment\\/bank_transfer\",\"extension\\/payment\\/bluepay_hosted\",\"extension\\/payment\\/bluepay_redirect\",\"extension\\/payment\\/cardconnect\",\"extension\\/payment\\/cardinity\",\"extension\\/payment\\/cheque\",\"extension\\/payment\\/cod\",\"extension\\/payment\\/divido\",\"extension\\/payment\\/eway\",\"extension\\/payment\\/firstdata\",\"extension\\/payment\\/firstdata_remote\",\"extension\\/payment\\/free_checkout\",\"extension\\/payment\\/g2apay\",\"extension\\/payment\\/globalpay\",\"extension\\/payment\\/globalpay_remote\",\"extension\\/payment\\/klarna_account\",\"extension\\/payment\\/klarna_checkout\",\"extension\\/payment\\/klarna_invoice\",\"extension\\/payment\\/laybuy\",\"extension\\/payment\\/liqpay\",\"extension\\/payment\\/nochex\",\"extension\\/payment\\/paymate\",\"extension\\/payment\\/paypoint\",\"extension\\/payment\\/payza\",\"extension\\/payment\\/perpetual_payments\",\"extension\\/payment\\/pilibaba\",\"extension\\/payment\\/pp_express\",\"extension\\/payment\\/pp_payflow\",\"extension\\/payment\\/pp_payflow_iframe\",\"extension\\/payment\\/pp_pro\",\"extension\\/payment\\/pp_pro_iframe\",\"extension\\/payment\\/pp_standard\",\"extension\\/payment\\/realex\",\"extension\\/payment\\/realex_remote\",\"extension\\/payment\\/sagepay_direct\",\"extension\\/payment\\/sagepay_server\",\"extension\\/payment\\/sagepay_us\",\"extension\\/payment\\/securetrading_pp\",\"extension\\/payment\\/securetrading_ws\",\"extension\\/payment\\/skrill\",\"extension\\/payment\\/twocheckout\",\"extension\\/payment\\/web_payment_software\",\"extension\\/payment\\/worldpay\",\"extension\\/shipping\\/auspost\",\"extension\\/shipping\\/citylink\",\"extension\\/shipping\\/fedex\",\"extension\\/shipping\\/flat\",\"extension\\/shipping\\/free\",\"extension\\/shipping\\/item\",\"extension\\/shipping\\/parcelforce_48\",\"extension\\/shipping\\/pickup\",\"extension\\/shipping\\/royal_mail\",\"extension\\/shipping\\/sf_express\",\"extension\\/shipping\\/ups\",\"extension\\/shipping\\/usps\",\"extension\\/shipping\\/weight\",\"extension\\/store\",\"extension\\/theme\\/theme_default\",\"extension\\/total\\/coupon\",\"extension\\/total\\/credit\",\"extension\\/total\\/handling\",\"extension\\/total\\/klarna_fee\",\"extension\\/total\\/low_order_fee\",\"extension\\/total\\/reward\",\"extension\\/total\\/shipping\",\"extension\\/total\\/sub_total\",\"extension\\/total\\/tax\",\"extension\\/total\\/total\",\"extension\\/total\\/voucher\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"payment\\/ecpaylogistic\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/customer_search\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/ecpaylogistic_order\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"shipping\\/ECPay.Logistics.Integration\",\"shipping\\/ecpaylogistic.inc\",\"shipping\\/ecpaylogistic\",\"startup\\/compatibility\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"tool\\/backup\",\"tool\\/log\",\"tool\\/upload\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/shipping\\/ecpaylogistic\",\"extension\\/payment\\/ecpaylogistic\",\"extension\\/shipping\\/ecpaylogistic\",\"extension\\/shipping\\/ecpaylogistic\",\"extension\\/shipping\\/ecpaylogistic\",\"extension\\/payment\\/ecpaylogistic\",\"extension\\/payment\\/ecpaylogistic\",\"extension\\/payment\\/ecpaylogistic\"]}'),
+(10, '一般', ''),
+(11, '最高管理員', '{\"access\":[\"catalog\\/category\",\"catalog\\/information\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/review\",\"common\\/filemanager\",\"customer\\/customer\",\"design\\/banner\",\"extension\\/analytics\\/google_analytics\",\"extension\\/captcha\\/basic_captcha\",\"extension\\/captcha\\/google_captcha\",\"extension\\/dashboard\\/activity\",\"extension\\/dashboard\\/chart\",\"extension\\/dashboard\\/customer\",\"extension\\/dashboard\\/map\",\"extension\\/dashboard\\/online\",\"extension\\/dashboard\\/order\",\"extension\\/dashboard\\/recent\",\"extension\\/dashboard\\/sale\",\"extension\\/extension\\/shipping\",\"extension\\/payment\\/bank_transfer\",\"localisation\\/location\",\"localisation\\/stock_status\",\"marketing\\/contact\",\"marketing\\/marketing\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/customer_search\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"sale\\/order\",\"sale\\/return\"],\"modify\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/language\",\"design\\/layout\",\"design\\/menu\",\"design\\/theme\",\"design\\/translation\",\"event\\/compatibility\",\"event\\/theme\",\"extension\\/analytics\\/google_analytics\",\"extension\\/captcha\\/basic_captcha\",\"extension\\/captcha\\/google_captcha\",\"extension\\/dashboard\\/activity\",\"extension\\/dashboard\\/chart\",\"extension\\/dashboard\\/customer\",\"extension\\/dashboard\\/map\",\"extension\\/dashboard\\/online\",\"extension\\/dashboard\\/order\",\"extension\\/dashboard\\/recent\",\"extension\\/dashboard\\/sale\",\"extension\\/event\",\"extension\\/extension\",\"extension\\/extension\\/analytics\",\"extension\\/extension\\/captcha\",\"extension\\/extension\\/dashboard\",\"extension\\/extension\\/feed\",\"extension\\/extension\\/fraud\",\"extension\\/extension\\/module\",\"extension\\/extension\\/payment\",\"extension\\/extension\\/shipping\",\"extension\\/extension\\/theme\",\"extension\\/extension\\/total\",\"extension\\/feed\\/google_base\",\"extension\\/feed\\/google_sitemap\",\"extension\\/feed\\/openbaypro\",\"extension\\/fraud\\/fraudlabspro\",\"extension\\/fraud\\/ip\",\"extension\\/fraud\\/maxmind\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\\/account\",\"extension\\/module\\/affiliate\",\"extension\\/module\\/amazon_login\",\"extension\\/module\\/amazon_pay\",\"extension\\/module\\/banner\",\"extension\\/module\\/bestseller\",\"extension\\/module\\/carousel\",\"extension\\/module\\/category\",\"extension\\/module\\/divido_calculator\",\"extension\\/module\\/ebay_listing\",\"extension\\/module\\/featured\",\"extension\\/module\\/filter\",\"extension\\/module\\/google_hangouts\",\"extension\\/module\\/html\",\"extension\\/module\\/information\",\"extension\\/module\\/klarna_checkout_module\",\"extension\\/module\\/latest\",\"extension\\/module\\/laybuy_layout\",\"extension\\/module\\/pilibaba_button\",\"extension\\/module\\/pp_button\",\"extension\\/module\\/pp_login\",\"extension\\/module\\/sagepay_direct_cards\",\"extension\\/module\\/sagepay_server_cards\",\"extension\\/module\\/slideshow\",\"extension\\/module\\/special\",\"extension\\/module\\/store\",\"extension\\/openbay\",\"extension\\/openbay\\/amazon\",\"extension\\/openbay\\/amazon_listing\",\"extension\\/openbay\\/amazon_product\",\"extension\\/openbay\\/amazonus\",\"extension\\/openbay\\/amazonus_listing\",\"extension\\/openbay\\/amazonus_product\",\"extension\\/openbay\\/ebay\",\"extension\\/openbay\\/ebay_profile\",\"extension\\/openbay\\/ebay_template\",\"extension\\/openbay\\/etsy\",\"extension\\/openbay\\/etsy_product\",\"extension\\/openbay\\/etsy_shipping\",\"extension\\/openbay\\/etsy_shop\",\"extension\\/openbay\\/fba\",\"extension\\/payment\\/amazon_login_pay\",\"extension\\/payment\\/authorizenet_aim\",\"extension\\/payment\\/authorizenet_sim\",\"extension\\/payment\\/bank_transfer\",\"extension\\/payment\\/bluepay_hosted\",\"extension\\/payment\\/bluepay_redirect\",\"extension\\/payment\\/cardconnect\",\"extension\\/payment\\/cardinity\",\"extension\\/payment\\/cheque\",\"extension\\/payment\\/cod\",\"extension\\/payment\\/divido\",\"extension\\/payment\\/eway\",\"extension\\/payment\\/firstdata\",\"extension\\/payment\\/firstdata_remote\",\"extension\\/payment\\/free_checkout\",\"extension\\/payment\\/g2apay\",\"extension\\/payment\\/globalpay\",\"extension\\/payment\\/globalpay_remote\",\"extension\\/payment\\/klarna_account\",\"extension\\/payment\\/klarna_checkout\",\"extension\\/payment\\/klarna_invoice\",\"extension\\/payment\\/laybuy\",\"extension\\/payment\\/liqpay\",\"extension\\/payment\\/nochex\",\"extension\\/payment\\/paymate\",\"extension\\/payment\\/paypoint\",\"extension\\/payment\\/payza\",\"extension\\/payment\\/perpetual_payments\",\"extension\\/payment\\/pilibaba\",\"extension\\/payment\\/pp_express\",\"extension\\/payment\\/pp_payflow\",\"extension\\/payment\\/pp_payflow_iframe\",\"extension\\/payment\\/pp_pro\",\"extension\\/payment\\/pp_pro_iframe\",\"extension\\/payment\\/pp_standard\",\"extension\\/payment\\/realex\",\"extension\\/payment\\/realex_remote\",\"extension\\/payment\\/sagepay_direct\",\"extension\\/payment\\/sagepay_server\",\"extension\\/payment\\/sagepay_us\",\"extension\\/payment\\/securetrading_pp\",\"extension\\/payment\\/securetrading_ws\",\"extension\\/payment\\/skrill\",\"extension\\/payment\\/twocheckout\",\"extension\\/payment\\/web_payment_software\",\"extension\\/payment\\/worldpay\",\"extension\\/shipping\\/auspost\",\"extension\\/shipping\\/citylink\",\"extension\\/shipping\\/fedex\",\"extension\\/shipping\\/flat\",\"extension\\/shipping\\/free\",\"extension\\/shipping\\/item\",\"extension\\/shipping\\/parcelforce_48\",\"extension\\/shipping\\/pickup\",\"extension\\/shipping\\/royal_mail\",\"extension\\/shipping\\/sf_express\",\"extension\\/shipping\\/ups\",\"extension\\/shipping\\/usps\",\"extension\\/shipping\\/weight\",\"extension\\/store\",\"extension\\/theme\\/theme_default\",\"extension\\/total\\/coupon\",\"extension\\/total\\/credit\",\"extension\\/total\\/handling\",\"extension\\/total\\/klarna_fee\",\"extension\\/total\\/low_order_fee\",\"extension\\/total\\/reward\",\"extension\\/total\\/shipping\",\"extension\\/total\\/sub_total\",\"extension\\/total\\/tax\",\"extension\\/total\\/total\",\"extension\\/total\\/voucher\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/customer_search\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"startup\\/compatibility\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"tool\\/backup\",\"tool\\/log\",\"tool\\/upload\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\"]}');
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 
 -- --------------------------------------------------------
 
@@ -4414,7 +7523,11 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (95, 3, 'Medea', 'MED', 1),
 (96, 3, 'Mila', 'MIL', 1),
 (97, 3, 'Mostaganem', 'MOS', 1),
+<<<<<<< HEAD
 (98, 3, 'M''Sila', 'MSI', 1),
+=======
+(98, 3, 'M\'Sila', 'MSI', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (99, 3, 'Naama', 'NAA', 1),
 (100, 3, 'Oran', 'ORA', 1),
 (101, 3, 'Ouargla', 'OUA', 1),
@@ -4434,7 +7547,11 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (115, 3, 'Tizi Ouzou', 'TOU', 1),
 (116, 3, 'Tlemcen', 'TLE', 1),
 (117, 4, 'Eastern', 'E', 1),
+<<<<<<< HEAD
 (118, 4, 'Manu''a', 'M', 1),
+=======
+(118, 4, 'Manu\'a', 'M', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (119, 4, 'Rose Island', 'R', 1),
 (120, 4, 'Swains Island', 'S', 1),
 (121, 4, 'Western', 'W', 1),
@@ -4499,6 +7616,7 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (180, 11, 'Aragatsotn', 'AGT', 1),
 (181, 11, 'Ararat', 'ARR', 1),
 (182, 11, 'Armavir', 'ARM', 1),
+<<<<<<< HEAD
 (183, 11, 'Geghark''unik''', 'GEG', 1),
 (184, 11, 'Kotayk''', 'KOT', 1),
 (185, 11, 'Lorri', 'LOR', 1),
@@ -4506,6 +7624,15 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (187, 11, 'Syunik''', 'SYU', 1),
 (188, 11, 'Tavush', 'TAV', 1),
 (189, 11, 'Vayots'' Dzor', 'VAY', 1),
+=======
+(183, 11, 'Geghark\'unik\'', 'GEG', 1),
+(184, 11, 'Kotayk\'', 'KOT', 1),
+(185, 11, 'Lorri', 'LOR', 1),
+(186, 11, 'Shirak', 'SHI', 1),
+(187, 11, 'Syunik\'', 'SYU', 1),
+(188, 11, 'Tavush', 'TAV', 1),
+(189, 11, 'Vayots\' Dzor', 'VAY', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (190, 11, 'Yerevan', 'YER', 1),
 (191, 13, 'Australian Capital Territory', 'ACT', 1),
 (192, 13, 'New South Wales', 'NSW', 1),
@@ -4619,7 +7746,11 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (300, 16, 'Long Island', 'LNG', 1),
 (301, 16, 'Mangrove Cay', 'MAN', 1),
 (302, 16, 'Mayaguana', 'MAY', 1),
+<<<<<<< HEAD
 (303, 16, 'Moore''s Island', 'MOO', 1),
+=======
+(303, 16, 'Moore\'s Island', 'MOO', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (304, 16, 'North Abaco', 'NAB', 1),
 (305, 16, 'North Andros', 'NAN', 1),
 (306, 16, 'North Eleuthera', 'NEL', 1),
@@ -4654,7 +7785,11 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (335, 19, 'Saint Philip', 'PHI', 1),
 (336, 19, 'Saint Thomas', 'THO', 1),
 (337, 20, 'Brestskaya (Brest)', 'BR', 1),
+<<<<<<< HEAD
 (338, 20, 'Homyel''skaya (Homyel'')', 'HO', 1),
+=======
+(338, 20, 'Homyel\'skaya (Homyel\')', 'HO', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (339, 20, 'Horad Minsk', 'HM', 1),
 (340, 20, 'Hrodzyenskaya (Hrodna)', 'HR', 1),
 (341, 20, 'Mahilyowskaya (Mahilyow)', 'MA', 1),
@@ -4694,9 +7829,15 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (375, 24, 'Paget', 'PG', 1),
 (376, 24, 'Pembroke', 'PB', 1),
 (377, 24, 'Saint George City', 'GC', 1),
+<<<<<<< HEAD
 (378, 24, 'Saint George''s', 'SG', 1),
 (379, 24, 'Sandys', 'SA', 1),
 (380, 24, 'Smith''s', 'SM', 1),
+=======
+(378, 24, 'Saint George\'s', 'SG', 1),
+(379, 24, 'Sandys', 'SA', 1),
+(380, 24, 'Smith\'s', 'SM', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (381, 24, 'Southampton', 'SH', 1),
 (382, 24, 'Warwick', 'WA', 1),
 (383, 25, 'Bumthang', 'BUM', 1),
@@ -4965,7 +8106,11 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (646, 41, 'Mambere-KadeÔ', 'MKD', 1),
 (647, 41, 'Mbomou', 'MBO', 1),
 (648, 41, 'Nana-Mambere', 'NMM', 1),
+<<<<<<< HEAD
 (649, 41, 'Ombella-M''Poko', 'OMP', 1),
+=======
+(649, 41, 'Ombella-M\'Poko', 'OMP', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (650, 41, 'Ouaka', 'OUK', 1),
 (651, 41, 'Ouham', 'OUH', 1),
 (652, 41, 'Ouham-Pende', 'OPE', 1),
@@ -4993,7 +8138,11 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (674, 43, 'Atacama', 'AT', 1),
 (675, 43, 'Bio-Bio', 'BI', 1),
 (676, 43, 'Coquimbo', 'CO', 1),
+<<<<<<< HEAD
 (677, 43, 'Libertador General Bernardo O''Higgins', 'LI', 1),
+=======
+(677, 43, 'Libertador General Bernardo O\'Higgins', 'LI', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (678, 43, 'Los Lagos', 'LL', 1),
 (679, 43, 'Magallanes y de la Antartica Chilena', 'MA', 1),
 (680, 43, 'Maule', 'ML', 1),
@@ -5235,7 +8384,11 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (916, 57, 'Vejle', 'VK', 1),
 (917, 57, 'Vestj&aelig;lland', 'VJ', 1),
 (918, 57, 'Viborg', 'VB', 1),
+<<<<<<< HEAD
 (919, 58, '''Ali Sabih', 'S', 1),
+=======
+(919, 58, '\'Ali Sabih', 'S', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (920, 58, 'Dikhil', 'K', 1),
 (921, 58, 'Djibouti', 'J', 1),
 (922, 58, 'Obock', 'O', 1),
@@ -5323,7 +8476,11 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (1004, 63, 'Al Fayyum', 'FYM', 1),
 (1005, 63, 'Al Gharbiyah', 'GBY', 1),
 (1006, 63, 'Al Iskandariyah', 'IDR', 1),
+<<<<<<< HEAD
 (1007, 63, 'Al Isma''iliyah', 'IML', 1),
+=======
+(1007, 63, 'Al Isma\'iliyah', 'IML', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (1008, 63, 'Al Jizah', 'JZH', 1),
 (1009, 63, 'Al Minufiyah', 'MFY', 1),
 (1010, 63, 'Al Minya', 'MNY', 1),
@@ -5335,6 +8492,7 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (1016, 63, 'Aswan', 'ASW', 1),
 (1017, 63, 'Asyut', 'ASY', 1),
 (1018, 63, 'Bani Suwayf', 'BSW', 1),
+<<<<<<< HEAD
 (1019, 63, 'Bur Sa''id', 'BSD', 1),
 (1020, 63, 'Dumyat', 'DMY', 1),
 (1021, 63, 'Janub Sina''', 'JNS', 1),
@@ -5342,6 +8500,15 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (1023, 63, 'Matruh', 'MAT', 1),
 (1024, 63, 'Qina', 'QIN', 1),
 (1025, 63, 'Shamal Sina''', 'SHS', 1),
+=======
+(1019, 63, 'Bur Sa\'id', 'BSD', 1),
+(1020, 63, 'Dumyat', 'DMY', 1),
+(1021, 63, 'Janub Sina\'', 'JNS', 1),
+(1022, 63, 'Kafr ash Shaykh', 'KSH', 1),
+(1023, 63, 'Matruh', 'MAT', 1),
+(1024, 63, 'Qina', 'QIN', 1),
+(1025, 63, 'Shamal Sina\'', 'SHS', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (1026, 63, 'Suhaj', 'SUH', 1),
 (1027, 64, 'Ahuachapan', 'AH', 1),
 (1028, 64, 'Cabanas', 'CA', 1),
@@ -5502,7 +8669,11 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (1206, 74, 'Hauts de Seine', '92', 1),
 (1207, 74, 'Seine St-Denis', '93', 1),
 (1208, 74, 'Val de Marne', '94', 1),
+<<<<<<< HEAD
 (1209, 74, 'Val d''Oise', '95', 1),
+=======
+(1209, 74, 'Val d\'Oise', '95', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (1210, 76, 'Archipel des Marquises', 'M', 1),
 (1211, 76, 'Archipel des Tuamotu', 'T', 1),
 (1212, 76, 'Archipel des Tubuai', 'I', 1),
@@ -5674,7 +8845,11 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (1378, 92, 'Upper Takutu-Upper Essequibo', 'UT', 1),
 (1379, 93, 'Artibonite', 'AR', 1),
 (1380, 93, 'Centre', 'CE', 1),
+<<<<<<< HEAD
 (1381, 93, 'Grand''Anse', 'GA', 1),
+=======
+(1381, 93, 'Grand\'Anse', 'GA', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (1382, 93, 'Nord', 'ND', 1),
 (1383, 93, 'Nord-Est', 'NE', 1),
 (1384, 93, 'Nord-Ouest', 'NO', 1),
@@ -5838,7 +9013,11 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (1581, 102, 'Ninawa', 'NN', 1),
 (1582, 102, 'Dahuk', 'DH', 1),
 (1583, 102, 'Arbil', 'AL', 1),
+<<<<<<< HEAD
 (1584, 102, 'At Ta''mim', 'TM', 1),
+=======
+(1584, 102, 'At Ta\'mim', 'TM', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (1585, 102, 'As Sulaymaniyah', 'SL', 1),
 (1586, 103, 'Carlow', 'CA', 1),
 (1587, 103, 'Cavan', 'CV', 1),
@@ -5867,8 +9046,13 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (1609, 103, 'Westmeath', 'WE', 1),
 (1610, 103, 'Wexford', 'WX', 1),
 (1611, 103, 'Wicklow', 'WI', 1),
+<<<<<<< HEAD
 (1612, 104, 'Be''er Sheva', 'BS', 1),
 (1613, 104, 'Bika''at Hayarden', 'BH', 1),
+=======
+(1612, 104, 'Be\'er Sheva', 'BS', 1),
+(1613, 104, 'Bika\'at Hayarden', 'BH', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (1614, 104, 'Eilat and Arava', 'EA', 1),
 (1615, 104, 'Galil', 'GA', 1),
 (1616, 104, 'Haifa', 'HA', 1),
@@ -5958,6 +9142,7 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (1701, 107, 'Yamagata', 'YA', 1),
 (1702, 107, 'Yamaguchi', 'YM', 1),
 (1703, 107, 'Yamanashi', 'YN', 1),
+<<<<<<< HEAD
 (1704, 108, '''Amman', 'AM', 1),
 (1705, 108, 'Ajlun', 'AJ', 1),
 (1706, 108, 'Al ''Aqabah', 'AA', 1),
@@ -5969,6 +9154,19 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (1712, 108, 'Irbid', 'IR', 1),
 (1713, 108, 'Jarash', 'JA', 1),
 (1714, 108, 'Ma''an', 'MA', 1),
+=======
+(1704, 108, '\'Amman', 'AM', 1),
+(1705, 108, 'Ajlun', 'AJ', 1),
+(1706, 108, 'Al \'Aqabah', 'AA', 1),
+(1707, 108, 'Al Balqa\'', 'AB', 1),
+(1708, 108, 'Al Karak', 'AK', 1),
+(1709, 108, 'Al Mafraq', 'AL', 1),
+(1710, 108, 'At Tafilah', 'AT', 1),
+(1711, 108, 'Az Zarqa\'', 'AZ', 1),
+(1712, 108, 'Irbid', 'IR', 1),
+(1713, 108, 'Jarash', 'JA', 1),
+(1714, 108, 'Ma\'an', 'MA', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (1715, 108, 'Madaba', 'MD', 1),
 (1716, 109, 'Almaty', 'AL', 1),
 (1717, 109, 'Almaty City', 'AC', 1),
@@ -6022,6 +9220,7 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (1765, 112, 'Hwanghae-bukto', 'HWB', 1),
 (1766, 112, 'Hwanghae-namdo', 'HWN', 1),
 (1767, 112, 'Kangwon-do', 'KAN', 1),
+<<<<<<< HEAD
 (1768, 112, 'P''yongan-bukto', 'PYB', 1),
 (1769, 112, 'P''yongan-namdo', 'PYN', 1),
 (1770, 112, 'Ryanggang-do (Yanggang-do)', 'YAN', 1),
@@ -6033,12 +9232,26 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (1776, 113, 'Cholla-bukto', 'CB', 1),
 (1777, 113, 'Cholla-namdo', 'CN', 1),
 (1778, 113, 'Inch''on-gwangyoksi', 'IG', 1),
+=======
+(1768, 112, 'P\'yongan-bukto', 'PYB', 1),
+(1769, 112, 'P\'yongan-namdo', 'PYN', 1),
+(1770, 112, 'Ryanggang-do (Yanggang-do)', 'YAN', 1),
+(1771, 112, 'Rason Directly Governed City', 'NAJ', 1),
+(1772, 112, 'P\'yongyang Special City', 'PYO', 1),
+(1773, 113, 'Ch\'ungch\'ong-bukto', 'CO', 1),
+(1774, 113, 'Ch\'ungch\'ong-namdo', 'CH', 1),
+(1775, 113, 'Cheju-do', 'CD', 1),
+(1776, 113, 'Cholla-bukto', 'CB', 1),
+(1777, 113, 'Cholla-namdo', 'CN', 1),
+(1778, 113, 'Inch\'on-gwangyoksi', 'IG', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (1779, 113, 'Kangwon-do', 'KA', 1),
 (1780, 113, 'Kwangju-gwangyoksi', 'KG', 1),
 (1781, 113, 'Kyonggi-do', 'KD', 1),
 (1782, 113, 'Kyongsang-bukto', 'KB', 1),
 (1783, 113, 'Kyongsang-namdo', 'KN', 1),
 (1784, 113, 'Pusan-gwangyoksi', 'PG', 1),
+<<<<<<< HEAD
 (1785, 113, 'Soul-t''ukpyolsi', 'SO', 1),
 (1786, 113, 'Taegu-gwangyoksi', 'TA', 1),
 (1787, 113, 'Taejon-gwangyoksi', 'TG', 1),
@@ -6046,6 +9259,15 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (1789, 114, 'Al Ahmadi', 'AA', 1),
 (1790, 114, 'Al Farwaniyah', 'AF', 1),
 (1791, 114, 'Al Jahra''', 'AJ', 1),
+=======
+(1785, 113, 'Soul-t\'ukpyolsi', 'SO', 1),
+(1786, 113, 'Taegu-gwangyoksi', 'TA', 1),
+(1787, 113, 'Taejon-gwangyoksi', 'TG', 1),
+(1788, 114, 'Al \'Asimah', 'AL', 1),
+(1789, 114, 'Al Ahmadi', 'AA', 1),
+(1790, 114, 'Al Farwaniyah', 'AF', 1),
+(1791, 114, 'Al Jahra\'', 'AJ', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (1792, 114, 'Hawalli', 'HA', 1),
 (1793, 115, 'Bishkek', 'GB', 1),
 (1794, 115, 'Batken', 'B', 1),
@@ -6078,9 +9300,15 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (1854, 119, 'Leribe', 'LE', 1),
 (1855, 119, 'Mafeteng', 'MF', 1),
 (1856, 119, 'Maseru', 'MS', 1),
+<<<<<<< HEAD
 (1857, 119, 'Mohale''s Hoek', 'MH', 1),
 (1858, 119, 'Mokhotlong', 'MK', 1),
 (1859, 119, 'Qacha''s Nek', 'QN', 1),
+=======
+(1857, 119, 'Mohale\'s Hoek', 'MH', 1),
+(1858, 119, 'Mokhotlong', 'MK', 1),
+(1859, 119, 'Qacha\'s Nek', 'QN', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (1860, 119, 'Quthing', 'QT', 1),
 (1861, 119, 'Thaba-Tseka', 'TT', 1),
 (1862, 120, 'Bomi', 'BI', 1),
@@ -6097,14 +9325,22 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (1873, 120, 'River Cess', 'RC', 1),
 (1874, 120, 'Sinoe', 'SN', 1),
 (1875, 121, 'Ajdabiya', 'AJ', 1),
+<<<<<<< HEAD
 (1876, 121, 'Al ''Aziziyah', 'AZ', 1),
+=======
+(1876, 121, 'Al \'Aziziyah', 'AZ', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (1877, 121, 'Al Fatih', 'FA', 1),
 (1878, 121, 'Al Jabal al Akhdar', 'JA', 1),
 (1879, 121, 'Al Jufrah', 'JU', 1),
 (1880, 121, 'Al Khums', 'KH', 1),
 (1881, 121, 'Al Kufrah', 'KU', 1),
 (1882, 121, 'An Nuqat al Khams', 'NK', 1),
+<<<<<<< HEAD
 (1883, 121, 'Ash Shati''', 'AS', 1),
+=======
+(1883, 121, 'Ash Shati\'', 'AS', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (1884, 121, 'Awbari', 'AW', 1),
 (1885, 121, 'Az Zawiyah', 'ZA', 1),
 (1886, 121, 'Banghazi', 'BA', 1),
@@ -6572,7 +9808,11 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (2347, 153, 'Coromandel', 'COR', 1),
 (2348, 153, 'Gisborne', 'GIS', 1),
 (2349, 153, 'Fiordland', 'FIO', 1),
+<<<<<<< HEAD
 (2350, 153, 'Hawke''s Bay', 'HKB', 1),
+=======
+(2350, 153, 'Hawke\'s Bay', 'HKB', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (2351, 153, 'Marlborough', 'MBH', 1),
 (2352, 153, 'Manawatu-Wanganui', 'MWT', 1),
 (2353, 153, 'Mt Cook-Mackenzie', 'MCM', 1),
@@ -6899,7 +10139,11 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (2674, 173, 'Ar Rayyan', 'RN', 1),
 (2675, 173, 'Jarayan al Batinah', 'JB', 1),
 (2676, 173, 'Madinat ash Shamal', 'MS', 1),
+<<<<<<< HEAD
 (2677, 173, 'Umm Sa''id', 'UD', 1),
+=======
+(2677, 173, 'Umm Sa\'id', 'UD', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (2678, 173, 'Umm Salal', 'UL', 1),
 (2679, 175, 'Alba', 'AB', 1),
 (2680, 175, 'Arad', 'AR', 1),
@@ -7016,9 +10260,15 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (2792, 176, 'Tver', 'TV', 1),
 (2793, 176, 'Tyumen', 'TY', 1),
 (2794, 176, 'Ufa', 'UF', 1),
+<<<<<<< HEAD
 (2795, 176, 'Ul''yanovsk', 'UL', 1),
 (2796, 176, 'Ulan-Ude', 'UU', 1),
 (2797, 176, 'Ust''-Ordynskiy', 'US', 1),
+=======
+(2795, 176, 'Ul\'yanovsk', 'UL', 1),
+(2796, 176, 'Ulan-Ude', 'UU', 1),
+(2797, 176, 'Ust\'-Ordynskiy', 'US', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (2798, 176, 'Vladikavkaz', 'VL', 1),
 (2799, 176, 'Vladimir', 'VA', 1),
 (2800, 176, 'Vladivostok', 'VV', 1),
@@ -7073,6 +10323,7 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (2849, 180, 'Saint David', 'D', 1),
 (2850, 180, 'Saint George', 'G', 1),
 (2851, 180, 'Saint Patrick', 'P', 1),
+<<<<<<< HEAD
 (2852, 181, 'A''ana', 'AN', 1),
 (2853, 181, 'Aiga-i-le-Tai', 'AI', 1),
 (2854, 181, 'Atua', 'AT', 1),
@@ -7083,6 +10334,18 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (2859, 181, 'Satupa''itea', 'SA', 1),
 (2860, 181, 'Tuamasaga', 'TU', 1),
 (2861, 181, 'Va''a-o-Fonoti', 'VF', 1),
+=======
+(2852, 181, 'A\'ana', 'AN', 1),
+(2853, 181, 'Aiga-i-le-Tai', 'AI', 1),
+(2854, 181, 'Atua', 'AT', 1),
+(2855, 181, 'Fa\'asaleleaga', 'FA', 1),
+(2856, 181, 'Gaga\'emauga', 'GE', 1),
+(2857, 181, 'Gagaifomauga', 'GF', 1),
+(2858, 181, 'Palauli', 'PA', 1),
+(2859, 181, 'Satupa\'itea', 'SA', 1),
+(2860, 181, 'Tuamasaga', 'TU', 1),
+(2861, 181, 'Va\'a-o-Fonoti', 'VF', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (2862, 181, 'Vaisigano', 'VS', 1),
 (2863, 182, 'Acquaviva', 'AC', 1),
 (2864, 182, 'Borgo Maggiore', 'BM', 1),
@@ -7102,8 +10365,13 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (2878, 184, 'Al Qasim', 'QS', 1),
 (2879, 184, 'Ar Riyad', 'RD', 1),
 (2880, 184, 'Ash Sharqiyah (Eastern)', 'AQ', 1),
+<<<<<<< HEAD
 (2881, 184, '''Asir', 'AS', 1),
 (2882, 184, 'Ha''il', 'HL', 1),
+=======
+(2881, 184, '\'Asir', 'AS', 1),
+(2882, 184, 'Ha\'il', 'HL', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (2883, 184, 'Jizan', 'JZ', 1),
 (2884, 184, 'Makkah', 'ML', 1),
 (2885, 184, 'Najran', 'NR', 1),
@@ -7131,8 +10399,13 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (2907, 186, 'Bel Ombre', 'BO', 1),
 (2908, 186, 'Cascade', 'CA', 1),
 (2909, 186, 'Glacis', 'GL', 1),
+<<<<<<< HEAD
 (2910, 186, 'Grand'' Anse (on Mahe)', 'GM', 1),
 (2911, 186, 'Grand'' Anse (on Praslin)', 'GP', 1),
+=======
+(2910, 186, 'Grand\' Anse (on Mahe)', 'GM', 1),
+(2911, 186, 'Grand\' Anse (on Praslin)', 'GP', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (2912, 186, 'La Digue', 'DG', 1),
 (2913, 186, 'La Riviere Anglaise', 'RA', 1),
 (2914, 186, 'Mont Buxton', 'MB', 1),
@@ -7253,7 +10526,11 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (3029, 196, 'Uva', 'UV', 1),
 (3030, 196, 'Western', 'WE', 1),
 (3032, 197, 'Saint Helena', 'S', 1),
+<<<<<<< HEAD
 (3034, 199, 'A''ali an Nil', 'ANL', 1),
+=======
+(3034, 199, 'A\'ali an Nil', 'ANL', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (3035, 199, 'Al Bahr al Ahmar', 'BAM', 1),
 (3036, 199, 'Al Buhayrat', 'BRT', 1),
 (3037, 199, 'Al Jazirah', 'JZR', 1),
@@ -7264,7 +10541,11 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (3042, 199, 'An Nil al Azraq', 'ANZ', 1),
 (3043, 199, 'Ash Shamaliyah', 'ASH', 1),
 (3044, 199, 'Bahr al Jabal', 'BJA', 1),
+<<<<<<< HEAD
 (3045, 199, 'Gharb al Istiwa''iyah', 'GIS', 1),
+=======
+(3045, 199, 'Gharb al Istiwa\'iyah', 'GIS', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (3046, 199, 'Gharb Bahr al Ghazal', 'GBG', 1),
 (3047, 199, 'Gharb Darfur', 'GDA', 1),
 (3048, 199, 'Gharb Kurdufan', 'GKU', 1),
@@ -7276,7 +10557,11 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (3054, 199, 'Shamal Bahr al Ghazal', 'SBG', 1),
 (3055, 199, 'Shamal Darfur', 'SDA', 1),
 (3056, 199, 'Shamal Kurdufan', 'SKU', 1),
+<<<<<<< HEAD
 (3057, 199, 'Sharq al Istiwa''iyah', 'SIS', 1),
+=======
+(3057, 199, 'Sharq al Istiwa\'iyah', 'SIS', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (3058, 199, 'Sinnar', 'SNR', 1),
 (3059, 199, 'Warab', 'WRB', 1),
 (3060, 200, 'Brokopondo', 'BR', 1),
@@ -7490,9 +10775,15 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (3270, 211, 'Atafu', 'A', 1),
 (3271, 211, 'Fakaofo', 'F', 1),
 (3272, 211, 'Nukunonu', 'N', 1),
+<<<<<<< HEAD
 (3273, 212, 'Ha''apai', 'H', 1),
 (3274, 212, 'Tongatapu', 'T', 1),
 (3275, 212, 'Vava''u', 'V', 1),
+=======
+(3273, 212, 'Ha\'apai', 'H', 1),
+(3274, 212, 'Tongatapu', 'T', 1),
+(3275, 212, 'Vava\'u', 'V', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (3276, 213, 'Couva/Tabaquite/Talparo', 'CT', 1),
 (3277, 213, 'Diego Martin', 'DM', 1),
 (3278, 213, 'Mayaro/Rio Claro', 'MR', 1),
@@ -7697,6 +10988,7 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (3477, 219, 'Mbarara', 'MBR', 1),
 (3478, 219, 'Ntungamo', 'NTU', 1),
 (3479, 219, 'Rukungiri', 'RUK', 1),
+<<<<<<< HEAD
 (3480, 220, 'Cherkas''ka Oblast''', '71', 1),
 (3481, 220, 'Chernihivs''ka Oblast''', '74', 1),
 (3482, 220, 'Chernivets''ka Oblast''', '77', 1),
@@ -7729,6 +11021,40 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (3509, 221, 'Ash Shariqah', 'SH', 1),
 (3510, 221, 'Dubai', 'DU', 1),
 (3511, 221, 'R''as al Khaymah', 'RK', 1),
+=======
+(3480, 220, 'Cherkas\'ka Oblast\'', '71', 1),
+(3481, 220, 'Chernihivs\'ka Oblast\'', '74', 1),
+(3482, 220, 'Chernivets\'ka Oblast\'', '77', 1),
+(3483, 220, 'Crimea', '43', 1),
+(3484, 220, 'Dnipropetrovs\'ka Oblast\'', '12', 1),
+(3485, 220, 'Donets\'ka Oblast\'', '14', 1),
+(3486, 220, 'Ivano-Frankivs\'ka Oblast\'', '26', 1),
+(3487, 220, 'Khersons\'ka Oblast\'', '65', 1),
+(3488, 220, 'Khmel\'nyts\'ka Oblast\'', '68', 1),
+(3489, 220, 'Kirovohrads\'ka Oblast\'', '35', 1),
+(3490, 220, 'Kyiv', '30', 1),
+(3491, 220, 'Kyivs\'ka Oblast\'', '32', 1),
+(3492, 220, 'Luhans\'ka Oblast\'', '09', 1),
+(3493, 220, 'L\'vivs\'ka Oblast\'', '46', 1),
+(3494, 220, 'Mykolayivs\'ka Oblast\'', '48', 1),
+(3495, 220, 'Odes\'ka Oblast\'', '51', 1),
+(3496, 220, 'Poltavs\'ka Oblast\'', '53', 1),
+(3497, 220, 'Rivnens\'ka Oblast\'', '56', 1),
+(3498, 220, 'Sevastopol\'', '40', 1),
+(3499, 220, 'Sums\'ka Oblast\'', '59', 1),
+(3500, 220, 'Ternopil\'s\'ka Oblast\'', '61', 1),
+(3501, 220, 'Vinnyts\'ka Oblast\'', '05', 1),
+(3502, 220, 'Volyns\'ka Oblast\'', '07', 1),
+(3503, 220, 'Zakarpats\'ka Oblast\'', '21', 1),
+(3504, 220, 'Zaporiz\'ka Oblast\'', '23', 1),
+(3505, 220, 'Zhytomyrs\'ka oblast\'', '18', 1),
+(3506, 221, 'Abu Dhabi', 'ADH', 1),
+(3507, 221, '\'Ajman', 'AJ', 1),
+(3508, 221, 'Al Fujayrah', 'FU', 1),
+(3509, 221, 'Ash Shariqah', 'SH', 1),
+(3510, 221, 'Dubai', 'DU', 1),
+(3511, 221, 'R\'as al Khaymah', 'RK', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (3512, 221, 'Umm al Qaywayn', 'UQ', 1),
 (3513, 222, 'Aberdeen', 'ABN', 1),
 (3514, 222, 'Aberdeenshire', 'ABNS', 1),
@@ -7925,12 +11251,20 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (3705, 225, 'Treinta y Tres', 'TT', 1),
 (3706, 226, 'Andijon', 'AN', 1),
 (3707, 226, 'Buxoro', 'BU', 1),
+<<<<<<< HEAD
 (3708, 226, 'Farg''ona', 'FA', 1),
+=======
+(3708, 226, 'Farg\'ona', 'FA', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (3709, 226, 'Jizzax', 'JI', 1),
 (3710, 226, 'Namangan', 'NG', 1),
 (3711, 226, 'Navoiy', 'NW', 1),
 (3712, 226, 'Qashqadaryo', 'QA', 1),
+<<<<<<< HEAD
 (3713, 226, 'Qoraqalpog''iston Republikasi', 'QR', 1),
+=======
+(3713, 226, 'Qoraqalpog\'iston Republikasi', 'QR', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (3714, 226, 'Samarqand', 'SA', 1),
 (3715, 226, 'Sirdaryo', 'SI', 1),
 (3716, 226, 'Surxondaryo', 'SU', 1),
@@ -8018,6 +11352,7 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (3798, 235, 'Ibb', 'IB', 1),
 (3799, 235, 'Al Jawf', 'JA', 1),
 (3800, 235, 'Lahij', 'LA', 1),
+<<<<<<< HEAD
 (3801, 235, 'Ma''rib', 'MA', 1),
 (3802, 235, 'Al Mahrah', 'MR', 1),
 (3803, 235, 'Al Mahwit', 'MW', 1),
@@ -8025,6 +11360,15 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (3805, 235, 'San''a', 'SN', 1),
 (3806, 235, 'Shabwah', 'SH', 1),
 (3807, 235, 'Ta''izz', 'TA', 1),
+=======
+(3801, 235, 'Ma\'rib', 'MA', 1),
+(3802, 235, 'Al Mahrah', 'MR', 1),
+(3803, 235, 'Al Mahwit', 'MW', 1),
+(3804, 235, 'Sa\'dah', 'SD', 1),
+(3805, 235, 'San\'a', 'SN', 1),
+(3806, 235, 'Shabwah', 'SH', 1),
+(3807, 235, 'Ta\'izz', 'TA', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (3812, 237, 'Bas-Congo', 'BC', 1),
 (3813, 237, 'Bandundu', 'BN', 1),
 (3814, 237, 'Equateur', 'EQ', 1),
@@ -8413,7 +11757,11 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (4221, 117, 'Zilupes novads', '0681801', 1),
 (4222, 43, 'Arica y Parinacota', 'AP', 1),
 (4223, 43, 'Los Rios', 'LR', 1),
+<<<<<<< HEAD
 (4224, 220, 'Kharkivs''ka Oblast''', '63', 1),
+=======
+(4224, 220, 'Kharkivs\'ka Oblast\'', '63', 1),
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 (4225, 118, 'Beirut', 'LB-BR', 1),
 (4226, 118, 'Bekaa', 'LB-BE', 1),
 (4227, 118, 'Mount Lebanon', 'LB-ML', 1),
@@ -8871,6 +12219,15 @@ ALTER TABLE `oc_extension`
   ADD PRIMARY KEY (`extension_id`);
 
 --
+<<<<<<< HEAD
+=======
+-- 資料表索引 `oc_fb_logins`
+--
+ALTER TABLE `oc_fb_logins`
+  ADD PRIMARY KEY (`id`);
+
+--
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 -- 資料表索引 `oc_filter`
 --
 ALTER TABLE `oc_filter`
@@ -9394,467 +12751,868 @@ ALTER TABLE `oc_zone_to_geo_zone`
 -- 使用資料表 AUTO_INCREMENT `oc_address`
 --
 ALTER TABLE `oc_address`
+<<<<<<< HEAD
   MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+=======
+  MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_affiliate`
 --
 ALTER TABLE `oc_affiliate`
   MODIFY `affiliate_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_affiliate_activity`
 --
 ALTER TABLE `oc_affiliate_activity`
   MODIFY `affiliate_activity_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_affiliate_login`
 --
 ALTER TABLE `oc_affiliate_login`
   MODIFY `affiliate_login_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_affiliate_transaction`
 --
 ALTER TABLE `oc_affiliate_transaction`
   MODIFY `affiliate_transaction_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_api`
 --
 ALTER TABLE `oc_api`
   MODIFY `api_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_api_ip`
 --
 ALTER TABLE `oc_api_ip`
+<<<<<<< HEAD
   MODIFY `api_ip_id` int(11) NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `api_ip_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_api_session`
 --
 ALTER TABLE `oc_api_session`
+<<<<<<< HEAD
   MODIFY `api_session_id` int(11) NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `api_session_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_attribute`
 --
 ALTER TABLE `oc_attribute`
   MODIFY `attribute_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_attribute_group`
 --
 ALTER TABLE `oc_attribute_group`
   MODIFY `attribute_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_banner`
 --
 ALTER TABLE `oc_banner`
+<<<<<<< HEAD
   MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+=======
+  MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_banner_image`
 --
 ALTER TABLE `oc_banner_image`
+<<<<<<< HEAD
   MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
+=======
+  MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=400;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_cart`
 --
 ALTER TABLE `oc_cart`
+<<<<<<< HEAD
   MODIFY `cart_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+=======
+  MODIFY `cart_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_category`
 --
 ALTER TABLE `oc_category`
+<<<<<<< HEAD
   MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+=======
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_country`
 --
 ALTER TABLE `oc_country`
   MODIFY `country_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=258;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_coupon`
 --
 ALTER TABLE `oc_coupon`
   MODIFY `coupon_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_coupon_history`
 --
 ALTER TABLE `oc_coupon_history`
   MODIFY `coupon_history_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_coupon_product`
 --
 ALTER TABLE `oc_coupon_product`
   MODIFY `coupon_product_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_currency`
 --
 ALTER TABLE `oc_currency`
   MODIFY `currency_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_customer`
 --
 ALTER TABLE `oc_customer`
+<<<<<<< HEAD
   MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+=======
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_customer_activity`
 --
 ALTER TABLE `oc_customer_activity`
   MODIFY `customer_activity_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_customer_group`
 --
 ALTER TABLE `oc_customer_group`
   MODIFY `customer_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_customer_history`
 --
 ALTER TABLE `oc_customer_history`
   MODIFY `customer_history_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_customer_ip`
 --
 ALTER TABLE `oc_customer_ip`
+<<<<<<< HEAD
   MODIFY `customer_ip_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+=======
+  MODIFY `customer_ip_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_customer_login`
 --
 ALTER TABLE `oc_customer_login`
+<<<<<<< HEAD
   MODIFY `customer_login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+=======
+  MODIFY `customer_login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_customer_reward`
 --
 ALTER TABLE `oc_customer_reward`
   MODIFY `customer_reward_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_customer_search`
 --
 ALTER TABLE `oc_customer_search`
   MODIFY `customer_search_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_customer_transaction`
 --
 ALTER TABLE `oc_customer_transaction`
   MODIFY `customer_transaction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_custom_field`
 --
 ALTER TABLE `oc_custom_field`
   MODIFY `custom_field_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_custom_field_value`
 --
 ALTER TABLE `oc_custom_field_value`
   MODIFY `custom_field_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_download`
 --
 ALTER TABLE `oc_download`
   MODIFY `download_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_easy_blog_article`
 --
 ALTER TABLE `oc_easy_blog_article`
   MODIFY `article_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_event`
 --
 ALTER TABLE `oc_event`
   MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_extension`
 --
 ALTER TABLE `oc_extension`
+<<<<<<< HEAD
   MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+=======
+  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+
+--
+-- 使用資料表 AUTO_INCREMENT `oc_fb_logins`
+--
+ALTER TABLE `oc_fb_logins`
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_filter`
 --
 ALTER TABLE `oc_filter`
   MODIFY `filter_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_filter_group`
 --
 ALTER TABLE `oc_filter_group`
   MODIFY `filter_group_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_geo_zone`
 --
 ALTER TABLE `oc_geo_zone`
   MODIFY `geo_zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_information`
 --
 ALTER TABLE `oc_information`
   MODIFY `information_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_language`
 --
 ALTER TABLE `oc_language`
   MODIFY `language_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_layout`
 --
 ALTER TABLE `oc_layout`
   MODIFY `layout_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_layout_module`
 --
 ALTER TABLE `oc_layout_module`
   MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_layout_route`
 --
 ALTER TABLE `oc_layout_route`
   MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_length_class`
 --
 ALTER TABLE `oc_length_class`
   MODIFY `length_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_location`
 --
 ALTER TABLE `oc_location`
   MODIFY `location_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_manufacturer`
 --
 ALTER TABLE `oc_manufacturer`
   MODIFY `manufacturer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_marketing`
 --
 ALTER TABLE `oc_marketing`
   MODIFY `marketing_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_menu`
 --
 ALTER TABLE `oc_menu`
   MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_modification`
 --
 ALTER TABLE `oc_modification`
+<<<<<<< HEAD
   MODIFY `modification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+=======
+  MODIFY `modification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_module`
 --
 ALTER TABLE `oc_module`
   MODIFY `module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_option`
 --
 ALTER TABLE `oc_option`
   MODIFY `option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_option_value`
 --
 ALTER TABLE `oc_option_value`
   MODIFY `option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_order`
 --
 ALTER TABLE `oc_order`
+<<<<<<< HEAD
   MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+=======
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_order_custom_field`
 --
 ALTER TABLE `oc_order_custom_field`
   MODIFY `order_custom_field_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_order_history`
 --
 ALTER TABLE `oc_order_history`
+<<<<<<< HEAD
   MODIFY `order_history_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+=======
+  MODIFY `order_history_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_order_option`
 --
 ALTER TABLE `oc_order_option`
   MODIFY `order_option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_order_product`
 --
 ALTER TABLE `oc_order_product`
+<<<<<<< HEAD
   MODIFY `order_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
+=======
+  MODIFY `order_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=153;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_order_recurring`
 --
 ALTER TABLE `oc_order_recurring`
   MODIFY `order_recurring_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_order_recurring_transaction`
 --
 ALTER TABLE `oc_order_recurring_transaction`
   MODIFY `order_recurring_transaction_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_order_status`
 --
 ALTER TABLE `oc_order_status`
   MODIFY `order_status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_order_total`
 --
 ALTER TABLE `oc_order_total`
+<<<<<<< HEAD
   MODIFY `order_total_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=283;
+=======
+  MODIFY `order_total_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=334;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_order_voucher`
 --
 ALTER TABLE `oc_order_voucher`
   MODIFY `order_voucher_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_product`
 --
 ALTER TABLE `oc_product`
+<<<<<<< HEAD
   MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+=======
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=370;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_product_discount`
 --
 ALTER TABLE `oc_product_discount`
+<<<<<<< HEAD
   MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=450;
+=======
+  MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=458;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_product_image`
 --
 ALTER TABLE `oc_product_image`
+<<<<<<< HEAD
   MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2803;
+=======
+  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7474;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_product_option`
 --
 ALTER TABLE `oc_product_option`
   MODIFY `product_option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=236;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_product_option_value`
 --
 ALTER TABLE `oc_product_option_value`
   MODIFY `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_product_reward`
 --
 ALTER TABLE `oc_product_reward`
   MODIFY `product_reward_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=550;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_product_special`
 --
 ALTER TABLE `oc_product_special`
   MODIFY `product_special_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=445;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_recurring`
 --
 ALTER TABLE `oc_recurring`
   MODIFY `recurring_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_return`
 --
 ALTER TABLE `oc_return`
   MODIFY `return_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_return_action`
 --
 ALTER TABLE `oc_return_action`
   MODIFY `return_action_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_return_history`
 --
 ALTER TABLE `oc_return_history`
   MODIFY `return_history_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_return_reason`
 --
 ALTER TABLE `oc_return_reason`
   MODIFY `return_reason_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_return_status`
 --
 ALTER TABLE `oc_return_status`
   MODIFY `return_status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_review`
 --
 ALTER TABLE `oc_review`
+<<<<<<< HEAD
   MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+=======
+  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_setting`
 --
 ALTER TABLE `oc_setting`
+<<<<<<< HEAD
   MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1028;
+=======
+  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3220;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_stock_status`
 --
 ALTER TABLE `oc_stock_status`
   MODIFY `stock_status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_store`
 --
 ALTER TABLE `oc_store`
   MODIFY `store_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_tax_class`
 --
 ALTER TABLE `oc_tax_class`
   MODIFY `tax_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_tax_rate`
 --
 ALTER TABLE `oc_tax_rate`
   MODIFY `tax_rate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_tax_rule`
 --
 ALTER TABLE `oc_tax_rule`
   MODIFY `tax_rule_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_theme`
 --
 ALTER TABLE `oc_theme`
   MODIFY `theme_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_translation`
 --
 ALTER TABLE `oc_translation`
   MODIFY `translation_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_upload`
 --
 ALTER TABLE `oc_upload`
   MODIFY `upload_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_url_alias`
 --
 ALTER TABLE `oc_url_alias`
+<<<<<<< HEAD
   MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1008;
+=======
+  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1177;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_user`
 --
 ALTER TABLE `oc_user`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_user_group`
 --
 ALTER TABLE `oc_user_group`
   MODIFY `user_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_voucher`
 --
 ALTER TABLE `oc_voucher`
   MODIFY `voucher_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_voucher_history`
 --
 ALTER TABLE `oc_voucher_history`
   MODIFY `voucher_history_id` int(11) NOT NULL AUTO_INCREMENT;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_voucher_theme`
 --
 ALTER TABLE `oc_voucher_theme`
   MODIFY `voucher_theme_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_weight_class`
 --
 ALTER TABLE `oc_weight_class`
   MODIFY `weight_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_zone`
 --
 ALTER TABLE `oc_zone`
   MODIFY `zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4236;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 --
 -- 使用資料表 AUTO_INCREMENT `oc_zone_to_geo_zone`
 --
 ALTER TABLE `oc_zone_to_geo_zone`
   MODIFY `zone_to_geo_zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+<<<<<<< HEAD
+=======
+COMMIT;
+
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

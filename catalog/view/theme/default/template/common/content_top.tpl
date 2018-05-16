@@ -115,6 +115,7 @@ body {
 <script src="catalog/view/theme/default/template/product/productjs/prodjs3.js"></script>
 <script>
     $(function(){
+<<<<<<< HEAD
 
         // setTimeout(function(){
             $('#box').waterfall(
@@ -126,6 +127,9 @@ body {
                 $(this).height(Math.floor((Math.random() * (440-240 + 1) ) + 210));
             })
         // }, 300);
+=======
+        // $('#box').waterfall();
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
     })
 </script>
 

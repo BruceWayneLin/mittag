@@ -548,8 +548,12 @@ class ModelCheckoutOrder extends Model {
                         'extraDetail3' => $product['extraDetail3'],
                         'extraDetail4' => $product['extraDetail4'],
                         'extraDetail5' => $product['extraDetail5'],
+<<<<<<< HEAD
                         'extraShippingFee' => $product['extraShippingFee'],
                         'option'   => $option_data,
+=======
+						'option'   => $option_data,
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 						'quantity' => $product['quantity'],
 						'price'    => $this->currency->format($product['price'] + ($this->config->get('config_tax') ? $product['tax'] : 0), $order_info['currency_code'], $order_info['currency_value']),
 						'total'    => $this->currency->format($product['total'] + ($this->config->get('config_tax') ? ($product['tax'] * $product['quantity']) : 0), $order_info['currency_code'], $order_info['currency_value'])

@@ -39,5 +39,21 @@
   <?php } ?>
 </div>
 <script type="text/javascript">
+<<<<<<< HEAD
     
+=======
+    $(function(){
+
+        setTimeout(function(){
+            $('#box').waterfall(
+            );
+            var array = $('.caption');
+            array.each(function(item){
+                console.log($(this).height());
+                console.log(Math.floor((Math.random() * 80 ) + 280));
+                $(this).height(Math.floor((Math.random() * (440-240 + 1) ) + 210));
+            })
+        }, 300);
+    })
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 </script>

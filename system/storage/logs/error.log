@@ -654,6 +654,7 @@
 2018-03-14 22:10:22 - PHP Notice:  Undefined index:  in /home/jungweic/public_html/mittag.com.tw/system/library/cart/currency.php on line 27
 2018-03-14 22:10:22 - PHP Notice:  Undefined variable: currency in /home/jungweic/public_html/mittag.com.tw/system/library/cart/currency.php on line 30
 2018-03-14 22:10:22 - PHP Notice:  Undefined index:  in /home/jungweic/public_html/mittag.com.tw/system/library/cart/currency.php on line 30
+<<<<<<< HEAD
 2018-05-12 5:27:25 - PHP Notice:  Undefined index: extraDetail2 in C:\xampp\htdocs\mittag\catalog\model\catalog\product.php on line 49
 2018-05-12 5:27:25 - PHP Notice:  Undefined index: extraDetail3 in C:\xampp\htdocs\mittag\catalog\model\catalog\product.php on line 50
 2018-05-12 5:27:25 - PHP Notice:  Undefined index: extraDetail4 in C:\xampp\htdocs\mittag\catalog\model\catalog\product.php on line 51
@@ -924,3 +925,5 @@
 2018-05-12 16:35:20 - PHP Warning:  mail(): SMTP server response: 530 5.7.0 Must issue a STARTTLS command first. p1-v6sm11276031pfp.137 - gsmtp in C:\xampp\htdocs\mittag\system\library\mail.php on line 158
 2018-05-12 17:18:21 - PHP Warning:  mail(): SMTP server response: 530 5.7.0 Must issue a STARTTLS command first. a11-v6sm10590190pgn.64 - gsmtp in C:\xampp\htdocs\mittag\system\library\mail.php on line 158
 2018-05-12 17:18:22 - PHP Warning:  mail(): SMTP server response: 530 5.7.0 Must issue a STARTTLS command first. y7-v6sm9831282pgr.26 - gsmtp in C:\xampp\htdocs\mittag\system\library\mail.php on line 158
+=======
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190

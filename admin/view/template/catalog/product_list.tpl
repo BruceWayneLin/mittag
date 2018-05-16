@@ -14,7 +14,10 @@
       </ul>
     </div>
   </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
   <div class="container-fluid">
     <?php if ($error_warning) { ?>
     <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?>
@@ -95,6 +98,7 @@
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <div class="container-fluid">
           <div class="col-xs-4"></div>
           <div class=" col-xs-4 text-center">
@@ -125,6 +129,8 @@
           </div>
           <div class="col-xs-4"></div>
         </div>
+=======
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
         <form action="<?php echo $delete; ?>" method="post" enctype="multipart/form-data" id="form-product">
           <div class="table-responsive">
             <table class="table table-bordered table-hover">
@@ -265,6 +271,7 @@ $('#button-filter').on('click', function() {
 });
 //--></script>
   <script type="text/javascript"><!--
+<<<<<<< HEAD
       $("button[type='submit']").click(function(){
           $.ajax({
               url: 'index.php?route=catalog/product/autocomplete&token=<?php echo $token; ?>&discountSelectForProd=' +  encodeURIComponent($('#discountSelectForProd').val()),
@@ -281,6 +288,9 @@ $('#button-filter').on('click', function() {
       });
 
       $('input[name=\'filter_name\']').autocomplete({
+=======
+$('input[name=\'filter_name\']').autocomplete({
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 	'source': function(request, response) {
 		$.ajax({
 			url: 'index.php?route=catalog/product/autocomplete&token=<?php echo $token; ?>&filter_name=' +  encodeURIComponent(request),
@@ -319,6 +329,9 @@ $('input[name=\'filter_model\']').autocomplete({
 		$('input[name=\'filter_model\']').val(item['label']);
 	}
 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
 //--></script></div>
 <?php echo $footer; ?>

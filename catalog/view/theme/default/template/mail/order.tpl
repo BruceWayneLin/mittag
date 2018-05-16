@@ -108,7 +108,11 @@
             </li>
           </ul>
         </td>
+<<<<<<< HEAD
         <td style="font-size: 12px;	border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; text-align: right; padding: 7px;"><?php echo $product['extraShippingFee'] + $product['price']; ?></td>
+=======
+        <td style="font-size: 12px;	border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; text-align: right; padding: 7px;"><?php echo $product['price']; ?></td>
+>>>>>>> 8ca06c2da264531c9a0397a4c5479b8adf3c5190
         <td style="font-size: 12px;	border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; text-align: right; padding: 7px;"><?php echo $product['total']; ?></td>
       </tr>
       <?php } ?>
